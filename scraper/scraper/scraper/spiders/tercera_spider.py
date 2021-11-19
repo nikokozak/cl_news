@@ -80,4 +80,15 @@ class BioBioSpider(scrapy.Spider):
                 "published": published
                 }
 
+class EmolScraper(scrapy.Spider):
+    name = "emol"
+    base_url = "https://www.emol.com"
+
+    def start_requests(self):
+        secciones = {
+                'Nacional': self.base_url + '/nacional/',
+                'Economía': self.base_url + '/economia/',
+                'Educación': self.base_url + '/educacion/',
+                'Tendencias': self.base_url + '/tendencias/'
+                }
 

@@ -10,13 +10,13 @@
 ## Selectores
 ### Article List:
     - res = response.xpath('//section[@class="middle-mainy"]/div[contains(@class,"archive-list")]/article/div')
-        1. Headline: res.xpath('./div[contains(@class, "headline")]//a/text()[4]').get()
-        2. Writer: res.xpath('./div[contains(@class, "byline")]//small/text()').get()
-        3. Image: res.xpath('./div[contains(@class, "image")]//source[1]/@srcset').get()
         #### In Article:
-            a. Excerpt: response.xpath('//p[@class="excerpt"]/text()').get()
-            b. Body: response.xpath('//p[contains(@class, "paragraph")]').getall()
-            c. Published: response.xpath('//time/@datetime').get()
+            a. Headline: //div[contains(@class, "titulares")]//h1//text()
+            b. Author: //div[contains(@class, "titulares")]//div[@rel="author"]//text()
+            c. Image: //div[@class="main-figure"]//img/@src
+            d. Excerpt: response.xpath('//p[@class="excerpt"]/text()').get()
+            e. Body: response.xpath('//p[contains(@class, "paragraph")]').getall()
+            f. Published: response.xpath('//time/@datetime').get()
 
 # Bio Bio Chile:
 
@@ -31,13 +31,14 @@
 ## Selectores
 ### Article List:
     - res = response.xpath('//section[contains(@class, "section-busca")]/div[@class="section-body"]//article')
-        1. Headline: res.xpath('./h2/text()')
-        2. Image: res.xpath('.//div[@class="article-image"]/@style')
         #### In Article:
-            a. Excerpt: response.xpath('//div[@class="extracto-nota"]/p//text()').getall()
-            b. Body: response.xpath('//div[contains(@class, "contenido-nota")]/*[self::p or self::h1]//text()')
-            c. Published: response.xpath('//meta[@property="article:published_time"]/@content').get()
-            d. Writer: response.xpath('//a[@class="autor-link"]/text()')
+            a. Headline: response.xpath('//h1[@class="post-title"]')
+            d. Author: response.xpath('//a[@class="autor-link"]/text()')
+            c. Image: response.xpath('//meta[@property="og:image"]/@content')
+            d. Excerpt: response.xpath('//div[@class="extracto-nota"]/p//text()').getall()
+            e. Body: response.xpath('//div[contains(@class, "contenido-nota")]/*[self::p or self::h1]//text()')
+
+            f. Published: response.xpath('//meta[@property="article:published_time"]/@content').get()
 
 # El Mercurio:
 
