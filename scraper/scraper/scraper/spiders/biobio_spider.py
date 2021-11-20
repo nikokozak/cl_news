@@ -25,4 +25,3 @@ class BioBioSpider(scrapy.Spider):
                 "body": biobio['article']['body'](response),
                 "published": biobio['article']['published'](response)
                 }
-
