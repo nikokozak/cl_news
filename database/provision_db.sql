@@ -28,7 +28,7 @@ create table noticias (
     titular varchar(200) NOT NULL,
     bajada text,
     imagen_url text,
-    cuerpo text NOT NULL,
+    cuerpo text[] NOT NULL, -- Text is an array of "paragraphs" to aid in formatting.
     url text,
 
     PRIMARY KEY (url),
@@ -36,3 +36,4 @@ create table noticias (
 );
 grant insert, update, delete, select on table noticias to :lectoruser;
 
+grant usage, select on all sequences in schema public to :lectoruser;
