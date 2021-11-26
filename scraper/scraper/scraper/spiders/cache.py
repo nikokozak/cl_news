@@ -1,5 +1,5 @@
 from json.decoder import JSONDecodeError
-import os, json, tempfile, shutil, hashlib
+import os, json, hashlib
 
 class Cache:
 
@@ -29,7 +29,6 @@ class Cache:
         '''
         with open(self.file, 'w', encoding='utf-8') as cache_file:
             try:
-                # SOMETHING ISN'T RIGHT HERE
                 json.dump(self.cache, cache_file)
                 return True
             except Exception as e:
