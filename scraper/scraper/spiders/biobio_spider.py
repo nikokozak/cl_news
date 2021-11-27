@@ -1,6 +1,7 @@
 import scrapy
 from scraper.spiders.rules import biobio
 from scraper.spiders.cache import Cache
+from scraper.items import NoticiaItem, NoticiaLoader
 
 class BioBioSpider(scrapy.Spider):
     name = biobio['name']
@@ -19,29 +20,30 @@ class BioBioSpider(scrapy.Spider):
         return spider
 
     def start_requests(self):
-        count = 0
         for section, url in biobio['sections'].items():
-            if count < 1:
-                count += 1
-                yield scrapy.Request(url=url, callback=self.parse, cb_kwargs=dict(section=section))
+            yield scrapy.Request(url=url, callback=self.parse, cb_kwargs=dict(section=section))
 
     def parse(self, response, section):
-        article_abs_links = biobio['article_links'](response)
+        article_abs_links = response.xpath(biobio['article_links']).getall()
 
         for abs_link in article_abs_links:
             if not self.cache.unique(abs_link):
                 yield scrapy.Request(url=abs_link, callback=self.parse_article, cb_kwargs=dict(section=section))
 
     def parse_article(self, response, section):
-        yield {
-                "section": section,
-                "headline": biobio['article']['headline'](response),
-                "author": biobio['article']['author'](response),
-                "image": biobio['article']['image'](response),
-                "excerpt": biobio['article']['excerpt'](response),
-                "body": biobio['article']['body'](response),
-                "published": biobio['article']['published'](response)
-                }
+        rules = biobio['article']
+        l = NoticiaLoader(item=NoticiaItem(), response=response)
+
+        l.add_value('medio', 'biobio')
+        l.add_value('seccion', section)
+        l.add_xpath('titular', rules['titular'])
+        l.add_xpath('bajada', rules['bajada'])
+        l.add_xpath('autor', rules['autor'])
+        l.add_xpath('image_url', rules['image_url'])
+        l.add_xpath('cuerpo', rules['cuerpo'])
+        l.add_xpath('fecha', rules['fecha'])
+
+        yield l.load_item()
 
     def closed(self, reason):
         if reason == 'finished':

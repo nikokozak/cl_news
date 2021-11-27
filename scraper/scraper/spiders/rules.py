@@ -34,14 +34,14 @@ biobio = {
             'Opinión': 'https://www.biobiochile.cl/lista/busca-2020/categorias/opinion',
             },
 
-        'article_links': lambda r: r.xpath('//section[contains(@class, "section-busca")]//div[@class="results"]/article/a/@href').getall(),
+        'article_links': '//section[contains(@class, "section-busca")]//div[@class="results"]/article/a/@href',
 
         'article': {
-            'headline': lambda r: r.xpath('normalize-space(//h1[@class="post-title" or @class="nota-title"]/text())').get(),
-            'author': lambda r: r.xpath('//a[@class="autor-link"]/text()').get(),
-            'image': lambda r: r.xpath('//meta[@property="og:image"]/@content').get(),
-            'excerpt': lambda r: r.xpath('//div[@class="post-excerpt"]/p//text()').getall() or r.xpath('//div[@class="extracto-nota"]/p//text()').getall(),
-            'body': lambda r: r.xpath('//div[contains(@class, "contenido-nota") or contains(@class, "nota-content")]/*[self::p or self::h1]//text()').getall(),
-            'published': lambda r: r.xpath('//meta[@property="article:published_time"]/@content').get()
+            'titular': 'normalize-space(//h1[@class="post-title" or @class="nota-title"]/text())',
+            'bajada': '//div[@class="post-excerpt" or @class="extracto-nota"]/p//text()',
+            'autor': '//a[@class="autor-link"]/text()',
+            'image_url': '//meta[@property="og:image"]/@content',
+            'cuerpo': '//div[contains(@class, "contenido-nota") or contains(@class, "nota-content")]/*[self::p or self::h1]//text()',
+            'fecha': '//meta[@property="article:published_time"]/@content'
            }
         }
