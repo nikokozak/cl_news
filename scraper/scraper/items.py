@@ -5,15 +5,19 @@
 
 import scrapy
 from scrapy.loader import ItemLoader
-from itemloaders.processors import TakeFirst
+from itemloaders.processors import TakeFirst, Identity
 
 class NoticiaLoader(ItemLoader):
 
     default_output_processor = TakeFirst()
-    #TODO add functions to deal with data conversion here
+
+    bajada_out = Identity()
+    cuerpo_out = Identity()
 
 class NoticiaItem(scrapy.Item):
 
+    #TODO set defaults here
+    #TODO add data conversions in Pipeline
     medio = scrapy.Field()
     seccion = scrapy.Field()
     titular = scrapy.Field()

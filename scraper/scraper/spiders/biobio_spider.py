@@ -19,15 +19,24 @@ class BioBioSpider(scrapy.Spider):
         spider.cache = Cache(cache_file)
         return spider
 
+    def __init__(self, *args, **kwargs):
+        '''Override the __init__ function so that we might pass in keyword args
+        and set defaults for our spider'''
+        super(BioBioSpider, self).__init__(*args, **kwargs)
+        # Accept a "limit" kwarg that sets how many articles we scrape per page
+        self.limit = 1000 if not hasattr(self, 'limit') else self.limit
+
     def start_requests(self):
         for section, url in biobio['sections'].items():
             yield scrapy.Request(url=url, callback=self.parse, cb_kwargs=dict(section=section))
 
     def parse(self, response, section):
+        limit_count = 0
         article_abs_links = response.xpath(biobio['article_links']).getall()
 
         for abs_link in article_abs_links:
-            if not self.cache.unique(abs_link):
+            if not self.cache.unique(abs_link) and limit_count < self.limit:
+                limit_count += 1
                 yield scrapy.Request(url=abs_link, callback=self.parse_article, cb_kwargs=dict(section=section))
 
     def parse_article(self, response, section):
