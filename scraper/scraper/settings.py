@@ -1,3 +1,4 @@
+import os
 # Scrapy settings for scraper project
 #
 # For simplicity, this file contains only settings considered important or
@@ -12,6 +13,8 @@ BOT_NAME = 'scraper'
 SPIDER_MODULES = ['scraper.spiders']
 NEWSPIDER_MODULE = 'scraper.spiders'
 
+# The folder where cache files for spiders are saved
+SPIDER_CACHE_FOLDER = os.path.dirname(os.path.realpath(__file__)) + '/cache/'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'scraper (+http://www.yourdomain.com)'
