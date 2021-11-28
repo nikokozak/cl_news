@@ -17,7 +17,9 @@ values
     ('Política'),
     ('Internacional'),
     ('Economía'),
-    ('Educación');
+    ('Educación'),
+    ('Opinión'),
+    ('Tendencias');
 
 insert into noticias 
 (medio_id, seccion_id, autor, fecha, titular, bajada, imagen_url, cuerpo, url)
