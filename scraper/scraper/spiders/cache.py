@@ -23,9 +23,12 @@ class Cache:
             self.cache[hashed] = 1
             return 0
 
+    def clear(self):
+        '''Clears the current cache.'''
+        self.cache = {}
+
     def save(self):
-        '''Saves the current cache object to a tmp file, and then copies it
-        over to the original cache file.
+        '''Saves the current cache object, erasing the previous contents of the cache file.
         '''
         with open(self.file, 'w', encoding='utf-8') as cache_file:
             try:

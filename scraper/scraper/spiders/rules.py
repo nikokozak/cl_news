@@ -10,15 +10,15 @@ tercera = {
             'Opinión': 'https://www.latercera.com/canal/opinion' 
             },
 
-        'article_links': lambda r: r.xpath('//section[@class="middle-mainy"]//h3/a/@href').getall(),
+        'article_links': '//section[@class="middle-mainy"]//h3/a/@href',
 
         'article': {
-            'headline': lambda r: r.xpath('//div[contains(@class, "titulares")]//h1//text()').get(),
-            'author': lambda r: r.xpath('//div[contains(@class, "titulares")]//div[@rel="author"]//text()').get(),
-            'image': lambda r: r.xpath('//div[@class="main-figure"]//img/@src').get(),
-            'excerpt': lambda r: r.xpath('//p[@class="excerpt"]/text()').get(),
-            'body': lambda r: r.xpath('//p[contains(@class, "paragraph")]').getall(),
-            'published': lambda r: r.xpath('//time/@datetime').get()
+            'titular': '//div[contains(@class, "titulares")]//h1//text()',
+            'autor': '//div[contains(@class, "titulares")]//div[@rel="author"]//text()',
+            'image_url': '//div[@class="main-figure"]//img/@src',
+            'bajada': '//p[@class="excerpt"]/text()',
+            'cuerpo': '//p[contains(@class, "paragraph")]',
+            'fecha': '//time/@datetime'
             }
         }
 
