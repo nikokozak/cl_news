@@ -1,5 +1,5 @@
 import scrapy
-from scraper.spiders.cache import Cache
+from scraper.spiders.cache_manager import Cache
 
 class NoticiaSpider(scrapy.Spider):
     @classmethod 

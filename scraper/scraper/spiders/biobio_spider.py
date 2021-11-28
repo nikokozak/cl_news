@@ -1,5 +1,5 @@
 import scrapy
-from scraper.spiders.rules import biobio
+from scraper.spiders.site_rules import biobio
 from scraper.spiders.base_spider import NoticiaSpider
 from scraper.items import NoticiaItem, NoticiaLoader
 
@@ -36,4 +36,3 @@ class BioBioSpider(NoticiaSpider):
         l.add_xpath('fecha', rules['fecha'])
 
         yield l.load_item()
-

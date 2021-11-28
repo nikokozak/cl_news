@@ -1,5 +1,5 @@
 import scrapy
-from scraper.spiders.rules import tercera
+from scraper.spiders.site_rules import tercera
 from scraper.spiders.base_spider import NoticiaSpider
 from scraper.items import NoticiaItem, NoticiaLoader
 
