@@ -8,7 +8,7 @@ class TerceraSpider(NoticiaSpider):
     base_url = tercera['base_url']
 
     def start_requests(self):
-        if self.clear_cache: self.clear_cache
+        if self.clear_cache: self.cache.clear()
 
         for section, url in tercera['sections'].items():
             yield scrapy.Request(url=url, callback=self.parse, cb_kwargs=dict(section=section))
@@ -32,8 +32,9 @@ class TerceraSpider(NoticiaSpider):
         l.add_xpath('titular', rules['titular'])
         l.add_xpath('bajada', rules['bajada'])
         l.add_xpath('autor', rules['autor'])
-        l.add_xpath('image_url', rules['image_url'])
+        l.add_xpath('imagen_url', rules['image_url'])
         l.add_xpath('cuerpo', rules['cuerpo'])
         l.add_xpath('fecha', rules['fecha'])
+        l.add_value('url', response.url)
 
         yield l.load_item() 

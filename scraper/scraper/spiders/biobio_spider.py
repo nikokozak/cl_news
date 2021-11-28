@@ -31,8 +31,9 @@ class BioBioSpider(NoticiaSpider):
         l.add_xpath('titular', rules['titular'])
         l.add_xpath('bajada', rules['bajada'])
         l.add_xpath('autor', rules['autor'])
-        l.add_xpath('image_url', rules['image_url'])
+        l.add_xpath('imagen_url', rules['image_url'])
         l.add_xpath('cuerpo', rules['cuerpo'])
         l.add_xpath('fecha', rules['fecha'])
+        l.add_value('url', response.url)
 
         yield l.load_item()

@@ -23,8 +23,9 @@ class NoticiaItem(scrapy.Item):
     titular = scrapy.Field()
     bajada = scrapy.Field()
     autor = scrapy.Field()
-    image_url = scrapy.Field()
+    imagen_url = scrapy.Field()
     cuerpo = scrapy.Field()
     fecha = scrapy.Field()
+    url = scrapy.Field()
 
     
