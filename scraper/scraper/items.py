@@ -4,6 +4,7 @@ from itemloaders.processors import TakeFirst, Identity
 
 class NoticiaLoader(ItemLoader):
 
+    #TODO define conversion here instead of in pipeline
     default_output_processor = TakeFirst()
 
     bajada_out = Identity()
