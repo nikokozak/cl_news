@@ -2,9 +2,6 @@ import psycopg2
 import logging
 import datetime
 from scrapy.exceptions import DropItem
-from itemadapter import ItemAdapter
-# Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 
 MEDIOS = { 
         'biobio': 1,
@@ -43,18 +40,30 @@ class DBPipeline:
 
     def process_item(self, item, spider):
         #TODO: Implement error catching here, unique keys and such.
-        self.cur.execute("INSERT INTO noticias" 
+        insert_sql = ("INSERT INTO noticias"
         "(medio_id, seccion_id, autor, fecha, titular, bajada, imagen_url, cuerpo, url)"
         "VALUES"
-        "(%s, %s, %s, %s, %s, %s, %s, %s, %s)",
-        (1, 1, item['autor'], item['fecha'], item['titular'], 
-            item['bajada'], item['imagen_url'], item['cuerpo'], item['url']))
-        logging.log(logging.INFO, self.conn.notices[-1])
+        "(%s, %s, %s, %s, %s, %s, %s, %s, %s)")
 
-        return item
+        insert_data = [
+                item['medio'], item['seccion'], item['autor'], item['fecha'],
+                item['titular'], item['bajada'], item['imagen_url'], item['cuerpo'],
+                item['url'] 
+                ]
+
+        try:
+            self.cur.execute(insert_sql, insert_data)
+            logging.log(logging.INFO,
+                    'Inserted item with url:\n\t{url}\ninto DB.'.format(url=item['url']))
+            return item
+        except psycopg2.errors.UniqueViolation:
+            logging.log(logging.INFO, 
+                    'Item for medio {medio}, with url:\n\t{url}\nalready exists in DB. Skipping.'.format(medio=item['medio'], url=item['url']))
+            raise DropItem
 
     def close_spider(self, spider):
         # self.conn.commit() -- Use if no autocommit
+        logging.log(logging.INFO, self.conn.notices)
         self.conn.close()
 
 class ScreenerPipeline:

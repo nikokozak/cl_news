@@ -1,8 +1,3 @@
-# Define here the models for your scraped items
-#
-# See documentation in:
-# https://docs.scrapy.org/en/latest/topics/items.html
-
 import scrapy
 from scrapy.loader import ItemLoader
 from itemloaders.processors import TakeFirst, Identity
@@ -16,7 +11,6 @@ class NoticiaLoader(ItemLoader):
 
 class NoticiaItem(scrapy.Item):
 
-    #TODO set defaults in Pipeline
     #TODO add data conversions in Pipeline
     medio = scrapy.Field()
     seccion = scrapy.Field()
