@@ -16,7 +16,7 @@ class NoticiaLoader(ItemLoader):
 
 class NoticiaItem(scrapy.Item):
 
-    #TODO set defaults here
+    #TODO set defaults in Pipeline
     #TODO add data conversions in Pipeline
     medio = scrapy.Field()
     seccion = scrapy.Field()
