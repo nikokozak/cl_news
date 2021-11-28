@@ -1,18 +1,21 @@
 defmodule Lector do
+  use Application
   @moduledoc """
-  Documentation for `Lector`.
+  Base module called on by `mix run` for app orchestration.
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Lector.hello()
-      :world
-
+  Called by `mix run` on start. 
+  Starts a supervision tree, runs Plug to handle incoming conns.
   """
-  def hello do
-    :world
+  def start(_type, _args) do
+    children = [
+      {Plug.Cowboy, scheme: :http, plug: Lector.Endpoint, options: [port: 8080]}
+    ]
+    opts = [
+      strategy: :one_for_one,
+      name: Lector.Supervisor
+    ]
+    Supervisor.start_link(children, opts)
   end
 end
