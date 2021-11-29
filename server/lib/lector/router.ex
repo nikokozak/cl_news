@@ -7,6 +7,7 @@ defmodule Lector.Router do
   plug :dispatch
 
   get "/test" do
+    Lector.DBInterface.all
     send_resp(conn, 200, "A test")
   end
 
