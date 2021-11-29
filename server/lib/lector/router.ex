@@ -7,12 +7,13 @@ defmodule Lector.Router do
   plug :dispatch
 
   get "/test" do
-    Lector.DBInterface.all
+    Lector.DBInterface.get_all
     send_resp(conn, 200, "A test")
   end
 
   get "/" do
-    render(conn, "home.eex", [a: "You", b: "Me"])
+    results = Lector.DBInterface.get_all
+    render(conn, "home.eex", [noticias: results])
   end
 
   match _ do

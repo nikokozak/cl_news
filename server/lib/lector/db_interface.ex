@@ -10,7 +10,7 @@ defmodule Lector.DBInterface do
   Maps column names onto each row value, returning an array of
   Maps.
   """
-  def all do
+  def get_all do
     {:ok, pid} = Postgrex.start_link(hostname: @hostname, username: @username, database: @database)
 
     %{columns: columns,
