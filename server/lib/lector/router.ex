@@ -1,6 +1,7 @@
 defmodule Lector.Router do
-  require EEx
   use Plug.Router
+
+  @template_dir "lib/templates"
 
   plug :match
   plug :dispatch
@@ -10,14 +11,19 @@ defmodule Lector.Router do
   end
 
   get "/" do
-    compiled = EEx.compile_file('lib/templates/home.eex')
-    {home, _bindings} = Code.eval_quoted(compiled, a: "One", b: "Two")
-    conn
-    |> Plug.Conn.put_resp_header("content-type", "text/html")
-    |> send_resp(200, home)
+    render(conn, "home.eex", [a: "You", b: "Me"])
   end
 
   match _ do
     send_resp(conn, 404, "not found")
+  end
+
+  defp render(%{status: status} = conn, template, assigns \\ []) do
+    body = 
+      @template_dir
+      |> Path.join(template)
+      |> EEx.eval_file(assigns)
+
+    send_resp(conn, (status || 200), body)
   end
 end
