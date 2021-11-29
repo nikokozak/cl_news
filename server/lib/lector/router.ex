@@ -1,4 +1,5 @@
 defmodule Lector.Router do
+  require EEx
   use Plug.Router
 
   plug :match
@@ -9,7 +10,11 @@ defmodule Lector.Router do
   end
 
   get "/" do
-    send_resp(conn, 200, "Home")
+    compiled = EEx.compile_file('lib/templates/home.eex')
+    {home, _bindings} = Code.eval_quoted(compiled, a: "One", b: "Two")
+    conn
+    |> Plug.Conn.put_resp_header("content-type", "text/html")
+    |> send_resp(200, home)
   end
 
   match _ do

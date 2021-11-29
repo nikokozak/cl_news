@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A test site</title>
+  </head>
+  <body>
+    <h1>Hello!</h1>
+    <p><%= a %></p>
+    <p><%= b %></p>
+  </body>
+</html>
