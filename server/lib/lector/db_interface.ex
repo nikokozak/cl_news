@@ -14,7 +14,10 @@ defmodule Lector.DBInterface do
     {:ok, pid} = Postgrex.start_link(hostname: @hostname, username: @username, database: @database)
 
     %{columns: columns,
-      rows: rows } = Postgrex.query!(pid, "SELECT * FROM noticias", [])
+      rows: rows } = Postgrex.query!(pid, "SELECT m.nombre as medio, s.seccion, noticia_id, titular, bajada, autor, imagen_url, cuerpo, fecha 
+        FROM noticias 
+        JOIN medios as m USING (medio_id) 
+        JOIN secciones as s USING (seccion_id)", [])
 
     IO.inspect(Enum.map(rows, fn row -> row_reducer(row, columns) end))
   end

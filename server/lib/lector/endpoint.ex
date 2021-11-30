@@ -6,8 +6,10 @@ defmodule Lector.Endpoint do
     pass: ['*/*']
 
   plug Plug.Static,
-    at: "/",
-    from: {:lector, "lib/assets"}
+    at: "/assets", 
+    from: :lector
+
+  IO.inspect(Path.expand('.'))
 
   plug Lector.Router
 end

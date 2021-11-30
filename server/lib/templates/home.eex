@@ -3,12 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <title>A test site</title>
-    <link rel="stylesheet" href="main.css" /> 
+    <link rel="stylesheet" href="assets/main.css" /> 
   </head>
   <body>
     <h1>Hello!</h1>
-    <%= for noticia <- noticias do %>
-      <h1><%= Map.get(noticia, "titular") %></h1>
+    <div id="noticia-list">
+      <%= for noticia <- noticias do %>
+        <div class="noticia-item">
+          <a href="#"><h1><%= Map.get(noticia, "titular") %></h1></a>
+        </div>
     <% end %>
+    </div>
   </body>
 </html>
