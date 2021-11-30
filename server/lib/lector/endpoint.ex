@@ -5,5 +5,9 @@ defmodule Lector.Endpoint do
     parsers: [:urlencoded],
     pass: ['*/*']
 
+  plug Plug.Static,
+    at: "/",
+    from: {:lector, "lib/assets"}
+
   plug Lector.Router
 end

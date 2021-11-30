@@ -48,8 +48,7 @@ class DBPipeline:
         insert_data = [
                 item['medio'], item['seccion'], item['autor'], item['fecha'],
                 item['titular'], item['bajada'], item['imagen_url'], item['cuerpo'],
-                item['url'] 
-                ]
+                item['url'] ]
 
         try:
             self.cur.execute(insert_sql, insert_data)

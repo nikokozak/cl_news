@@ -8,6 +8,8 @@ GRANT CONNECT ON DATABASE :lectordatabase TO :lectoruser;
 
 \c :lectordatabase
 
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
 create table medios (
     medio_id bigserial PRIMARY KEY,
     nombre varchar(50) NOT NULL
@@ -21,6 +23,7 @@ create table secciones (
 grant insert, update, delete, select on table secciones to :lectoruser;
 
 create table noticias (
+    noticia_id UUID NOT NULL DEFAULT uuid_generate_v1mc(),
     medio_id bigint REFERENCES medios (medio_id),
     seccion_id bigint REFERENCES secciones (seccion_id),
     autor varchar(50),
@@ -31,7 +34,8 @@ create table noticias (
     cuerpo text[] NOT NULL, -- Text is an array of "paragraphs" to aid in formatting.
     url text,
 
-    PRIMARY KEY (url),
+    PRIMARY KEY (noticia_id),
+    UNIQUE (url),
     UNIQUE (titular, medio_id)
 );
 grant insert, update, delete, select on table noticias to :lectoruser;

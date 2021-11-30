@@ -16,7 +16,7 @@ defmodule Lector.DBInterface do
     %{columns: columns,
       rows: rows } = Postgrex.query!(pid, "SELECT * FROM noticias", [])
 
-    Enum.map(rows, fn row -> row_reducer(row, columns) end)
+    IO.inspect(Enum.map(rows, fn row -> row_reducer(row, columns) end))
   end
 
   defp row_reducer(row, cols) do
