@@ -41,7 +41,7 @@ biobio = {
             'bajada': '//div[@class="post-excerpt" or @class="extracto-nota"]/p//text()',
             'autor': '//a[@class="autor-link"]/text()',
             'image_url': '//meta[@property="og:image"]/@content',
-            'cuerpo': '//div[contains(@class, "contenido-nota") or contains(@class, "nota-content")]/*[self::p or self::h1]//text()',
+            'cuerpo': '//div[contains(@class, "contenido-nota") or contains(@class, "nota-content")]/*[self::p or self::h1 or self::h2]',
             'fecha': '//meta[@property="article:published_time"]/@content'
            }
         }

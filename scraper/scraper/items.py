@@ -1,13 +1,13 @@
 import scrapy
 from scrapy.loader import ItemLoader
-from itemloaders.processors import TakeFirst, Identity
+from itemloaders.processors import TakeFirst, Identity, Join
 
 class NoticiaLoader(ItemLoader):
 
     #TODO define conversion here instead of in pipeline
     default_output_processor = TakeFirst()
 
-    bajada_out = Identity()
+    bajada_out = Join()
     cuerpo_out = Identity()
 
 class NoticiaItem(scrapy.Item):
