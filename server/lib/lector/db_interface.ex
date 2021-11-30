@@ -11,15 +11,36 @@ defmodule Lector.DBInterface do
   Maps.
   """
   def get_all do
-    {:ok, pid} = Postgrex.start_link(hostname: @hostname, username: @username, database: @database)
+    {:ok, pid} = connect()
 
-    %{columns: columns,
-      rows: rows } = Postgrex.query!(pid, "SELECT m.nombre as medio, s.seccion, noticia_id, titular, bajada, autor, imagen_url, cuerpo, fecha 
+    query = "SELECT m.nombre as medio, s.seccion, noticia_id, titular, bajada, autor, imagen_url, cuerpo, fecha 
         FROM noticias 
         JOIN medios as m USING (medio_id) 
-        JOIN secciones as s USING (seccion_id)", [])
+        JOIN secciones as s USING (seccion_id)"
+
+    %{columns: columns,
+      rows: rows } = Postgrex.query!(pid, query, [])
 
     IO.inspect(Enum.map(rows, fn row -> row_reducer(row, columns) end))
+  end
+
+  def get_noticia(id) do
+    {:ok, pid} = connect()
+
+    query = "SELECT m.nombre as medio, s.seccion, noticia_id, titular, bajada, autor, imagen_url, cuerpo, fecha
+    FROM noticias
+    JOIN medios as m USING (medio_id)
+    JOIN secciones as s USING (seccion_id)
+    WHERE noticia_id = $1"
+
+    %{columns: columns,
+      rows: rows} = Postgrex.query!(pid, query, [id])
+
+    IO.inspect(Enum.map(rows, fn row -> row_reducer(row, columns) end))
+  end
+
+  defp connect do
+    Postgrex.start_link(hostname: @hostname, username: @username, database: @database)
   end
 
   defp row_reducer(row, cols) do

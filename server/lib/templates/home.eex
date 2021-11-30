@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width">
     <meta charset="utf-8" />
     <title>A test site</title>
     <link rel="stylesheet" href="assets/main.css" /> 
   </head>
   <body>
-    <h1>Hello!</h1>
+    <header>
+      <h1 id="header-title">Lector Chile</h1>
+      <button id="header-secciones-button">Secciones <span class="dropdown-decorator">&#9660;</span></button>
+    </header>
+    <h2 id="noticia-list-title">Lo Último</h2>
     <div id="noticia-list">
       <%= for noticia <- noticias do %>
         <div class="noticia-item">
-          <a href="#"><h1><%= Map.get(noticia, "titular") %></h1></a>
+          <div class="noticia-details">
+            <p class="noticia-seccion <%= String.downcase(Map.get(noticia, "seccion")) %>"><%= Map.get(noticia, "seccion") %></p>
+            <p class="noticia-medio"><%= Map.get(noticia, "medio") %></p>
+          </div>
+          <a href="/noticia/<%= Map.get(noticia, "noticia_id") |> Base.url_encode64 %>"><h1><%= Map.get(noticia, "titular") %></h1></a>
         </div>
     <% end %>
     </div>

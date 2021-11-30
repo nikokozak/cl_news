@@ -11,6 +11,12 @@ defmodule Lector.Router do
     send_resp(conn, 200, "A test")
   end
 
+  get "/noticia/:id" do
+    {:ok, id} = Base.url_decode64(id)
+    [noticia] = Lector.DBInterface.get_noticia(id)
+    render(conn, "noticia.eex", [noticia: noticia])
+  end
+
   get "/" do
     results = Lector.DBInterface.get_all
     render(conn, "home.eex", [noticias: results])

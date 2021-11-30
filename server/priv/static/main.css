@@ -1,6 +1,8 @@
 * {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -11,11 +13,70 @@ h1 {
     font-size: 1rem;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+#header-title {
+    font-size: 1.2rem;
+}
+
+#header-secciones-button {
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+    padding: 0 0.5rem 0 0.5rem;
+    font-size: 0.8rem;
+    background-color: transparent;
+}
+
+.dropdown-decorator {
+    font-size: 0.4rem;
+    position: relative;
+    top: -0.1rem;
+}
+
+#noticia-list-title {
+    margin-bottom: 1rem;
+}
+
 .noticia-item {
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
+}
+
+.noticia-details p {
+    font-size: 0.7rem;
 }
 
 .noticia-item a {
     text-decoration: none;
     color: inherit;
+}
+
+.noticia-autor {
+    font-size: 0.7rem;
+}
+
+.noticia-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.noticia-seccion.nacional {
+    color: blue;
+}
+
+.noticia-seccion.política {
+    color: red;
+}
+
+.noticia-seccion.internacional {
+    color: green;
+}
+
+.noticia-seccion.economía {
+    color: orange;
 }
