@@ -1,6 +1,7 @@
 import psycopg2
 import logging
 import datetime
+import lxml.html.clean as clean
 from scrapy.exceptions import DropItem
 
 MEDIOS = { 
@@ -23,10 +24,20 @@ class DBTranslatorPipeline:
     Handles normalizing and translating values
     for our DB.
     '''
+
+    # Setup for cleansing html tags of attrs we don't want.
+    safe_attrs = set(['src', 'href', 'alt'])
+    kill_tags = ['object', 'iframe']
+    cleaner = clean.Cleaner(safe_attrs_only=True, safe_attrs=safe_attrs, kill_tags=kill_tags)
+
     def process_item(self, item, spider):
         # Set the medio_id
         item['medio'] = MEDIOS[item['medio']]
         item['seccion'] = SECCIONES[item['seccion']]
+
+        # Clean all tags in cuerpo.
+        item['cuerpo'] = list(map(self.cleaner.clean_html, item['cuerpo']))
+
         return item
 
 class DBPipeline:
