@@ -4,23 +4,6 @@
 
 \c :lectordatabase :lectoruser
 
-insert into medios (nombre)
-values
-    ('Radio Bío Bío'),
-    ('El Mercurio Online'),
-    ('La Tercera'),
-    ('CIPER Chile');
-
-insert into secciones (seccion)
-values
-    ('Nacional'),
-    ('Política'),
-    ('Internacional'),
-    ('Economía'),
-    ('Educación'),
-    ('Opinión'),
-    ('Tendencias');
-
 insert into noticias 
 (medio_id, seccion_id, autor, fecha, titular, bajada, imagen_url, cuerpo, url)
 values

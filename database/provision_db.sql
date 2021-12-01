@@ -8,7 +8,9 @@ GRANT CONNECT ON DATABASE :lectordatabase TO :lectoruser;
 
 \c :lectordatabase
 
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp"; -- for generating noticia UUID's
+
+-- CREATE TABLES
 
 create table medios (
     medio_id bigserial PRIMARY KEY,
@@ -25,8 +27,8 @@ grant insert, update, delete, select on table secciones to :lectoruser;
 
 create table noticias (
     noticia_id UUID NOT NULL DEFAULT uuid_generate_v1mc(),
-    medio_id bigint REFERENCES medios (medio_id),
-    seccion_id bigint REFERENCES secciones (seccion_id),
+    medio_id bigint NOT NULL REFERENCES medios (medio_id),
+    seccion_id bigint NOT NULL REFERENCES secciones (seccion_id),
     autor varchar(50),
     fecha timestamptz,
     titular varchar(200) NOT NULL,
@@ -42,3 +44,22 @@ create table noticias (
 grant insert, update, delete, select on table noticias to :lectoruser;
 
 grant usage, select on all sequences in schema public to :lectoruser;
+
+-- POPULATE VALUES
+
+insert into medios (nombre, nombre_corto)
+values
+    ('Radio Bío Bío', 'biobio'),
+    ('El Mercurio Online', 'emol'),
+    ('La Tercera', 'tercera'),
+    ('CIPER Chile', 'ciper');
+
+insert into secciones (seccion)
+values
+    ('Nacional'),
+    ('Política'),
+    ('Internacional'),
+    ('Economía'),
+    ('Educación'),
+    ('Opinión'),
+    ('Tendencias');
