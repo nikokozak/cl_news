@@ -4,7 +4,7 @@ import datetime
 import lxml.html.clean as clean
 from scrapy.exceptions import DropItem
 
-class DBTranslatorPipeline:
+class SanitizePipeline:
     '''
     Handles normalizing and translating values
     for our DB.

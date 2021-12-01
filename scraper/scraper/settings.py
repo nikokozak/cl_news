@@ -67,7 +67,7 @@ COOKIES_ENABLED = False
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'scraper.pipelines.DefaultsPipeline': 300,
-    'scraper.pipelines.DBTranslatorPipeline': 400,
+    'scraper.pipelines.SanitizePipeline': 400,
     'scraper.pipelines.DBPipeline': 500,
 }
 
