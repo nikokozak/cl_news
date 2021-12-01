@@ -11,9 +11,9 @@
       <a href="/"><h1 id="header-title">Lector Chile</h1></a>
       <button id="header-secciones-button">Secciones <span class="dropdown-decorator">&#9660;</span></button>
     </header>
-    <h2 id="noticia-list-title"><%= seccion %></h2>
+    <h2 id="noticia-list-title"><%= @seccion %></h2>
     <div id="noticia-list">
-      <%= for noticia <- noticias do %>
+      <%= for noticia <- @noticias do %>
         <div class="noticia-item">
           <div class="noticia-details">
             <p class="noticia-seccion <%= String.downcase(Map.get(noticia, "seccion")) %>"><%= Map.get(noticia, "seccion") %></p>
@@ -23,20 +23,6 @@
         </div>
     <% end %>
     </div>
-    <%= if length(noticias) > 0 do %>
-      <div id="noticia-pagination">
-        <% full_count = Map.get(Enum.at(noticias, 0), "full_count", 0) %>
-        <% step = round(full_count / 5) %>
-        <%= for n <- 1..step do %>
-          <div class="noticia-pagination-number">
-            <%= if n == 1 do %>
-              <a href="/" class="<%= if page == 1, do: "active", else: "inactive" %>"><%= n %></a>
-            <% else %>
-              <a href="/ultimo/<%= n %>" class="<%= if page == n, do: "active", else: "inactive" %>"><%= n %></a>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+    <%= pagination(@noticias, "full_count", @page) %>
   </body>
 </html>

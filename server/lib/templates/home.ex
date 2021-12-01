@@ -1,16 +1,14 @@
 defmodule Lector.Templates.Home do
+  require EEx
+  import Lector.Templates.Component, only: [pagination: 3]
 
   @template_dir "lib/templates"
 
-  def render(%{status: status} = conn, template, assigns \\ []) do
-    quoted = 
-      @template_dir
-      |> Path.join(template)
-      |> EEx.compile_file
+  EEx.function_from_file(:def, :render_template, Path.join(@template_dir, 'home.html.eex'), [:assigns])
 
-    {result, _bindings} = Code.eval_quoted(quoted, assigns)
-
+  def render(%{status: status} = conn, assigns \\ []) do
+    result = render_template(assigns)
     Plug.Conn.send_resp(conn, (status || 200), result)
-  end
+ end
 
 end

@@ -20,25 +20,25 @@ defmodule Lector.Router do
   get "/ultimo/:page" do
     page_int = String.to_integer(page)
     results = Lector.DBInterface.get_all((page_int - 1) * 5, 5)
-    Home.render(conn, "home.html.eex", noticias: results, seccion: "Lo Último", page: page_int)
+    Home.render(conn, noticias: results, seccion: "Lo Último", page: page_int)
   end
 
   get "/:seccion/:page" do
     page_int = String.to_integer(page)
     results = Lector.DBInterface.get_seccion(seccion, (page_int - 1) * 5, 5)
     #render(conn, "home.html.eex", [noticias: results, seccion: seccion])
-    Home.render(conn, "home.html.eex", noticias: results, seccion: seccion, page: page_int)
+    Home.render(conn, noticias: results, seccion: seccion, page: page_int)
   end
 
   get "/:seccion" do
     results = Lector.DBInterface.get_seccion(seccion, 0, 5)
     #render(conn, "home.html.eex", [noticias: results, seccion: seccion])
-    Home.render(conn, "home.html.eex", noticias: results, seccion: seccion, page: 1)
+    Home.render(conn, noticias: results, seccion: seccion, page: 1)
   end
 
   get "/" do
     results = Lector.DBInterface.get_all(0, 5) 
-    Home.render(conn, "home.html.eex", noticias: results, seccion: "Lo Último", page: 1)
+    Home.render(conn, noticias: results, seccion: "Lo Último", page: 1)
   end
 
   match _ do

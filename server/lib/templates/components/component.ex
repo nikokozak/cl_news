@@ -1,0 +1,9 @@
+defmodule Lector.Templates.Component do
+  require EEx
+
+  @component_dir 'lib/templates/components'
+
+  # Compiled function for pagination
+  EEx.function_from_file(:def, :pagination, Path.join(@component_dir, "pagination.html.eex"), [:items, :count_key, :page])
+
+end
