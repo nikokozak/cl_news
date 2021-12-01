@@ -13,7 +13,7 @@ defmodule Lector.DBInterface do
   def get_all do
     {:ok, pid} = connect()
 
-    query = "SELECT m.nombre as medio, s.seccion, noticia_id, titular, bajada, autor, imagen_url, cuerpo, fecha 
+    query = "SELECT m.nombre as medio, s.seccion, noticia_id, titular, bajada, autor, imagen_url, cuerpo, to_char(fecha, 'DD-MM-YYYY') as \"fecha\"
         FROM noticias 
         JOIN medios as m USING (medio_id) 
         JOIN secciones as s USING (seccion_id)"
@@ -27,7 +27,7 @@ defmodule Lector.DBInterface do
   def get_noticia(id) do
     {:ok, pid} = connect()
 
-    query = "SELECT m.nombre as medio, s.seccion, noticia_id, titular, bajada, autor, imagen_url, cuerpo, fecha
+    query = "SELECT m.nombre as medio, s.seccion, noticia_id, titular, bajada, autor, imagen_url, cuerpo, to_char(fecha, 'DD-MM-YYYY') as \"fecha\"
     FROM noticias
     JOIN medios as m USING (medio_id)
     JOIN secciones as s USING (seccion_id)
