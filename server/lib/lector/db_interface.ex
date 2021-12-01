@@ -10,17 +10,30 @@ defmodule Lector.DBInterface do
   Maps column names onto each row value, returning an array of
   Maps.
   """
-  def get_all do
+  def get_all(offset \\ 0, limit \\ false) do
     {:ok, pid} = connect()
 
-    query = "SELECT m.nombre as medio, s.seccion, noticia_id, titular, bajada, autor, imagen_url, cuerpo, to_char(fecha, 'DD-MM-YYYY') as \"fecha\"
+    query = "SELECT m.nombre as medio, s.seccion, noticia_id, titular, bajada, autor, imagen_url, cuerpo, to_char(fecha, 'DD-MM-YYYY') as \"fecha\", count(*) over() as full_count
         FROM noticias 
         JOIN medios as m USING (medio_id) 
         JOIN secciones as s USING (seccion_id)
-        ORDER BY fecha DESC"
+        ORDER BY fecha DESC
+        OFFSET $1"
+
+    query = if limit != false do
+      query <> " LIMIT $2"
+    else
+      query
+    end
+
+    params = if limit != false do
+      [offset, limit]
+    else
+      [offset]
+    end
 
     %{columns: columns,
-      rows: rows } = Postgrex.query!(pid, query, [])
+      rows: rows } = Postgrex.query!(pid, query, params)
 
     IO.inspect(Enum.map(rows, fn row -> row_reducer(row, columns) end))
   end

@@ -20,10 +20,10 @@
       <p id="articulo-autor">Por <strong><%= Map.get(noticia, "autor") %></strong></p>
       <p id="articulo-fecha"><%= Map.get(noticia, "fecha") %></p>
     </div>
-    <%= if Map.get(noticia, "imagen_url", False) do %>
+    <%= if Map.get(noticia, "imagen_url", false) do %>
       <img id="noticia-imagen" src="<%= Map.get(noticia, "imagen_url") %>" />
     <% end %>
-    <%= if Map.get(noticia, "bajada", False) do %>
+    <%= if Map.get(noticia, "bajada", false) do %>
       <div id="noticia-bajada">
         <p><%= Map.get(noticia, "bajada") %></p>
       </div>

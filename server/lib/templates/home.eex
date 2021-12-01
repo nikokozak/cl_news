@@ -23,5 +23,16 @@
         </div>
     <% end %>
     </div>
+    <%= if length(noticias) > 0 do %>
+      <div id="noticia-pagination">
+        <% full_count = Map.get(Enum.at(noticias, 0), "full_count", 0) %>
+        <% step = round(full_count / 5) %>
+        <%= for n <- 1..step do %>
+          <div class="noticia-pagination-number">
+            <%= n %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   </body>
 </html>
