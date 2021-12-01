@@ -81,6 +81,18 @@ header {
     color: orange;
 }
 
+/** --------------------------- **/
+/** ------- PAGINATION -------- **/
+/** --------------------------- **/
+
+#noticia-pagination {
+    display: flex;
+}
+
+.noticia-pagination-number:not(:first-child) {
+    margin-left: 1rem; 
+}
+
 /** -------------------------- **/
 /** ------- ARTICULOS -------- **/
 /** -------------------------- **/

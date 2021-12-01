@@ -29,7 +29,11 @@
         <% step = round(full_count / 5) %>
         <%= for n <- 1..step do %>
           <div class="noticia-pagination-number">
-            <%= n %>
+            <%= if n == 1 do %>
+              <a href="/"><%= n %></a>
+            <% else %>
+              <a href="/ultimo/<%= n %>"><%= n %></a>
+            <% end %>
           </div>
         <% end %>
       </div>
