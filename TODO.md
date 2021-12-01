@@ -1,5 +1,6 @@
-1. Integrate with Postgres
-2. Refactor into lighter app (no Scrapy structure)
-3. Scraponic structures (scrapy.Item, etc.)
-4. CLI
-5. Logging
+1. Finalize pagination
+2. Pre-rendered templates (with context for functions)
+2. - Nested templates
+3. Styling
+4. Good logging
+5. Python CLI

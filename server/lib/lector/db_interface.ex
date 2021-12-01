@@ -26,7 +26,7 @@ defmodule Lector.DBInterface do
     %{columns: columns,
       rows: rows } = Postgrex.query!(pid, query, params)
 
-    IO.inspect(Enum.map(rows, fn row -> row_reducer(row, columns) end))
+    format_rows(rows, columns)
   end
 
   @doc """
@@ -43,10 +43,12 @@ defmodule Lector.DBInterface do
         WHERE s.seccion = $1
         ORDER BY fecha DESC"
 
-    %{columns: columns,
-      rows: rows } = Postgrex.query!(pid, query, [seccion])
+    params = [seccion]
 
-    IO.inspect(Enum.map(rows, fn row -> row_reducer(row, columns) end))
+    %{columns: columns,
+      rows: rows } = Postgrex.query!(pid, query, params)
+
+    format_rows(rows, columns)
   end
 
   def get_noticia(id) do
@@ -58,15 +60,25 @@ defmodule Lector.DBInterface do
     JOIN secciones as s USING (seccion_id)
     WHERE noticia_id = $1"
 
-    %{columns: columns,
-      rows: rows} = Postgrex.query!(pid, query, [id])
+    params = [id]
 
-    IO.inspect(Enum.map(rows, fn row -> row_reducer(row, columns) end))
+    %{columns: columns,
+      rows: rows} = Postgrex.query!(pid, query, params)
+
+    format_rows(rows, columns)
   end
 
   defp connect do
     Postgrex.start_link(hostname: @hostname, username: @username, database: @database)
   end
+
+  defp format_rows(rows, columns, inspect \\ false) do
+    Enum.map(rows, fn row -> row_reducer(row, columns) end)
+    |> inspect_format(inspect)
+  end
+
+  defp inspect_format(mapped_rows, false), do: mapped_rows
+  defp inspect_format(mapped_rows, _), do: IO.inspect(mapped_rows)
 
   defp row_reducer(row, cols) do
     row

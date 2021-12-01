@@ -30,9 +30,9 @@
         <%= for n <- 1..step do %>
           <div class="noticia-pagination-number">
             <%= if n == 1 do %>
-              <a href="/"><%= n %></a>
+              <a href="/" class="<%= if page == 1, do: "active", else: "inactive" %>"><%= n %></a>
             <% else %>
-              <a href="/ultimo/<%= n %>"><%= n %></a>
+              <a href="/ultimo/<%= n %>" class="<%= if page == n, do: "active", else: "inactive" %>"><%= n %></a>
             <% end %>
           </div>
         <% end %>
