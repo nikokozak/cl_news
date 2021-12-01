@@ -12,24 +12,24 @@
       <button id="header-secciones-button">Secciones <span class="dropdown-decorator">&#9660;</span></button>
     </header>
     <div id="articulo-header">
-      <h3 id="articulo-medio"><%= Map.get(noticia, "medio") %></h3>
-      <p id="articulo-seccion"><%= Map.get(noticia, "seccion") %></p>
+      <h3 id="articulo-medio"><%= Map.get(@noticia, "medio") %></h3>
+      <p id="articulo-seccion"><%= Map.get(@noticia, "seccion") %></p>
     </div>
-    <h2 id="noticia-titular"><%= Map.get(noticia, "titular") %></h2>
+    <h2 id="noticia-titular"><%= Map.get(@noticia, "titular") %></h2>
     <div id="articulo-details">
-      <p id="articulo-autor">Por <strong><%= Map.get(noticia, "autor") %></strong></p>
-      <p id="articulo-fecha"><%= Map.get(noticia, "fecha") %></p>
+      <p id="articulo-autor">Por <strong><%= Map.get(@noticia, "autor") %></strong></p>
+      <p id="articulo-fecha"><%= Map.get(@noticia, "fecha") %></p>
     </div>
-    <%= if Map.get(noticia, "imagen_url", false) do %>
-      <img id="noticia-imagen" src="<%= Map.get(noticia, "imagen_url") %>" />
+    <%= if Map.get(@noticia, "imagen_url", false) do %>
+      <img id="noticia-imagen" src="<%= Map.get(@noticia, "imagen_url") %>" />
     <% end %>
-    <%= if Map.get(noticia, "bajada", false) do %>
+    <%= if Map.get(@noticia, "bajada", false) do %>
       <div id="noticia-bajada">
-        <p><%= Map.get(noticia, "bajada") %></p>
+        <p><%= Map.get(@noticia, "bajada") %></p>
       </div>
     <% end %>
     <div id="noticia-cuerpo">
-      <%= for item <- Map.get(noticia, "cuerpo") do %>
+      <%= for item <- Map.get(@noticia, "cuerpo") do %>
         <%= item %>
       <% end %>
     </div>

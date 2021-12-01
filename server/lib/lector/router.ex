@@ -14,7 +14,7 @@ defmodule Lector.Router do
   get "/noticia/:id" do
     {:ok, id} = Base.url_decode64(id)
     [noticia] = Lector.DBInterface.get_noticia(id)
-    Noticia.render(conn, "noticia.html.eex", noticia: noticia)
+    Noticia.render(conn, noticia: noticia)
   end
 
   get "/ultimo/:page" do
