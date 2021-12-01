@@ -1,7 +1,7 @@
 defmodule Lector.Router do
   use Plug.Router
-
-  @template_dir "lib/templates"
+  alias Lector.Templates.Home
+  alias Lector.Templates.Noticia
 
   plug :match
   plug :dispatch
@@ -14,35 +14,44 @@ defmodule Lector.Router do
   get "/noticia/:id" do
     {:ok, id} = Base.url_decode64(id)
     [noticia] = Lector.DBInterface.get_noticia(id)
-    render(conn, "noticia.eex", [noticia: noticia])
-  end
-
-  get "/:seccion" do
-    results = Lector.DBInterface.get_seccion(seccion)
-    render(conn, "home.eex", [noticias: results, seccion: seccion])
+    Noticia.render(conn, "noticia.html.eex", noticia: noticia)
   end
 
   get "/ultimo/:page" do
     page_int = String.to_integer(page)
     results = Lector.DBInterface.get_all((page_int - 1) * 5, 5)
-    render(conn, "home.eex", [noticias: results, seccion: "Lo Último", page: page_int])
+    Home.render(conn, "home.html.eex", noticias: results, seccion: "Lo Último", page: page_int)
+  end
+
+  get "/:seccion/:page" do
+    page_int = String.to_integer(page)
+    results = Lector.DBInterface.get_seccion(seccion, (page_int - 1) * 5, 5)
+    #render(conn, "home.html.eex", [noticias: results, seccion: seccion])
+    Home.render(conn, "home.html.eex", noticias: results, seccion: seccion, page: page_int)
+  end
+
+  get "/:seccion" do
+    results = Lector.DBInterface.get_seccion(seccion, 0, 5)
+    #render(conn, "home.html.eex", [noticias: results, seccion: seccion])
+    Home.render(conn, "home.html.eex", noticias: results, seccion: seccion, page: 1)
   end
 
   get "/" do
     results = Lector.DBInterface.get_all(0, 5) 
-    render(conn, "home.eex", [noticias: results, seccion: "Lo Último", page: 1])
+    Home.render(conn, "home.html.eex", noticias: results, seccion: "Lo Último", page: 1)
   end
 
   match _ do
     send_resp(conn, 404, "not found")
   end
 
-  defp render(%{status: status} = conn, template, assigns \\ []) do
-    body = 
-      @template_dir
-      |> Path.join(template)
-      |> EEx.eval_file(assigns)
-
-    send_resp(conn, (status || 200), body)
-  end
+# Old render function, keeping around for reference (not compiled!)
+# defp render(%{status: status} = conn, template, assigns \\ []) do
+#   body = 
+#     @template_dir
+#     |> Path.join(template)
+#     |> EEx.eval_file(assigns)
+#
+#   send_resp(conn, (status || 200), body)
+# end
 end

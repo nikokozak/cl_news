@@ -33,17 +33,19 @@ defmodule Lector.DBInterface do
   Retrieves all entries from the 'noticias' table matching a given 'seccion'.
   Maps column names onto each row value, returning an array of Maps.
   """
-  def get_seccion(seccion) do
+  def get_seccion(seccion, offset \\ 0, limit \\ false) do
     {:ok, pid} = connect()
 
-    query = "SELECT m.nombre as medio, s.seccion, noticia_id, titular, bajada, autor, imagen_url, cuerpo, to_char(fecha, 'DD-MM-YYYY') as fecha
+    query = "SELECT m.nombre as medio, s.seccion, noticia_id, titular, bajada, autor, imagen_url, cuerpo, fecha, to_char(fecha, 'DD-MM-YYYY') as fecha_short, count(*) over() as full_count 
         FROM noticias
         JOIN medios as m USING (medio_id)
         JOIN secciones as s USING (seccion_id)
         WHERE s.seccion = $1
-        ORDER BY fecha DESC"
+        ORDER BY fecha DESC
+        OFFSET $2"
 
-    params = [seccion]
+    query = if limit != false, do: query <> " LIMIT $3", else: query
+    params = if limit != false, do: [seccion, offset, limit], else: [seccion, offset]
 
     %{columns: columns,
       rows: rows } = Postgrex.query!(pid, query, params)
