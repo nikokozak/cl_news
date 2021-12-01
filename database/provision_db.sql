@@ -12,7 +12,8 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 create table medios (
     medio_id bigserial PRIMARY KEY,
-    nombre varchar(50) NOT NULL
+    nombre varchar(50) NOT NULL,
+    alias varchar(50) NOT NULL
 );
 grant insert, update, delete, select on table medios to :lectoruser;
 

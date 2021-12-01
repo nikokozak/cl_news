@@ -4,41 +4,22 @@ import datetime
 import lxml.html.clean as clean
 from scrapy.exceptions import DropItem
 
-MEDIOS = { 
-        'biobio': 1,
-        'emol': 2,
-        'tercera': 3, }
-
-SECCIONES = {
-        'Nacional': 1,
-        'Política': 2,
-        'Internacional': 3,
-        'Economía': 4,
-        'Educación': 5,
-        'Opinión': 6,
-        'Tendencias': 7
-        }
-
 class DBTranslatorPipeline:
     '''
     Handles normalizing and translating values
     for our DB.
     '''
-
     # Setup for cleansing html tags of attrs we don't want.
     safe_attrs = set(['src', 'href', 'alt'])
     kill_tags = ['object', 'iframe']
     cleaner = clean.Cleaner(safe_attrs_only=True, safe_attrs=safe_attrs, kill_tags=kill_tags)
 
     def process_item(self, item, spider):
-        # Set the medio_id
-        item['medio'] = MEDIOS[item['medio']]
-        item['seccion'] = SECCIONES[item['seccion']]
-
         # Clean all tags in cuerpo.
         item['cuerpo'] = list(map(self.cleaner.clean_html, item['cuerpo']))
 
         return item
+
 
 class DBPipeline:
     '''
@@ -50,11 +31,12 @@ class DBPipeline:
         self.cur = self.conn.cursor()
 
     def process_item(self, item, spider):
-        #TODO: Implement error catching here, unique keys and such.
         insert_sql = ("INSERT INTO noticias"
         "(medio_id, seccion_id, autor, fecha, titular, bajada, imagen_url, cuerpo, url)"
         "VALUES"
-        "(%s, %s, %s, %s, %s, %s, %s, %s, %s)")
+        "((select medio_id from medios where nombre_corto = %s),"
+          "(select seccion_id from secciones where seccion = %s),"
+          "%s, %s, %s, %s, %s, %s, %s)")
 
         insert_data = [
                 item['medio'], item['seccion'], item['autor'], item['fecha'],
@@ -76,6 +58,7 @@ class DBPipeline:
         logging.log(logging.INFO, self.conn.notices)
         self.conn.close()
 
+
 class ScreenerPipeline:
     '''
     Screen items for unacceptable values.
@@ -84,6 +67,7 @@ class ScreenerPipeline:
         if item['titular'] == None: raise DropItem
         if item['cuerpo'] == None or item['cuerpo'] == []: raise DropItem
         if item['url'] == None: raise DropItem
+
 
 class DefaultsPipeline:
     '''
