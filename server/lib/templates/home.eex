@@ -8,10 +8,10 @@
   </head>
   <body>
     <header>
-      <h1 id="header-title">Lector Chile</h1>
+      <a href="/"><h1 id="header-title">Lector Chile</h1></a>
       <button id="header-secciones-button">Secciones <span class="dropdown-decorator">&#9660;</span></button>
     </header>
-    <h2 id="noticia-list-title">Lo Último</h2>
+    <h2 id="noticia-list-title"><%= seccion %></h2>
     <div id="noticia-list">
       <%= for noticia <- noticias do %>
         <div class="noticia-item">

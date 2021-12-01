@@ -19,12 +19,12 @@ defmodule Lector.Router do
 
   get "/:seccion" do
     results = Lector.DBInterface.get_seccion(seccion)
-    render(conn, "home.eex", [noticias: results])
+    render(conn, "home.eex", [noticias: results, seccion: seccion])
   end
 
   get "/" do
     results = Lector.DBInterface.get_all
-    render(conn, "home.eex", [noticias: results])
+    render(conn, "home.eex", [noticias: results, seccion: "Lo Último"])
   end
 
   match _ do
