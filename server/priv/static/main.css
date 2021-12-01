@@ -80,3 +80,49 @@ header {
 .noticia-seccion.economía {
     color: orange;
 }
+
+/** -------------------------- **/
+/** ------- ARTICULOS -------- **/
+/** -------------------------- **/
+
+#articulo-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.4rem;
+}
+
+#articulo-header h3, #articulo-header p {
+    font-size: 0.7rem;
+}
+
+#articulo-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.4rem;
+}
+
+#articulo-details p, #articulo-details strong {
+    font-size: 0.7rem;
+}
+
+#noticia-bajada p {
+    margin: 0.7rem 0 0.7rem 0;
+    font-size: 0.9rem;
+}
+
+#noticia-cuerpo p, 
+#noticia-cuerpo h2,
+#noticia-cuerpo h1,
+#noticia-cuerpo strong,
+#noticia-cuerpo a,
+#noticia-cuerpo b {
+    font-size: 0.8rem;
+}
+
+#noticia-cuerpo p {
+    margin-bottom: 0.8rem;
+}
+
+#noticia-cuerpo a {
+    color: darkblue; 
+}

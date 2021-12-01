@@ -11,20 +11,23 @@
       <h1 id="header-title">Lector Chile</h1>
       <button id="header-secciones-button">Secciones <span class="dropdown-decorator">&#9660;</span></button>
     </header>
-    <p id="articulo-medio"><%= Map.get(noticia, "medio") %></p>
+    <div id="articulo-header">
+      <h3 id="articulo-medio"><%= Map.get(noticia, "medio") %></h3>
+      <p id="articulo-seccion"><%= Map.get(noticia, "seccion") %></p>
+    </div>
     <h2 id="noticia-titular"><%= Map.get(noticia, "titular") %></h2>
     <div id="articulo-details">
-      <p id="articulo-autor"><%= Map.get(noticia, "autor") %></p>
+      <p id="articulo-autor">Por <strong><%= Map.get(noticia, "autor") %></strong></p>
       <p id="articulo-fecha"><%= Map.get(noticia, "fecha") %></p>
     </div>
     <%= if Map.get(noticia, "bajada", False) do %>
-      <div id="noicia-bajada">
+      <div id="noticia-bajada">
         <p><%= Map.get(noticia, "bajada") %></p>
       </div>
     <% end %>
     <div id="noticia-cuerpo">
       <%= for item <- Map.get(noticia, "cuerpo") do %>
-        <p><%= item %></p>
+        <%= item %>
       <% end %>
     </div>
   </body>
