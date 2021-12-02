@@ -61,14 +61,21 @@ header {
     text-decoration: none;
 }
 
-#header-secciones-button {
+/** --------------------------- **/
+/** ------- NAVIGATION -------- **/
+/** --------------------------- **/
+
+nav {
+    position: relative;
+}
+
+#nav-button {
     border-radius: 0.5rem;
     border: 1px solid gray;
     padding: 0 0.5rem 0 0.5rem;
     font-size: 0.7rem;
     background-color: transparent;
     height: 2.2em;
-    align: start;
     margin-top: 0.3rem;
 }
 
@@ -76,6 +83,56 @@ header {
     font-size: 0.4rem;
     position: relative;
     top: -0.05rem;
+}
+
+#nav-modal {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    right: 0rem;
+
+    list-style-type: none;
+    background-color: var(--bg-color);
+    padding: 1rem 1rem 0.5rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.4rem #999999; 
+}
+
+#nav-modal.active {
+    display: block;
+}
+
+#nav-modal > li {
+    margin-bottom: .8rem;
+}
+
+#nav-modal > li > a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#nav-modal .nacional {
+    color: var(--nacional-color);
+}
+
+#nav-modal .internacional {
+    color: var(--internacional-color);
+}
+
+#nav-modal .politica {
+    color: var(--politica-color);
+}
+
+#nav-modal .economia {
+    color: var(--economia-color);
+}
+
+#nav-modal .opinion {
+    color: var(--opinion-color);
+}
+
+#nav-modal .tendencias {
+    color: var(--tendencias-color);
 }
 
 #seccion-title {

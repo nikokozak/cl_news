@@ -1,6 +1,6 @@
 defmodule Lector.Templates.Home do
   require EEx
-  import Lector.Templates.Component, only: [pagination: 3]
+  import Lector.Templates.Component, only: [pagination: 3, navigation: 0]
 
   @template_dir "lib/templates"
 

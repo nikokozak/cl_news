@@ -1,0 +1,34 @@
+<% #The navigation component takes a *trigger_id* which activates the menu. %>
+
+<nav>
+  <button id="nav-button">Secciones <span class="dropdown-decorator">&#9660;</span></button>
+
+  <ul id="nav-modal">
+    <li><a class="nacional" href="/nacional">Nacional</a></li>
+    <li><a class="politica" href="/politica">Política</a></li>
+    <li><a class="economia" href="/economia">Economía</a></li>
+    <li><a class="internacional" href="/internacional">Internacional</a></li>
+    <li><a class="opinion" href="/opinion">Opinión</a></li>
+    <li><a class="tendencias" href="/tendencias">Tendencias</a></li>
+  </ul>
+</nav>
+
+<script>
+  let modal_active = false;
+  const trigger = document.getElementById('nav-button');
+  const modal = document.getElementById('nav-modal');
+  window.addEventListener('click', (e) => {
+    console.log(e);
+    if (e.target == trigger) {
+      modal_active = !modal_active;
+      if (modal_active) {
+        modal.classList.add('active');
+      } else {
+        modal.classList.remove('active');
+      }
+    } else {
+      modal_active = false;
+      modal.classList.remove('active');
+    }
+  });
+</script>

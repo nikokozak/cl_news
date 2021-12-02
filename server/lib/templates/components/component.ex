@@ -6,4 +6,7 @@ defmodule Lector.Templates.Component do
   # Compiled function for pagination
   EEx.function_from_file(:def, :pagination, Path.join(@component_dir, "pagination.html.eex"), [:items, :count_key, :page])
 
+  # Compiled function for navigation
+  EEx.function_from_file(:def, :navigation, Path.join(@component_dir, "navigation.html.eex"), [])
+ 
 end

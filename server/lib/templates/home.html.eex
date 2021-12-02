@@ -9,7 +9,7 @@
   <body>
     <header>
       <a id="header-title" href="/">Lector Chile</a>
-      <button id="header-secciones-button">Secciones <span class="dropdown-decorator">&#9660;</span></button>
+      <%= navigation %>
     </header>
     <div id="seccion-title">
       <h2><%= @seccion %></h2>
