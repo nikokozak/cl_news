@@ -17,6 +17,7 @@
     --green-color: #668053;
     --cream-color: #DDBA9E;
     --text-color: #333333;
+    --text-color-lighter: #555555;
     --bg-color: #F5F0EB;
 
     --nacional-color: #03738C;
@@ -92,6 +93,14 @@ header {
 
 .noticia-item {
     margin-bottom: 1.5rem;
+}
+
+.noticia-titular {
+    font-weight: 600;
+}
+
+.noticia-titular:visited {
+    color: var(--text-color-lighter);
 }
 
 .noticia-details p {
@@ -227,6 +236,7 @@ header {
     display: flex;
     justify-content: space-between;
     margin-top: 0.7rem;
+    margin-bottom: 1.4rem;
 }
 
 #articulo-details p, #articulo-details strong {
@@ -235,8 +245,7 @@ header {
 
 #noticia-imagen {
     max-width: 80vw;
-    margin-top: 1.4rem;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.2rem;
 }
 
 #noticia-bajada {

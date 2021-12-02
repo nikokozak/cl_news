@@ -22,7 +22,7 @@
             <p class="noticia-seccion <%= String.downcase(Map.get(noticia, "seccion")) %>"><%= Map.get(noticia, "seccion") %></p>
             <p class="noticia-medio"><%= Map.get(noticia, "medio") %></p>
           </div>
-          <a href="/noticia/<%= Map.get(noticia, "noticia_id") |> Base.url_encode64 %>"><h1><%= Map.get(noticia, "titular") %></h1></a>
+          <a class="noticia-titular" href="/noticia/<%= Map.get(noticia, "noticia_id") |> Base.url_encode64 %>"><%= Map.get(noticia, "titular") %></a>
         </div>
     <% end %>
     </div>
