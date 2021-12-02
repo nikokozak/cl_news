@@ -3,7 +3,7 @@
   <div id="pagination">
     <% full_count = Map.get(Enum.at(items, 0), count_key, 0) %>
     <% step = round(full_count / 5) %>
-    <%= for n <- 1..step do %>
+    <%= for n <- (page - 1)..(page + 1), n > 0 && n <= step do %>
       <div class="pagination-number">
         <%= if n == 1 do %>
           <a href="/" class="<%= if page == 1, do: "active", else: "inactive" %>"><%= n %></a>

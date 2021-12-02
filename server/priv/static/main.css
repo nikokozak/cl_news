@@ -85,21 +85,21 @@ header {
 /** ------- PAGINATION -------- **/
 /** --------------------------- **/
 
-#noticia-pagination {
+#pagination {
     display: flex;
     width: 100%;
     justify-content: center;
 }
 
-.noticia-pagination-number:not(:first-child) {
+.pagination-number:not(:first-child) {
     margin-left: 1rem; 
 }
 
-.noticia-pagination-number a {
+.pagination-number a {
     text-decoration: none;
 }
 
-.noticia-pagination-number a.active {
+.pagination-number a.active {
     text-decoration: underline;
 }
 
