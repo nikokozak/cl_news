@@ -1,5 +1,6 @@
 defmodule Lector.Templates.Noticia do
   require EEx
+  import Lector.Templates.Component, only: [navigation: 0]
 
   @template_dir "lib/templates"
 
