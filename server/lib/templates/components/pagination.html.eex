@@ -1,6 +1,11 @@
 <% # This template requires a list of *items* (maps), each with a *count_key* containing the total count of items %>
 <%= if length(items) > 0 do %>
   <div id="pagination">
+    <%= if page != 1 do %>
+      <div class="pagination-previous">
+        <a href="<%= if page == 1, do: "/", else: "/ultimo/#{page - 1}" %>"><<</a>
+      </div>
+    <% end %>
     <% full_count = Map.get(Enum.at(items, 0), count_key, 0) %>
     <% step = round(full_count / 5) %>
     <%= for n <- (page - 1)..(page + 1), n > 0 && n <= step do %>
@@ -10,6 +15,11 @@
         <% else %>
           <a href="/ultimo/<%= n %>" class="<%= if page == n, do: "active", else: "inactive" %>"><%= n %></a>
         <% end %>
+      </div>
+    <% end %>
+    <%= if page != step do %>
+      <div class="pagination-next">
+        <a href="<%= "/ultimo/#{page + 1}" %>">>></a>
       </div>
     <% end %>
   </div>
