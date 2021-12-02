@@ -15,13 +15,14 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp"; -- for generating noticia UUID's
 create table medios (
     medio_id bigserial PRIMARY KEY,
     nombre varchar(50) NOT NULL,
-    alias varchar(50) NOT NULL
+    std varchar(50) NOT NULL
 );
 grant insert, update, delete, select on table medios to :lectoruser;
 
 create table secciones (
     seccion_id bigserial PRIMARY KEY,
-    seccion varchar(50) NOT NULL
+    nombre varchar(50) NOT NULL,
+    std varchar(50) NOT NULL
 );
 grant insert, update, delete, select on table secciones to :lectoruser;
 
@@ -47,19 +48,19 @@ grant usage, select on all sequences in schema public to :lectoruser;
 
 -- POPULATE VALUES
 
-insert into medios (nombre, nombre_corto)
+insert into medios (nombre, std)
 values
     ('Radio Bío Bío', 'biobio'),
     ('El Mercurio Online', 'emol'),
     ('La Tercera', 'tercera'),
     ('CIPER Chile', 'ciper');
 
-insert into secciones (seccion)
+insert into secciones (nombre, std)
 values
-    ('Nacional'),
-    ('Política'),
-    ('Internacional'),
-    ('Economía'),
-    ('Educación'),
-    ('Opinión'),
-    ('Tendencias');
+    ('Nacional', 'nacional'),
+    ('Política', 'politica'),
+    ('Internacional', 'internacional'),
+    ('Economía', 'economia'),
+    ('Educación', 'educacion'),
+    ('Opinión', 'opinion'),
+    ('Tendencias', 'tendencias');

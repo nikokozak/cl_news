@@ -3,11 +3,11 @@ tercera = {
         'base_url': 'https://www.latercera.com',
 
         'sections': {
-            'Política': 'https://www.latercera.com/canal/politica/',
-            'Nacional': 'https://www.latercera.com/canal/nacional/',
-            'Tendencias': 'https://www.latercera.com/canal/tendencias/',
-            'Internacional': 'https://www.latercera.com/canal/mundo',
-            'Opinión': 'https://www.latercera.com/canal/opinion' 
+            'politica': 'https://www.latercera.com/canal/politica/',
+            'nacional': 'https://www.latercera.com/canal/nacional/',
+            'tendencias': 'https://www.latercera.com/canal/tendencias/',
+            'internacional': 'https://www.latercera.com/canal/mundo',
+            'opinion': 'https://www.latercera.com/canal/opinion' 
             },
 
         'article_links': '//section[@class="middle-mainy"]//h3/a/@href',
@@ -27,11 +27,11 @@ biobio = {
         'base_url': 'https://www.biobiochile.cl',
 
         'sections': {
-            'Nacional': 'https://www.biobiochile.cl/lista/busca-2020/categorias/nacional',
-            'Internacional': 'https://www.biobiochile.cl/lista/busca-2020/categorias/internacional',
-            'Economía': 'https://www.biobiochile.cl/lista/busca-2020/categorias/economia',
-            'Tendencias': 'https://www.biobiochile.cl/lista/busca-2020/categorias/tendencias',
-            'Opinión': 'https://www.biobiochile.cl/lista/busca-2020/categorias/opinion',
+            'nacional': 'https://www.biobiochile.cl/lista/busca-2020/categorias/nacional',
+            'internacional': 'https://www.biobiochile.cl/lista/busca-2020/categorias/internacional',
+            'economia': 'https://www.biobiochile.cl/lista/busca-2020/categorias/economia',
+            'tendencias': 'https://www.biobiochile.cl/lista/busca-2020/categorias/tendencias',
+            'opinion': 'https://www.biobiochile.cl/lista/busca-2020/categorias/opinion',
             },
 
         'article_links': '//section[contains(@class, "section-busca")]//div[@class="results"]/article/a/@href',

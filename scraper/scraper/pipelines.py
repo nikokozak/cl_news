@@ -34,8 +34,8 @@ class DBPipeline:
         insert_sql = ("INSERT INTO noticias"
         "(medio_id, seccion_id, autor, fecha, titular, bajada, imagen_url, cuerpo, url)"
         "VALUES"
-        "((select medio_id from medios where nombre_corto = %s),"
-          "(select seccion_id from secciones where seccion = %s),"
+        "((select medio_id from medios where std = %s),"
+          "(select seccion_id from secciones where std = %s),"
           "%s, %s, %s, %s, %s, %s, %s)")
 
         insert_data = [

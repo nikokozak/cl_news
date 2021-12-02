@@ -13,7 +13,7 @@ defmodule Lector.DBInterface do
   def get_all(offset \\ 0, limit \\ false) do
     {:ok, pid} = connect()
 
-    query = "SELECT m.nombre as medio, s.seccion, noticia_id, titular, bajada, autor, imagen_url, cuerpo, fecha, to_char(fecha, 'DD-MM-YYYY') as fecha_short, count(*) over() as full_count
+    query = "SELECT m.nombre as medio, m.std as medio_std, s.nombre as seccion, s.std as seccion_std, noticia_id, titular, bajada, autor, imagen_url, cuerpo, fecha, to_char(fecha, 'DD-MM-YYYY') as fecha_short, count(*) over() as full_count
         FROM noticias 
         JOIN medios as m USING (medio_id) 
         JOIN secciones as s USING (seccion_id)
@@ -26,6 +26,8 @@ defmodule Lector.DBInterface do
     %{columns: columns,
       rows: rows } = Postgrex.query!(pid, query, params)
 
+    disconnect(pid)
+
     format_rows(rows, columns)
   end
 
@@ -36,11 +38,11 @@ defmodule Lector.DBInterface do
   def get_seccion(seccion, offset \\ 0, limit \\ false) do
     {:ok, pid} = connect()
 
-    query = "SELECT m.nombre as medio, s.seccion, noticia_id, titular, bajada, autor, imagen_url, cuerpo, fecha, to_char(fecha, 'DD-MM-YYYY') as fecha_short, count(*) over() as full_count 
+    query = "SELECT m.nombre as medio, m.std as medio_std, s.nombre as seccion, s.std as seccion_std, noticia_id, titular, bajada, autor, imagen_url, cuerpo, fecha, to_char(fecha, 'DD-MM-YYYY') as fecha_short, count(*) over() as full_count 
         FROM noticias
         JOIN medios as m USING (medio_id)
         JOIN secciones as s USING (seccion_id)
-        WHERE s.seccion = $1
+        WHERE s.std = $1
         ORDER BY fecha DESC
         OFFSET $2"
 
@@ -50,13 +52,15 @@ defmodule Lector.DBInterface do
     %{columns: columns,
       rows: rows } = Postgrex.query!(pid, query, params)
 
+    disconnect(pid)
+
     format_rows(rows, columns)
   end
 
   def get_noticia(id) do
     {:ok, pid} = connect()
 
-    query = "SELECT m.nombre as medio, s.seccion, noticia_id, titular, bajada, autor, imagen_url, cuerpo, to_char(fecha, 'DD-MM-YYYY') as \"fecha\"
+    query = "SELECT m.nombre as medio, m.std as medio_std, s.nombre as seccion, s.std as seccion_std, noticia_id, titular, bajada, autor, imagen_url, cuerpo, to_char(fecha, 'DD-MM-YYYY') as \"fecha\"
     FROM noticias
     JOIN medios as m USING (medio_id)
     JOIN secciones as s USING (seccion_id)
@@ -67,11 +71,17 @@ defmodule Lector.DBInterface do
     %{columns: columns,
       rows: rows} = Postgrex.query!(pid, query, params)
 
+    disconnect(pid)
+
     format_rows(rows, columns)
   end
 
   defp connect do
     Postgrex.start_link(hostname: @hostname, username: @username, database: @database)
+  end
+
+  def disconnect(pid) do
+    GenServer.stop(pid)
   end
 
   defp format_rows(rows, columns, inspect \\ false) do
