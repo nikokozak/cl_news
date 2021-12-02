@@ -179,17 +179,54 @@ header {
 #articulo-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.6rem;
+    margin-top: 1.8rem;
+    align-items: center;
 }
 
-#articulo-header h3, #articulo-header p {
+#articulo-medio {
     font-size: 0.7rem;
+}
+
+.articulo-seccion {
+    color: var(--bg-color);
+    padding: 0.1rem 0.4rem 0.12rem 0.4rem;
+    border-radius: 0.2rem;
+    font-size: 0.6rem;
+}
+
+.articulo-seccion.nacional {
+    background-color: var(--nacional-color);
+}
+
+.articulo-seccion.política {
+    background-color: var(--politica-color);
+}
+
+.articulo-seccion.internacional {
+    background-color: var(--internacional-color);
+}
+
+.articulo-seccion.economía {
+    background-color: var(--economia-color);
+}
+
+.articulo-seccion.tendencias {
+    background-color: var(--tendencias-color);
+}
+
+.articulo-seccion.opinión {
+    background-color: var(--opinion-color);
+}
+
+#noticia-titular {
+    font-size: 1.2rem;
 }
 
 #articulo-details {
     display: flex;
     justify-content: space-between;
-    margin-top: 0.4rem;
+    margin-top: 0.7rem;
 }
 
 #articulo-details p, #articulo-details strong {
@@ -198,13 +235,17 @@ header {
 
 #noticia-imagen {
     max-width: 80vw;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
 }
 
-#noticia-bajada p {
-    margin: 0 0 0.7rem 0;
+#noticia-bajada {
+    margin: 0 0 1.2rem -0.7rem;
     font-size: 0.9rem;
+    font-weight: 600;
+    font-style: italic;
+    padding-left: 0.7rem;
+    border-left: 1px solid gray;
 }
 
 #noticia-cuerpo p, 
@@ -213,7 +254,10 @@ header {
 #noticia-cuerpo strong,
 #noticia-cuerpo a,
 #noticia-cuerpo b {
-    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+    line-height: 1.3rem;
 }
 
 #noticia-cuerpo p, #noticia-cuerpo h2 {
@@ -221,5 +265,5 @@ header {
 }
 
 #noticia-cuerpo a {
-    color: darkblue; 
+    color: inherit; 
 }

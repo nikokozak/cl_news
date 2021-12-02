@@ -8,12 +8,12 @@
   </head>
   <body>
     <header>
-      <a href="/"><h1 id="header-title">Lector Chile</h1></a>
+      <a id="header-title" href="/">Lector Chile</a>
       <button id="header-secciones-button">Secciones <span class="dropdown-decorator">&#9660;</span></button>
     </header>
     <div id="articulo-header">
       <h3 id="articulo-medio"><%= Map.get(@noticia, "medio") %></h3>
-      <p id="articulo-seccion"><%= Map.get(@noticia, "seccion") %></p>
+      <p class="articulo-seccion <%= String.downcase(Map.get(@noticia, "seccion")) %>"><%= Map.get(@noticia, "seccion") %></p>
     </div>
     <h2 id="noticia-titular"><%= Map.get(@noticia, "titular") %></h2>
     <div id="articulo-details">
