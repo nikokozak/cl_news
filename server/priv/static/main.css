@@ -1,8 +1,40 @@
-* {
+/*
+ * bg: #F2ECD8
+ * blue: #03738C
+ * yellow: #F2B441
+ * red: #D9430D
+ * pink: #F26052
+ * text: #333333
+ * green: #668053
+ * cream: #DDBA9E
+ */
+
+:root {
+    --blue-color: #03738C;
+    --yellow-color: #F2B441;
+    --red-color: #D9430D;
+    --pink-color: #F26052;
+    --green-color: #668053;
+    --cream-color: #DDBA9E;
+    --text-color: #333333;
+    --bg-color: #F5F0EB;
+
+    --nacional-color: #03738C;
+    --internacional-color: #668053;
+    --politica-color: #D9430D;
+    --economia-color: #F2B441;
+    --tendencias-color: #585CA6;
+    --opinion-color: #D39876;
+
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
+    background-color: var(--bg-color);
+}
+
+* {
     margin: 0;
     padding: 0;
+    color: var(--text-color);
 }
 
 body {
@@ -16,33 +48,50 @@ h1 {
 header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
 #header-title {
-    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--red-color);
+    text-decoration: none;
 }
 
 #header-secciones-button {
     border-radius: 0.5rem;
     border: 1px solid gray;
     padding: 0 0.5rem 0 0.5rem;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     background-color: transparent;
+    height: 2.2em;
+    align: start;
+    margin-top: 0.3rem;
 }
 
 .dropdown-decorator {
     font-size: 0.4rem;
     position: relative;
-    top: -0.1rem;
+    top: -0.05rem;
 }
 
-#noticia-list-title {
-    margin-bottom: 1rem;
+#seccion-title {
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+#seccion-title h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#seccion-title hr {
+    margin: 0;
 }
 
 .noticia-item {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .noticia-details p {
@@ -65,21 +114,36 @@ header {
     margin-bottom: 0.5rem;
 }
 
+.noticia-seccion {
+    color: var(--bg-color);
+    padding: 0.1rem 0.4rem 0.12rem 0.4rem;
+    border-radius: 0.2rem;
+}
+
 .noticia-seccion.nacional {
-    color: blue;
+    background-color: var(--nacional-color);
 }
 
 .noticia-seccion.política {
-    color: red;
+    background-color: var(--politica-color);
 }
 
 .noticia-seccion.internacional {
-    color: green;
+    background-color: var(--internacional-color);
 }
 
 .noticia-seccion.economía {
-    color: orange;
+    background-color: var(--economia-color);
 }
+
+.noticia-seccion.tendencias {
+    background-color: var(--tendencias-color);
+}
+
+.noticia-seccion.opinión {
+    background-color: var(--opinion-color);
+}
+
 
 /** --------------------------- **/
 /** ------- PAGINATION -------- **/
@@ -89,18 +153,23 @@ header {
     display: flex;
     width: 100%;
     justify-content: center;
+    font-size: 0.8rem;
+}
+
+#pagination a {
+    text-decoration: none;
+}
+
+#pagination a.active {
+    text-decoration: underline;
 }
 
 .pagination-number:not(:first-child) {
     margin-left: 1rem; 
 }
 
-.pagination-number a {
-    text-decoration: none;
-}
-
-.pagination-number a.active {
-    text-decoration: underline;
+.pagination-next {
+    margin-left: 1rem;
 }
 
 /** -------------------------- **/
