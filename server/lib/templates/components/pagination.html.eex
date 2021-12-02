@@ -1,4 +1,4 @@
-<% # This template requires a list of *items* (maps), each with a *count_key* containing the total count of items %>
+<% # This template requires a list of *items* (maps), each with a *count_key* containing the total count of items, as well as a *page* signifying the current page num %>
 <%= if length(items) > 0 do %>
   <div id="pagination">
     <%= if page != 1 do %>
