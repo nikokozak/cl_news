@@ -1,32 +1,19 @@
 <% alias Lector.Templates.Component %>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width">
-    <meta charset="utf-8" />
-    <title>A test site</title>
-    <link rel="stylesheet" href="/assets/main.css" /> 
-  </head>
-  <body>
-    <header>
-      <a id="header-title" href="/">Lector Chile</a>
-      <%= Component.navigation() %>
-    </header>
-    <div id="seccion-title">
-      <h2><%= @seccion %></h2>
-      <hr>
+
+<div id="seccion-title">
+  <h2><%= @seccion %></h2>
+  <hr>
+</div>
+<div id="noticia-list">
+  <%= for noticia <- @noticias do %>
+    <div class="noticia-item">
+      <div class="noticia-details">
+        <p class="noticia-seccion <%= String.downcase(Map.get(noticia, "seccion")) %>"><%= Map.get(noticia, "seccion") %></p>
+        <p class="noticia-medio"><%= Map.get(noticia, "medio") %></p>
+      </div>
+      <a class="noticia-titular" href="/noticia/<%= Map.get(noticia, "noticia_id") |> Base.url_encode64 %>"><%= Map.get(noticia, "titular") %></a>
     </div>
-    <div id="noticia-list">
-      <%= for noticia <- @noticias do %>
-        <div class="noticia-item">
-          <div class="noticia-details">
-            <p class="noticia-seccion <%= String.downcase(Map.get(noticia, "seccion")) %>"><%= Map.get(noticia, "seccion") %></p>
-            <p class="noticia-medio"><%= Map.get(noticia, "medio") %></p>
-          </div>
-          <a class="noticia-titular" href="/noticia/<%= Map.get(noticia, "noticia_id") |> Base.url_encode64 %>"><%= Map.get(noticia, "titular") %></a>
-        </div>
-    <% end %>
-    </div>
-    <%= Component.pagination(@noticias, "full_count", @page) %>
-  </body>
-</html>
+<% end %>
+</div>
+
+<%= Component.pagination(@noticias, "full_count", @page) %>
