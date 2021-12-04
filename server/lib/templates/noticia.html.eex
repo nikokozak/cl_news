@@ -9,7 +9,7 @@
   <body>
     <header>
       <a id="header-title" href="/">Lector Chile</a>
-      <%= navigation() %>
+      <%= Lector.Templates.Component.navigation() %>
     </header>
     <div id="articulo-header">
       <h3 id="articulo-medio"><%= Map.get(@noticia, "medio") %></h3>

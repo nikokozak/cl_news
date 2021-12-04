@@ -1,3 +1,4 @@
+<% alias Lector.Templates.Component %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,7 +10,7 @@
   <body>
     <header>
       <a id="header-title" href="/">Lector Chile</a>
-      <%= navigation() %>
+      <%= Component.navigation() %>
     </header>
     <div id="seccion-title">
       <h2><%= @seccion %></h2>
@@ -26,6 +27,6 @@
         </div>
     <% end %>
     </div>
-    <%= pagination(@noticias, "full_count", @page) %>
+    <%= Component.pagination(@noticias, "full_count", @page) %>
   </body>
 </html>
