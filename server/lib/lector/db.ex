@@ -35,6 +35,14 @@ defmodule Lector.DB do
     GenServer.call(:db, {:get_noticia, id})
   end
 
+  def get_medios do
+    GenServer.call(:db, :get_medios)
+  end
+
+  def get_secciones do
+    GenServer.call(:db, :get_secciones)
+  end
+
   #############################################################
   ###################### CALLBACKS ############################
   #############################################################
@@ -101,8 +109,25 @@ defmodule Lector.DB do
 
     params = [id]
 
-    %{columns: columns,
-      rows: rows} = Postgrex.query!(db_conn, query, params)
+    %{columns: columns, rows: rows} = Postgrex.query!(db_conn, query, params)
+
+    {:reply, format_rows(rows, columns), state}
+  end
+
+  def handle_call(:get_medios, _from, [conn: db_conn] = state) do
+    query = "SELECT nombre, std
+    FROM medios"
+
+    %{columns: columns, rows: rows} = Postgrex.query!(db_conn, query, [])
+
+    {:reply, format_rows(rows, columns), state}
+  end
+
+  def handle_call(:get_secciones, _from, [conn: db_conn] = state) do
+    query = "SELECT nombre, std
+    FROM secciones"
+
+    %{columns: columns, rows: rows} = Postgrex.query!(db_conn, query, [])
 
     {:reply, format_rows(rows, columns), state}
   end

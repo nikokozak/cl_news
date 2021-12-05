@@ -12,7 +12,8 @@ defmodule Lector do
 
     children = [
       {Plug.Cowboy, scheme: :http, plug: Lector.Endpoint, options: [port: 8080]},
-      {Lector.DB, []}
+      {Lector.DB, []},
+      {Lector.Cache, []}
     ]
 
     opts = [
