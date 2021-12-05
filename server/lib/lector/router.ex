@@ -12,9 +12,13 @@ defmodule Lector.Router do
   end
 
   get "/noticia/:id" do
-    {:ok, id} = Base.url_decode64(id)
-    [noticia] = Lector.DB.get_noticia(id)
-    Noticia.render(conn, "noticia.html.eex", noticia: noticia)
+    with {:ok, id} <- Base.url_decode64(id),
+         [noticia] <- Lector.DB.get_noticia(id)
+    do
+      Noticia.render(conn, "noticia.html.eex", noticia: noticia)
+    else
+      _err -> send_resp(conn, 404, "not found")
+    end
   end
 
   get "/ultimo/:page" do

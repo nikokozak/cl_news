@@ -109,9 +109,13 @@ defmodule Lector.DB do
 
     params = [id]
 
-    %{columns: columns, rows: rows} = Postgrex.query!(db_conn, query, params)
-
-    {:reply, format_rows(rows, columns), state}
+    try do
+      %{columns: columns, rows: rows} = Postgrex.query!(db_conn, query, params)
+      {:reply, format_rows(rows, columns), state}
+    rescue
+      # Will throw as encode error when binary is not right UUID length
+      DBConnection.EncodeError -> {:reply, [], state}
+    end
   end
 
   def handle_call(:get_medios, _from, [conn: db_conn] = state) do
