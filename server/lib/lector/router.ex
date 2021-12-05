@@ -20,23 +20,25 @@ defmodule Lector.Router do
   get "/ultimo/:page" do
     page_int = String.to_integer(page)
     results = Lector.DB.get_all((page_int - 1) * 5, 5)
-    Home.render(conn, "home.html.eex", noticias: results, seccion: "Lo Último", page: page_int)
+    Home.render(conn, "home.html.eex", noticias: results, seccion_fullname: "Lo Último", seccion: "ultimo", page: page_int)
   end
 
   get "/:seccion/:page" do
     page_int = String.to_integer(page)
     results = Lector.DB.get_seccion(seccion, (page_int - 1) * 5, 5)
-    Home.render(conn, "home.html.eex", noticias: results, seccion: seccion, page: page_int)
+    seccion_fullname = Lector.Cache.get_seccion_fullname(seccion)
+    Home.render(conn, "home.html.eex", noticias: results, seccion_fullname: seccion_fullname, seccion: seccion, page: page_int)
   end
 
   get "/:seccion" do
     results = Lector.DB.get_seccion(seccion, 0, 5)
-    Home.render(conn, "home.html.eex", noticias: results, seccion: seccion, page: 1)
+    seccion_fullname = Lector.Cache.get_seccion_fullname(seccion)
+    Home.render(conn, "home.html.eex", noticias: results, seccion_fullname: seccion_fullname, seccion: seccion, page: 1)
   end
 
   get "/" do
     results = Lector.DB.get_all(0, 5) 
-    Home.render(conn, "home.html.eex", noticias: results, seccion: "Lo Último", page: 1)
+    Home.render(conn, "home.html.eex", noticias: results, seccion_fullname: "Lo Último", seccion: "ultimo", page: 1)
   end
 
   match _ do

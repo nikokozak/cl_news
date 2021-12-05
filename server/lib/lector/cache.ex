@@ -29,8 +29,8 @@ defmodule Lector.Cache do
 
   def init(_) do
     :ets.new(:noticias, [:named_table])
-    :ets.new(:secciones, [:named_table])
-    :ets.new(:medios, [:named_table])
+    :ets.new(:secciones, [:named_table, :ordered_set])
+    :ets.new(:medios, [:named_table, :ordered_set])
 
     store_medios()
     store_secciones()
@@ -41,6 +41,8 @@ defmodule Lector.Cache do
   # These can access the tables seeing as the tables are public-read by default
   def get_medio_fullname(std_name), do: get_fullname(:medios, std_name)
   def get_seccion_fullname(std_name), do: get_fullname(:secciones, std_name)
+  def get_medios, do: :ets.tab2list(:medios)
+  def get_secciones, do: :ets.tab2list(:secciones)
 
   #############################################################
   ###################### PRIVATE ##############################
@@ -49,7 +51,7 @@ defmodule Lector.Cache do
   defp store_medios do
     Lector.DB.get_medios
     |> Enum.each(fn medio ->
-      :ets.insert(:medios, {Map.get(medio, "std"), Map.get(medio, "nombre")})
+      :ets.insert(:medios, {Map.get(medio, "medio_id"), Map.get(medio, "std"), Map.get(medio, "nombre")})
     end)
 
     :ok
@@ -58,7 +60,7 @@ defmodule Lector.Cache do
   defp store_secciones do
     Lector.DB.get_secciones
     |> Enum.each(fn seccion ->
-      :ets.insert(:secciones, {Map.get(seccion, "std"), Map.get(seccion, "nombre")})
+      :ets.insert(:secciones, {Map.get(seccion, "seccion_id"), Map.get(seccion, "std"), Map.get(seccion, "nombre")})
     end)
 
     :ok
@@ -66,7 +68,7 @@ defmodule Lector.Cache do
 
   defp get_fullname(table, std_name) do
     try do
-      [{_, full_name}] = :ets.lookup(table, std_name)
+      [{_, _, full_name}] = :ets.match_object(table, {:_, std_name, :_})
       full_name
     rescue 
       MatchError -> nil

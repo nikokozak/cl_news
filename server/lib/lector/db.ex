@@ -115,8 +115,9 @@ defmodule Lector.DB do
   end
 
   def handle_call(:get_medios, _from, [conn: db_conn] = state) do
-    query = "SELECT nombre, std
-    FROM medios"
+    query = "SELECT medio_id, nombre, std 
+    FROM medios
+    ORDER BY medio_id ASC"
 
     %{columns: columns, rows: rows} = Postgrex.query!(db_conn, query, [])
 
@@ -124,8 +125,9 @@ defmodule Lector.DB do
   end
 
   def handle_call(:get_secciones, _from, [conn: db_conn] = state) do
-    query = "SELECT nombre, std
-    FROM secciones"
+    query = "SELECT seccion_id, nombre, std 
+    FROM secciones
+    ORDER BY seccion_id ASC"
 
     %{columns: columns, rows: rows} = Postgrex.query!(db_conn, query, [])
 
