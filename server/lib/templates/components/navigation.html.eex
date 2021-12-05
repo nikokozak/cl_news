@@ -4,12 +4,10 @@
   <button id="nav-button">Secciones <span class="dropdown-decorator">&#9660;</span></button>
 
   <ul id="nav-modal">
-    <li><a class="nacional" href="/nacional">Nacional</a></li>
-    <li><a class="politica" href="/politica">Política</a></li>
-    <li><a class="economia" href="/economia">Economía</a></li>
-    <li><a class="internacional" href="/internacional">Internacional</a></li>
-    <li><a class="opinion" href="/opinion">Opinión</a></li>
-    <li><a class="tendencias" href="/tendencias">Tendencias</a></li>
+    <% secciones = Lector.Cache.get_secciones() %>
+    <%= for {_, seccion, seccion_fullname} <- secciones do %>
+      <li><a class="<%= seccion %>" href="/<%= seccion %>"><%= seccion_fullname %></a></li>
+    <% end %>
   </ul>
 </nav>
 
