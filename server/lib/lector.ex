@@ -9,13 +9,18 @@ defmodule Lector do
   Starts a supervision tree, runs Plug to handle incoming conns.
   """
   def start(_type, _args) do
+
     children = [
-      {Plug.Cowboy, scheme: :http, plug: Lector.Endpoint, options: [port: 8080]}
+      {Plug.Cowboy, scheme: :http, plug: Lector.Endpoint, options: [port: 8080]},
+      {Lector.DB, []}
     ]
+
     opts = [
       strategy: :one_for_one,
       name: Lector.Supervisor
     ]
+
     Supervisor.start_link(children, opts)
   end
+
 end

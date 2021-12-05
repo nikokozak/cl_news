@@ -1,9 +1,18 @@
-defmodule Lector.DBInterface do
+defmodule Lector.DB do
+  use GenServer
   require Postgrex
 
   @hostname "localhost"
   @username "lector_chile"
   @database "lector"
+
+  #############################################################
+  ###################### PUBLIC API ###########################
+  #############################################################
+  
+  def start_link(_) do
+    GenServer.start_link(__MODULE__, nil, name: :db)
+  end
 
   @doc """
   Retrieves all entries from the 'noticias' table.
@@ -11,8 +20,44 @@ defmodule Lector.DBInterface do
   Maps.
   """
   def get_all(offset \\ 0, limit \\ false) do
-    {:ok, pid} = connect()
+    GenServer.call(:db, {:get_all, [offset: offset, limit: limit]})
+  end
 
+  @doc """
+  Retrieves all entries from the 'noticias' table matching a given 'seccion'.
+  Maps column names onto each row value, returning an array of Maps.
+  """
+  def get_seccion(seccion, offset \\ 0, limit \\ false) do
+    GenServer.call(:db, {:get_seccion, [seccion: seccion, offset: offset, limit: limit]})
+  end
+
+  def get_noticia(id) do
+    GenServer.call(:db, {:get_noticia, id})
+  end
+
+  #############################################################
+  ###################### CALLBACKS ############################
+  #############################################################
+
+  def init(_) do
+    {:ok, db_conn} = Postgrex.start_link(
+      hostname: @hostname, 
+      username: @username, 
+      database: @database,
+      pool_size: 25 # In theory this allows us to use the DBConnection pool behavior.
+    )
+
+    IO.inspect(db_conn)
+
+    {:ok, conn: db_conn}
+  end
+
+  def terminate(_, [conn: db_conn] = _state) do
+    GenServer.stop(db_conn)
+    :conn_closed
+  end
+
+  def handle_call({:get_all, [offset: offset, limit: limit]}, _from, [conn: db_conn] = state) do
     query = "SELECT m.nombre as medio, m.std as medio_std, s.nombre as seccion, s.std as seccion_std, noticia_id, titular, bajada, autor, imagen_url, cuerpo, fecha, to_char(fecha, 'DD-MM-YYYY') as fecha_short, count(*) over() as full_count
         FROM noticias 
         JOIN medios as m USING (medio_id) 
@@ -24,20 +69,12 @@ defmodule Lector.DBInterface do
     params = if limit != false, do: [offset, limit], else: [offset]
 
     %{columns: columns,
-      rows: rows } = Postgrex.query!(pid, query, params)
+      rows: rows } = Postgrex.query!(db_conn, query, params)
 
-    disconnect(pid)
-
-    format_rows(rows, columns)
+    {:reply, format_rows(rows, columns), state}
   end
 
-  @doc """
-  Retrieves all entries from the 'noticias' table matching a given 'seccion'.
-  Maps column names onto each row value, returning an array of Maps.
-  """
-  def get_seccion(seccion, offset \\ 0, limit \\ false) do
-    {:ok, pid} = connect()
-
+  def handle_call({:get_seccion, [seccion: seccion, offset: offset, limit: limit]}, _from, [conn: db_conn] = state) do
     query = "SELECT m.nombre as medio, m.std as medio_std, s.nombre as seccion, s.std as seccion_std, noticia_id, titular, bajada, autor, imagen_url, cuerpo, fecha, to_char(fecha, 'DD-MM-YYYY') as fecha_short, count(*) over() as full_count 
         FROM noticias
         JOIN medios as m USING (medio_id)
@@ -50,16 +87,12 @@ defmodule Lector.DBInterface do
     params = if limit != false, do: [seccion, offset, limit], else: [seccion, offset]
 
     %{columns: columns,
-      rows: rows } = Postgrex.query!(pid, query, params)
+      rows: rows } = Postgrex.query!(db_conn, query, params)
 
-    disconnect(pid)
-
-    format_rows(rows, columns)
+    {:reply, format_rows(rows, columns), state}
   end
 
-  def get_noticia(id) do
-    {:ok, pid} = connect()
-
+  def handle_call({:get_noticia, id}, _from, [conn: db_conn] = state) do
     query = "SELECT m.nombre as medio, m.std as medio_std, s.nombre as seccion, s.std as seccion_std, noticia_id, titular, bajada, autor, imagen_url, cuerpo, to_char(fecha, 'DD-MM-YYYY') as \"fecha\"
     FROM noticias
     JOIN medios as m USING (medio_id)
@@ -69,19 +102,9 @@ defmodule Lector.DBInterface do
     params = [id]
 
     %{columns: columns,
-      rows: rows} = Postgrex.query!(pid, query, params)
+      rows: rows} = Postgrex.query!(db_conn, query, params)
 
-    disconnect(pid)
-
-    format_rows(rows, columns)
-  end
-
-  defp connect do
-    Postgrex.start_link(hostname: @hostname, username: @username, database: @database)
-  end
-
-  def disconnect(pid) do
-    GenServer.stop(pid)
+    {:reply, format_rows(rows, columns), state}
   end
 
   defp format_rows(rows, columns, inspect \\ false) do
