@@ -28,16 +28,26 @@ defmodule Lector.Router do
   end
 
   get "/:seccion/:page" do
-    page_int = String.to_integer(page)
-    results = Lector.DB.get_seccion(seccion, (page_int - 1) * 5, 5)
-    seccion_fullname = Lector.Cache.get_seccion_fullname(seccion)
-    Home.render(conn, "home.html.eex", noticias: results, seccion_fullname: seccion_fullname, seccion: seccion, page: page_int)
+    with false <- is_nil(Lector.Cache.get_seccion_fullname(seccion))
+    do
+      page_int = String.to_integer(page)
+      results = Lector.DB.get_seccion(seccion, (page_int - 1) * 5, 5)
+      seccion_fullname = Lector.Cache.get_seccion_fullname(seccion)
+      Home.render(conn, "home.html.eex", noticias: results, seccion_fullname: seccion_fullname, seccion: seccion, page: page_int)
+    else
+      _err -> send_resp(conn, 404, "not found")
+    end
   end
 
   get "/:seccion" do
-    results = Lector.DB.get_seccion(seccion, 0, 5)
-    seccion_fullname = Lector.Cache.get_seccion_fullname(seccion)
-    Home.render(conn, "home.html.eex", noticias: results, seccion_fullname: seccion_fullname, seccion: seccion, page: 1)
+    with false <- is_nil(Lector.Cache.get_seccion_fullname(seccion))
+    do
+      results = Lector.DB.get_seccion(seccion, 0, 5)
+      seccion_fullname = Lector.Cache.get_seccion_fullname(seccion)
+      Home.render(conn, "home.html.eex", noticias: results, seccion_fullname: seccion_fullname, seccion: seccion, page: 1)
+    else
+      _err -> send_resp(conn, 404, "not found")
+    end
   end
 
   get "/" do
