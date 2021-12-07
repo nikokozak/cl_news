@@ -13,3 +13,30 @@
 11:31:03.861 [info] GET / 127.0.0.1 :: sent - 200
 11:31:06.155 [info] GET /noticia/F-IX5Fd0EeydsG8ZuG6j-w== 127.0.0.1 :: sent - 200
 11:31:09.085 [info] GET / 127.0.0.1 :: sent - 200
+11:42:58.337 [info] Starting server at port 8080
+11:43:01.670 [info] GET / 127.0.0.1 :: sent - 200
+11:43:05.059 [info] GET /asdfasdf 127.0.0.1 :: sent - 404
+11:43:40.372 [info] Starting server at port 8080
+11:43:44.367 [info] GET /asdfasdf 127.0.0.1 :: sent - 404
+11:48:35.535 [info] Starting server at port 8080
+11:48:38.656 [info] GET /asdfasdf 127.0.0.1 :: sent - 404
+11:52:43.421 [info] GET /asdfasdf 127.0.0.1 :: sent - 404
+11:52:44.453 [info] GET /asdfasdf 127.0.0.1 :: sent - 404
+11:52:49.168 [info] GET /asdfasdf 127.0.0.1 :: sent - 404
+11:53:02.900 [info] GET /asdfasdf 127.0.0.1 :: sent - 404
+11:53:14.476 [info] GET /asdfasdf 127.0.0.1 :: sent - 404
+11:53:36.999 [info] GET /asdfasdf 127.0.0.1 :: sent - 404
+11:53:40.803 [info] GET / 127.0.0.1 :: sent - 200
+11:53:42.753 [info] GET /noticia/F-IX5Fd0EeydsG8ZuG6j-w== 127.0.0.1 :: sent - 200
+11:53:48.961 [info] GET /noticia/F-IX5Fd0EeydsG8ZuG6j-w== 127.0.0.1 :: sent - 200
+11:54:15.920 [info] GET / 127.0.0.1 :: sent - 200
+11:54:17.431 [info] GET /noticia/EJBZxFd0EeydsLtnghThTg== 127.0.0.1 :: sent - 200
+11:54:20.527 [info] GET / 127.0.0.1 :: sent - 200
+11:54:22.506 [info] GET /noticia/EII5yld0EeydsMfkbFOETQ== 127.0.0.1 :: sent - 200
+11:54:30.708 [info] GET / 127.0.0.1 :: sent - 200
+11:54:34.730 [info] GET /noticia/F9_5yFd0EeydsGvbXq5jAg== 127.0.0.1 :: sent - 200
+11:54:37.364 [info] GET / 127.0.0.1 :: sent - 200
+11:54:46.065 [info] GET /internacional 127.0.0.1 :: sent - 200
+11:54:49.050 [info] GET /politica 127.0.0.1 :: sent - 200
+11:54:50.466 [info] GET /noticia/-uhqkFb_EeyuhzvFtvnR3w== 127.0.0.1 :: sent - 200
+11:54:55.566 [info] GET / 127.0.0.1 :: sent - 200

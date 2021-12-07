@@ -140,6 +140,10 @@ nav {
     color: var(--tecnologia-color);
 }
 
+/** ------------------------------ **/
+/** ------- SECCION PAGES -------- **/
+/** ------------------------------ **/
+
 #seccion-title {
     margin: 1.5rem 0 1.5rem 0;
 }
@@ -152,6 +156,10 @@ nav {
 #seccion-title hr {
     margin: 0;
 }
+
+/** --------------------------------- **/
+/** ------- NOTICIA LISTINGS -------- **/
+/** --------------------------------- **/
 
 .noticia-item {
     margin-bottom: 1.5rem;
@@ -341,4 +349,14 @@ nav {
 
 #noticia-cuerpo a {
     color: inherit; 
+}
+
+/** --------------------------------- **/
+/** ----------- ERROR PAGE ---------- **/
+/** --------------------------------- **/
+
+.error-title {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }

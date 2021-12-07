@@ -1,8 +1,7 @@
 defmodule Lector.Router do
   require Logger
   use Plug.Router
-  alias Lector.Templates.Home
-  alias Lector.Templates.Noticia
+  alias Lector.Templates.{Home, Noticia, Error}
 
   plug :match
   plug :dispatch
@@ -19,7 +18,7 @@ defmodule Lector.Router do
     do
       Noticia.render(conn, "noticia.html.eex", noticia: noticia)
     else
-      _err -> send_resp(conn, 404, "not found")
+      _err -> send_error(conn)
     end
   end
 
@@ -37,7 +36,7 @@ defmodule Lector.Router do
       seccion_fullname = Lector.Cache.get_seccion_fullname(seccion)
       Home.render(conn, "home.html.eex", noticias: results, seccion_fullname: seccion_fullname, seccion: seccion, page: page_int)
     else
-      _err -> send_resp(conn, 404, "not found")
+      _err -> send_error(conn)
     end
   end
 
@@ -48,7 +47,7 @@ defmodule Lector.Router do
       seccion_fullname = Lector.Cache.get_seccion_fullname(seccion)
       Home.render(conn, "home.html.eex", noticias: results, seccion_fullname: seccion_fullname, seccion: seccion, page: 1)
     else
-      _err -> send_resp(conn, 404, "not found")
+      _err -> send_error(conn)
     end
   end
 
@@ -58,7 +57,7 @@ defmodule Lector.Router do
   end
 
   match _ do
-    send_resp(conn, 404, "not found")
+    send_error(conn)
   end
 
   def log_metadata_plug(conn, _opts) do
@@ -77,6 +76,12 @@ defmodule Lector.Router do
     Logger.debug("#{method} #{req_path} #{ip} :: #{user_agent} :: #{state} - #{status}")
     Logger.info("#{method} #{req_path} #{ip} :: #{state} - #{status}")
     conn
+  end
+
+  def send_error(conn) do
+    conn
+    |> Plug.Conn.put_status(404)
+    |> Error.render("error.html.eex")
   end
 
 end
