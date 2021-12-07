@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Removes the LECTOR_PSQL_DATABASE and users
-
 function check_for_envs ()
 {
     if [[ -z $LECTOR_PSQL_USER ]]; then
@@ -20,16 +18,18 @@ function check_for_envs ()
     fi
 }
 
-function remove_db ()
+function init_psql ()
 {
-    psql -c "DROP DATABASE IF EXISTS $LECTOR_PSQL_DATABASE"
+    brew services start postgresql
 }
 
-function remove_user ()
+function provision_db ()
 {
-    psql -c "DROP USER IF EXISTS $LECTOR_PSQL_USER"
+    psql -f ./sql/provision_db.sql
 }
 
 check_for_envs
-remove_db
-remove_user
+init_psql
+provision_db
+
+echo "Database $LECTOR_PSQL_DATABASE and User $LECTOR_PSQL_USER provisioned correctly"
