@@ -7,6 +7,8 @@ defmodule Lector.Router do
   plug :dispatch
   plug :log_metadata_plug
 
+  @results_per_page 20
+
   get "/test" do
     Lector.DB.get_all
     send_resp(conn, 200, "A test")
@@ -24,7 +26,7 @@ defmodule Lector.Router do
 
   get "/ultimo/:page" do
     page_int = String.to_integer(page)
-    results = Lector.DB.get_all((page_int - 1) * 5, 5)
+    results = Lector.DB.get_all((page_int - 1) * @results_per_page, @results_per_page)
     Home.render(conn, "home.html.eex", noticias: results, seccion_fullname: "Lo Último", seccion: "ultimo", page: page_int)
   end
 
@@ -32,7 +34,7 @@ defmodule Lector.Router do
     with false <- is_nil(Lector.Cache.get_seccion_fullname(seccion))
     do
       page_int = String.to_integer(page)
-      results = Lector.DB.get_seccion(seccion, (page_int - 1) * 5, 5)
+      results = Lector.DB.get_seccion(seccion, (page_int - 1) * @results_per_page, @results_per_page)
       seccion_fullname = Lector.Cache.get_seccion_fullname(seccion)
       Home.render(conn, "home.html.eex", noticias: results, seccion_fullname: seccion_fullname, seccion: seccion, page: page_int)
     else
@@ -43,7 +45,7 @@ defmodule Lector.Router do
   get "/:seccion" do
     with false <- is_nil(Lector.Cache.get_seccion_fullname(seccion))
     do
-      results = Lector.DB.get_seccion(seccion, 0, 5)
+      results = Lector.DB.get_seccion(seccion, 0, @results_per_page)
       seccion_fullname = Lector.Cache.get_seccion_fullname(seccion)
       Home.render(conn, "home.html.eex", noticias: results, seccion_fullname: seccion_fullname, seccion: seccion, page: 1)
     else
@@ -52,7 +54,7 @@ defmodule Lector.Router do
   end
 
   get "/" do
-    results = Lector.DB.get_all(0, 5) 
+    results = Lector.DB.get_all(0, @results_per_page) 
     Home.render(conn, "home.html.eex", noticias: results, seccion_fullname: "Lo Último", seccion: "ultimo", page: 1)
   end
 
