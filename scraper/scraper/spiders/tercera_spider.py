@@ -13,7 +13,7 @@ class TerceraSpider(NoticiaSpider):
 
         for section, url in tercera['sections'].items():
             yield scrapy.Request(url=url, callback=self.parse, cb_kwargs=dict(section=section))
-   
+
     def parse(self, response, section):
         limit_count = 0
         article_rel_links = response.xpath(tercera['article_links']).getall()
@@ -37,9 +37,8 @@ class TerceraSpider(NoticiaSpider):
         l.add_xpath('cuerpo', rules['cuerpo'])
         l.add_value('url', response.url)
         l.add_value('fecha', self.sanitize_date(response, rules['fecha']))
-        #l.add_xpath('fecha', rules['fecha'])
-        
-        yield l.load_item() 
+
+        yield l.load_item()
 
     def sanitize_date(self, response, rule):
         '''If the extracted date matches La Tercera's incompatible date
@@ -49,8 +48,7 @@ class TerceraSpider(NoticiaSpider):
         fecha_match = self.fecha_reg.match(fecha)
 
         if fecha_match:
-            fecha_parsed = datetime.datetime.strptime(fecha_match.group(0), 
-                    '%a %b %d %Y %H:%M:%S %Z%z')
+            fecha_parsed = datetime.datetime.strptime(fecha_match.group(0), '%a %b %d %Y %H:%M:%S %Z%z')
             return fecha_parsed
         else:
             return fecha
