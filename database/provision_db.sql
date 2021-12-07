@@ -61,6 +61,7 @@ values
     ('Política', 'politica'),
     ('Internacional', 'internacional'),
     ('Economía', 'economia'),
+    ('Tecnología', 'tecnologia'),
     ('Educación', 'educacion'),
     ('Opinión', 'opinion'),
     ('Tendencias', 'tendencias');

@@ -296,3 +296,640 @@ into DB.
 2021-12-06 21:32:16 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
 2021-12-06 21:32:26 [scrapy.core.engine] INFO: Spider opened
 2021-12-06 21:32:26 [default] INFO: Spider opened: default
+2021-12-06 21:57:10 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: scraper)
+2021-12-06 21:57:10 [scrapy.utils.log] INFO: Versions: lxml 4.6.4.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.9.9 (main, Nov 21 2021, 03:23:42) - [Clang 13.0.0 (clang-1300.0.29.3)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 36.0.0, Platform macOS-11.4-x86_64-i386-64bit
+2021-12-06 21:57:10 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 10,
+ 'LOG_FILE': '/Users/niko/Documents/Code/LectorChile/scraper/scraper/logs/log.txt',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders']}
+2021-12-06 21:57:10 [scrapy.extensions.telnet] INFO: Telnet Password: 5f287e54ed0af2d1
+2021-12-06 21:57:10 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2021-12-06 21:57:10 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy_useragents.downloadermiddlewares.useragents.UserAgentsMiddleware',
+ 'scraper.middlewares.ScraperDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-12-06 21:57:10 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-12-06 21:57:10 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.DefaultsPipeline',
+ 'scraper.pipelines.SanitizePipeline',
+ 'scraper.pipelines.DBPipeline']
+2021-12-06 21:57:10 [scrapy.core.engine] INFO: Spider opened
+2021-12-06 21:57:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-12-06 21:57:10 [emol] INFO: Spider opened: emol
+2021-12-06 21:57:10 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-12-06 21:57:25 [root] INFO: INSERTED item with:
+	URL: None
+	Titular: Streaming y entrevistas: La programación de este martes 7 de diciembre en EmolTV
+	Medio: emol
+into DB.
+2021-12-06 21:57:25 [root] INFO: INSERTED item with:
+	URL: None
+	Titular: Primera jornada de preparación de juicio oral contra Martín Pradenas: Defensa solicitó eliminar párrafos de la acusación
+	Medio: emol
+into DB.
+2021-12-06 21:57:25 [root] INFO: INSERTED item with:
+	URL: None
+	Titular: Militantes y ex DC llaman a votar por José Antonio Kast y presentan propuestas en materia social y económica
+	Medio: emol
+into DB.
+2021-12-06 21:57:25 [root] INFO: INSERTED item with:
+	URL: None
+	Titular: Kast dice que plan de gobierno recogerá planteamientos de presidenciables y que &quot;nada impide un gabinete paritario&quot;
+	Medio: emol
+into DB.
+2021-12-06 21:57:25 [root] INFO: INSERTED item with:
+	URL: None
+	Titular: CNA recomienda postular en instituciones acreditadas: &quot;Es una certificación de calidad y de acceso a beneficios económicos&quot;
+	Medio: emol
+into DB.
+2021-12-06 21:57:25 [root] INFO: INSERTED item with:
+	URL: None
+	Titular: Decretan prisión preventiva a hombre acusado de femicidio frustrado en Viña del Mar: Su pareja cayó de un sexto piso y está en riesgo vital
+	Medio: emol
+into DB.
+2021-12-06 21:57:26 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.emol.com/economia/> (referer: None)
+Traceback (most recent call last):
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/utils/defer.py", line 120, in iter_errback
+    yield next(it)
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/utils/python.py", line 353, in __next__
+    return next(self.data)
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/utils/python.py", line 353, in __next__
+    return next(self.data)
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/core/spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/core/spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/spidermiddlewares/referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/core/spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/spidermiddlewares/urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/core/spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/core/spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/emol_spider.py", line 40, in parse
+    yield scrapy.Request(url=abs_link, callback=self.parse_article, cb_kwargs=dict(section=section))
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/http/request/__init__.py", line 25, in __init__
+    self._set_url(url)
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/http/request/__init__.py", line 73, in _set_url
+    raise ValueError(f'Missing scheme in request url: {self._url}')
+ValueError: Missing scheme in request url: /noticias/Economia/2021/12/06/1040508/comision-hacienda-reajuste-sector-publico.html
+2021-12-06 21:57:38 [root] INFO: INSERTED item with:
+	URL: None
+	Titular: Eligen a Argentina para presidir el Consejo de Derechos Humanos de la ONU en 2022
+	Medio: emol
+into DB.
+2021-12-06 21:57:38 [root] INFO: INSERTED item with:
+	URL: None
+	Titular: Los puntos clave que se tocarán en la esperada reunión virtual entre Joe Biden y Vladimir Putin
+	Medio: emol
+into DB.
+2021-12-06 21:57:38 [root] INFO: INSERTED item with:
+	URL: None
+	Titular: Liberan a otros tres misioneros norteamericanos en Haití: Son 12 los que siguen secuestrados
+	Medio: emol
+into DB.
+2021-12-06 21:57:38 [root] INFO: INSERTED item with:
+	URL: None
+	Titular: Sin ir al cine ni al estadio: Italia impone más restricciones a los no vacunados contra el covid-19
+	Medio: emol
+into DB.
+2021-12-06 21:57:38 [root] INFO: INSERTED item with:
+	URL: None
+	Titular: Número de muertos por erupción del volcán Semeru en Indonesia subió a 22 personas
+	Medio: emol
+into DB.
+2021-12-06 21:57:38 [root] INFO: INSERTED item with:
+	URL: None
+	Titular: Todo listo en Alemania: Los Verdes aprueban pacto de gobierno que convertirá a Olaf Scholz en canciller
+	Medio: emol
+into DB.
+2021-12-06 21:57:53 [scrapy.core.scraper] ERROR: Error processing {'autor': 'Emol',
+ 'bajada': 'Un estudio realizado por investigadores de Geografía UC y el '
+           'Instituto de Ecología y Biodiversidad, publicado en el <i>Journal '
+           'of Hydrology</i>, advirtió sobre las consecuencias en la '
+           'disponibilidad de agua dulce para las comunidades humanas y las '
+           'actividades productivas. Estos fueron los ecosistemas analizados a '
+           'través de imágenes satelitales.',
+ 'cuerpo': ['<div> <body><div> <img alt="" '
+            'src="https://static.emol.cl/emol50/Fotos/2021/12/06/file_20211206125820.jpg"> '
+            '</div> <div> <div> <strong>Infografía:</strong> Juan Pablo Bravo, '
+            'El Mercurio  | <strong>Diseño y adaptación web:</strong> Johanna '
+            'Mellado, Emol  | <strong>Fuentes:</strong> Instituto de Geografía '
+            'U. Católica e IEB</div> </div></body></div>'],
+ 'fecha': datetime.datetime(2021, 12, 6, 12, 25),
+ 'imagen_url': 'https://static.emol.cl/emol50/Fotos/2021/12/06/file_20211206132252.jpg',
+ 'medio': 'emol',
+ 'seccion': 'tecnologia',
+ 'titular': 'Entre las regiones de Valparaíso y el Maule: Los 12 lagos andinos '
+            'de Chile que podrían desaparecer si no son protegidos',
+ 'url': None}
+Traceback (most recent call last):
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 858, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/utils/defer.py", line 150, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/pipelines.py", line 46, in process_item
+    self.cur.execute(insert_sql, insert_data)
+psycopg2.errors.NotNullViolation: null value in column "seccion_id" of relation "noticias" violates not-null constraint
+DETAIL:  Failing row contains (dab531c4-5711-11ec-8369-47acbc7612a3, 2, null, Emol, 2021-12-06 12:25:00-06, Entre las regiones de Valparaíso y el Maule: Los 12 lagos andin..., Un estudio realizado por investigadores de Geografía UC y el In..., https://static.emol.cl/emol50/Fotos/2021/12/06/file_202112061322..., {"<div> <body><div> <img alt=\"\" src=\"https://static.emol.cl/e..., null).
+
+2021-12-06 21:57:53 [scrapy.core.scraper] ERROR: Error processing {'autor': 'AFP / Editado por N. Ramírez',
+ 'bajada': 'El resultado estará disponible en 15 a 30 minutos y ayudará a los '
+           'médicos a establecer rápidamente un diagnóstico.',
+ 'cuerpo': ['<div><div>El <b>grupo suizo Roche lanzará al mercado un nuevo '
+            'test para diferenciar el covid-19 de la gripe A y B</b>, '
+            'permitiendo tener el <b>resultado en 15 a 30 minutos</b>, anunció '
+            'la compañía este lunes.</div><div><br></div><div>Este test de '
+            'antígenos <b>ayudará a los médicos a establecer rápidamente un '
+            'diagnóstico</b> y estará disponible en enero en los países que '
+            'acepten la marca CE –marca de conformidad obligatoria para los '
+            'productos vendidos dentro de la Unión Europea (UE)–.\xa0'
+            '</div><div><br></div><div>{RELACIONADA '
+            'https://www.emol.com/noticias/Nacional/2021/05/10/1020244/test-antigenos-anticuerpos-pcr.html}</div><div>Roche '
+            'también prevé presentar una solicitud de autorización de urgencia '
+            'en Estados Unidos a principios de '
+            '2022.</div><div><br></div><div><b>"Es esencial que los '
+            'profesionales puedan saber rápidamente si un paciente tiene '
+            'coronavirus o gripe, sobre todo porque la pandemia del covid-19 '
+            'se está expandiendo en la temporada de gripe"</b>, dijo Thomas '
+            'Schinecker, director de la sección de diagnósticos de Roche, '
+            'citado en el comunicado.</div><div><br></div><div><b>Roche tiene '
+            'una importante sección dedicada a los diagnósticos</b>. Este test '
+            'es el 22º que el grupo lanza desde el inicio de la '
+            'pandemia.</div></div>'],
+ 'fecha': datetime.datetime(2021, 12, 6, 11, 7),
+ 'imagen_url': 'https://static.emol.cl/emol50/Fotos/2021/12/06/file_20211206111930.jpg',
+ 'medio': 'emol',
+ 'seccion': 'tecnologia',
+ 'titular': 'Laboratorio suizo lanzará un test para diferenciar el covid-19 de '
+            'la gripe',
+ 'url': None}
+Traceback (most recent call last):
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 858, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/utils/defer.py", line 150, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/pipelines.py", line 46, in process_item
+    self.cur.execute(insert_sql, insert_data)
+psycopg2.errors.NotNullViolation: null value in column "seccion_id" of relation "noticias" violates not-null constraint
+DETAIL:  Failing row contains (dab84ad0-5711-11ec-8369-238ca4a8f415, 2, null, AFP / Editado por N. Ramírez, 2021-12-06 11:07:00-06, Laboratorio suizo lanzará un test para diferenciar el covid-19 ..., El resultado estará disponible en 15 a 30 minutos y ayudará a ..., https://static.emol.cl/emol50/Fotos/2021/12/06/file_202112061119..., {"<div><div>El <b>grupo suizo Roche lanzará al mercado un nuevo..., null).
+
+2021-12-06 21:57:53 [scrapy.core.scraper] ERROR: Error processing {'autor': 'Aton / Editado por Leonardo Vallejos, Emol.',
+ 'bajada': 'El evento duró 1 minuto y 45 segundos  y se observó de mejor '
+           'manera en el glaciar Unión, a 3.000 kilómetros al sur de Punta '
+           'Arenas.',
+ 'cuerpo': ['<div><div>Durante la madrugada de este sábado 4 de diciembre, '
+            'desde la Antártica se pudo ver un eclipse solar total que duró un '
+            'minuto y 45 segundos.</div><div><br></div><div>{RELACIONADA '
+            'http://www.emol.com/noticias/Nacional/2021/11/18/1038791/eclipse-lunar-cielos-de-chile.html}El '
+            'evento se pudo apreciar cerca de las 4:00 horas y se observó de '
+            'mejor manera en el glaciar Unión, a 3.000 kilómetros al sur de '
+            'Punta Arenas.</div><div><br></div><div>En la zona, un equipo '
+            'especializado de la NASA transmitió todo el proceso astronómico. '
+            'Inició cuando se comenzó a cubrir el Sol con la silueta de la '
+            'Luna y terminó cuando la última porción de la estrella volvió a '
+            'ser visible.</div><div><br><div>{IMAGEN '
+            'https://static.emol.cl/emol50/Fotos/2021/12/04/file_20211204085430.jpg}</div><div>{IMAGEN '
+            'https://static.emol.cl/emol50/Fotos/2021/12/04/file_20211204085434.jpg}</div><div>{IMAGEN '
+            'https://static.emol.cl/emol50/Fotos/2021/12/04/file_20211204085441.jpg}</div><div>{IMAGEN '
+            'https://static.emol.cl/emol50/Fotos/2021/12/04/file_20211204085446.jpg}</div><div>{IMAGEN '
+            'https://static.emol.cl/emol50/Fotos/2021/12/04/file_20211204085450.jpg}</div><div>{IMAGEN '
+            'https://static.emol.cl/emol50/Fotos/2021/12/04/file_20211204085454.jpg}</div></div></div>'],
+ 'fecha': datetime.datetime(2021, 12, 4, 8, 46),
+ 'imagen_url': 'https://static.emol.cl/emol50/Fotos/2021/12/04/file_20211204085418.jpg',
+ 'medio': 'emol',
+ 'seccion': 'tecnologia',
+ 'titular': 'Fotos: Eclipse solar se pudo ver desde la Antártica: No se '
+            'repetirá en Chile hasta 2048',
+ 'url': None}
+Traceback (most recent call last):
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 858, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/utils/defer.py", line 150, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/pipelines.py", line 46, in process_item
+    self.cur.execute(insert_sql, insert_data)
+psycopg2.errors.NotNullViolation: null value in column "seccion_id" of relation "noticias" violates not-null constraint
+DETAIL:  Failing row contains (dab8de00-5711-11ec-8369-bbdaae1fa94c, 2, null, Aton / Editado por Leonardo Vallejos, Emol., 2021-12-04 08:46:00-06, Fotos: Eclipse solar se pudo ver desde la Antártica: No se repe..., El evento duró 1 minuto y 45 segundos  y se observó de mejor m..., https://static.emol.cl/emol50/Fotos/2021/12/04/file_202112040854..., {"<div><div>Durante la madrugada de este sábado 4 de diciembre,..., null).
+
+2021-12-06 21:57:53 [scrapy.core.scraper] ERROR: Error processing {'autor': 'AFP / Equipo Multimedia Emol',
+ 'bajada': 'Para el 22 de diciembre está programado el lanzamiento del nuevo '
+           'instrumento que reemplazará al Hubble que opera desde 1990, y que '
+           'permitirá la búsqueda de potencial vida en otros rincones del '
+           'universo.',
+ 'cuerpo': ['<div> <body><div> <img alt="" '
+            'src="https://static.emol.cl/emol50/Fotos/2021/12/02/file_20211202171907.jpg"> '
+            '</div> <div> <div> <strong>Infografía:</strong> AFP  | '
+            '<strong>Diseño y adaptación web:</strong> Johanna Mellado, Emol  '
+            '| <strong>Fuentes:</strong> Nasa, ESA y Agencia Espacial '
+            'Canadiense </div> </div></body></div>'],
+ 'fecha': datetime.datetime(2021, 12, 4, 11, 48),
+ 'imagen_url': 'https://static.emol.cl/emol50/Fotos/2021/12/03/file_20211203114939.jpg',
+ 'medio': 'emol',
+ 'seccion': 'tecnologia',
+ 'titular': 'Cómo se compara el telescopio espacial Hubble con el James Webb, '
+            'que lo reemplazará este año',
+ 'url': None}
+Traceback (most recent call last):
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 858, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/utils/defer.py", line 150, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/pipelines.py", line 46, in process_item
+    self.cur.execute(insert_sql, insert_data)
+psycopg2.errors.NotNullViolation: null value in column "seccion_id" of relation "noticias" violates not-null constraint
+DETAIL:  Failing row contains (dab9679e-5711-11ec-8369-138d7e55cc1e, 2, null, AFP / Equipo Multimedia Emol, 2021-12-04 11:48:00-06, Cómo se compara el telescopio espacial Hubble con el James Webb..., Para el 22 de diciembre está programado el lanzamiento del nuev..., https://static.emol.cl/emol50/Fotos/2021/12/03/file_202112031149..., {"<div> <body><div> <img alt=\"\" src=\"https://static.emol.cl/e..., null).
+
+2021-12-06 21:57:53 [scrapy.core.scraper] ERROR: Error processing {'autor': 'EFE / Publicado por M. Francisca Prieto, Emol',
+ 'bajada': 'Fue probada en hámsters y solo una dosis fue suficiente para '
+           'proteger a los roedores de una infección.',
+ 'cuerpo': ['<div><b>Un equipo de científicos </b>de la Universidad Libre de '
+            'Berlín <b>construyeron</b> en un estudio preclínico<b> una '
+            'variante atenuada del virus SARS-CoV-2, que administrada a '
+            'hámsters por vía intranasal protegió a los roedores</b> de una '
+            'infección con el coronavirus.<br><br><div><b>El virus atenuado '
+            'sCPD9 se reprodujo</b> en hámsters dorados y hámsters enanos de '
+            'Roborovski, con una efectividad reducida y <b>no causó ningún '
+            'síntoma de enfermedad en los animales</b>, según un comunicado '
+            'difundido hoy por la universidad.<br><br>Los científicos '
+            '<b>detectaron, además, que solo una única vacuna intranasal '
+            '</b>con sCPD9<b> protege a los hámsters de una infección </b>con '
+            'una variante más peligrosa del SARS-CoV-2, revela el estudio '
+            'publicado en la revista "Science Advances".<br><br>Para crear el '
+            'virus atenuado sCPD9, los expertos sustituyeron una breve '
+            'secuencia del genoma del SARS-CoV-2, por una secuencia '
+            'químicamente sintetizada que limita la replicación del '
+            'virus.<br><br>La secuencia introducida fue creada por un '
+            'algoritmo informático mediante un proceso llamado Codon Pair '
+            'Deoptimization.<br><br>"Tales secuencias desoptimizadas evitan '
+            'que genes recodificados produzcan de manera eficiente proteínas '
+            'codificadas. Por eso, sCPD9 no se puede replicar ni reproducir '
+            'con tanta fuerza", explicó el veterinario y autor principal del '
+            'estudio, Jakob Trimpert, de la Universidad Libre.<br><br>Por '
+            'ello, para un huésped es más fácil combatir el virus con '
+            'reacciones inmunológicas congénitas o '
+            'adaptadas.<br><br>{TEXTODESTACADO\xa0<b>el sCPD9 fue capaz de '
+            'estimular anticuerpos neutralizadores contra cuatro variantes del '
+            'SARS-CoV-2</b>: la Alpha, la Beta, la Gamma y la Delta.} El virus '
+            'sCPD9 codifica las mismas proteínas que el virus SARS-CoV-2 '
+            'original, pero la replicación es muy '
+            'retardada.</div><div><br>"<b>El virus de replicación lenta</b> '
+            'ofrece todo el repertorio de antígenos del virus que pueden '
+            'despertar una respuesta inmunológica eficiente", explicó el '
+            'biólogo y autor último del estudio, Dusan Kunec, de la '
+            'Universidad Libre.<br><br>A pesar de que el sCPD9 se reprodujo en '
+            'las vías respiratorias superiores e inferiores de los hámsters, '
+            '<b>ninguno de los dos tipos de roedores presentó tras la vacuna '
+            'síntomas evidentes de enfermedad</b>, hecho atribuible a la '
+            'replicación atenuada del virus.<br><br>El comunicado precisa que '
+            'a pesar de la atenuación de esta potencial vacuna, <b>una única '
+            'administración intranasal del sCPD9 fue capaz de estimular '
+            'anticuerpos neutralizadores contra cuatro variantes del '
+            'SARS-CoV-2</b>: la B.1.1.7 (Alpha), la B.1 .351 (Beta), la '
+            'B.1.1.28.1 (Gamma) y la B.1.617.2 (Delta).<br><br>Además, la '
+            'vacuna ofreció una protección completa contra una enfermedad '
+            'equivalente al covid-19 tras una infección experimental con las '
+            'variantes B.1, tanto Alpha como Beta.<br><br>"<b>Debido a la '
+            'constante evolución de SARS-CoV-2</b> hacia nuevas variantes de '
+            'difícil control como la reciente Ómicron, <b>vacunas ampliamente '
+            'eficaces y localmente administrables son urgentemente '
+            'necesarias</b>", señaló Trimpert.<br><br>En este sentido, agregó, '
+            '"una vacuna viva como sCPD9 es fácil de utilizar debido a su '
+            'aplicación intranasal y al mismo tiempo altamente '
+            'efectiva".<br><br>"Puedes servir así como medio efectivo para '
+            'combatir la persistente pandemia", agregó Kunec.</div></div>'],
+ 'fecha': datetime.datetime(2021, 12, 2, 12, 52),
+ 'imagen_url': 'https://static.emol.cl/emol50/Fotos/2021/12/02/file_20211202140514.jpg',
+ 'medio': 'emol',
+ 'seccion': 'tecnologia',
+ 'titular': 'Científicos recodifican y atenúan el SARS-CoV-2 para crear vacuna '
+            'intranasal ampliamente eficaz',
+ 'url': None}
+Traceback (most recent call last):
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 858, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/utils/defer.py", line 150, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/pipelines.py", line 46, in process_item
+    self.cur.execute(insert_sql, insert_data)
+psycopg2.errors.NotNullViolation: null value in column "seccion_id" of relation "noticias" violates not-null constraint
+DETAIL:  Failing row contains (dab9f862-5711-11ec-8369-27b35c43d334, 2, null, EFE / Publicado por M. Francisca Prieto, Emol, 2021-12-02 12:52:00-06, Científicos recodifican y atenúan el SARS-CoV-2 para crear vac..., Fue probada en hámsters y solo una dosis fue suficiente para pr..., https://static.emol.cl/emol50/Fotos/2021/12/02/file_202112021405..., {"<div><b>Un equipo de científicos </b>de la Universidad Libre ..., null).
+
+2021-12-06 21:57:53 [scrapy.core.scraper] ERROR: Error processing {'autor': 'EFE/ Editado por M. Silva, Emol',
+ 'bajada': 'Los fósiles de "Stegouros elengassen" fueron encontrados por un '
+           'equipo de científicos de la Universidad de Chile en una zona '
+           'inhóspita cercana al Parque Nacional.\n'
+           '\n',
+ 'cuerpo': ['<div><div>Un equipo de investigadores de la Universidad de Chile '
+            'dio con una <b>nueva especie de dinosaurio acorazado</b> tras '
+            'hallar un fósil <b>íntegro de 74 millones</b> de años en la '
+            'sureña Región de Magallanes, el descubrimiento más importante de '
+            'la paleontología chilena junto con el Chilesaurus '
+            'diegosuarezi.</div><div><br></div><div>El hallazgo, de alto '
+            'impacto mundial y divulgado este miércoles, se <b>produjo en una '
+            'inhóspita zona cercana al Parque Nacional Torres</b> del Paine '
+            'cuando en febrero de 2018 un grupo de paleontólogos extrajo con '
+            'gran dificultad un bloque de roca con restos fósiles expuestos en '
+            'el empinado cerro del Valle del Río de las '
+            'Chinas.</div><div><br></div><div>La identificación del '
+            'espécimen,<b> liderada por los científicos Sergio Soto y '
+            'Alexander Vargas</b>, reveló la existencia de un linaje hasta '
+            'ahora desconocido de dinosaurios acorazados que, en este caso, '
+            'incluía una cola que maravilló a los investigadores al no '
+            'parecerse a la de ningún ejemplar catalogado a la '
+            'fecha.</div><div><br></div><div>El extremo de su cola <b>tenía '
+            'una particular forma parecida al macuahuitl</b>, temido garrote '
+            'utilizado por los antiguos aztecas, una rareza que permitió '
+            'identificarlo claramente como un nuevo tipo de dinosaurio '
+            'acorazado.</div><div><br></div><div>{RELACIONADA '
+            'http://www.emol.com/noticias/Tecnologia/2021/09/29/1034027/fosiles-existencia-dinosaurios-depredadores.html} '
+            'A medida que los equipos de trabajo <b>removieron la roca se '
+            'encontraron con un esqueleto prácticamente completo y con su zona '
+            'posterior articulada</b>, cuya mitad poseía siete pares de huesos '
+            'dérmicos proyectados lateralmente que le daban un aspecto similar '
+            'al un macuahuitl, el garrote de guerra utilizado por los '
+            'aztecas.</div><div><br></div><div>Con una dimensión en torno a '
+            'los 2 metros, <b>la nueva especie fue nombrada "Stegouros '
+            'elengassen"</b>: denominación que, según explicaron los '
+            'investigadores chilenos, se traduce como "<b>cola techad</b>a" '
+            'desde Stegouros, mientras que el término "elengassen" hace '
+            'referencia a un monstruo acorazado de la tradición del pueblo '
+            'tehuelche, originarios de la zona sur de '
+            'país.</div><div><br></div><div>{SUB La "Piedra '
+            'Rosetta"}</div><div><br></div><div>El paleontólogo Sergio Soto, '
+            'principal autor del estudio, señala que la investigación permitió '
+            'determinar que el ejemplar se trataba de un anquilosaurio '
+            'transicional, es decir, "u<b>n eslabón evolutivo entre los '
+            'anquilosaurios (especie acorazada de dinosaurios) y otros linajes '
+            'más antiguos de dinosaurios '
+            'acorazados</b>".</div><div><br></div><div>"<b>Stegouros tiene '
+            'solo algunos de los rasgos que normalmente se encuentran en '
+            'anquilosaurios</b>, particularmente en el cráneo, pero muchos '
+            'otros están ausentes. También tiene algunos rasgos parecidos a '
+            'los estegosaurios, heredados desde un ancestro común con ellos, '
+            'pero que otros anquilosaurios perdieron en la evolución", agregó '
+            'el investigador.</div><div><br></div><div>{RELACIONADA '
+            'http://www.emol.com/noticias/Tecnologia/2021/08/10/1029198/australia-restos-dinosaurio-volador.html}En '
+            'base a estos datos, el equipo de la Universidad de Chile sostiene '
+            'que el descubrimiento es una "Piedra Rosetta" de este grupo de '
+            'animales prehistóricos, un hallazgo que permite explicar y dar '
+            'sentido a la evolución de estos acorazados cuyos restos se han '
+            'encontrado en pocas cantidades en el Hemisferio '
+            'Sur.</div><div><br></div><div>Por su parte, el paleontólogo '
+            'Alexander Vargas enfatizó que los estegosaurios se encuentran '
+            'entre las especies más reconocibles, tanto por sus poderosas '
+            'placas dorsales como por su arma en la cola con púas '
+            'pareadas.</div><div><br></div><div>"Los anquilosaurios avanzados, '
+            'en cambio, son famosos por sus anchas espaldas acorazadas por '
+            'filas de osteodermos, y por tener una enorme maza redondeada en '
+            'el extremo de la cola. Claramente, el arma de la cola en nuestro '
+            'dinosaurio era ninguna de las anteriores", describió el '
+            'científico chileno.</div><div><br></div><div>Otra de las '
+            'conclusiones de este trabajo es que l<b>os dinosaurios acorazados '
+            'son el único linaje de vertebrados terrestres que ha evolucionado '
+            'de forma independiente</b> tres tipos radicalmente diferentes de '
+            'armas especializadas en la cola: las púas pareadas de '
+            'estegosaurios, la maza de anquilosaurios avanzados, y el '
+            'macuahuitl de Stegouros recién '
+            'hallado.</div><div><br></div><div>{SUB Desconocidos en América '
+            'del Sur}</div><div><br></div><div>Hasta ahora los anquilosaurios '
+            'habían sido encontrados por restos aislados en América del Sur, '
+            'por lo que el hallazgo del Stegouros elengassen, además en tan '
+            'buen estado de conservación, superó todas las '
+            'expectativas.</div><div><br></div><div>Las conclusiones de los '
+            'investigadores permitieron también emparentar esta nueva especie '
+            'con dos descubrimientos anteriores de dinosaurios acorazados con '
+            'los que comparte algunas características: Antarctopelta de la '
+            'Antártica y Kunbarrasaurus de '
+            'Australia.</div><div><br></div><div>El nuevo hallazgo de la '
+            'paleontología chilena permite, de esta manera, sumar información '
+            'para estudiar a los anquilosaurios del Hemisferio Sur y '
+            'compararlos con sus parientes del norte: son de menor tamaño, de '
+            'armadura más ligera y miembros más '
+            'esbeltos.</div><div><br></div><div>El trabajo propone reconocer '
+            'la nueva especie como <b>Parankylosauria ("al lado de los '
+            'Ankylosauria")</b> y distinguirlos de sus parecidos de la parte '
+            'norte del planeta.</div><div><br></div><div>{SUB Mundo Cretácico '
+            'Patagón}</div><div><br></div><div>Chile y todo Sudamérica, además '
+            'de África, Oceanía, India y la Antártica, se ubicaba en el margen '
+            'occidental del megacontinente denominado Gondwana durante la era '
+            'de los dinosaurios.</div><div><br></div><div>Este descubrimiento, '
+            'según el jefe del Área Paleontología del Museo Nacional de '
+            'Historia Natural de Chile y parte del estudio, David Rubilar, '
+            'brinda información no solo para la fauna prehistórica del país '
+            'sudamericano sino que representa "<b>evidencia valiosa" de la '
+            'conexión de los continentes australes hace millones de '
+            'años</b>.</div></div>'],
+ 'fecha': datetime.datetime(2021, 12, 1, 14, 37),
+ 'imagen_url': 'https://static.emol.cl/emol50/Fotos/2021/12/01/file_20211201161213.jpg',
+ 'medio': 'emol',
+ 'seccion': 'tecnologia',
+ 'titular': 'Investigadores hallan fósiles de 74 millones de años en Torres '
+            'del Paine: Se trataría de nueva especie de dinosaurio',
+ 'url': None}
+Traceback (most recent call last):
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 858, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/utils/defer.py", line 150, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/pipelines.py", line 46, in process_item
+    self.cur.execute(insert_sql, insert_data)
+psycopg2.errors.NotNullViolation: null value in column "seccion_id" of relation "noticias" violates not-null constraint
+DETAIL:  Failing row contains (dabaad16-5711-11ec-8369-dbc55c5c4bc8, 2, null, EFE/ Editado por M. Silva, Emol, 2021-12-01 14:37:00-06, Investigadores hallan fósiles de 74 millones de años en Torres..., Los fósiles de "Stegouros elengassen" fueron encontrados por un..., https://static.emol.cl/emol50/Fotos/2021/12/01/file_202112011612..., {"<div><div>Un equipo de investigadores de la Universidad de Chi..., null).
+
+2021-12-06 21:58:07 [root] INFO: EXISTS already: 
+	None
+Skipping.
+2021-12-06 21:58:07 [scrapy.core.scraper] WARNING: Dropped: 
+{'autor': 'Redactado por Carolina González, Emol.',
+ 'bajada': 'En el marco de la rendición de la Prueba de Transición para el '
+           'proceso de admisión a la educación superior 2022, desde la '
+           'Comisión Nacional de Acreditación hacen un llamado a tomar una '
+           'decisión con "tranquilidad" sobre dónde se planea estudiar.',
+ 'cuerpo': ['<div><div>A las 10:00 comenzó la rendición de la Prueba de '
+            'Transición (PDT), para el proceso de admisión 2022. En ese '
+            'sentido, el presidente de la Comisión Nacional de Acreditación '
+            '(CNA), Hernán Burdiles recomendó a los estudiantes postular en '
+            'instituciones de educación superior que estén<b> '
+            'acreditadas.</b></div><div><br></div>"Con los resultados a la '
+            'vista, hay que seleccionar qué carrera y en qué institución. Yo '
+            'recomiendo es ver qué nivel de acreditación tienen las '
+            'universidades, los institutos profesionales y los CFT en los '
+            'cuales pueda darse las carreras que les interesen", señaló '
+            'Burdiles.\xa0<div><br></div><div>{RELACIONADAS\xa0'
+            'https://www.emol.com/noticias/Nacional/2021/12/03/1040271/preparativos-ptu-2021-protocolos-covid.html;\xa0'
+            'https://www.emol.com/noticias/Nacional/2021/12/06/1040308/rendicion-ptu-claves-admision-2022.html}</div><div>Cabe '
+            'señalar que la acreditación es el proceso de certificación '
+            'obligatorio al que deben someterse todas las IES del país, '
+            'realizado por la Comisión Nacional de Acreditación y busca '
+            '<b>garantizar la calidad de una institución de educación '
+            'superior.</b></div><div><br></div><div>En ese sentido, el '
+            'presidente de la CNA recalcó que "la acreditación es un referente '
+            'de <b>calidad,</b> pero además el estar acreditado es una fuente '
+            'de certificación para que los estudiantes accedan a <b>beneficios '
+            'económicos que otorga el Estado</b>: Becas, gratuidad, si es que '
+            'no están calificando, postular al Crédito con Aval del '
+            'Estado".</div><div><br></div><div>Burdiles hizo un llamado a '
+            'mantener la calma sobre el proceso, pero sostuvo la importancia '
+            'de planificar la elección de las futuras carreras e instituciones '
+            'donde se planee estudiar: "<b>Deben estar tranquilos para tomar '
+            'decisiones de elección. </b>Eso, háganlo mirando en el ojo de '
+            'dónde se planea estudiar, si la institución está acreditada o no '
+            'y en qué nivel".</div><div><br></div><div>Por ello, la CNA '
+            'habilitó una plataforma<b> (www.ojodondeestudias.cl)</b> para que '
+            'los postulantes pueden informarse sobre qué instituciones de '
+            'educación superior y carreras se encuentran acreditadas y por '
+            'cuántos años.</div></div>'],
+ 'fecha': datetime.datetime(2021, 12, 6, 11, 48),
+ 'imagen_url': 'https://static.emol.cl/emol50/Fotos/2021/12/06/file_20211206132718.gif',
+ 'medio': 'emol',
+ 'seccion': 'educacion',
+ 'titular': 'CNA recomienda postular en instituciones acreditadas: &quot;Es '
+            'una certificación de calidad y de acceso a beneficios '
+            'económicos&quot;',
+ 'url': None}
+2021-12-06 21:58:07 [root] INFO: INSERTED item with:
+	URL: None
+	Titular: Hoy comienza la rendición de la PTU: Revisa las claves del proceso, los elementos obligatorios y horarios
+	Medio: emol
+into DB.
+2021-12-06 21:58:07 [scrapy.core.scraper] ERROR: Spider error processing <GET https://cache-elastic-pandora.ecn.cl/emol/noticia/_search?q=publicada:true+AND+temas.id:79+OR+temas.id:109+NOT+id:1021974&sort=fechaModificacion:desc&size=6&from=0> (referer: None)
+Traceback (most recent call last):
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/utils/defer.py", line 120, in iter_errback
+    yield next(it)
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/utils/python.py", line 353, in __next__
+    return next(self.data)
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/utils/python.py", line 353, in __next__
+    return next(self.data)
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/core/spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/core/spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/spidermiddlewares/referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/core/spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/spidermiddlewares/urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/core/spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/core/spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/emol_spider.py", line 29, in parse
+    l.add_value('imagen_url', article["tablas"]["tablaMedios"][0]["Url"])
+IndexError: list index out of range
+2021-12-06 21:58:07 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-06 21:58:07 [root] INFO: []
+2021-12-06 21:58:07 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3019,
+ 'downloader/request_count': 8,
+ 'downloader/request_method_count/GET': 8,
+ 'downloader/response_bytes': 201931,
+ 'downloader/response_count': 8,
+ 'downloader/response_status_count/200': 7,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 56.803111,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 12, 7, 3, 58, 7, 148800),
+ 'httpcompression/response_bytes': 161878,
+ 'httpcompression/response_count': 3,
+ 'item_dropped_count': 1,
+ 'item_dropped_reasons_count/DropItem': 1,
+ 'item_scraped_count': 13,
+ 'log_count/ERROR': 8,
+ 'log_count/INFO': 26,
+ 'log_count/WARNING': 1,
+ 'memusage/max': 51920896,
+ 'memusage/startup': 51916800,
+ 'response_received_count': 8,
+ 'robotstxt/request_count': 2,
+ 'robotstxt/response_count': 2,
+ 'robotstxt/response_status_count/200': 1,
+ 'robotstxt/response_status_count/404': 1,
+ 'scheduler/dequeued': 6,
+ 'scheduler/dequeued/memory': 6,
+ 'scheduler/enqueued': 6,
+ 'scheduler/enqueued/memory': 6,
+ 'spider_exceptions/IndexError': 1,
+ 'spider_exceptions/ValueError': 1,
+ 'start_time': datetime.datetime(2021, 12, 7, 3, 57, 10, 345689)}
+2021-12-06 21:58:07 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-07 09:22:31 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: scraper)
+2021-12-07 09:22:31 [scrapy.utils.log] INFO: Versions: lxml 4.6.4.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.9.9 (main, Nov 21 2021, 03:23:42) - [Clang 13.0.0 (clang-1300.0.29.3)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 36.0.0, Platform macOS-11.4-x86_64-i386-64bit
+2021-12-07 09:22:31 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 10,
+ 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter',
+ 'EDITOR': '/usr/local/bin/nvim',
+ 'LOGSTATS_INTERVAL': 0,
+ 'LOG_FILE': '/Users/niko/Documents/Code/LectorChile/scraper/scraper/logs/log.txt',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders']}
+2021-12-07 09:22:31 [scrapy.extensions.telnet] INFO: Telnet Password: d22ca48565f284c7
+2021-12-07 09:22:31 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage']
+2021-12-07 09:22:31 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy_useragents.downloadermiddlewares.useragents.UserAgentsMiddleware',
+ 'scraper.middlewares.ScraperDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-12-07 09:22:31 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-12-07 09:22:31 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.DefaultsPipeline',
+ 'scraper.pipelines.SanitizePipeline',
+ 'scraper.pipelines.DBPipeline']
+2021-12-07 09:22:31 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-12-07 09:22:42 [scrapy.core.engine] INFO: Spider opened
+2021-12-07 09:22:42 [default] INFO: Spider opened: default
