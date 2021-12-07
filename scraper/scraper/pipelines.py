@@ -6,8 +6,7 @@ from scrapy.exceptions import DropItem
 
 class SanitizePipeline:
     '''
-    Handles normalizing and translating values
-    for our DB.
+    Sanitizes our article bodies.
     '''
     # Setup for cleansing html tags of attrs we don't want.
     safe_attrs = set(['src', 'href', 'alt'])
@@ -15,7 +14,7 @@ class SanitizePipeline:
     cleaner = clean.Cleaner(safe_attrs_only=True, safe_attrs=safe_attrs, kill_tags=kill_tags)
 
     def process_item(self, item, spider):
-        # Clean all tags in cuerpo.
+        # Clean all tags in cuerpo. Cuerpo is a list of tags, essentially.
         item['cuerpo'] = list(map(self.cleaner.clean_html, item['cuerpo']))
 
         return item
@@ -45,17 +44,15 @@ class DBPipeline:
 
         try:
             self.cur.execute(insert_sql, insert_data)
-            logging.log(logging.INFO,
-                    'Inserted item with url:\n\t{url}\ninto DB.'.format(url=item['url']))
+            logging.info('INSERTED item with:\n\tURL: {url}\n\tTitular: {titular}\n\tMedio: {medio}\ninto DB.'.format(url=item['url'], titular=item['titular'], medio=item['medio']))
             return item
         except psycopg2.errors.UniqueViolation:
-            logging.log(logging.INFO, 
-                    'Item for medio {medio}, with url:\n\t{url}\nalready exists in DB. Skipping.'.format(medio=item['medio'], url=item['url']))
+            logging.info('EXISTS already: \n\t{url}\nSkipping.'.format(medio=item['medio'], url=item['url']))
             raise DropItem
 
     def close_spider(self, spider):
         # self.conn.commit() -- Use if no autocommit
-        logging.log(logging.INFO, self.conn.notices)
+        logging.info(self.conn.notices)
         self.conn.close()
 
 
@@ -64,9 +61,15 @@ class ScreenerPipeline:
     Screen items for unacceptable values.
     '''
     def process_item(self, item, spider):
-        if item['titular'] == None: raise DropItem
-        if item['cuerpo'] == None or item['cuerpo'] == []: raise DropItem
-        if item['url'] == None: raise DropItem
+        if item['titular'] == None:
+            logging.warn('NULL TITULAR for article: \n\t{url}\nDropping.'.format(url=item['url']))
+            raise DropItem
+        if item['cuerpo'] == None or item['cuerpo'] == []:
+            logging.warn('NULL BODY for article: \n\t{url}\nDropping.'.format(url=item['url']))
+            raise DropItem
+        if item['url'] == None:
+            logging.warn('NULL URL in spider {spider_name}\nDropping.'.format(url=spider.name))
+            raise DropItem
 
 
 class DefaultsPipeline:

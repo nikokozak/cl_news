@@ -16,6 +16,11 @@ NEWSPIDER_MODULE = 'scraper.spiders'
 # The folder where cache files for spiders are saved
 SPIDER_CACHE_FOLDER = os.path.dirname(os.path.realpath(__file__)) + '/cache/'
 
+# Logging settings
+LOG_LEVEL = 'INFO'
+LOG_FILE = os.path.dirname(os.path.realpath(__file__)) + '/logs/log.txt'
+LOG_ENCODING = 'utf-8'
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'scraper (+http://www.yourdomain.com)'
 
