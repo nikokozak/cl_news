@@ -4,7 +4,9 @@
 </div>
 <h2 id="noticia-titular"><%= Map.get(@noticia, "titular") %></h2>
 <div id="articulo-details">
-  <p id="articulo-autor">Por <strong><%= Map.get(@noticia, "autor") %></strong></p>
+  <% autor = Map.get(@noticia, "autor", false) %>
+  <% medio = Map.get(@noticia, "medio_std") %>
+  <p id="articulo-autor"><%= if autor do %><%= if String.equivalent?(medio, "emol") do%><% else %>Por<% end %><strong><%= Map.get(@noticia, "autor") %></strong><% end %></p>
   <p id="articulo-fecha"><%= Map.get(@noticia, "fecha") %></p>
 </div>
 <%= if Map.get(@noticia, "imagen_url", false) do %>
@@ -15,7 +17,9 @@
     <p><%= Map.get(@noticia, "bajada") %></p>
   </div>
 <% end %>
-<div id="noticia-cuerpo">
+<% seccion = Map.get(@noticia, "seccion_std") %>
+<% medio = Map.get(@noticia, "medio_std") %>
+<div id="noticia-cuerpo" class="<%= seccion %> <%= medio %>">
   <%= for item <- Map.get(@noticia, "cuerpo") do %>
     <%= item %>
   <% end %>

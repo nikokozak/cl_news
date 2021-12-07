@@ -336,11 +336,16 @@ nav {
 #noticia-cuerpo h1,
 #noticia-cuerpo strong,
 #noticia-cuerpo a,
-#noticia-cuerpo b {
+#noticia-cuerpo b,
+#noticia-cuerpo div {
     margin: 0;
     padding: 0;
     font-size: 0.85rem;
     line-height: 1.3rem;
+}
+
+#noticia-cuerpo.economia.emol div {
+    margin-bottom: 1rem;
 }
 
 #noticia-cuerpo p, #noticia-cuerpo h2 {

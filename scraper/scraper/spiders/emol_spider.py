@@ -1,4 +1,5 @@
 import scrapy, json, datetime, re
+from scrapy import Selector
 from scraper.spiders.site_rules import emol
 from scraper.spiders.base_spider import NoticiaSpider
 from scraper.items import NoticiaItem, NoticiaLoader
@@ -64,7 +65,12 @@ class BioBioSpider(NoticiaSpider):
             l.add_value('cuerpo', self.sanitize_body_text(article["texto"]))
             l.add_value('fecha', self.parse_date(article["fechaPublicacion"]))
             l.add_value('url', article["permalink"])
-            yield l.load_item()
+
+            # Skip this item if it's a multimedia item
+            if (article["fuente"] == "Por Equipo Multimedia Emol"):
+                return
+            else:
+                yield l.load_item()
 
     def sanitize_body(self, response, rule):
         cuerpo = response.xpath(rule).getall()

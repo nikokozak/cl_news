@@ -60,3 +60,54 @@
 12:23:47.869 [info] GET /noticia/iR5AkFeIEeywDMN-KYV44Q== 127.0.0.1 :: sent - 200
 12:24:00.647 [info] GET /ultimo/2 127.0.0.1 :: sent - 200
 12:24:03.400 [info] GET / 127.0.0.1 :: sent - 200
+13:09:47.536 [info] Starting server at port 8080
+13:09:52.174 [info] GET / 127.0.0.1 :: sent - 200
+13:09:58.341 [info] GET /noticia/kfRKrFeIEeywDPNOQzl-Sg== 127.0.0.1 :: sent - 200
+13:10:26.074 [info] GET / 127.0.0.1 :: sent - 200
+13:10:36.850 [info] GET /politica 127.0.0.1 :: sent - 200
+13:10:37.961 [info] GET /noticia/sMyxWFeIEeyhG6c8GOAQ4Q== 127.0.0.1 :: sent - 200
+13:12:01.487 [info] GET /noticia/kfRKrFeIEeywDPNOQzl-Sg== 127.0.0.1 :: sent - 200
+13:12:26.932 [info] GET /noticia/swFl6leIEeywDJfev5QnUw== 127.0.0.1 :: sent - 200
+13:13:09.943 [info] GET /noticia/kfRKrFeIEeywDPNOQzl-Sg== 127.0.0.1 :: sent - 200
+13:20:19.705 [info] GET / 127.0.0.1 :: sent - 200
+13:20:21.618 [info] GET /noticia/swFl6leIEeywDJfev5QnUw== 127.0.0.1 :: sent - 200
+13:20:56.123 [info] GET /noticia/kfRKrFeIEeywDPNOQzl-Sg== 127.0.0.1 :: sent - 200
+13:21:00.092 [info] GET /noticia/iRleuFeIEeywDCNS0piioA== 127.0.0.1 :: sent - 200
+13:21:56.805 [info] GET /noticia/kfRKrFeIEeywDPNOQzl-Sg== 127.0.0.1 :: sent - 200
+13:31:44.398 [info] Starting server at port 8080
+13:31:46.778 [info] GET /noticia/swFl6leIEeywDJfev5QnUw== 127.0.0.1 :: sent - 200
+13:41:55.137 [info] Starting server at port 8080
+13:42:00.024 [info] GET /noticia/swFl6leIEeywDJfev5QnUw== 127.0.0.1 :: sent - 200
+13:43:21.478 [info] Starting server at port 8080
+13:43:23.170 [info] GET /noticia/swFl6leIEeywDJfev5QnUw== 127.0.0.1 :: sent - 200
+13:44:58.979 [info] Starting server at port 8080
+13:45:00.522 [info] GET /noticia/swFl6leIEeywDJfev5QnUw== 127.0.0.1 :: sent - 200
+13:45:03.732 [info] GET /noticia/swFl6leIEeywDJfev5QnUw== 127.0.0.1 :: sent - 200
+13:46:11.278 [info] Starting server at port 8080
+13:46:15.233 [info] GET /noticia/swFl6leIEeywDJfev5QnUw== 127.0.0.1 :: sent - 200
+13:46:57.687 [info] Starting server at port 8080
+13:46:58.757 [info] GET /noticia/swFl6leIEeywDJfev5QnUw== 127.0.0.1 :: sent - 200
+13:47:16.285 [info] GET / 127.0.0.1 :: sent - 200
+13:47:17.484 [info] GET /noticia/kfRKrFeIEeywDPNOQzl-Sg== 127.0.0.1 :: sent - 200
+13:48:31.708 [info] GET /noticia/swFl6leIEeywDJfev5QnUw== 127.0.0.1 :: sent - 200
+13:48:47.180 [info] GET /noticia/swFl6leIEeywDJfev5QnUw== 127.0.0.1 :: sent - 200
+13:48:56.819 [info] GET / 127.0.0.1 :: sent - 200
+13:48:58.349 [info] GET /noticia/iRleuFeIEeywDCNS0piioA== 127.0.0.1 :: sent - 200
+13:50:31.114 [info] Starting server at port 8080
+13:50:33.361 [error] #PID<0.417.0> running Lector.Endpoint (connection #PID<0.415.0>, stream id 1) terminated
+Server: localhost:8080 (http)
+Request: GET /noticia/iRleuFeIEeywDCNS0piioA==
+** (exit) an exception was raised:
+    ** (CompileError) nofile:9: undefined function ==/2
+        (elixir 1.12.3) src/elixir_expand.erl:655: :elixir_expand.expand_case/4
+        (elixir 1.12.3) expanding macro: Kernel.if/2
+        nofile:9: (file)
+        (elixir 1.12.3) expanding macro: Kernel.if/2
+        nofile:9: (file)
+13:51:34.018 [info] Starting server at port 8080
+13:51:38.063 [info] GET /noticia/iRleuFeIEeywDCNS0piioA== 127.0.0.1 :: sent - 200
+13:51:40.687 [info] GET /noticia/iRleuFeIEeywDCNS0piioA== 127.0.0.1 :: sent - 200
+13:51:54.717 [info] Starting server at port 8080
+13:51:56.229 [info] GET /noticia/iRleuFeIEeywDCNS0piioA== 127.0.0.1 :: sent - 200
+13:52:02.141 [info] GET / 127.0.0.1 :: sent - 200
+13:52:06.403 [info] GET /noticia/iRleuFeIEeywDCNS0piioA== 127.0.0.1 :: sent - 200
