@@ -17,9 +17,9 @@ class BioBioSpider(NoticiaSpider):
         # These are returned as a JSON dump, 6 articles at a time. We load
         # the JSON and navigate it to extract values.
         if section in ['nacional', 'internacional', 'tecnologia', 'educacion']:
-            self.parse_json_dump(response, section)
+            return self.parse_json_dump(response, section)
         else:
-            self.dispatch_to_article_parser(response, section)
+            return self.dispatch_to_article_parser(response, section)
 
     def parse_article(self, response, section):
         rules = emol['article']
@@ -30,7 +30,7 @@ class BioBioSpider(NoticiaSpider):
         l.add_xpath('titular', rules['titular'])
         l.add_xpath('bajada', rules['bajada'])
         l.add_xpath('autor', rules['autor'])
-        l.add_xpath('imagen_url', rules['image_url'])
+        l.add_xpath('imagen_url', rules['imagen_url'])
         l.add_xpath('cuerpo', rules['cuerpo'])
         l.add_xpath('fecha', rules['fecha'])
         l.add_value('url', response.url)

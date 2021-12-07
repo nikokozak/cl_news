@@ -48,7 +48,7 @@ class DBPipeline:
             return item
         except psycopg2.errors.UniqueViolation:
             logging.info('EXISTS already: \n\t{url}\nSkipping.'.format(medio=item['medio'], url=item['url']))
-            raise DropItem
+            return None #In this case we can do this, given it's the last pipeline
 
     def close_spider(self, spider):
         # self.conn.commit() -- Use if no autocommit
