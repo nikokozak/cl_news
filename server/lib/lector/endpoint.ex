@@ -9,7 +9,5 @@ defmodule Lector.Endpoint do
     at: "/assets", 
     from: :lector
 
-  IO.inspect(Path.expand('.'))
-
   plug Lector.Router
 end

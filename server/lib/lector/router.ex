@@ -1,10 +1,12 @@
 defmodule Lector.Router do
+  require Logger
   use Plug.Router
   alias Lector.Templates.Home
   alias Lector.Templates.Noticia
 
   plug :match
   plug :dispatch
+  plug :log_metadata_plug
 
   get "/test" do
     Lector.DB.get_all
@@ -59,13 +61,22 @@ defmodule Lector.Router do
     send_resp(conn, 404, "not found")
   end
 
-# Old render function, keeping around for reference (not compiled!)
-# defp render(%{status: status} = conn, template, assigns \\ []) do
-#   body = 
-#     @template_dir
-#     |> Path.join(template)
-#     |> EEx.eval_file(assigns)
-#
-#   send_resp(conn, (status || 200), body)
-# end
+  def log_metadata_plug(conn, _opts) do
+    %{ 
+      method: method,
+      request_path: req_path,
+      remote_ip: ip_tup,
+      req_headers: headers,
+      state: state,
+      status: status,
+    } = conn
+
+    {_, user_agent} = Enum.find(headers, fn {h, _v} -> h == "user-agent" end)
+    ip = Enum.join(Tuple.to_list(ip_tup), ".")
+
+    Logger.debug("#{method} #{req_path} #{ip} :: #{user_agent} :: #{state} - #{status}")
+    Logger.info("#{method} #{req_path} #{ip} :: #{state} - #{status}")
+    conn
+  end
+
 end

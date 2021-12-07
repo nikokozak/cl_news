@@ -1,5 +1,6 @@
 defmodule Lector do
   use Application
+  require Logger
   @moduledoc """
   Base module called on by `mix run` for app orchestration.
   """
@@ -20,7 +21,8 @@ defmodule Lector do
       strategy: :one_for_one,
       name: Lector.Supervisor
     ]
-
+    
+    Logger.info("Starting server at port 8080")
     Supervisor.start_link(children, opts)
   end
 

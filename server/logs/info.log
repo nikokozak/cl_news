@@ -1,0 +1,15 @@
+11:25:16.862 [info] Starting server at port 8080
+11:25:22.124 [info] GET / 127.0.0.1 :: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36
+11:25:24.141 [info] GET /noticia/F-IX5Fd0EeydsG8ZuG6j-w== 127.0.0.1 :: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36
+11:25:46.413 [info] GET /noticia/Fasfasdf 127.0.0.1 :: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36
+11:26:20.305 [info] Starting server at port 8080
+11:26:22.184 [info] GET /noticia/Fasfasdf 127.0.0.1 :: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36
+11:27:59.651 [info] Starting server at port 8080
+11:28:02.124 [info] GET /noticia/Fasfasdf 127.0.0.1 :: sent - 404
+11:29:48.735 [info] Starting server at port 8080
+11:29:53.469 [info] GET /noticia/Fasfasdf 127.0.0.1 :: sent - 404
+11:30:44.899 [info] Starting server at port 8080
+11:30:48.176 [info] GET /noticia/Fasfasdf 127.0.0.1 :: sent - 404
+11:31:03.861 [info] GET / 127.0.0.1 :: sent - 200
+11:31:06.155 [info] GET /noticia/F-IX5Fd0EeydsG8ZuG6j-w== 127.0.0.1 :: sent - 200
+11:31:09.085 [info] GET / 127.0.0.1 :: sent - 200
