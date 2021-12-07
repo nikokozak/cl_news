@@ -1,3 +1,4 @@
-3. Error pages
-4. Good logging
-5. Python CLI
+2. Cache pruning
+3. Other outlets
+4. Error pages
+

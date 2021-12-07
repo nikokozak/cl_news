@@ -18,6 +18,7 @@ SPIDER_CACHE_FOLDER = os.path.dirname(os.path.realpath(__file__)) + '/cache/'
 
 # Logging settings
 LOG_LEVEL = 'INFO'
+LOG_ENABLED = True
 LOG_FILE = os.path.dirname(os.path.realpath(__file__)) + '/logs/log.txt'
 LOG_ENCODING = 'utf-8'
 
