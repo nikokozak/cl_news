@@ -21,6 +21,16 @@ class BioBioSpider(NoticiaSpider):
         else:
             return self.dispatch_to_article_parser(response, section)
 
+    def dispatch_to_article_parser(self, response, section):
+        limit_count = 0
+        article_rel_links = response.xpath(emol['article_links']).getall()
+
+        for rel_link in article_rel_links:
+            abs_link = self.base_url + rel_link
+            if not self.cache.unique(abs_link) and limit_count < self.limit:
+                limit_count += 1
+                yield scrapy.Request(url=abs_link, callback=self.parse_article, cb_kwargs=dict(section=section))
+
     def parse_article(self, response, section):
         rules = emol['article']
         l = NoticiaLoader(item=NoticiaItem(), response=response)
@@ -56,16 +66,6 @@ class BioBioSpider(NoticiaSpider):
             l.add_value('url', article["permalink"])
             yield l.load_item()
 
-    def dispatch_to_article_parser(self, response, section):
-        limit_count = 0
-        article_rel_links = response.xpath(emol['article_links']).getall()
-
-        for rel_link in article_rel_links:
-            abs_link = self.base_url + rel_link
-            if not self.cache.unique(abs_link) and limit_count < self.limit:
-                limit_count += 1
-                yield scrapy.Request(url=abs_link, callback=self.parse_article, cb_kwargs=dict(section=section))
-
     def sanitize_body(self, response, rule):
         cuerpo = response.xpath(rule).getall()
         return map(self.sanitize_body_text, cuerpo)
@@ -74,4 +74,5 @@ class BioBioSpider(NoticiaSpider):
         return re.sub(r'{.*}', "", text)
 
     def parse_date(self, strdate):
-        return datetime.datetime.strptime(strdate, '%Y-%m-%dT%H:%M:%S')
+        strdate = strdate + "UTC-0400"
+        return datetime.datetime.strptime(strdate, '%Y-%m-%dT%H:%M:%S%Z%z')

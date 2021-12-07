@@ -10,6 +10,7 @@ Scrapy = "^2.5.1"
 psycopg2-binary = "^2.9.2"
 python-dateutil = "^2.8.2"
 Scrapy-UserAgents = "^0.0.1"
+tzdata = "^2021.5"
 
 [tool.poetry.dev-dependencies]
 

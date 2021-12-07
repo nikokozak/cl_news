@@ -40,3 +40,23 @@
 11:54:49.050 [info] GET /politica 127.0.0.1 :: sent - 200
 11:54:50.466 [info] GET /noticia/-uhqkFb_EeyuhzvFtvnR3w== 127.0.0.1 :: sent - 200
 11:54:55.566 [info] GET / 127.0.0.1 :: sent - 200
+12:21:37.814 [info] Starting server at port 8080
+12:21:43.000 [info] GET / 127.0.0.1 :: sent - 200
+12:21:44.515 [info] GET / 127.0.0.1 :: sent - 200
+12:21:58.404 [info] GET / 127.0.0.1 :: sent - 200
+12:22:03.189 [info] GET /ultimo/2 127.0.0.1 :: sent - 200
+12:22:07.176 [info] GET /ultimo/3 127.0.0.1 :: sent - 200
+12:22:13.710 [info] GET /ultimo/4 127.0.0.1 :: sent - 200
+12:22:17.162 [info] GET /ultimo/5 127.0.0.1 :: sent - 200
+12:22:19.660 [info] GET /ultimo/4 127.0.0.1 :: sent - 200
+12:22:20.348 [info] GET /ultimo/3 127.0.0.1 :: sent - 200
+12:22:21.115 [info] GET /ultimo/2 127.0.0.1 :: sent - 200
+12:22:21.937 [info] GET / 127.0.0.1 :: sent - 200
+12:22:26.588 [info] GET /noticia/iRleuFeIEeywDCNS0piioA== 127.0.0.1 :: sent - 200
+12:23:13.921 [info] GET /noticia/swFl6leIEeywDJfev5QnUw== 127.0.0.1 :: sent - 200
+12:23:23.906 [info] GET /noticia/iRqfOleIEeywDGcnTE6jeA== 127.0.0.1 :: sent - 200
+12:23:31.602 [info] GET /noticia/iR5AkFeIEeywDMN-KYV44Q== 127.0.0.1 :: sent - 200
+12:23:40.364 [info] GET /noticia/iRqfOleIEeywDGcnTE6jeA== 127.0.0.1 :: sent - 200
+12:23:47.869 [info] GET /noticia/iR5AkFeIEeywDMN-KYV44Q== 127.0.0.1 :: sent - 200
+12:24:00.647 [info] GET /ultimo/2 127.0.0.1 :: sent - 200
+12:24:03.400 [info] GET / 127.0.0.1 :: sent - 200
