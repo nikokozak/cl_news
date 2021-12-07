@@ -1,0 +1,298 @@
+2021-12-06 19:48:34 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: scraper)
+2021-12-06 19:48:34 [scrapy.utils.log] INFO: Versions: lxml 4.6.4.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.9.9 (main, Nov 21 2021, 03:23:42) - [Clang 13.0.0 (clang-1300.0.29.3)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 36.0.0, Platform macOS-11.4-x86_64-i386-64bit
+2021-12-06 19:48:34 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 10,
+ 'LOG_FILE': '/Users/niko/Documents/Code/LectorChile/scraper/scraper/logs/log.txt',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders']}
+2021-12-06 19:48:34 [scrapy.extensions.telnet] INFO: Telnet Password: 7c51c83f1af7c482
+2021-12-06 19:48:34 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2021-12-06 19:48:35 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy_useragents.downloadermiddlewares.useragents.UserAgentsMiddleware',
+ 'scraper.middlewares.ScraperDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-12-06 19:48:35 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-12-06 19:48:35 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.DefaultsPipeline',
+ 'scraper.pipelines.SanitizePipeline',
+ 'scraper.pipelines.DBPipeline']
+2021-12-06 19:48:35 [scrapy.core.engine] INFO: Spider opened
+2021-12-06 19:48:35 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-12-06 19:48:35 [biobio] INFO: Spider opened: biobio
+2021-12-06 19:48:35 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-12-06 19:48:35 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 10,
+ 'LOG_FILE': '/Users/niko/Documents/Code/LectorChile/scraper/scraper/logs/log.txt',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders']}
+2021-12-06 19:48:35 [scrapy.extensions.telnet] INFO: Telnet Password: 8cea03167be650af
+2021-12-06 19:48:35 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2021-12-06 19:48:35 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy_useragents.downloadermiddlewares.useragents.UserAgentsMiddleware',
+ 'scraper.middlewares.ScraperDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-12-06 19:48:35 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-12-06 19:48:35 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.DefaultsPipeline',
+ 'scraper.pipelines.SanitizePipeline',
+ 'scraper.pipelines.DBPipeline']
+2021-12-06 19:48:35 [scrapy.core.engine] INFO: Spider opened
+2021-12-06 19:48:35 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-12-06 19:48:35 [tercera] INFO: Spider opened: tercera
+2021-12-06 19:48:35 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6024
+2021-12-06 19:49:35 [scrapy.extensions.logstats] INFO: Crawled 5 pages (at 5 pages/min), scraped 0 items (at 0 items/min)
+2021-12-06 19:49:35 [scrapy.extensions.logstats] INFO: Crawled 4 pages (at 4 pages/min), scraped 0 items (at 0 items/min)
+2021-12-06 19:49:51 [root] INFO: INSERTED item with:
+	URL: https://www.biobiochile.cl/noticias/nacional/region-del-bio-bio/2021/12/06/hasta-10-anos-de-carcel-arriesga-hombre-acusado-de-multiples-delitos-en-contra-de-expareja.shtml
+	Titular: Hasta 10 años de cárcel arriesga hombre acusado de múltiples delitos en contra de expareja
+	Medio: biobio
+into DB.
+2021-12-06 19:49:56 [root] INFO: INSERTED item with:
+	URL: https://www.latercera.com/politica/noticia/a-13-dias-de-la-segunda-vuelta-la-moneda-pone-presion-a-18-proyectos-de-agenda-de-seguridad/SJIX32L3ABCAPGJMGBPDJH375A/
+	Titular: A 13 días de la segunda vuelta, La Moneda pone presión a 17 proyectos de agenda de seguridad
+	Medio: tercera
+into DB.
+2021-12-06 19:50:05 [root] INFO: INSERTED item with:
+	URL: https://www.biobiochile.cl/noticias/internacional/europa/2021/12/06/rey-emerito-juan-carlos-i-clama-inmunidad-en-inglaterra-tras-acusacion-de-acoso-de-examante.shtml
+	Titular: Rey emérito Juan Carlos I clama inmunidad en Inglaterra tras acusación de acoso de examante
+	Medio: biobio
+into DB.
+2021-12-06 19:50:08 [root] INFO: INSERTED item with:
+	URL: https://www.latercera.com/nacional/noticia/gobierno-realiza-positivo-balance-de-primera-jornada-de-la-prueba-de-transicion-se-realizo-de-manera-tranquila-y-segura/CHBS3CLDU5EWPJOITZPGB5NKVQ/
+	Titular: Gobierno realiza positivo balance de primera jornada de la Prueba de Transición: “Se realizó de manera tranquila y segura”
+	Medio: tercera
+into DB.
+2021-12-06 19:50:16 [root] INFO: INSERTED item with:
+	URL: https://www.biobiochile.cl/noticias/economia/tu-bolsillo/2021/12/06/calefaccion-electrica-permite-ahorrar-hasta-53-en-ciudades-del-sur-arroja-estudio-de-grupo-saesa.shtml
+	Titular: Calefacción eléctrica permite ahorrar hasta 53% en ciudades del sur, arroja estudio de Grupo Saesa
+	Medio: biobio
+into DB.
+2021-12-06 19:50:31 [root] INFO: INSERTED item with:
+	URL: https://www.biobiochile.cl/noticias/espectaculos-y-tv/cine-y-series/2021/12/06/por-primera-vez-marvel-competira-con-una-serie-en-los-critics-choice-awards-2022.shtml
+	Titular: Por primera vez Marvel competirá con una serie en los Critics Choice Awards 2022
+	Medio: biobio
+into DB.
+2021-12-06 19:50:35 [scrapy.extensions.logstats] INFO: Crawled 10 pages (at 5 pages/min), scraped 4 items (at 4 items/min)
+2021-12-06 19:50:35 [scrapy.extensions.logstats] INFO: Crawled 8 pages (at 4 pages/min), scraped 2 items (at 2 items/min)
+2021-12-06 19:50:43 [root] INFO: INSERTED item with:
+	URL: https://www.biobiochile.cl/biobiotv/programas/podria-ser-peor/2021/12/06/metro-de-stgo-vecinos-de-renca-reclaman-por-obras-que-ocuparan-17-hectareas.shtml
+	Titular: Metro de Stgo: Vecinos de Renca reclaman por obras que ocuparán 17 hectáreas
+	Medio: biobio
+into DB.
+2021-12-06 19:50:43 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-06 19:50:43 [root] INFO: []
+2021-12-06 19:50:43 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 4350,
+ 'downloader/request_count': 11,
+ 'downloader/request_method_count/GET': 11,
+ 'downloader/response_bytes': 306019,
+ 'downloader/response_count': 11,
+ 'downloader/response_status_count/200': 11,
+ 'elapsed_time_seconds': 128.641276,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 12, 7, 1, 50, 43, 868575),
+ 'httpcompression/response_bytes': 2263326,
+ 'httpcompression/response_count': 10,
+ 'item_scraped_count': 5,
+ 'log_count/INFO': 33,
+ 'memusage/max': 77021184,
+ 'memusage/startup': 51974144,
+ 'request_depth_max': 1,
+ 'response_received_count': 11,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 10,
+ 'scheduler/dequeued/memory': 10,
+ 'scheduler/enqueued': 10,
+ 'scheduler/enqueued/memory': 10,
+ 'start_time': datetime.datetime(2021, 12, 7, 1, 48, 35, 227299)}
+2021-12-06 19:50:43 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-06 19:50:44 [root] INFO: INSERTED item with:
+	URL: https://www.latercera.com/mundo/noticia/reino-unido-alerta-que-hay-transmision-comunitaria-de-variante-omicron-en-varias-regiones-de-inglaterra/UX2AV7DK2FAV3LX44IPKHC4B4I/
+	Titular: Reino Unido alerta que hay transmisión comunitaria de variante Ómicron en varias regiones de Inglaterra
+	Medio: tercera
+into DB.
+2021-12-06 19:50:44 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-06 19:50:44 [root] INFO: []
+2021-12-06 19:50:44 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3753,
+ 'downloader/request_count': 11,
+ 'downloader/request_method_count/GET': 11,
+ 'downloader/response_bytes': 642891,
+ 'downloader/response_count': 11,
+ 'downloader/response_status_count/200': 9,
+ 'downloader/response_status_count/301': 2,
+ 'elapsed_time_seconds': 129.233104,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 12, 7, 1, 50, 44, 473049),
+ 'httpcompression/response_bytes': 3531950,
+ 'httpcompression/response_count': 9,
+ 'item_scraped_count': 3,
+ 'log_count/INFO': 28,
+ 'memusage/max': 77021184,
+ 'memusage/startup': 52137984,
+ 'request_depth_max': 1,
+ 'response_received_count': 9,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 10,
+ 'scheduler/dequeued/memory': 10,
+ 'scheduler/enqueued': 10,
+ 'scheduler/enqueued/memory': 10,
+ 'start_time': datetime.datetime(2021, 12, 7, 1, 48, 35, 239945)}
+2021-12-06 19:50:44 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-06 21:00:36 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: scraper)
+2021-12-06 21:00:36 [scrapy.utils.log] INFO: Versions: lxml 4.6.4.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.9.9 (main, Nov 21 2021, 03:23:42) - [Clang 13.0.0 (clang-1300.0.29.3)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 35.0.0, Platform macOS-11.4-x86_64-i386-64bit
+2021-12-06 21:00:36 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 10,
+ 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter',
+ 'EDITOR': '/usr/local/bin/nvim',
+ 'LOGSTATS_INTERVAL': 0,
+ 'LOG_FILE': '/Users/niko/Documents/Code/LectorChile/scraper/scraper/logs/log.txt',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders']}
+2021-12-06 21:00:37 [scrapy.extensions.telnet] INFO: Telnet Password: f7a889335d636fcd
+2021-12-06 21:00:37 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage']
+2021-12-06 21:01:15 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: scraper)
+2021-12-06 21:01:15 [scrapy.utils.log] INFO: Versions: lxml 4.6.4.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.9.9 (main, Nov 21 2021, 03:23:42) - [Clang 13.0.0 (clang-1300.0.29.3)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 36.0.0, Platform macOS-11.4-x86_64-i386-64bit
+2021-12-06 21:01:15 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 10,
+ 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter',
+ 'EDITOR': '/usr/local/bin/nvim',
+ 'LOGSTATS_INTERVAL': 0,
+ 'LOG_FILE': '/Users/niko/Documents/Code/LectorChile/scraper/scraper/logs/log.txt',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders']}
+2021-12-06 21:01:15 [scrapy.extensions.telnet] INFO: Telnet Password: 021e60de63f56efd
+2021-12-06 21:01:15 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage']
+2021-12-06 21:01:16 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy_useragents.downloadermiddlewares.useragents.UserAgentsMiddleware',
+ 'scraper.middlewares.ScraperDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-12-06 21:01:16 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-12-06 21:01:16 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.DefaultsPipeline',
+ 'scraper.pipelines.SanitizePipeline',
+ 'scraper.pipelines.DBPipeline']
+2021-12-06 21:01:16 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-12-06 21:01:28 [scrapy.core.engine] INFO: Spider opened
+2021-12-06 21:01:28 [default] INFO: Spider opened: default
+2021-12-06 21:32:16 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: scraper)
+2021-12-06 21:32:16 [scrapy.utils.log] INFO: Versions: lxml 4.6.4.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.9.9 (main, Nov 21 2021, 03:23:42) - [Clang 13.0.0 (clang-1300.0.29.3)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 36.0.0, Platform macOS-11.4-x86_64-i386-64bit
+2021-12-06 21:32:16 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 10,
+ 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter',
+ 'EDITOR': '/usr/local/bin/nvim',
+ 'LOGSTATS_INTERVAL': 0,
+ 'LOG_FILE': '/Users/niko/Documents/Code/LectorChile/scraper/scraper/logs/log.txt',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders']}
+2021-12-06 21:32:16 [scrapy.extensions.telnet] INFO: Telnet Password: 3c3235b5129afc71
+2021-12-06 21:32:16 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage']
+2021-12-06 21:32:16 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy_useragents.downloadermiddlewares.useragents.UserAgentsMiddleware',
+ 'scraper.middlewares.ScraperDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-12-06 21:32:16 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-12-06 21:32:16 [scrapy.middleware] INFO: Enabled item pipelines:
+['scraper.pipelines.DefaultsPipeline',
+ 'scraper.pipelines.SanitizePipeline',
+ 'scraper.pipelines.DBPipeline']
+2021-12-06 21:32:16 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-12-06 21:32:26 [scrapy.core.engine] INFO: Spider opened
+2021-12-06 21:32:26 [default] INFO: Spider opened: default
