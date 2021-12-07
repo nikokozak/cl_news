@@ -1,4 +1,4 @@
-import scrapy, json, datetime
+import scrapy, json, datetime, re
 from scraper.spiders.site_rules import emol
 from scraper.spiders.base_spider import NoticiaSpider
 from scraper.items import NoticiaItem, NoticiaLoader
@@ -31,7 +31,7 @@ class BioBioSpider(NoticiaSpider):
         l.add_xpath('bajada', rules['bajada'])
         l.add_xpath('autor', rules['autor'])
         l.add_xpath('imagen_url', rules['imagen_url'])
-        l.add_xpath('cuerpo', rules['cuerpo'])
+        l.add_value('cuerpo', self.sanitize_body(response, rules['cuerpo']))
         l.add_xpath('fecha', rules['fecha'])
         l.add_value('url', response.url)
 
@@ -51,7 +51,7 @@ class BioBioSpider(NoticiaSpider):
                 l.add_value('imagen_url', article["tablas"]["tablaMedios"][0]["Url"])
             else:
                 l.add_value('imagen_url', None)
-            l.add_value('cuerpo', article["texto"])
+            l.add_value('cuerpo', self.sanitize_body_text(article["texto"]))
             l.add_value('fecha', self.parse_date(article["fechaPublicacion"]))
             l.add_value('url', article["permalink"])
             yield l.load_item()
@@ -65,6 +65,13 @@ class BioBioSpider(NoticiaSpider):
             if not self.cache.unique(abs_link) and limit_count < self.limit:
                 limit_count += 1
                 yield scrapy.Request(url=abs_link, callback=self.parse_article, cb_kwargs=dict(section=section))
+
+    def sanitize_body(self, response, rule):
+        cuerpo = response.xpath(rule).getall()
+        return map(self.sanitize_body_text, cuerpo)
+
+    def sanitize_body_text(self, text):
+        return re.sub(r'{.*}', "", text)
 
     def parse_date(self, strdate):
         return datetime.datetime.strptime(strdate, '%Y-%m-%dT%H:%M:%S')
