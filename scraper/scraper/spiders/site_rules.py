@@ -70,3 +70,38 @@ emol = {
         'fecha': '//meta[@name="DC.date"]/@content'
     }
 }
+
+mostrador = {
+    'name': 'mostrador',
+    'base_url': 'https://www.elmostrador.cl',
+
+    'sections': {
+        'nacional': 'https://www.elmostrador.cl/noticias/pais/',
+        'internacional': 'https://www.elmostrador.cl/noticias/mundo/',
+        'opinion': 'https://www.elmostrador.cl/noticias/opinion/'
+    },
+
+    'article_links': {
+        'default': '//section[contains(@class, "lo-ultimo")]/article//a/@href',
+        'opinion': '//div[contains(@class, "columnas-posteo")]/article//h4/a/@href'
+    },
+
+    'rules': {
+        'default': {
+            'titular': '//h2[@class="titulo-single"]/text()',
+            'autor': '//something',
+            'image_url': '//article/figure/img[1]/@src',
+            'bajada': '//figcaption/text()',
+            'cuerpo': '//div[@id="noticia"]/p[text()]',
+            'fecha': '//meta[@property="article:published_time"]/@content'
+        },
+        'opinion': {
+            'titular': '//section[contains(@class, "datos-noticias")]//h2/text()',
+            'autor': '//a[@rel="author"]/text()',
+            'image_url': '//article/figure/img[1]/@src',
+            'bajada': '//figcaption/text()',
+            'cuerpo': '//div[@id="noticia"]/p',
+            'fecha': '//meta[@property="article:published_time"]/@content'
+        }
+    }
+}

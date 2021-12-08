@@ -10,7 +10,7 @@ class SanitizePipeline:
     '''
     # Setup for cleansing html tags of attrs we don't want.
     safe_attrs = set(['src', 'href', 'alt'])
-    kill_tags = ['object', 'iframe']
+    kill_tags = ['object', 'iframe', 'script']
     cleaner = clean.Cleaner(safe_attrs_only=True, safe_attrs=safe_attrs, kill_tags=kill_tags)
 
     def process_item(self, item, spider):

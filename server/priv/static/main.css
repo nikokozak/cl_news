@@ -74,7 +74,6 @@ header {
     }
 }
 
-
 /** --------------------------- **/
 /** ------- NAVIGATION -------- **/
 /** --------------------------- **/
@@ -382,6 +381,15 @@ nav {
 
 #noticia-cuerpo a {
     color: inherit; 
+}
+
+@media (min-width: 700px) {
+
+    #noticia-imagen {
+        max-width: 700px;
+        margin-bottom: 1.2rem;
+    }
+
 }
 
 /** --------------------------------- **/

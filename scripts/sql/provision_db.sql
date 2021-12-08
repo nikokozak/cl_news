@@ -53,7 +53,8 @@ values
     ('Radio Bío Bío', 'biobio'),
     ('El Mercurio Online', 'emol'),
     ('La Tercera', 'tercera'),
-    ('CIPER Chile', 'ciper');
+    ('CIPER Chile', 'ciper'),
+    ('El Mostrador', 'mostrador');
 
 insert into secciones (nombre, std)
 values
