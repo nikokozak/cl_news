@@ -3,7 +3,7 @@ import argparse
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 
-sites = ['biobio', 'tercera', 'emol']
+sites = ['biobio', 'tercera', 'emol', 'mostrador']
 process = CrawlerProcess(get_project_settings())
 
 parser = argparse.ArgumentParser()

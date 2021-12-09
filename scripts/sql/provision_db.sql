@@ -2,7 +2,7 @@
 \set lectordatabase 'lector_chile'
 
 CREATE DATABASE :lectordatabase;
-CREATE USER :lectoruser; --WITH ENCRYPTED PASSWORD :'lectorpass';
+CREATE USER :lectoruser;
 GRANT CONNECT ON DATABASE :lectordatabase TO :lectoruser;
 
 \c :lectordatabase
