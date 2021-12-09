@@ -7,7 +7,7 @@ tercera = {
         'nacional': 'https://www.latercera.com/canal/nacional/',
         'tendencias': 'https://www.latercera.com/canal/tendencias/',
         'internacional': 'https://www.latercera.com/canal/mundo',
-        'opinion': 'https://www.latercera.com/canal/opinion' 
+        'opinion': 'https://www.latercera.com/canal/opinion'
     },
 
     'article_links': '//section[@class="middle-mainy"]//h3/a/@href',
