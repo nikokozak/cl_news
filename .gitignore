@@ -2,3 +2,4 @@ populate_env.sh
 scraper/scraper/__pycache__
 server/deps
 server/_build
+release
