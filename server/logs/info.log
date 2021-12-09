@@ -299,3 +299,107 @@ See DBConnection.start_link/2 for more information
 15:33:24.255 [info] GET / 127.0.0.1 :: sent - 200
 15:33:28.918 [info] GET /noticia/85Z74Fk2EeybkzczPvAkng== 127.0.0.1 :: sent - 200
 15:33:34.631 [info] GET /noticia/9ZGz4lk2EeyKmFc_KenLBA== 127.0.0.1 :: sent - 200
+16:17:47.102 [info] Starting server at port 8080
+16:24:43.677 [info] Starting server at port 8080
+16:29:35.187 [info] Starting server at port 8080
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.427.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.430.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.428.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.418.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.423.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.413.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.432.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.433.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.417.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.425.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.420.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.414.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.415.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.412.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.409.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.410.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.421.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.426.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.429.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.424.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.419.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.278 [error] Postgrex.Protocol (#PID<0.422.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.279 [error] Postgrex.Protocol (#PID<0.431.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.306 [error] Postgrex.Protocol (#PID<0.411.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:35.306 [error] Postgrex.Protocol (#PID<0.416.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:36.505 [error] Postgrex.Protocol (#PID<0.424.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:36.515 [error] Postgrex.Protocol (#PID<0.427.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:36.564 [error] Postgrex.Protocol (#PID<0.416.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:36.643 [error] Postgrex.Protocol (#PID<0.411.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:36.644 [error] Postgrex.Protocol (#PID<0.418.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:36.727 [error] Postgrex.Protocol (#PID<0.431.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:36.902 [error] Postgrex.Protocol (#PID<0.419.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:36.986 [error] Postgrex.Protocol (#PID<0.413.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:37.193 [error] Postgrex.Protocol (#PID<0.428.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:37.322 [error] Postgrex.Protocol (#PID<0.410.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:37.329 [error] Postgrex.Protocol (#PID<0.409.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:37.388 [error] Postgrex.Protocol (#PID<0.414.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:37.464 [error] Postgrex.Protocol (#PID<0.412.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:37.531 [error] Postgrex.Protocol (#PID<0.429.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:37.598 [error] Postgrex.Protocol (#PID<0.432.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:37.714 [error] Postgrex.Protocol (#PID<0.422.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:37.927 [error] Postgrex.Protocol (#PID<0.420.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:37.937 [error] Postgrex.Protocol (#PID<0.425.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:37.974 [error] Postgrex.Protocol (#PID<0.424.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:37.979 [error] Postgrex.Protocol (#PID<0.415.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:38.011 [error] Postgrex.Protocol (#PID<0.427.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:38.014 [error] Postgrex.Protocol (#PID<0.421.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:38.047 [error] Postgrex.Protocol (#PID<0.423.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:38.087 [error] Postgrex.Protocol (#PID<0.417.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:38.178 [error] Postgrex.Protocol (#PID<0.433.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:38.203 [error] Postgrex.Protocol (#PID<0.426.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:38.212 [error] Postgrex.Protocol (#PID<0.430.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) no PostgreSQL user name specified in startup packet
+16:29:38.235 [error] GenServer :db terminating
+** (DBConnection.ConnectionError) connection not available and request was dropped from queue after 2978ms. This means requests are coming in and your connection pool cannot serve them fast enough. You can address this by:
+
+  1. Ensuring your database is available and that you can connect to it
+  2. Tracking down slow queries and making sure they are running fast enough
+  3. Increasing the pool_size (although this increases resource consumption)
+  4. Allowing requests to wait longer by increasing :queue_target and :queue_interval
+
+See DBConnection.start_link/2 for more information
+
+    (postgrex 0.15.13) lib/postgrex.ex:327: Postgrex.query!/4
+    (lector 0.1.0) lib/lector/db.ex:123: Lector.DB.handle_call/3
+    (stdlib 3.16.1) gen_server.erl:721: :gen_server.try_handle_call/4
+    (stdlib 3.16.1) gen_server.erl:750: :gen_server.handle_msg/6
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message (from :lector_cache): :get_medios
+16:29:38.244 [info] Application lector exited: Lector.start(:normal, []) returned an error: shutdown: failed to start child: Lector.Cache
+    ** (EXIT) exited in: GenServer.call(:db, :get_medios, 5000)
+        ** (EXIT) an exception was raised:
+            ** (DBConnection.ConnectionError) connection not available and request was dropped from queue after 2978ms. This means requests are coming in and your connection pool cannot serve them fast enough. You can address this by:
+
+  1. Ensuring your database is available and that you can connect to it
+  2. Tracking down slow queries and making sure they are running fast enough
+  3. Increasing the pool_size (although this increases resource consumption)
+  4. Allowing requests to wait longer by increasing :queue_target and :queue_interval
+
+See DBConnection.start_link/2 for more information
+
+                (postgrex 0.15.13) lib/postgrex.ex:327: Postgrex.query!/4
+                (lector 0.1.0) lib/lector/db.ex:123: Lector.DB.handle_call/3
+                (stdlib 3.16.1) gen_server.erl:721: :gen_server.try_handle_call/4
+                (stdlib 3.16.1) gen_server.erl:750: :gen_server.handle_msg/6
+                (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+16:29:38.244 [info] Application logger_file_backend exited: :stopped
+16:29:38.244 [info] Application poolboy exited: :stopped
+16:29:38.245 [info] Application postgrex exited: :stopped
+16:29:38.246 [info] Application db_connection exited: :stopped
+16:29:38.246 [info] Application connection exited: :stopped
+16:29:38.246 [info] Application decimal exited: :stopped
+16:29:38.247 [info] Application plug_cowboy exited: :stopped
+16:29:38.247 [info] Application cowboy_telemetry exited: :stopped
+16:29:38.247 [info] Application cowboy exited: :stopped
+16:29:38.248 [info] Application ranch exited: :stopped
+16:29:38.248 [info] Application cowlib exited: :stopped
+16:29:38.248 [info] Application plug exited: :stopped
+16:29:38.249 [info] Application telemetry exited: :stopped
+16:29:38.250 [info] Application plug_crypto exited: :stopped
+16:29:38.250 [info] Application mime exited: :stopped
+16:29:38.250 [info] Application eex exited: :stopped
