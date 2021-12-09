@@ -3,8 +3,8 @@ defmodule Lector.DB do
   require Postgrex
 
   @hostname "localhost"
-  @username "lector_chile"
-  @database "lector"
+  @username System.fetch_env!("USER")
+  @database "lector_chile"
 
   #############################################################
   ###################### PUBLIC API ###########################

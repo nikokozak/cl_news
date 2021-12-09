@@ -196,3 +196,102 @@ Request: GET /noticia/iRleuFeIEeywDCNS0piioA==
 22:30:46.326 [info] GET / 127.0.0.1 :: sent - 200
 22:30:48.337 [info] GET /noticia/Tl8tklexEey4Fu8jkdJZxQ== 127.0.0.1 :: sent - 200
 22:30:55.820 [info] GET / 127.0.0.1 :: sent - 200
+15:16:16.907 [info] Starting server at port 8080
+15:16:17.032 [error] Postgrex.Protocol (#PID<0.414.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.032 [error] Postgrex.Protocol (#PID<0.432.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.032 [error] Postgrex.Protocol (#PID<0.409.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.032 [error] Postgrex.Protocol (#PID<0.420.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.032 [error] Postgrex.Protocol (#PID<0.419.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.032 [error] Postgrex.Protocol (#PID<0.423.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.032 [error] Postgrex.Protocol (#PID<0.425.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.032 [error] Postgrex.Protocol (#PID<0.413.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.066 [error] Postgrex.Protocol (#PID<0.421.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.067 [error] Postgrex.Protocol (#PID<0.429.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.067 [error] Postgrex.Protocol (#PID<0.416.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.069 [error] Postgrex.Protocol (#PID<0.424.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.069 [error] Postgrex.Protocol (#PID<0.430.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.070 [error] Postgrex.Protocol (#PID<0.428.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.070 [error] Postgrex.Protocol (#PID<0.427.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.078 [error] Postgrex.Protocol (#PID<0.418.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.086 [error] Postgrex.Protocol (#PID<0.417.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.086 [error] Postgrex.Protocol (#PID<0.415.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.091 [error] Postgrex.Protocol (#PID<0.410.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.093 [error] Postgrex.Protocol (#PID<0.426.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.101 [error] Postgrex.Protocol (#PID<0.431.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.124 [error] Postgrex.Protocol (#PID<0.412.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.129 [error] Postgrex.Protocol (#PID<0.422.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.129 [error] Postgrex.Protocol (#PID<0.433.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:17.220 [error] Postgrex.Protocol (#PID<0.411.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:18.136 [error] Postgrex.Protocol (#PID<0.417.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:18.195 [error] Postgrex.Protocol (#PID<0.414.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:18.306 [error] Postgrex.Protocol (#PID<0.416.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:18.391 [error] Postgrex.Protocol (#PID<0.426.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:18.422 [error] Postgrex.Protocol (#PID<0.409.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:18.478 [error] Postgrex.Protocol (#PID<0.424.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:18.592 [error] Postgrex.Protocol (#PID<0.432.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:18.666 [error] Postgrex.Protocol (#PID<0.415.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:18.785 [error] Postgrex.Protocol (#PID<0.428.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:18.883 [error] Postgrex.Protocol (#PID<0.418.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:18.918 [error] Postgrex.Protocol (#PID<0.421.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:19.167 [error] Postgrex.Protocol (#PID<0.422.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:19.196 [error] Postgrex.Protocol (#PID<0.413.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:19.319 [error] Postgrex.Protocol (#PID<0.411.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:19.326 [error] Postgrex.Protocol (#PID<0.410.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:19.384 [error] Postgrex.Protocol (#PID<0.431.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:19.625 [error] Postgrex.Protocol (#PID<0.429.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:19.724 [error] Postgrex.Protocol (#PID<0.423.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:19.739 [error] Postgrex.Protocol (#PID<0.419.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:19.757 [error] Postgrex.Protocol (#PID<0.417.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:19.827 [error] Postgrex.Protocol (#PID<0.433.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:19.870 [error] Postgrex.Protocol (#PID<0.420.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:19.886 [error] Postgrex.Protocol (#PID<0.425.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:19.930 [error] Postgrex.Protocol (#PID<0.430.0>) failed to connect: ** (Postgrex.Error) FATAL 3D000 (invalid_catalog_name) database "lector_chile" does not exist
+15:16:19.955 [error] GenServer :db terminating
+** (DBConnection.ConnectionError) connection not available and request was dropped from queue after 2979ms. This means requests are coming in and your connection pool cannot serve them fast enough. You can address this by:
+
+  1. Ensuring your database is available and that you can connect to it
+  2. Tracking down slow queries and making sure they are running fast enough
+  3. Increasing the pool_size (although this increases resource consumption)
+  4. Allowing requests to wait longer by increasing :queue_target and :queue_interval
+
+See DBConnection.start_link/2 for more information
+
+    (postgrex 0.15.13) lib/postgrex.ex:327: Postgrex.query!/4
+    (lector 0.1.0) lib/lector/db.ex:126: Lector.DB.handle_call/3
+    (stdlib 3.16.1) gen_server.erl:721: :gen_server.try_handle_call/4
+    (stdlib 3.16.1) gen_server.erl:750: :gen_server.handle_msg/6
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message (from :lector_cache): :get_medios
+15:16:19.964 [info] Application lector exited: Lector.start(:normal, []) returned an error: shutdown: failed to start child: Lector.Cache
+    ** (EXIT) exited in: GenServer.call(:db, :get_medios, 5000)
+        ** (EXIT) an exception was raised:
+            ** (DBConnection.ConnectionError) connection not available and request was dropped from queue after 2979ms. This means requests are coming in and your connection pool cannot serve them fast enough. You can address this by:
+
+  1. Ensuring your database is available and that you can connect to it
+  2. Tracking down slow queries and making sure they are running fast enough
+  3. Increasing the pool_size (although this increases resource consumption)
+  4. Allowing requests to wait longer by increasing :queue_target and :queue_interval
+
+See DBConnection.start_link/2 for more information
+
+                (postgrex 0.15.13) lib/postgrex.ex:327: Postgrex.query!/4
+                (lector 0.1.0) lib/lector/db.ex:126: Lector.DB.handle_call/3
+                (stdlib 3.16.1) gen_server.erl:721: :gen_server.try_handle_call/4
+                (stdlib 3.16.1) gen_server.erl:750: :gen_server.handle_msg/6
+                (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+15:16:19.965 [info] Application logger_file_backend exited: :stopped
+15:16:19.965 [info] Application poolboy exited: :stopped
+15:16:19.966 [info] Application postgrex exited: :stopped
+15:16:19.967 [info] Application db_connection exited: :stopped
+15:16:19.967 [info] Application connection exited: :stopped
+15:16:19.967 [info] Application decimal exited: :stopped
+15:16:19.968 [info] Application plug_cowboy exited: :stopped
+15:16:19.968 [info] Application cowboy_telemetry exited: :stopped
+15:16:19.968 [info] Application cowboy exited: :stopped
+15:16:19.969 [info] Application ranch exited: :stopped
+15:16:19.969 [info] Application cowlib exited: :stopped
+15:16:19.970 [info] Application plug exited: :stopped
+15:16:19.970 [info] Application telemetry exited: :stopped
+15:16:19.971 [info] Application plug_crypto exited: :stopped
+15:16:19.971 [info] Application mime exited: :stopped
+15:16:19.971 [info] Application eex exited: :stopped

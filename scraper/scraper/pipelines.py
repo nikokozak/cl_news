@@ -1,6 +1,4 @@
-import psycopg2
-import logging
-import datetime
+import psycopg2, logging, datetime, os
 import lxml.html.clean as clean
 from scrapy.exceptions import DropItem
 
@@ -25,7 +23,8 @@ class DBPipeline:
     Handles storing items in our database.
     '''
     def open_spider(self, spider):
-        self.conn = psycopg2.connect("dbname=lector user=lector_chile")
+        user = os.environ.get('USER')
+        self.conn = psycopg2.connect(f"dbname=lector_chile user={user}")
         self.conn.set_session(autocommit=True)
         self.cur = self.conn.cursor()
 

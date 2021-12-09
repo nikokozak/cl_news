@@ -1,6 +1,5 @@
-\set lectoruser `echo $LECTOR_PSQL_USER`
---\set lectorpass `echo $LECTOR_PSQL_PASS`
-\set lectordatabase `echo $LECTOR_PSQL_DATABASE`
+\set lectoruser `echo $USER`
+\set lectordatabase 'lector_chile'
 
 CREATE DATABASE :lectordatabase;
 CREATE USER :lectoruser; --WITH ENCRYPTED PASSWORD :'lectorpass';
