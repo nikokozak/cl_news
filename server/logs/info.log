@@ -558,3 +558,17 @@ Request: GET /
 17:12:05.313 [info] GET /ultimo/2 127.0.0.1 :: sent - 200
 17:12:07.066 [info] GET /noticia/9P9Gzlk2EeybkxdTFlEzVQ== 127.0.0.1 :: sent - 200
 17:12:09.881 [info] GET / 127.0.0.1 :: sent - 200
+17:28:13.326 [info] Starting server at port 8080
+17:28:17.092 [info] GET / 127.0.0.1 :: sent - 200
+17:28:20.468 [info] GET /noticia/_LI6NFk2EeyKmGcSIWGtIg== 127.0.0.1 :: sent - 200
+17:28:23.421 [info] GET / 127.0.0.1 :: sent - 200
+17:28:24.552 [info] GET /noticia/_T158Fk2EeyKmCdf6D2O4w== 127.0.0.1 :: sent - 200
+17:28:26.106 [info] GET / 127.0.0.1 :: sent - 200
+17:29:44.921 [info] Starting server at port 8080
+17:29:45.738 [info] GET /noticia/8Mzy1lk2EeySZafODsiFlw== 127.0.0.1 :: sent - 200
+17:29:47.378 [info] GET / 127.0.0.1 :: sent - 200
+17:29:52.333 [info] GET /opinion 127.0.0.1 :: sent - 200
+17:29:54.064 [info] GET /noticia/_ipB4Fk2EeyKmM_VOon-oA== 127.0.0.1 :: sent - 200
+17:29:58.152 [info] GET /internacional 127.0.0.1 :: sent - 200
+17:29:59.578 [info] GET /noticia/7JRusFk2EeySZe-q2Gcxng== 127.0.0.1 :: sent - 200
+17:30:02.680 [info] GET / 127.0.0.1 :: sent - 200

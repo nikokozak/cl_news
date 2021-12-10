@@ -3,10 +3,20 @@ defmodule Lector.Template do
   Defines helper functions for rendering Templates.
 
   What this allows is a naive re-implementation of how Phoenix handles views/templates. 
-  By 'using' `Lector.Template`, a render function gets injected into the target module. This render
-  function (via Lector.Template functions) both compiles and evaluates a given template file, pulling
-  in the target (view) Module's bindings (i.e., functions defined in the Module are accessible to the template
-  without any more work on the user's side).
+
+  When 'using' `Lector.Template`, files sharing the same module name as the view being used get pre-compiled
+  into named render functions. In other words, `Lector.Templates.Home` will pre-compile a `home.html.eex` file
+  in the same folder into a function of the same name (`Lector.Templates.Home.home(assigns)`), which renders 
+  the template.
+
+  NOTE: As a next step, it makes sense to divvy up the templates into folders named after the parent view module,
+  as it's done in Phoenix. This means that instead of only pre-compiling one file, we can pre-compile many into the
+  same view module, and they will all share the context and layout declared in said file.
+
+  'Using' `Lector.Template` will also inject a `render(conn, file, assigns \\ [])` function. While at the moment
+  I haven't built in support for multiple template files per view, the <file> parameter will match the given file
+  to a named function for rendering. If, for example, we pass in `home.html.eex`, the `home` function will get called
+  for rendering. 
 
   The render function renders both the template and the base layout, passing in the rendered template as
   `:inner_content` in the `assigns` made available to the layout.
@@ -21,7 +31,7 @@ defmodule Lector.Template do
   @default_layout "base.html.eex"
 
   @doc """
-  Injects the render function into our "views".
+  Injects the render, and template-render functions into our "views".
   """
   defmacro __using__(opts) do
     %{ module: calling_module } = __CALLER__
@@ -36,33 +46,23 @@ defmodule Lector.Template do
     # the precompiled function to render is has the same name as the normalized module name.
     # again, in future iterations we could have multiple pages with multiple names, where rendering gets
     # dispatched according to the "filename" passed in
-    fn_name = tmplt_base_name |> String.to_atom
+    tmplt_fn_name = tmplt_base_name |> String.to_atom
     quoted_template = EEx.compile_file(Path.join(@template_dir, tmplt_filename))
     quoted_layout = EEx.compile_file(layout)
+
+    quoted_template_render_fn = craft_render_fn(tmplt_fn_name, quoted_template)
+    quoted_layout_render_fn = craft_render_fn(:layout, quoted_layout)
 
     quote do
       def render(conn, file, assigns \\ []), do: Lector.Template.render(__MODULE__, conn, file, assigns)
 
-      # will inject eg. 'def home(assigns) do'
-      unquote( # double quoting necessary in order to preserve the `assigns` variable
-        quote do
-          def unquote(fn_name)(var!(assigns)) do
-            _ = var!(assigns)
-            unquote(quoted_template)
-          end
-        end
-      )
-
-      #def layout, do: unquote(layout)
-      unquote(
-        quote do
-          def layout(var!(assigns)) do
-            _ = var!(assigns)
-            unquote(quoted_layout)
-          end
-        end
-      )
+      # injects `def home(assigns) do`
+      unquote(quoted_template_render_fn)
+      # injects `def layout(assigns) do`
+      unquote(quoted_layout_render_fn)
+      
     end
+
   end
 
   @doc """
@@ -71,29 +71,10 @@ defmodule Lector.Template do
   def render(module, %{ status: status } = conn, file, assigns) do
     template_render_fn_name = get_fn_name_from_filename(file)
     rendered_template = apply(module, template_render_fn_name, [assigns])
-    #rendered_template = render_template(module, file, assigns)
     assigns = [assigns | [inner_content: rendered_template]]
 
-    #rendered_layout = render_layout(module, assigns)
     rendered_layout = apply(module, :layout, [assigns])
     Plug.Conn.send_resp(conn, (status || 200), rendered_layout)
-  end
-
-  defp render_template(module, file, assigns) do
-    Application.app_dir(:lector, [@template_dir, file])
-    |> render_file(assigns, functions: [{module, module.__info__(:functions)}])
-  end
-
-  defp render_layout(module, assigns) do
-    module.layout()
-    |> render_file(assigns)
-  end
-
-  defp render_file(file, assigns, eval_options \\ []) do
-    quoted = EEx.compile_file(file)
-    # Note that binding() will return, among others the "assigns" parameter, allowing us to use the @key EEx convenience in templates.
-    {result, _binding} = Code.eval_quoted(quoted, binding(), eval_options)
-    result
   end
 
   defp normalize_module_name(module) do
@@ -113,6 +94,15 @@ defmodule Lector.Template do
     |> String.split(".")
     |> List.first
     |> String.to_atom
+  end
+
+  defp craft_render_fn(fn_name, quoted_content) do
+    quote do
+      def unquote(fn_name)(var!(assigns)) do
+        _ = var!(assigns)
+        unquote(quoted_content)
+      end
+    end
   end
 
 end
