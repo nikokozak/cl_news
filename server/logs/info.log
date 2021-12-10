@@ -403,3 +403,158 @@ See DBConnection.start_link/2 for more information
 16:29:38.250 [info] Application plug_crypto exited: :stopped
 16:29:38.250 [info] Application mime exited: :stopped
 16:29:38.250 [info] Application eex exited: :stopped
+17:12:38.342 [info] Starting server at port 8080
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.443.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.445.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.442.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.447.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.440.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.450.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.446.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.434.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.449.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.454.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.444.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.433.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.453.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.456.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.437.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.455.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.435.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.441.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.439.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.451.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.436.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.457.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.438 [error] Postgrex.Protocol (#PID<0.438.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.467 [error] Postgrex.Protocol (#PID<0.448.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:38.508 [error] Postgrex.Protocol (#PID<0.452.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:39.535 [error] Postgrex.Protocol (#PID<0.439.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:39.569 [error] Postgrex.Protocol (#PID<0.454.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:39.759 [error] Postgrex.Protocol (#PID<0.443.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:39.771 [error] Postgrex.Protocol (#PID<0.446.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:39.809 [error] Postgrex.Protocol (#PID<0.433.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:39.956 [error] Postgrex.Protocol (#PID<0.451.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:39.982 [error] Postgrex.Protocol (#PID<0.440.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:40.140 [error] Postgrex.Protocol (#PID<0.448.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:40.302 [error] Postgrex.Protocol (#PID<0.436.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:40.359 [error] Postgrex.Protocol (#PID<0.449.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:40.473 [error] Postgrex.Protocol (#PID<0.445.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:40.477 [error] Postgrex.Protocol (#PID<0.447.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:40.678 [error] Postgrex.Protocol (#PID<0.453.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:40.756 [error] Postgrex.Protocol (#PID<0.452.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:40.761 [error] Postgrex.Protocol (#PID<0.450.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:40.820 [error] Postgrex.Protocol (#PID<0.442.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:40.832 [error] Postgrex.Protocol (#PID<0.444.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:40.832 [error] Postgrex.Protocol (#PID<0.434.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:40.885 [error] Postgrex.Protocol (#PID<0.437.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:40.960 [error] Postgrex.Protocol (#PID<0.456.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:41.091 [error] Postgrex.Protocol (#PID<0.455.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:41.112 [error] Postgrex.Protocol (#PID<0.441.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:41.126 [error] Postgrex.Protocol (#PID<0.457.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:41.132 [error] Postgrex.Protocol (#PID<0.446.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:41.158 [error] Postgrex.Protocol (#PID<0.435.0>) failed to connect: ** (Postgrex.Error) FATAL 28000 (invalid_authorization_specification) role "lector" does not exist
+17:12:41.395 [error] GenServer :db terminating
+** (DBConnection.ConnectionError) connection not available and request was dropped from queue after 2978ms. This means requests are coming in and your connection pool cannot serve them fast enough. You can address this by:
+
+  1. Ensuring your database is available and that you can connect to it
+  2. Tracking down slow queries and making sure they are running fast enough
+  3. Increasing the pool_size (although this increases resource consumption)
+  4. Allowing requests to wait longer by increasing :queue_target and :queue_interval
+
+See DBConnection.start_link/2 for more information
+
+    (postgrex 0.15.13) lib/postgrex.ex:327: Postgrex.query!/4
+    (lector 0.1.0) lib/lector/db.ex:123: Lector.DB.handle_call/3
+    (stdlib 3.16.1) gen_server.erl:721: :gen_server.try_handle_call/4
+    (stdlib 3.16.1) gen_server.erl:750: :gen_server.handle_msg/6
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message (from :lector_cache): :get_medios
+17:12:41.403 [info] Application lector exited: Lector.start(:normal, []) returned an error: shutdown: failed to start child: Lector.Cache
+    ** (EXIT) exited in: GenServer.call(:db, :get_medios, 5000)
+        ** (EXIT) an exception was raised:
+            ** (DBConnection.ConnectionError) connection not available and request was dropped from queue after 2978ms. This means requests are coming in and your connection pool cannot serve them fast enough. You can address this by:
+
+  1. Ensuring your database is available and that you can connect to it
+  2. Tracking down slow queries and making sure they are running fast enough
+  3. Increasing the pool_size (although this increases resource consumption)
+  4. Allowing requests to wait longer by increasing :queue_target and :queue_interval
+
+See DBConnection.start_link/2 for more information
+
+                (postgrex 0.15.13) lib/postgrex.ex:327: Postgrex.query!/4
+                (lector 0.1.0) lib/lector/db.ex:123: Lector.DB.handle_call/3
+                (stdlib 3.16.1) gen_server.erl:721: :gen_server.try_handle_call/4
+                (stdlib 3.16.1) gen_server.erl:750: :gen_server.handle_msg/6
+                (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+17:12:41.403 [info] Application logger_file_backend exited: :stopped
+17:12:41.403 [info] Application poolboy exited: :stopped
+17:12:41.404 [info] Application postgrex exited: :stopped
+17:12:41.405 [info] Application db_connection exited: :stopped
+17:12:41.405 [info] Application connection exited: :stopped
+17:12:41.405 [info] Application decimal exited: :stopped
+17:12:41.405 [info] Application plug_cowboy exited: :stopped
+17:12:41.406 [info] Application cowboy_telemetry exited: :stopped
+17:12:41.406 [info] Application cowboy exited: :stopped
+17:12:41.407 [info] Application ranch exited: :stopped
+17:12:41.407 [info] Application cowlib exited: :stopped
+17:12:41.407 [info] Application plug exited: :stopped
+17:12:41.408 [info] Application telemetry exited: :stopped
+17:12:41.408 [info] Application plug_crypto exited: :stopped
+17:12:41.409 [info] Application mime exited: :stopped
+17:12:41.409 [info] Application eex exited: :stopped
+17:13:56.484 [info] Starting server at port 8080
+17:14:05.750 [error] #PID<0.441.0> running Lector.Endpoint (connection #PID<0.440.0>, stream id 1) terminated
+Server: localhost:8080 (http)
+Request: GET /
+** (exit) an exception was raised:
+    ** (File.Error) could not read file "/Users/niko/Documents/Code/LectorChile/server/_build/dev/lib/lector/templates/home.html.eex": no such file or directory
+        (elixir 1.12.3) lib/file.ex:355: File.read!/1
+        (eex 1.12.3) lib/eex.ex:238: EEx.compile_file/2
+        (lector 0.1.0) lib/template.ex:56: Lector.Template.render_file/3
+        (lector 0.1.0) lib/template.ex:38: Lector.Template.render/4
+        (lector 0.1.0) lib/plug/router.ex:280: anonymous fn/4 in Lector.Router.dispatch/2
+        (telemetry 1.0.0) /Users/niko/Documents/Code/LectorChile/server/deps/telemetry/src/telemetry.erl:293: :telemetry.span/3
+        (lector 0.1.0) lib/plug/router.ex:276: Lector.Router.dispatch/2
+        (lector 0.1.0) lib/lector/router.ex:1: Lector.Router.plug_builder_call/2
+17:15:00.806 [info] Starting server at port 8080
+17:15:03.043 [error] #PID<0.417.0> running Lector.Endpoint (connection #PID<0.415.0>, stream id 1) terminated
+Server: localhost:8080 (http)
+Request: GET /
+** (exit) an exception was raised:
+    ** (File.Error) could not read file "/Users/niko/Documents/Code/LectorChile/server/_build/dev/lib/lector/templates/home.html.eex": no such file or directory
+        (elixir 1.12.3) lib/file.ex:355: File.read!/1
+        (eex 1.12.3) lib/eex.ex:238: EEx.compile_file/2
+        (lector 0.1.0) lib/template.ex:56: Lector.Template.render_file/3
+        (lector 0.1.0) lib/template.ex:38: Lector.Template.render/4
+        (lector 0.1.0) lib/plug/router.ex:280: anonymous fn/4 in Lector.Router.dispatch/2
+        (telemetry 1.0.0) /Users/niko/Documents/Code/LectorChile/server/deps/telemetry/src/telemetry.erl:293: :telemetry.span/3
+        (lector 0.1.0) lib/plug/router.ex:276: Lector.Router.dispatch/2
+        (lector 0.1.0) lib/lector/router.ex:1: Lector.Router.plug_builder_call/2
+14:50:36.696 [info] Starting server at port 8080
+14:53:52.002 [info] Starting server at port 8080
+17:07:56.053 [info] Starting server at port 8080
+17:08:05.273 [error] #PID<0.475.0> running Lector.Endpoint (connection #PID<0.473.0>, stream id 1) terminated
+Server: localhost:8080 (http)
+Request: GET /
+** (exit) an exception was raised:
+    ** (UndefinedFunctionError) function Lector.Templates.Home.render_it/3 is undefined or private
+        (lector 0.1.0) Lector.Templates.Home.render_it(%Plug.Conn{adapter: {Plug.Cowboy.Conn, :...}, assigns: %{}, body_params: %{}, cookies: %Plug.Conn.Unfetched{aspect: :cookies}, halted: false, host: "localhost", method: "GET", owner: #PID<0.475.0>, params: %{}, path_info: [], path_params: %{}, port: 8080, private: %{plug_route: {"/", #Function<11.10835712/2 in Lector.Router.do_match/4>}}, query_params: %{}, query_string: "", remote_ip: {127, 0, 0, 1}, req_cookies: %Plug.Conn.Unfetched{aspect: :cookies}, req_headers: [{"accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"}, {"accept-encoding", "gzip, deflate, br"}, {"accept-language", "en-US,en;q=0.9"}, {"connection", "keep-alive"}, {"host", "localhost:8080"}, {"purpose", "prefetch"}, {"sec-ch-ua", "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\""}, {"sec-ch-ua-mobile", "?0"}, {"sec-ch-ua-platform", "\"macOS\""}, {"sec-fetch-dest", "document"}, {"sec-fetch-mode", "navigate"}, {"sec-fetch-site", "none"}, {"sec-fetch-user", "?1"}, {"upgrade-insecure-requests", "1"}, {"user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36"}], request_path: "/", resp_body: nil, resp_cookies: %{}, resp_headers: [{"cache-control", "max-age=0, private, must-revalidate"}], scheme: :http, script_name: [], secret_key_base: nil, state: :unset, status: nil}, "home.html.eex", [noticias: [%{"autor" => "Redactado por Ignacia Munita C., Emol", "bajada" => "Desde el Ministerio de Hacienda y la CMF valoraron el informe elaborado por el Fondo Monetario Internacional.", "cuerpo" => ["<div>El Fondo Monetario Intercaional (FMI) publicó este jueves su inforde de evaluación denominado \"Financial Sector Stability Assessment (FSSA)\", en el cual destacó tanto el buen funcionamiento del sistema financiero de Chile, como la contundente y coordinada respuestas de las autoridades reguladoras frente a los shocks provocados por la crisis social y la pandemia.</div>", "<div><div></div> El documento es la primera entrega de una misión conjunta entre el FMI y el Banco Mundial, denominada Financial Sector Assessment Program (FSAP), llevada a cabo entre marzo y agosto del 2021.</div>", "<div>Sobre esto, el ministro de Hacienda, <b>Rodrigo Cerda,</b> subrayó que \"la evaluación del Fondo Monetario Internacional confirma que Chile tiene un sistema financiero sólido y que la coordinación entre autoridades financieras, así como la política fiscal implementada, fueron adecuadas para mantener la estabilidad del sistema\". </div>", "<div>Por su parte, el coordinador de Mercado de Capitales del Ministerio de Hacienda, <b>Francisco Larraín, </b>agregó que este primer informe de evaluación del FMI y el Banco Mundial es una buena noticia para la institucionalidad financiera chilena y marca coincidencias importantes con la agenda legislativa de la Coordinación de Mercado de Capitales del Ministerio.</div>", "<div> \"La ley de capitalización de Banco Estado, el proyecto de ley de Innovación Financiera (Fintech y Open Finance), el proyecto de ley que limita los cambios excesivos entre fondos de pensiones y otras iniciativas en diseño, como la creación de un registro consolidado de información crediticia, avanzan en la dirección sugerida por el Fondo. Esperamos con ansias el segundo informe de evaluación que profundiza en aspectos como la competencia y la inclusión en el mercado financiero\", señaló.</div>", "<div>También la <b>Comisión para el Mercado Financiero (CMF) </b>valoró la positiva evaluación del estudio, que contempló el análisis de diferentes aspectos del rol regulador y supervisor, tales como gestión de crisis y resolución, estabilidad financiera y pruebas de tensión, herramientas macroprudenciales y liquidez sistémica. </div>", "<div>Adicionalmente, se llevó a cabo una revisión especial del cumplimiento de los Principios Clave de una Supervisión Bancaria Efectiva, del Comité de Basilea.</div>", "<h2>Robusta regulación y supervisión</h2>", "<div>El FSAP destacó que el sistema financiero chileno se ha mostrado resiliente a los shocks recientes, con un marco de regulación y supervisión robusta, y adecuada respuesta por parte de las autoridades financieras al impacto causado por el covid-19.</div>", "<div>Adicionalmente, valoró los avances en supervisión, incluyendo la integración de la CMF, las modificaciones a la Ley de bancos, la adopción de los estándares de Basilea III y los mecanismos de coordinación entre la CMF y el Banco Central.</div>", "<div>En ese plano, destacó la importancia de una implementación completa de Basilea III y los planes de aumento de capital de la banca, subrayando que deberían mantenerse como prioridad hasta el cumplimiento del calendario de transición.</div>", "<h2>Espacios de perfeccionamiento</h2>", "<div>El análisis identificó algunos espacios de mejora en el marco legal del sector financiero que, en lo fundamental, coinciden con las brechas identificadas por la CMF en primera instancia.</div>", "<div>Las iniciativas estratégicas de la entidad para el período 2020-2022, incluyen iniciativas para cerrar dichas brechas, entre ellas: mejora en el marco gestión de crisis y creación de un marco de resolución; ley de Capital Basado en Riesgos para seguros; ley Fintech; registro consolidado de deudores, y un adecuado marco regulatorio para conglomerados financieros.</div>", "<div>También convocó a las autoridades a seguir reforzando el Consejo de Estabilidad Financiera (CEF), especialmente en la coordinación de la implementación de la política macroprudencial.</div>", "<div>Respecto de conglomerados financieros, siguiendo la recomendación del equipo del FMI, la CMF informó que ya aprobó un Manual de Supervisión.</div>", "<div>Junto a ello, perfeccionó el reglamento para incluir nuevas instrucciones al alcance, excepciones y sistemas de información, con el objetivo de controlar el límite al total de créditos que los bancos pueden otorgar a personas o entidades que pertenezcan al mismo grupo de negocios.</div>", "<h2>Medidas de apoyo y focos de riesgo</h2>", "<div><div></div> Estos últimos son particularmente relevantes, dijo el Fondo, tanto por su impacto en la sustentabilidad del sistema de pensiones, como por la subsecuente volatilidad que provocan sobre el mercado financiero local los elevados requerimientos de liquidez necesarios a la hora de implementar los retiros.</div>", "<div>En ese sentido, el Ministerio de Hacienda destacó la recomendación realizada por el organismo internacional de terminar con los retiros de fondos de pensiones y los anticipos de rentas vitalicias, aspectos que han sido enfatizados por las distintas autoridades financieras del país.</div>", "<div>La CMF inició un trabajo coordinado con el Banco Central para la actualización de sus marcos de regulación y herramientas de supervisión, con objeto de incorporar las sugerencias de mejoras levantadas por el equipo de FSAP y continuar con su estrategia de adoptar las mejores prácticas globales de regulación y supervisión.</div>", "<div>Dentro de éstas se pueden mencionar futuros reforzamientos de los marcos de gobernanza global de riesgos en la banca, los marcos de ejercicios de tensión de liquidez para diversos actores del sistema y una revisión de los marcos regulatorios de liquidez para ciertos fondos mutuos.</div>"], "fecha" => ~U[2021-12-09 21:56:29.000000Z], "fecha_short" => "09-12-2021", "full_count" => 71, "imagen_url" => "//static.emol.cl/emol50/Fotos/2021/12/09/file_20211209142024.jpg", "medio" => "El Mercurio Online", "medio_std" => "emol", "noticia_id" => <<240, 204, 242, 214, 89, 54, 17, 23 (truncated)
+17:08:53.228 [info] Starting server at port 8080
+17:08:56.733 [error] #PID<0.451.0> running Lector.Endpoint (connection #PID<0.449.0>, stream id 1) terminated
+Server: localhost:8080 (http)
+Request: GET /
+** (exit) an exception was raised:
+    ** (UndefinedFunctionError) function Lector.Templates.Home.home/4 is undefined or private
+        (lector 0.1.0) Lector.Templates.Home.home({:noticias, [%{"autor" => "Redactado por Ignacia Munita C., Emol", "bajada" => "Desde el Ministerio de Hacienda y la CMF valoraron el informe elaborado por el Fondo Monetario Internacional.", "cuerpo" => ["<div>El Fondo Monetario Intercaional (FMI) publicó este jueves su inforde de evaluación denominado \"Financial Sector Stability Assessment (FSSA)\", en el cual destacó tanto el buen funcionamiento del sistema financiero de Chile, como la contundente y coordinada respuestas de las autoridades reguladoras frente a los shocks provocados por la crisis social y la pandemia.</div>", "<div><div></div> El documento es la primera entrega de una misión conjunta entre el FMI y el Banco Mundial, denominada Financial Sector Assessment Program (FSAP), llevada a cabo entre marzo y agosto del 2021.</div>", "<div>Sobre esto, el ministro de Hacienda, <b>Rodrigo Cerda,</b> subrayó que \"la evaluación del Fondo Monetario Internacional confirma que Chile tiene un sistema financiero sólido y que la coordinación entre autoridades financieras, así como la política fiscal implementada, fueron adecuadas para mantener la estabilidad del sistema\". </div>", "<div>Por su parte, el coordinador de Mercado de Capitales del Ministerio de Hacienda, <b>Francisco Larraín, </b>agregó que este primer informe de evaluación del FMI y el Banco Mundial es una buena noticia para la institucionalidad financiera chilena y marca coincidencias importantes con la agenda legislativa de la Coordinación de Mercado de Capitales del Ministerio.</div>", "<div> \"La ley de capitalización de Banco Estado, el proyecto de ley de Innovación Financiera (Fintech y Open Finance), el proyecto de ley que limita los cambios excesivos entre fondos de pensiones y otras iniciativas en diseño, como la creación de un registro consolidado de información crediticia, avanzan en la dirección sugerida por el Fondo. Esperamos con ansias el segundo informe de evaluación que profundiza en aspectos como la competencia y la inclusión en el mercado financiero\", señaló.</div>", "<div>También la <b>Comisión para el Mercado Financiero (CMF) </b>valoró la positiva evaluación del estudio, que contempló el análisis de diferentes aspectos del rol regulador y supervisor, tales como gestión de crisis y resolución, estabilidad financiera y pruebas de tensión, herramientas macroprudenciales y liquidez sistémica. </div>", "<div>Adicionalmente, se llevó a cabo una revisión especial del cumplimiento de los Principios Clave de una Supervisión Bancaria Efectiva, del Comité de Basilea.</div>", "<h2>Robusta regulación y supervisión</h2>", "<div>El FSAP destacó que el sistema financiero chileno se ha mostrado resiliente a los shocks recientes, con un marco de regulación y supervisión robusta, y adecuada respuesta por parte de las autoridades financieras al impacto causado por el covid-19.</div>", "<div>Adicionalmente, valoró los avances en supervisión, incluyendo la integración de la CMF, las modificaciones a la Ley de bancos, la adopción de los estándares de Basilea III y los mecanismos de coordinación entre la CMF y el Banco Central.</div>", "<div>En ese plano, destacó la importancia de una implementación completa de Basilea III y los planes de aumento de capital de la banca, subrayando que deberían mantenerse como prioridad hasta el cumplimiento del calendario de transición.</div>", "<h2>Espacios de perfeccionamiento</h2>", "<div>El análisis identificó algunos espacios de mejora en el marco legal del sector financiero que, en lo fundamental, coinciden con las brechas identificadas por la CMF en primera instancia.</div>", "<div>Las iniciativas estratégicas de la entidad para el período 2020-2022, incluyen iniciativas para cerrar dichas brechas, entre ellas: mejora en el marco gestión de crisis y creación de un marco de resolución; ley de Capital Basado en Riesgos para seguros; ley Fintech; registro consolidado de deudores, y un adecuado marco regulatorio para conglomerados financieros.</div>", "<div>También convocó a las autoridades a seguir reforzando el Consejo de Estabilidad Financiera (CEF), especialmente en la coordinación de la implementación de la política macroprudencial.</div>", "<div>Respecto de conglomerados financieros, siguiendo la recomendación del equipo del FMI, la CMF informó que ya aprobó un Manual de Supervisión.</div>", "<div>Junto a ello, perfeccionó el reglamento para incluir nuevas instrucciones al alcance, excepciones y sistemas de información, con el objetivo de controlar el límite al total de créditos que los bancos pueden otorgar a personas o entidades que pertenezcan al mismo grupo de negocios.</div>", "<h2>Medidas de apoyo y focos de riesgo</h2>", "<div><div></div> Estos últimos son particularmente relevantes, dijo el Fondo, tanto por su impacto en la sustentabilidad del sistema de pensiones, como por la subsecuente volatilidad que provocan sobre el mercado financiero local los elevados requerimientos de liquidez necesarios a la hora de implementar los retiros.</div>", "<div>En ese sentido, el Ministerio de Hacienda destacó la recomendación realizada por el organismo internacional de terminar con los retiros de fondos de pensiones y los anticipos de rentas vitalicias, aspectos que han sido enfatizados por las distintas autoridades financieras del país.</div>", "<div>La CMF inició un trabajo coordinado con el Banco Central para la actualización de sus marcos de regulación y herramientas de supervisión, con objeto de incorporar las sugerencias de mejoras levantadas por el equipo de FSAP y continuar con su estrategia de adoptar las mejores prácticas globales de regulación y supervisión.</div>", "<div>Dentro de éstas se pueden mencionar futuros reforzamientos de los marcos de gobernanza global de riesgos en la banca, los marcos de ejercicios de tensión de liquidez para diversos actores del sistema y una revisión de los marcos regulatorios de liquidez para ciertos fondos mutuos.</div>"], "fecha" => ~U[2021-12-09 21:56:29.000000Z], "fecha_short" => "09-12-2021", "full_count" => 71, "imagen_url" => "//static.emol.cl/emol50/Fotos/2021/12/09/file_20211209142024.jpg", "medio" => "El Mercurio Online", "medio_std" => "emol", "noticia_id" => <<240, 204, 242, 214, 89, 54, 17, 236, 146, 101, 167, 206, 14, 200, 133, 151>>, "seccion" => "Economía", "seccion_std" => "economia", "titular" => "FMI destaca respuesta del sistema financiero chileno a la crisis social y pandemia y pide terminar con nuevos retiros"}, %{"autor" => "Camila Arcos", "bajada" => nil, "cuerpo" => ["<p>Foto: AGENCIA UNO</p>", "<p>Según cifras de la OMS 3.500 millones de personas en el mundo sufren de problemas dentales, la mayoría de esos casos tiene relación con las caries. </p>", "<p>Un grupo de científicos chilenos crearon Blueremin, medicamento que promete prevenirlas y eliminarlas si están en su etapa inicial. </p>", "<p>Para profundizar, hablamos con el Químico, Doctor en Ingeniería de materiales y profesor de la Facultad de Odontología de la U. de Chile Mario Díaz.</p>", "<p><strong>El producto aún se encuentra en prueba.</strong></p>", "<p>“Una vez que las pruebas clínicas estén, se pueden comercializar a nivel mundial. Es un líquido que tiene que ser aplicado por un dentista”.</p>", "<p>“Si ya te empezó a doler un diente, ya tienes la lesión cavitada”.</p>", "<p>“Estamos apuntando a un uso profesional y esperamos generar productos”.</p>"], "fecha" => ~U[2021-12-09 21:28:44.427435Z], "fecha_short" => "09-12-2021", "full_count" => 71, "imagen_url" => "https://media.biobiochile.cl/wp-content/uploads/2021/12/social-captura-de-pantalla-2021-12-09-a-las-16-23-58-1200x633.png", "medio" => "Radio Bío Bío", "medio_std" => "biobio", " (truncated)
+17:10:47.900 [info] Starting server at port 8080
+17:10:50.802 [info] GET / 127.0.0.1 :: sent - 200
+17:10:50.989 [info] GET /favicon.ico 127.0.0.1 :: sent - 404
+17:10:55.071 [info] GET /ultimo/2 127.0.0.1 :: sent - 200
+17:10:57.491 [info] GET / 127.0.0.1 :: sent - 200
+17:11:52.115 [info] GET /nacional 127.0.0.1 :: sent - 200
+17:11:59.504 [info] GET /noticia/8DcGVFk2EeyKmPNKa9IfQg== 127.0.0.1 :: sent - 200
+17:12:03.345 [info] GET / 127.0.0.1 :: sent - 200
+17:12:05.313 [info] GET /ultimo/2 127.0.0.1 :: sent - 200
+17:12:07.066 [info] GET /noticia/9P9Gzlk2EeybkxdTFlEzVQ== 127.0.0.1 :: sent - 200
+17:12:09.881 [info] GET / 127.0.0.1 :: sent - 200

@@ -2,6 +2,7 @@ defmodule Lector.Router do
   require Logger
   use Plug.Router
   alias Lector.Templates.{Home, Noticia, Error}
+  require Lector.Templates.Home
 
   plug :match
   plug :dispatch
@@ -56,6 +57,7 @@ defmodule Lector.Router do
   get "/" do
     results = Lector.DB.get_all(0, @results_per_page) 
     Home.render(conn, "home.html.eex", noticias: results, seccion_fullname: "Lo Último", seccion: "ultimo", page: 1)
+    #Home.render(conn, "home.html.eex", noticias: results, seccion_fullname: "Lo Último", seccion: "ultimo", page: 1)
   end
 
   match _ do

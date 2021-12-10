@@ -48,7 +48,7 @@ defmodule Lector.DB do
   def init(_) do
     {:ok, db_conn} = Postgrex.start_link(
       database: @database,
-      username: "lector",
+      username: username(),
       pool_size: 25 # In theory this allows us to use the DBConnection pool behavior.
     )
 
@@ -149,6 +149,10 @@ defmodule Lector.DB do
     |> Enum.reduce(%{}, fn({el, index}, acc) -> 
       Map.put(acc, Enum.at(cols, index), el)
     end)
+  end
+
+  def username do
+    System.get_env("USER", "lector")
   end
   
 end
