@@ -572,3 +572,257 @@ Request: GET /
 17:29:58.152 [info] GET /internacional 127.0.0.1 :: sent - 200
 17:29:59.578 [info] GET /noticia/7JRusFk2EeySZe-q2Gcxng== 127.0.0.1 :: sent - 200
 17:30:02.680 [info] GET / 127.0.0.1 :: sent - 200
+17:35:58.321 [info] Starting server at port 8080
+17:36:02.432 [info] GET / 127.0.0.1 :: sent - 200
+17:36:04.215 [info] GET /noticia/_LI6NFk2EeyKmGcSIWGtIg== 127.0.0.1 :: sent - 200
+17:36:05.795 [info] GET / 127.0.0.1 :: sent - 200
+17:40:25.199 [info] Starting server at port 8080
+17:40:25.264 [error] GenServer #PID<0.491.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.481.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.496.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.499.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.505.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.482.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.483.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.500.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.492.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.497.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.484.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.494.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.504.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.495.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.485.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.493.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.503.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.489.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.486.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.502.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.490.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.488.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.501.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.487.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.264 [error] GenServer #PID<0.498.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.274 [error] GenServer #PID<0.508.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.274 [error] GenServer #PID<0.507.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.275 [error] GenServer #PID<0.509.0> terminating
+** (RuntimeError) connect raised KeyError exception: key :database not found. The exception details are hidden, as they may contain sensitive data such as database credentials. You may set :show_sensitive_data_on_connection_error to true when starting your connection if you wish to see all of the details
+    (elixir 1.12.3) lib/keyword.ex:420: Keyword.fetch!/2
+    (postgrex 0.15.13) lib/postgrex/protocol.ex:155: Postgrex.Protocol.connect_endpoints/6
+    (db_connection 2.4.1) lib/db_connection/connection.ex:82: DBConnection.Connection.connect/2
+    (connection 1.1.0) lib/connection.ex:622: Connection.enter_connect/5
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: nil
+17:40:25.277 [info] Application lector exited: Lector.start(:normal, []) returned an error: shutdown: failed to start child: Lector.Cache
+    ** (EXIT) exited in: GenServer.call(:db, :get_medios, 5000)
+        ** (EXIT) killed
+17:40:25.277 [info] Application logger_file_backend exited: :stopped
+17:40:25.277 [info] Application poolboy exited: :stopped
+17:40:25.278 [info] Application postgrex exited: :stopped
+17:40:25.280 [info] Application db_connection exited: :stopped
+17:40:25.280 [info] Application connection exited: :stopped
+17:40:25.280 [info] Application decimal exited: :stopped
+17:40:25.281 [info] Application plug_cowboy exited: :stopped
+17:40:25.281 [info] Application cowboy_telemetry exited: :stopped
+17:40:25.282 [info] Application cowboy exited: :stopped
+17:40:25.283 [info] Application ranch exited: :stopped
+17:40:25.283 [info] Application cowlib exited: :stopped
+17:40:25.284 [info] Application plug exited: :stopped
+17:40:25.284 [info] Application telemetry exited: :stopped
+17:40:25.285 [info] Application plug_crypto exited: :stopped
+17:40:25.285 [info] Application mime exited: :stopped
+17:40:25.285 [info] Application eex exited: :stopped
+17:43:31.484 [info] Starting server at port 8080
+17:43:38.200 [info] GET / 127.0.0.1 :: sent - 200
+17:43:41.266 [info] GET /noticia/-yNXmFk2EeyKmDPxVfrtEA== 127.0.0.1 :: sent - 200
+17:43:46.584 [info] GET / 127.0.0.1 :: sent - 200
+17:43:48.096 [info] GET /noticia/_T158Fk2EeyKmCdf6D2O4w== 127.0.0.1 :: sent - 200
+17:43:52.921 [info] GET / 127.0.0.1 :: sent - 200

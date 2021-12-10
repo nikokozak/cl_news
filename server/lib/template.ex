@@ -26,9 +26,9 @@ defmodule Lector.Template do
   """
 
   require EEx
-  @template_dir "lib/templates"
-  @layout_dir "lib/templates/layouts"
-  @default_layout "base.html.eex"
+  @template_dir Application.compile_env!(:lector, :template_dir)
+  @layout_dir Application.compile_env!(:lector, :layout_dir)
+  @default_layout Application.compile_env!(:lector, :default_layout)
 
   @doc """
   Injects the render, and template-render functions into our "views".

@@ -2,8 +2,6 @@ defmodule Lector.DB do
   use GenServer
   require Postgrex
 
-  @database "lector_chile"
-
   #############################################################
   ###################### PUBLIC API ###########################
   #############################################################
@@ -47,7 +45,7 @@ defmodule Lector.DB do
 
   def init(_) do
     {:ok, db_conn} = Postgrex.start_link(
-      database: @database,
+      database: database(),
       username: username(),
       pool_size: 25 # In theory this allows us to use the DBConnection pool behavior.
     )
@@ -151,8 +149,7 @@ defmodule Lector.DB do
     end)
   end
 
-  def username do
-    System.get_env("USER", "lector")
-  end
-  
+  def username, do: Application.get_env(:lector, :db) |> Keyword.get(:username)
+  def database, do: Application.get_env(:lector, :db) |> Keyword.get(:database)
+
 end
