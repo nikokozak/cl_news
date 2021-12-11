@@ -1,0 +1,19 @@
+[Unit]
+Description=Lector Chile Elixir Server
+After=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Environment="HOME=/home/lector/srv/server"
+ExecStart=/home/lector/srv/server/bin/lector start
+ExecStop=/home/lector/srv/server/bin/lector stop
+SyslogIdentifier=simple
+Restart=always
+
+# 'StartLimitInterval' must be greater than 'RestartSec * StartLimitBurst' otherwise the service will be restarted indefinitely.
+# https://serverfault.com/a/800631
+RestartSec=5
+StartLimitBurst=3
+StartLimitInterval=10

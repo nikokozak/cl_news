@@ -7,6 +7,8 @@ source ../functions/ssh_and_run.sh
 
 cd ../../
 
+rm -rf server/_build
+
 sudo docker build -f deploy.Dockerfile --no-cache --output release .
 sudo chown niko release
 
@@ -22,7 +24,11 @@ ssh_and_run <<-STDIN
     rm release.tar.gz
     cd srv/server/
     sudo tar -zxvf release.tar.gz
+
+    sudo chcon -R -t bin_t /home/lector/srv/server/bin/
 STDIN
+
+# The last command above changes the SELinux policy, allowing us to run lector as a service
 
 if [ "$?" -eq "0" ]; then
     echo "Server copied over correctly"

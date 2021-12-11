@@ -1,2 +1,3 @@
-Figure out how to start with fallback ports
+Add inegration tests (check `rel/env.sh.eex` as a way of maybe running checks on startup)
 Finalize deploy pipeline
+
