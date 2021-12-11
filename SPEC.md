@@ -74,6 +74,3 @@
     - Entrevista (https://www.theclinic.cl/categoria/entrevista-canalla/)
     - Virales (https://www.theclinic.cl/categoria/virales/)
     - Actualidad (https://www.theclinic.cl/categoria/actualidad/)
-
-
-

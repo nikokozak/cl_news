@@ -11,8 +11,10 @@ defmodule Lector do
   """
   def start(_type, _args) do
 
+    application_port = get_port()
+
     children = [
-      {Plug.Cowboy, scheme: :http, plug: Lector.Endpoint, options: [port: 8080]},
+      {Plug.Cowboy, scheme: :http, plug: Lector.Endpoint, options: [port: application_port]},
       {Lector.DB, []},
       {Lector.Cache, []}
     ]
@@ -22,8 +24,17 @@ defmodule Lector do
       name: Lector.Supervisor
     ]
     
-    Logger.info("Starting server at port 8080")
+    Logger.info("Starting server at port #{application_port}")
     Supervisor.start_link(children, opts)
+  end
+
+  defp get_port do
+    { port, _ } =
+      Application.get_env(:lector, :network) 
+      |> Keyword.get(:port) 
+      |> Integer.parse
+
+    port
   end
 
 end

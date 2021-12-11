@@ -8,3 +8,6 @@ config :lector, :db,
   username: System.get_env("USER", "lector"),
   database: System.get_env("LECTOR_DB_NAME", "lector_chile")
 
+config :lector, :network,
+  port: System.get_env("LECTOR_PORT", "8080")
+
