@@ -25,7 +25,11 @@ ssh_and_run <<-STDIN
     cd srv/server/
     sudo tar -zxvf release.tar.gz
 
+    sudo chown lector /home/lector/srv/server
     sudo chcon -R -t bin_t /home/lector/srv/server/bin/
+
+    systemctl stop lector
+    systemctl start lector
 STDIN
 
 # The last command above changes the SELinux policy, allowing us to run lector as a service
