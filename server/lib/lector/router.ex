@@ -72,13 +72,16 @@ defmodule Lector.Router do
       req_headers: headers,
       state: state,
       status: status,
+      assigns: %{ 
+        time_taken: time
+      }
     } = conn
 
     {_, user_agent} = Enum.find(headers, fn {h, _v} -> h == "user-agent" end)
     ip = Enum.join(Tuple.to_list(ip_tup), ".")
 
-    Logger.debug("#{method} #{req_path} #{ip} :: #{user_agent} :: #{state} - #{status}")
-    Logger.info("#{method} #{req_path} #{ip} :: #{state} - #{status}")
+    Logger.debug("#{method} #{req_path} #{ip} :: #{user_agent} :: #{state} - #{status} - #{time}ms")
+    Logger.info("#{method} #{req_path} #{ip} :: #{state} - #{status} - #{time}ms")
     conn
   end
 

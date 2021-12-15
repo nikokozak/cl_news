@@ -1,5 +1,3 @@
-Fix Scrapy logs. 
-Add Scrapy pipeline logs.
 Add detailed (timestamped, conn times, etc.) to server.
 Integrate Grafana
 Set up crontab config in repo

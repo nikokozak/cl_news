@@ -74,7 +74,12 @@ defmodule Lector.Template do
     assigns = [assigns | [inner_content: rendered_template]]
 
     rendered_layout = apply(module, :layout, [assigns])
-    Plug.Conn.send_resp(conn, (status || 200), rendered_layout)
+
+    conn = Plug.Conn.assign(conn, :timing_end, System.monotonic_time(:millisecond))
+
+    conn
+    |> Plug.Conn.assign(:time_taken, conn.assigns[:timing_end] - conn.assigns[:timing_init])
+    |> Plug.Conn.send_resp((status || 200), rendered_layout)
   end
 
   defp normalize_module_name(module) do
