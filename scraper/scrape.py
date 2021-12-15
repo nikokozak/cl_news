@@ -25,9 +25,13 @@ for avoid in args.avoid:
 middleware_logger = logging.getLogger('scrapy.middleware')
 crawler_logger = logging.getLogger('scrapy.crawler')
 stats_logger = logging.getLogger('scrapy.statscollectors')
+telnet_logger = logging.getLogger('scrapy.extensions.telnet')
+logstat_logger = logging.getLogger('scrapy.extensions.logstats')
 middleware_logger.setLevel(logging.WARNING)
 stats_logger.setLevel(logging.WARNING)
 crawler_logger.setLevel(logging.WARNING)
+telnet_logger.setLevel(logging.WARNING)
+logstat_logger.setLevel(logging.WARNING)
 
 ## CRAWLING CALLS
 
