@@ -13,13 +13,13 @@ class NoticiaSpider(scrapy.Spider):
         spider._set_crawler(crawler)
         cache_file = crawler.settings.get('SPIDER_CACHE_FOLDER') + spider.name + '_cache.json'
         spider.cache = Cache(cache_file)
+        spider.stats = crawler.stats
         return spider
 
     def __init__(self, *args, **kwargs):
         '''Override the __init__ function so that we might pass in keyword args
         and set defaults for our spider'''
         super(NoticiaSpider, self).__init__(*args, **kwargs)
-        self.stats = self.crawler.stats
 
         # Clears the cache of values before starting
         if not hasattr(self, 'clear_cache'): self.clear_cache = False
@@ -31,5 +31,6 @@ class NoticiaSpider(scrapy.Spider):
         if reason == 'finished':
             self.stats.set_value('time_end', datetime.datetime.now())
             self.cache.save()
-            print('Successfully saved cache for ' + self.name)
+            self.logger.info('{} stats:\n%s'.format(self.name.upper()), self.stats.get_stats())
+            print('Successfully saved cache for ' + self.name.upper())
 

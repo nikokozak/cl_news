@@ -1,569 +1,228 @@
-2021-12-07 16:39:57 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: scraper)
-2021-12-07 16:39:57 [scrapy.utils.log] INFO: Versions: lxml 4.6.4.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.9.9 (main, Nov 21 2021, 03:23:42) - [Clang 13.0.0 (clang-1300.0.29.3)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 36.0.0, Platform macOS-11.4-x86_64-i386-64bit
-2021-12-07 16:39:57 [scrapy.crawler] INFO: Overridden settings:
-{'BOT_NAME': 'scraper',
- 'COOKIES_ENABLED': False,
- 'DOWNLOAD_DELAY': 1,
- 'LOG_FILE': '/Users/niko/Documents/Code/LectorChile/scraper/scraper/logs/log.txt',
- 'LOG_LEVEL': 'INFO',
- 'NEWSPIDER_MODULE': 'scraper.spiders',
- 'ROBOTSTXT_OBEY': True,
- 'SPIDER_MODULES': ['scraper.spiders']}
-2021-12-07 16:39:57 [scrapy.extensions.telnet] INFO: Telnet Password: dc159f889954a203
-2021-12-07 16:39:57 [scrapy.middleware] INFO: Enabled extensions:
-['scrapy.extensions.corestats.CoreStats',
- 'scrapy.extensions.telnet.TelnetConsole',
- 'scrapy.extensions.memusage.MemoryUsage',
- 'scrapy.extensions.logstats.LogStats']
-2021-12-07 16:39:57 [scrapy.middleware] INFO: Enabled downloader middlewares:
-['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
- 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
- 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
- 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
- 'scrapy_useragents.downloadermiddlewares.useragents.UserAgentsMiddleware',
- 'scraper.middlewares.ScraperDownloaderMiddleware',
- 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
- 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
- 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
- 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
- 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
- 'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2021-12-07 16:39:57 [scrapy.middleware] INFO: Enabled spider middlewares:
-['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
- 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
- 'scrapy.spidermiddlewares.referer.RefererMiddleware',
- 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
- 'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2021-12-07 16:39:57 [scrapy.middleware] INFO: Enabled item pipelines:
-['scraper.pipelines.DefaultsPipeline',
- 'scraper.pipelines.SanitizePipeline',
- 'scraper.pipelines.DBPipeline']
-2021-12-07 16:39:57 [scrapy.core.engine] INFO: Spider opened
-2021-12-07 16:39:57 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2021-12-07 16:39:57 [mostrador] INFO: Spider opened: mostrador
-2021-12-07 16:39:57 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
-2021-12-07 16:40:16 [root] INFO: INSERTED item with:
-	URL: https://www.elmostrador.cl/destacado/2021/12/07/dos-anos-sin-simce-el-comienzo-de-un-necesario-adios/
-	Titular: Dos años sin Simce: ¿el comienzo de un necesario adiós?
-	Medio: mostrador
-into DB.
-2021-12-07 16:40:16 [root] INFO: INSERTED item with:
-	URL: https://www.elmostrador.cl/destacado/2021/12/07/pueblos-indigenas-en-compas-de-espera/
-	Titular: Pueblos indígenas en compás de espera
-	Medio: mostrador
-into DB.
-2021-12-07 16:40:17 [root] INFO: INSERTED item with:
-	URL: https://www.elmostrador.cl/noticias/opinion/columnas/2021/12/07/detlef-nolte-kast-y-el-fascismo-algunas-consideraciones/
-	Titular: Detlef Nolte, Kast y el fascismo: algunas consideraciones
-	Medio: mostrador
-into DB.
-2021-12-07 16:40:17 [root] INFO: INSERTED item with:
-	URL: https://www.elmostrador.cl/noticias/opinion/columnas/2021/12/07/el-sentido-de-la-politica-se-perdio-elecciones-parlamentarias-y-presidenciales-en-chile/
-	Titular: El sentido de la política se perdió: elecciones parlamentarias y presidenciales en Chile
-	Medio: mostrador
-into DB.
-2021-12-07 16:40:21 [root] INFO: INSERTED item with:
-	URL: https://www.elmostrador.cl/noticias/opinion/2021/12/07/las-palabras-de-la-segunda-vuelta-promesas-para-la-accion-deudas-con-el-bienestar/
-	Titular: Las palabras de la segunda vuelta: promesas para la acción, deudas con el bienestar
-	Medio: mostrador
-into DB.
-2021-12-07 16:40:21 [scrapy.core.engine] INFO: Closing spider (finished)
-2021-12-07 16:40:21 [root] INFO: []
-2021-12-07 16:40:21 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{'downloader/request_bytes': 3303,
- 'downloader/request_count': 9,
- 'downloader/request_method_count/GET': 9,
- 'downloader/response_bytes': 211997,
- 'downloader/response_count': 9,
- 'downloader/response_status_count/200': 9,
- 'elapsed_time_seconds': 24.097931,
- 'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2021, 12, 7, 22, 40, 21, 383491),
- 'httpcompression/response_bytes': 1294596,
- 'httpcompression/response_count': 8,
- 'item_scraped_count': 5,
- 'log_count/INFO': 17,
- 'memusage/max': 51904512,
- 'memusage/startup': 51900416,
- 'request_depth_max': 1,
- 'response_received_count': 9,
- 'robotstxt/request_count': 1,
- 'robotstxt/response_count': 1,
- 'robotstxt/response_status_count/200': 1,
- 'scheduler/dequeued': 8,
- 'scheduler/dequeued/memory': 8,
- 'scheduler/enqueued': 8,
- 'scheduler/enqueued/memory': 8,
- 'start_time': datetime.datetime(2021, 12, 7, 22, 39, 57, 285560)}
-2021-12-07 16:40:21 [scrapy.core.engine] INFO: Spider closed (finished)
-2021-12-09 15:28:14 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: scraper)
-2021-12-09 15:28:14 [scrapy.utils.log] INFO: Versions: lxml 4.6.4.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.9.9 (main, Nov 21 2021, 03:23:42) - [Clang 13.0.0 (clang-1300.0.29.3)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 36.0.0, Platform macOS-11.4-x86_64-i386-64bit
-2021-12-09 15:28:14 [scrapy.crawler] INFO: Overridden settings:
-{'BOT_NAME': 'scraper',
- 'COOKIES_ENABLED': False,
- 'DOWNLOAD_DELAY': 1,
- 'LOG_FILE': '/Users/niko/Documents/Code/LectorChile/scraper/scraper/logs/log.txt',
- 'LOG_LEVEL': 'INFO',
- 'NEWSPIDER_MODULE': 'scraper.spiders',
- 'ROBOTSTXT_OBEY': True,
- 'SPIDER_MODULES': ['scraper.spiders']}
-2021-12-09 15:28:14 [scrapy.extensions.telnet] INFO: Telnet Password: 42f976cbf87e9ccf
-2021-12-09 15:28:14 [scrapy.middleware] INFO: Enabled extensions:
-['scrapy.extensions.corestats.CoreStats',
- 'scrapy.extensions.telnet.TelnetConsole',
- 'scrapy.extensions.memusage.MemoryUsage',
- 'scrapy.extensions.logstats.LogStats']
-2021-12-09 15:28:14 [scrapy.middleware] INFO: Enabled downloader middlewares:
-['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
- 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
- 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
- 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
- 'scrapy_useragents.downloadermiddlewares.useragents.UserAgentsMiddleware',
- 'scraper.middlewares.ScraperDownloaderMiddleware',
- 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
- 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
- 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
- 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
- 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
- 'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2021-12-09 15:28:14 [scrapy.middleware] INFO: Enabled spider middlewares:
-['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
- 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
- 'scrapy.spidermiddlewares.referer.RefererMiddleware',
- 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
- 'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2021-12-09 15:28:14 [scrapy.middleware] INFO: Enabled item pipelines:
-['scraper.pipelines.DefaultsPipeline',
- 'scraper.pipelines.SanitizePipeline',
- 'scraper.pipelines.DBPipeline']
-2021-12-09 15:28:14 [scrapy.core.engine] INFO: Spider opened
-2021-12-09 15:28:14 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2021-12-09 15:28:14 [biobio] INFO: Spider opened: biobio
-2021-12-09 15:28:14 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
-2021-12-09 15:28:14 [scrapy.crawler] INFO: Overridden settings:
-{'BOT_NAME': 'scraper',
- 'COOKIES_ENABLED': False,
- 'DOWNLOAD_DELAY': 1,
- 'LOG_FILE': '/Users/niko/Documents/Code/LectorChile/scraper/scraper/logs/log.txt',
- 'LOG_LEVEL': 'INFO',
- 'NEWSPIDER_MODULE': 'scraper.spiders',
- 'ROBOTSTXT_OBEY': True,
- 'SPIDER_MODULES': ['scraper.spiders']}
-2021-12-09 15:28:14 [scrapy.extensions.telnet] INFO: Telnet Password: c0c31b9a46c65ff1
-2021-12-09 15:28:14 [scrapy.middleware] INFO: Enabled extensions:
-['scrapy.extensions.corestats.CoreStats',
- 'scrapy.extensions.telnet.TelnetConsole',
- 'scrapy.extensions.memusage.MemoryUsage',
- 'scrapy.extensions.logstats.LogStats']
-2021-12-09 15:28:14 [scrapy.middleware] INFO: Enabled downloader middlewares:
-['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
- 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
- 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
- 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
- 'scrapy_useragents.downloadermiddlewares.useragents.UserAgentsMiddleware',
- 'scraper.middlewares.ScraperDownloaderMiddleware',
- 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
- 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
- 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
- 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
- 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
- 'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2021-12-09 15:28:14 [scrapy.middleware] INFO: Enabled spider middlewares:
-['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
- 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
- 'scrapy.spidermiddlewares.referer.RefererMiddleware',
- 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
- 'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2021-12-09 15:28:14 [scrapy.middleware] INFO: Enabled item pipelines:
-['scraper.pipelines.DefaultsPipeline',
- 'scraper.pipelines.SanitizePipeline',
- 'scraper.pipelines.DBPipeline']
-2021-12-09 15:28:14 [scrapy.core.engine] INFO: Spider opened
-2021-12-09 15:28:14 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2021-12-09 15:28:14 [tercera] INFO: Spider opened: tercera
-2021-12-09 15:28:14 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6024
-2021-12-09 15:28:14 [scrapy.crawler] INFO: Overridden settings:
-{'BOT_NAME': 'scraper',
- 'COOKIES_ENABLED': False,
- 'DOWNLOAD_DELAY': 1,
- 'LOG_FILE': '/Users/niko/Documents/Code/LectorChile/scraper/scraper/logs/log.txt',
- 'LOG_LEVEL': 'INFO',
- 'NEWSPIDER_MODULE': 'scraper.spiders',
- 'ROBOTSTXT_OBEY': True,
- 'SPIDER_MODULES': ['scraper.spiders']}
-2021-12-09 15:28:14 [scrapy.extensions.telnet] INFO: Telnet Password: 2b57172495180687
-2021-12-09 15:28:14 [scrapy.middleware] INFO: Enabled extensions:
-['scrapy.extensions.corestats.CoreStats',
- 'scrapy.extensions.telnet.TelnetConsole',
- 'scrapy.extensions.memusage.MemoryUsage',
- 'scrapy.extensions.logstats.LogStats']
-2021-12-09 15:28:14 [scrapy.middleware] INFO: Enabled downloader middlewares:
-['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
- 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
- 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
- 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
- 'scrapy_useragents.downloadermiddlewares.useragents.UserAgentsMiddleware',
- 'scraper.middlewares.ScraperDownloaderMiddleware',
- 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
- 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
- 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
- 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
- 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
- 'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2021-12-09 15:28:14 [scrapy.middleware] INFO: Enabled spider middlewares:
-['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
- 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
- 'scrapy.spidermiddlewares.referer.RefererMiddleware',
- 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
- 'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2021-12-09 15:28:14 [scrapy.middleware] INFO: Enabled item pipelines:
-['scraper.pipelines.DefaultsPipeline',
- 'scraper.pipelines.SanitizePipeline',
- 'scraper.pipelines.DBPipeline']
-2021-12-09 15:28:14 [scrapy.core.engine] INFO: Spider opened
-2021-12-09 15:28:14 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2021-12-09 15:28:14 [emol] INFO: Spider opened: emol
-2021-12-09 15:28:14 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6025
-2021-12-09 15:28:16 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Nacional/2021/12/09/1040771/tribunal-constitucional-comision-sistema-justicia.html
-	Titular: Comisión de Sistemas de Justicia aborda existencia del TC: mayoría de convencionales está por cambiarlo o eliminarlo
-	Medio: emol
-into DB.
-2021-12-09 15:28:16 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Nacional/2021/12/09/1040706/juicio-expolicia-imputado-asesinato-carabinera.html
-	Titular: Comienza juicio contra ex policía acusado por la muerte de carabinera en Linares: Fiscalía pide presidio perpetuo calificado
-	Medio: emol
-into DB.
-2021-12-09 15:28:16 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Nacional/2021/12/09/1040724/derecho-agua-convencion-constitucional-norma.html
-	Titular: Más de 50 convencionales presentan iniciativa que establece derecho al agua y al saneamiento en la nueva Constitución
-	Medio: emol
-into DB.
-2021-12-09 15:28:16 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Nacional/2021/12/09/1040755/paris-irregularidades-financieras-colmed.html
-	Titular: Paris y denuncias en Colmed: &quot;Si hubo algún error a nivel de mesa central, Siches también es corresponsable&quot;
-	Medio: emol
-into DB.
-2021-12-09 15:28:16 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Nacional/2021/12/09/1040763/lagos-apela-union-boric-kast.html
-	Titular: Lagos apela a la unión entre Boric y Kast: &quot;Sería importante que el ganador llame al otro y diga 'veamos en qué concordamos'&quot;
-	Medio: emol
-into DB.
-2021-12-09 15:28:16 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Nacional/2021/12/09/1040727/sorteo-debate-anatel.html
-	Titular: Último debate: Anatel sortea el orden de participación de Boric y Kast en el encuentro del 13 de diciembre
-	Medio: emol
-into DB.
-2021-12-09 15:28:17 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Internacional/2021/12/09/1040736/matrimonio-igualitario-en-latinoamerica.html
-	Titular: Tras ser promulgado en Chile: Los otros siete países de América Latina que han legalizado el matrimonio igualitario
-	Medio: emol
-into DB.
-2021-12-09 15:28:17 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Internacional/2021/12/09/1040766/onu-boicot-diplomatico-jjoo.html
-	Titular: Jefe de la ONU se desmarca del boicot diplomático y asistirá a la apertura de los JJ.OO. de Beijing
-	Medio: emol
-into DB.
-2021-12-09 15:28:17 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Internacional/2021/12/09/1040756/biden-cumbre-democracia.html
-	Titular: Biden abre cumbre sobre la democracia alertando los &quot;desafíos alarmantes&quot; que ésta enfrenta
-	Medio: emol
-into DB.
-2021-12-09 15:28:17 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Internacional/2021/12/09/1040745/primera-ministra-dinamarca-crisis-visones.html
-	Titular: Primera ministra de Dinamarca comparece ante comisión por matanza de visones en pandemia: &quot;Fue la decisión correcta&quot;
-	Medio: emol
-into DB.
-2021-12-09 15:28:17 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Internacional/2021/12/09/1040735/hong-kong-condena-jimmy-lai.html
-	Titular: Magnate de los medios hongkonés Jimmy Lai es encontrado culpable de incitar a participar en una vigilia
-	Medio: emol
-into DB.
-2021-12-09 15:28:17 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Internacional/2021/12/09/1040728/irak-fin-mision-coalicion-antiyihadista.html
-	Titular: Irak anuncia el fin de la &quot;misión de combate&quot; de la coalición antiyihadista liderada por EE.UU.
-	Medio: emol
-into DB.
-2021-12-09 15:28:18 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Tecnologia/2021/12/08/1040663/juego-calamar-alec-baldwin-google.html
-	Titular: &quot;El juego del calamar&quot;, Alec Baldwin y criptomoneda Dogecoin entre los más buscados en Google en 2021
-	Medio: emol
-into DB.
-2021-12-09 15:28:18 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Tecnologia/2021/12/08/1040649/recuperados-covid19-vacunados-potentes-anticuerpos.html
-	Titular: Recuperados por covid-19 que después son vacunados producen potentes anticuerpos contra múltiples variantes
-	Medio: emol
-into DB.
-2021-12-09 15:28:18 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Tecnologia/2021/12/06/1040467/lagos-en-peligro-chile.html
-	Titular: Entre las regiones de Valparaíso y el Maule: Los 12 lagos andinos de Chile que podrían desaparecer si no son protegidos
-	Medio: emol
-into DB.
-2021-12-09 15:28:18 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Tecnologia/2021/12/06/1040457/lanzan-test-diferenciar-covid19-gripe.html
-	Titular: Laboratorio suizo lanzará un test para diferenciar el covid-19 de la gripe
-	Medio: emol
-into DB.
-2021-12-09 15:28:18 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Tecnologia/2021/12/04/1040342/eclipse-solar-antartida.html
-	Titular: Fotos: Eclipse solar se pudo ver desde la Antártica: No se repetirá en Chile hasta 2048
-	Medio: emol
-into DB.
-2021-12-09 15:28:18 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Tecnologia/2021/12/04/1040258/telescopios-espaciales-hubble-james-webb.html
-	Titular: Cómo se compara el telescopio espacial Hubble con el James Webb, que lo reemplazará este año
-	Medio: emol
-into DB.
-2021-12-09 15:28:19 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Tendencias/2021/12/09/1040718/radio-apoya-mujeres-silenciadas-afganistan.html
-	Titular: Transmiten clases para las niñas y dan consejos psicológicos: Emisora se ha vuelto un refugio para las mujeres en Afganistán
-	Medio: emol
-into DB.
-2021-12-09 15:28:19 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Nacional/2021/12/06/1040463/cna-recomienda-postular-instituciones-acreditadas.html
-	Titular: CNA recomienda postular en instituciones acreditadas: &quot;Es una certificación de calidad y de acceso a beneficios económicos&quot;
-	Medio: emol
-into DB.
-2021-12-09 15:28:19 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Nacional/2021/12/06/1040308/rendicion-ptu-claves-admision-2022.html
-	Titular: Hoy comienza la rendición de la PTU: Revisa las claves del proceso, los elementos obligatorios y horarios
-	Medio: emol
-into DB.
-2021-12-09 15:28:19 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Tendencias/2021/12/03/1040313/usach-pdt.html
-	Titular: Conoce la oferta académica de la Usach en la antesala de la PDT
-	Medio: emol
-into DB.
-2021-12-09 15:28:19 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Nacional/2021/12/03/1040271/preparativos-ptu-2021-protocolos-covid.html
-	Titular: Más de 275 mil personas rendirán la PDT la próxima semana: El 95% de los inscritos están vacunados
-	Medio: emol
-into DB.
-2021-12-09 15:28:19 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Nacional/2021/11/30/1039891/ministro-figueroa-defensa-intervencionismo-electoral.html
-	Titular: Figueroa se defiende ante críticas por intervencionismo: &quot;Yo me imagino que nadie espera que vote por Boric&quot;
-	Medio: emol
-into DB.
-2021-12-09 15:28:19 [root] INFO: INSERTED item with:
-	URL: https://www.emol.com/noticias/Economia/2021/12/09/1040705/operadores-financieros-diciembre-tasa-intees.html
-	Titular: Mercado espera inflación de 0,5% en diciembre y prevé que tasa de interés llegue a 5% en marzo
-	Medio: emol
-into DB.
-2021-12-09 15:28:20 [root] INFO: INSERTED item with:
-	URL: https://www.emol.com/noticias/Economia/2021/12/09/1040704/ministro-hacienda-pension-garantizada-universal.html
-	Titular: Pensión Garantizada Universal: Cerda dice que costo fiscal es de US$3.000 millones al año y explica cómo se financiará
-	Medio: emol
-into DB.
-2021-12-09 15:28:21 [root] INFO: INSERTED item with:
-	URL: https://www.emol.com/noticias/Economia/2021/12/09/1040749/dolar-cierra-alza-jueves.html
-	Titular: Dólar cierra con fuerte impulso de casi $10 y vuelve a mirar de cerca el nivel de los $850
-	Medio: emol
-into DB.
-2021-12-09 15:28:22 [scrapy.core.scraper] ERROR: Error processing {'autor': 'Carlos Reyes P.',
- 'bajada': 'El candidato presidencial del Frente Social Cristiano aseguró que '
-           '"nosotros tenemos que partir respetando la dignidad del ser '
-           'humano”.',
- 'cuerpo': ['<p>Inaceptable. De esta manera el <b>abanderado presidencial del '
-            'Frente Social Cristiano, José Antonio Kast</b>, calificó los '
-            'dichos del exdiputado electo del Partido Republicano, <b>Johannes '
-            'Kaiser</b> en contra de la también parlamentaria electa, '
-            '<b>Emilia Schneider.</b></p>',
-            '<p>Durante una transmisión del programa de Youtube “El '
-            'Nacional-Libertario”, Kaiser se refirió de forma burlesca al '
-            'hecho de que su par republicana<b>\xa0María Gloria Naveillán\xa0'
-            '</b>tendrá que “compartir baño” con la representante del Frente '
-            'Amplio.</p>',
-            '<p>“<b>¿Sabes cuál va a ser la gracia?, tú vas a tener que '
-            'compartir baño con Emilia Schneider”</b>, dijo el diputado '
-            'electo, lo que provocó inmediatas carcajadas en Naveillán y en la '
-            'tercera invitada al programa, la excandidata a diputada por el '
-            'distrito 9 del Partido Republicano, Verónica Welkner.</p>',
-            '<p>Al respecto y consultado por las palabras de Kaiser, Kast '
-            'aseguró en diálogo con el matinal Mucho Gusto que<b> “esto es '
-            'inaceptable, burdo, chabacano, rebaja el nivel de la discusión. Y '
-            'lamento que parlamentarios electos caigan en eso.</b> En el caso '
-            'de Johannes, yo condené en el primer momento, en la primera '
-            'instancia en que tuve conocimiento de lo que se había viralizado '
-            'de sus dichos, que yo no conocía”.</p>',
-            '<p>El republicano aseguró que le transmitiría al diputado electo, '
-            '“claramente, a través de Gloria Naveillán, que es que '
-            'absolutamente inaceptable los términos en que él se refiere a '
-            'otra persona.<b> Nosotros tenemos que partir respetando la '
-            'dignidad del ser humano”.</b></p>',
-            '<p>“Es despreciable ese tipo de comentarios y yo le ofrezco de '
-            'parte del Partido Republicano todas las disculpas del caso (a '
-            'Schneider), porque no es nuestra forma de expresarnos”, cerró '
-            'Kast. </p>',
-            '<p>Durante la mañana, la ministra de la Mujer y la Equidad de '
-            'Género, Mónica Zalaquett, calificó como “inaceptables” los dichos '
-            'de Kaiser: “Todo discurso de odio contra una mujer debe ser '
-            'condenado”, indicó. </p>'],
- 'fecha': datetime.datetime(2021, 12, 9, 19, 35, 56, tzinfo=datetime.timezone(datetime.timedelta(0), 'GMT')),
- 'imagen_url': 'https://www.latercera.com/resizer/9aKtOFFh5eBS-n2pnjz5rR4zDy8=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/GQAO7XEAZBGERKFKMNEHZ4CK54.jpeg',
- 'medio': 'tercera',
- 'seccion': 'politica',
- 'titular': 'Kast rechaza dichos de Johannes Kaiser contra Emilia Schneider: '
-            '“Es inaceptable, burdo, chabacano, rebaja el nivel de la '
-            'discusión (...) le ofrezco de parte del Partido Republicano todas '
-            'las disculpas del caso”',
- 'url': 'https://www.latercera.com/politica/noticia/kast-rechaza-dichos-de-johannes-kaiser-contra-emilia-schneider-es-inaceptable-burdo-chabacano-rebaja-el-nivel-de-la-discusion-le-ofrezco-de-parte-del-partido-republicano-todas-las-disculpas-del-caso/7OPE7TQPSNCPBFSCNAKLFF7Q6M/'}
+2021-12-14 18:55:15 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: scraper)
+2021-12-14 18:55:15 [scrapy.utils.log] INFO: Versions: lxml 4.6.4.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.9.9 (main, Nov 21 2021, 03:23:42) - [Clang 13.0.0 (clang-1300.0.29.3)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 36.0.0, Platform macOS-11.4-x86_64-i386-64bit
+2021-12-14 18:55:15 [scrapy.extensions.telnet] INFO: Telnet Password: 2ee2d19170f11230
+2021-12-14 18:55:15 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-12-14 18:55:15 [twisted] CRITICAL: 
 Traceback (most recent call last):
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 858, in _runCallbacks
-    current.result = callback(  # type: ignore[misc]
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/utils/defer.py", line 150, in f
-    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
-  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/pipelines.py", line 45, in process_item
-    self.cur.execute(insert_sql, insert_data)
-psycopg2.errors.StringDataRightTruncation: value too long for type character varying(200)
-
-2021-12-09 15:28:23 [root] INFO: INSERTED item with:
-	URL: https://www.emol.com/noticias/Economia/2021/12/09/1040737/ministros-detallan-pension-garantizada-universal.html
-	Titular: Beneficiados, montos y tramitación: Los alcances de la Pensión Garantizada Universal
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 1661, in _inlineCallbacks
+    result = current_context.run(gen.send, result)
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/crawler.py", line 86, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/crawler.py", line 98, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/base_spider.py", line 12, in from_crawler
+    spider = cls(*args, **kwargs)
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/base_spider.py", line 22, in __init__
+    self.stats = self.crawler.stats
+AttributeError: 'BioBioSpider' object has no attribute 'crawler'
+2021-12-14 18:55:15 [scrapy.extensions.telnet] INFO: Telnet Password: 349053caeb8b3535
+2021-12-14 18:55:15 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-12-14 18:55:15 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 1661, in _inlineCallbacks
+    result = current_context.run(gen.send, result)
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/crawler.py", line 86, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/crawler.py", line 98, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/base_spider.py", line 12, in from_crawler
+    spider = cls(*args, **kwargs)
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/base_spider.py", line 22, in __init__
+    self.stats = self.crawler.stats
+AttributeError: 'TerceraSpider' object has no attribute 'crawler'
+2021-12-14 18:55:15 [scrapy.extensions.telnet] INFO: Telnet Password: 83cd2540463c3a4c
+2021-12-14 18:55:15 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-12-14 18:55:15 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 1661, in _inlineCallbacks
+    result = current_context.run(gen.send, result)
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/crawler.py", line 86, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/crawler.py", line 98, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/base_spider.py", line 12, in from_crawler
+    spider = cls(*args, **kwargs)
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/base_spider.py", line 22, in __init__
+    self.stats = self.crawler.stats
+AttributeError: 'BioBioSpider' object has no attribute 'crawler'
+2021-12-14 18:55:15 [scrapy.extensions.telnet] INFO: Telnet Password: 284f246640f69f39
+2021-12-14 18:55:15 [twisted] CRITICAL: Unhandled error in Deferred:
+2021-12-14 18:55:15 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 1661, in _inlineCallbacks
+    result = current_context.run(gen.send, result)
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/crawler.py", line 86, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/crawler.py", line 98, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/base_spider.py", line 12, in from_crawler
+    spider = cls(*args, **kwargs)
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/base_spider.py", line 22, in __init__
+    self.stats = self.crawler.stats
+AttributeError: 'MostradorSpider' object has no attribute 'crawler'
+2021-12-14 18:56:10 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: scraper)
+2021-12-14 18:56:10 [scrapy.utils.log] INFO: Versions: lxml 4.6.4.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.9.9 (main, Nov 21 2021, 03:23:42) - [Clang 13.0.0 (clang-1300.0.29.3)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 36.0.0, Platform macOS-11.4-x86_64-i386-64bit
+2021-12-14 18:56:10 [scrapy.extensions.telnet] INFO: Telnet Password: 4485b2efcf84ad5f
+2021-12-14 18:56:10 [scrapy.core.engine] INFO: Spider opened
+2021-12-14 18:56:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-12-14 18:56:10 [biobio] INFO: Spider opened: biobio
+2021-12-14 18:56:10 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-12-14 18:56:10 [scrapy.extensions.telnet] INFO: Telnet Password: 08577578db658f7c
+2021-12-14 18:56:10 [scrapy.core.engine] INFO: Spider opened
+2021-12-14 18:56:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-12-14 18:56:10 [tercera] INFO: Spider opened: tercera
+2021-12-14 18:56:10 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6024
+2021-12-14 18:56:10 [scrapy.extensions.telnet] INFO: Telnet Password: b5963045ff7d271f
+2021-12-14 18:56:10 [scrapy.core.engine] INFO: Spider opened
+2021-12-14 18:56:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-12-14 18:56:10 [emol] INFO: Spider opened: emol
+2021-12-14 18:56:10 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6025
+2021-12-14 18:56:10 [scrapy.extensions.telnet] INFO: Telnet Password: 72b0c6a675c352fc
+2021-12-14 18:56:10 [scrapy.core.engine] INFO: Spider opened
+2021-12-14 18:56:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-12-14 18:56:10 [mostrador] INFO: Spider opened: mostrador
+2021-12-14 18:56:10 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6026
+2021-12-14 18:56:12 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041177/cndc-violencia-macrozona-sur-estado.html
+	Titular: Dueños de camiones llaman a candidatos a frenar violencia en la Macrozona Sur tras nuevo ataque
 	Medio: emol
 into DB.
-2021-12-09 15:28:23 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/politica/noticia/ministro-ossa-expone-ante-la-convencion-defiende-el-presidencialismo-pero-con-cambios-sustantivos-y-presenta-reparos-a-la-unicameralidad-del-congreso/ACWXXIGKDJEENOJXDBMDS7LY6Q/
-	Titular: Ministro Ossa expone ante la Convención: defiende el presidencialismo pero con “cambios sustantivos” y presenta reparos a la unicameralidad del Congreso
-	Medio: tercera
-into DB.
-2021-12-09 15:28:23 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2021/12/09/con-5g-y-wi-fi-gratuito-inauguran-la-primera-plaza-inteligente-en-parque-eduardo-frei-de-la-florida.shtml
-	Titular: Con 5G y Wi-Fi gratuito: inauguran la primera Plaza Inteligente en parque Eduardo Frei de La Florida
-	Medio: biobio
-into DB.
-2021-12-09 15:28:24 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/politica/noticia/kast-y-boric-en-la-recta-final-anatel-sorteo-orden-de-participacion-de-candidatos-en-el-ultimo-debate-antes-de-la-eleccion/L7HGZTPN2NFYZOJJ456ILC5PFI/
-	Titular: Kast y Boric en la recta final: Anatel sorteó orden de participación de candidatos en el último debate antes de la elección
-	Medio: tercera
-into DB.
-2021-12-09 15:28:24 [root] INFO: INSERTED item with:
-	URL: https://www.emol.com/noticias/Economia/2021/12/09/1040754/fmi-destaca-sector-financiero-chileno.html
-	Titular: FMI destaca respuesta del sistema financiero chileno a la crisis social y pandemia y pide terminar con nuevos retiros
+2021-12-14 18:56:12 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041197/corte-declarainadimisble-recursocontrakast.html
+	Titular: Corte declara inadmisible recurso de protección contra Kast tras emplazar a Boric por acusación de &quot;abuso&quot;
 	Medio: emol
 into DB.
-2021-12-09 15:28:24 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/nacional/chile/2021/12/09/pdg-dice-que-tienen-una-cuenta-corriente-como-partido-y-que-no-han-recibido-denuncias-de-amenazas.shtml
-	Titular: PDG dice que tienen una cuenta corriente como partido y que no han recibido denuncias de amenazas
-	Medio: biobio
+2021-12-14 18:56:12 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041157/recomendaciones-plan-verano-seguro-covid19.html
+	Titular: Acelerar dosis de refuerzo, testeo aleatorio y foco en Ómicron: Las propuestas de expertos para el &quot;plan verano seguro&quot;
+	Medio: emol
 into DB.
-2021-12-09 15:28:24 [scrapy.core.engine] INFO: Closing spider (finished)
-2021-12-09 15:28:24 [root] INFO: []
-2021-12-09 15:28:24 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{'downloader/request_bytes': 4990,
- 'downloader/request_count': 13,
- 'downloader/request_method_count/GET': 13,
- 'downloader/response_bytes': 411849,
- 'downloader/response_count': 13,
- 'downloader/response_status_count/200': 12,
- 'downloader/response_status_count/404': 1,
- 'elapsed_time_seconds': 9.622556,
- 'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2021, 12, 9, 21, 28, 24, 504182),
- 'httpcompression/response_bytes': 1154070,
- 'httpcompression/response_count': 8,
- 'item_scraped_count': 29,
- 'log_count/ERROR': 1,
- 'log_count/INFO': 45,
- 'memusage/max': 52289536,
- 'memusage/startup': 52289536,
- 'request_depth_max': 1,
- 'response_received_count': 13,
- 'robotstxt/request_count': 2,
- 'robotstxt/response_count': 2,
- 'robotstxt/response_status_count/200': 1,
- 'robotstxt/response_status_count/404': 1,
- 'scheduler/dequeued': 11,
- 'scheduler/dequeued/memory': 11,
- 'scheduler/enqueued': 11,
- 'scheduler/enqueued/memory': 11,
- 'start_time': datetime.datetime(2021, 12, 9, 21, 28, 14, 881626)}
-2021-12-09 15:28:24 [scrapy.core.engine] INFO: Spider closed (finished)
-2021-12-09 15:28:25 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/nacional/region-de-valparaiso/2021/12/09/inician-alegatos-contra-expareja-de-madre-de-ambar-por-producir-y-almacenar-pornografia-infantil.shtml
-	Titular: Inician alegatos contra expareja de madre de Ámbar por producir y almacenar pornografía infantil
-	Medio: biobio
+2021-12-14 18:56:12 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041195/boric-agradece-apoyo-bachelet.html
+	Titular: Boric agradece respaldo de Bachelet a su candidatura: &quot;Es un gran honor en momentos clave de nuestra historia&quot;
+	Medio: emol
 into DB.
-2021-12-09 15:28:25 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/politica/noticia/presidente-pinera-promulga-ley-de-matrimonio-igualitario-es-buen-dia-para-la-libertad-y-la-familia-en-nuestro-pais/TLIQSYDTI5A7HMHUHQGV7QXYVE/
-	Titular: Presidente Piñera promulga Ley de Matrimonio Igualitario: “Es buen día para la libertad y la familia en nuestro país”
+2021-12-14 18:56:12 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041173/examenes-drogas-pelo-orina-debate.html
+	Titular: Mito y realidad: Expertos explican las diferencias entre el test de orina y de pelo para detectar drogas
+	Medio: emol
+into DB.
+2021-12-14 18:56:12 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041054/operativo-apoderados-de-mesa-balotaje.html
+	Titular: El reclutamiento de apoderados de mesa en los comandos de Kast  y Boric para &quot;defender&quot; los sufragios del balotaje
+	Medio: emol
+into DB.
+2021-12-14 18:56:13 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041203/bielorrusia-condena-carcel-opositora.html
+	Titular: Condenan a 18 años de cárcel al marido de la principal líder opositora en Bielorrusia
+	Medio: emol
+into DB.
+2021-12-14 18:56:13 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041199/italia-estado-emergencia-coronavirus.html
+	Titular: Italia prorroga hasta marzo el estado de emergencia por covid-19: Superará los dos años con este régimen
+	Medio: emol
+into DB.
+2021-12-14 18:56:13 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041188/haiti-balance-2021.html
+	Titular: Entre un magnicidio, un terremoto y una ola de violencia: El duro 2021 que azotó a Haití
+	Medio: emol
+into DB.
+2021-12-14 18:56:13 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041179/cumbre-alba-cuba.html
+	Titular: Cumbre del ALBA comienza en Cuba con críticas a EE.UU. por su &quot;egoísmo&quot; en la pandemia
+	Medio: emol
+into DB.
+2021-12-14 18:56:13 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041174/reino-unido-prohibicion-viaje-omicron.html
+	Titular: Reino Unido levanta la prohibición de viajar desde países de África por variante Ómicron
+	Medio: emol
+into DB.
+2021-12-14 18:56:13 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041158/colombia-ataque-explosivo.html
+	Titular: Ataque explosivo en aeropuerto colombiano causa la muerte de dos policías y un civil
+	Medio: emol
+into DB.
+2021-12-14 18:56:14 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Tecnologia/2021/12/14/1041128/onu-record-temperatura-siberia-2020.html
+	Titular: Agencia de la ONU validó los 38°C registrados en Siberia en 2020: &quot;Enciende las alarmas sobre el cambio climático&quot;
+	Medio: emol
+into DB.
+2021-12-14 18:56:14 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Tecnologia/2021/12/14/1041121/oms-tsunami-infecciones-delta-omicron.html
+	Titular: OMS advierte que el mundo enfrenta un &quot;tsunami de infecciones&quot; por variantes Delta y Ómicron
+	Medio: emol
+into DB.
+2021-12-14 18:56:14 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Tecnologia/2021/12/13/1041050/detectan-41-sitios-web-suplantados.html
+	Titular: Detectan 41 suplantaciones de sitios web con supuestos descuentos navideños
+	Medio: emol
+into DB.
+2021-12-14 18:56:14 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Tecnologia/2021/12/10/1040842/lluvia-estrellas-geminidas-2021.html
+	Titular: Vuelven las Gemínidas: Lluvia de estrellas tendrá su mayor actividad las noches del domingo y lunes
+	Medio: emol
+into DB.
+2021-12-14 18:56:14 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Tecnologia/2021/12/10/1040826/momia-cajamarquilla-desvela-rostro.html
+	Titular: Momia de hace mil años descubierta recientemente en Perú recuerda al cuadro &quot;El Grito&quot; de Edvard Munch
+	Medio: emol
+into DB.
+2021-12-14 18:56:14 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Tecnologia/2021/12/09/1040703/oms-efectividad-6meses-segunda-dosis.html
+	Titular: OMS estima que efectividad de vacunas contra el covid-19 se extendería seis meses tras segunda dosis
+	Medio: emol
+into DB.
+2021-12-14 18:56:15 [root] INFO: INSERTED item with:
+	URL: https://www.emol.com/noticias/Economia/2021/12/14/1041205/banco-central-tasa-interes-diciembre.html
+	Titular: Analistas reaccionan a la agresiva nueva alza de tasa de interés del Banco Central: "Es un golpe fuerte a la mesa"
+	Medio: emol
+into DB.
+2021-12-14 18:56:15 [root] INFO: INSERTED item with:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/10/1040903/mineduc.html
+	Titular: Mineduc destaca que PDT se realizó &quot;con total normalidad&quot;: Participaron 275 mil postulantes
+	Medio: emol
+into DB.
+2021-12-14 18:56:15 [root] INFO: EXISTS already: 
+	http://www.emol.com/noticias/Tendencias/2021/12/09/1040718/radio-apoya-mujeres-silenciadas-afganistan.html
+Skipping.
+2021-12-14 18:56:15 [root] INFO: EXISTS already: 
+	http://www.emol.com/noticias/Nacional/2021/12/06/1040463/cna-recomienda-postular-instituciones-acreditadas.html
+Skipping.
+2021-12-14 18:56:15 [root] INFO: EXISTS already: 
+	http://www.emol.com/noticias/Nacional/2021/12/06/1040308/rendicion-ptu-claves-admision-2022.html
+Skipping.
+2021-12-14 18:56:15 [root] INFO: EXISTS already: 
+	http://www.emol.com/noticias/Tendencias/2021/12/03/1040313/usach-pdt.html
+Skipping.
+2021-12-14 18:56:15 [root] INFO: EXISTS already: 
+	http://www.emol.com/noticias/Nacional/2021/12/03/1040271/preparativos-ptu-2021-protocolos-covid.html
+Skipping.
+2021-12-14 18:56:15 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-14 18:56:15 [root] INFO: []
+2021-12-14 18:56:15 [emol] INFO: Final stats:
+{'log_count/INFO': 38, 'start_time': datetime.datetime(2021, 12, 15, 0, 56, 10, 279722), 'memusage/startup': 52473856, 'memusage/max': 52473856, 'time_start': datetime.datetime(2021, 12, 14, 18, 56, 10, 293630), 'spider_name': 'emol', 'parse_limit': 1, 'scheduler/enqueued/memory': 7, 'scheduler/enqueued': 7, 'scheduler/dequeued/memory': 7, 'scheduler/dequeued': 7, 'downloader/request_count': 9, 'downloader/request_method_count/GET': 9, 'downloader/request_bytes': 3392, 'robotstxt/request_count': 2, 'downloader/response_count': 9, 'downloader/response_status_count/404': 1, 'downloader/response_bytes': 238105, 'response_received_count': 9, 'robotstxt/response_count': 2, 'robotstxt/response_status_count/404': 1, 'downloader/response_status_count/200': 8, 'nacional_json_dump_started': 1, 'nacional_parse_success': 6, 'nacional_storage_success': 6, 'item_scraped_count': 25, 'httpcompression/response_bytes': 356944, 'httpcompression/response_count': 4, 'robotstxt/response_status_count/200': 1, 'economia_links': 6, 'economia_articles_requested': 1, 'request_depth_max': 1, 'internacional_json_dump_started': 1, 'internacional_parse_success': 6, 'internacional_storage_success': 6, 'tendencias_links': 0, 'tecnologia_json_dump_started': 1, 'tecnologia_parse_success': 6, 'tecnologia_storage_success': 6, 'economia_articles_started': 1, 'economia_parse_success': 1, 'economia_storage_success': 1, 'educacion_json_dump_started': 1, 'educacion_parse_success': 6, 'educacion_storage_success': 1, 'educacion_storage_skipped': 5, 'elapsed_time_seconds': 5.497546, 'finish_time': datetime.datetime(2021, 12, 15, 0, 56, 15, 777268), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 18, 56, 15, 777362)}
+2021-12-14 18:56:15 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-14 18:56:18 [root] INFO: INSERTED item with:
+	URL: https://www.latercera.com/politica/noticia/congreso-despacha-proyecto-de-ley-juan-barrios-penas-partiran-desde-los-10-anos-para-quienes-incendien-lugares-habitados-sin-resultado-de-muerte/66BIRIFA7FDJBPIPW3NY7Z4VBE/
+	Titular: Congreso despacha proyecto de ley Juan Barrios: penas partirán desde los 10 años para quienes incendien lugares habitados sin resultado de muerte
 	Medio: tercera
 into DB.
-2021-12-09 15:28:26 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/nacional/region-del-bio-bio/2021/12/09/felix-gonzalez-oficiara-a-interior-y-fiscalia-por-detenciones-en-protesta-contra-central-rucalhue.shtml
-	Titular: Félix González oficiará a Interior y Fiscalía por detenciones en protesta contra central Rucalhue
+2021-12-14 18:56:19 [root] INFO: INSERTED item with:
+	URL: https://www.biobiochile.cl/noticias/nacional/chile/2021/12/14/como-jefe-de-campana-pido-disculpas-al-periodista-siches-pide-perdon-por-reaccion-de-boric.shtml
+	Titular: "Como jefa de campaña pido disculpas al periodista": Siches pide perdón por reacción de Boric
 	Medio: biobio
 into DB.
-2021-12-09 15:28:27 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/politica/noticia/kast-critica-ausencia-de-boric-a-bad-boys-y-lo-acusa-de-ningunear-al-votante-de-franco-parisi/ON5V5ICNYVA35NBDYBZ5VJ3UZQ/
-	Titular: Kast critica ausencia de Boric a Bad Boys y lo acusa de “ningunear” al votante de Franco Parisi
+2021-12-14 18:56:20 [root] INFO: INSERTED item with:
+	URL: https://www.latercera.com/nacional/noticia/procedimiento-policial-en-temucuicui-termina-con-un-comunero-herido/YIHCYCD3DRCMJHQQKVR3BJQLQ4/
+	Titular: Procedimiento de Carabineros en Temucuicui termina con enfrentamiento armado
 	Medio: tercera
 into DB.
-2021-12-09 15:28:28 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/nacional/region-de-los-lagos/2021/12/09/onemi-pide-evacuar-poblacion-camilo-henriquez-de-castro-por-incendio-forestal-que-amenaza-viviendas.shtml
-	Titular: Onemi pide evacuar población Camilo Henríquez de Castro por incendio forestal que amenaza viviendas
+2021-12-14 18:56:21 [root] INFO: INSERTED item with:
+	URL: https://www.biobiochile.cl/noticias/internacional/eeuu/2021/12/14/washington-dc-demando-a-dos-grupos-de-extremas-derecha-por-su-rol-en-asalto-al-capitolio.shtml
+	Titular: Washington DC demandó a dos grupos de extremas derecha por su rol en asalto al Capitolio
 	Medio: biobio
 into DB.
-2021-12-09 15:28:28 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/nacional/noticia/vocera-de-la-suprema-cuestiono-falta-de-recursos-adicionales-para-leyes-que-han-recargado-la-labor-de-los-tribunales/T7VHHKV22ZBMHERQBGKUBIBUBI/
-	Titular: Vocera de la Suprema cuestionó falta de recursos adicionales para “leyes que han recargado la labor de los tribunales”
-	Medio: tercera
-into DB.
-2021-12-09 15:28:28 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/internacional/africa/2021/12/09/informe-sudafricano-reporta-que-omicron-seria-la-forma-mas-contagiosa-de-covid-pero-la-menos-grave.shtml
-	Titular: Informe sudafricano reporta que Ómicron sería la forma más contagiosa de covid, pero la menos grave
-	Medio: biobio
-into DB.
-2021-12-09 15:28:29 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/nacional/noticia/paris-por-irregularidades-en-el-colmed-la-doctora-siches-era-parte-de-mi-mesa-directiva-si-hay-algun-error-que-se-haya-cometido-a-nivel-de-la-mesa-central-ella-tambien-es-corresponsable/N74ZWH2XU5H3ZOEB6L2MIM7HWM/
-	Titular: Paris por irregularidades en el Colmed: “La doctora Siches era parte de mi mesa directiva (...) si hay algún error que se haya cometido a nivel de la mesa central ella también es corresponsable”
-	Medio: tercera
-into DB.
-2021-12-09 15:28:30 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/internacional/europa/2021/12/09/boris-johnson-en-la-cuerda-floja-tras-cuestionamientos-en-la-prensa-y-en-su-propio-partido.shtml
-	Titular: Boris Johnson: en la cuerda floja tras cuestionamientos en la prensa y en su propio partido
-	Medio: biobio
-into DB.
-2021-12-09 15:28:30 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/nacional/noticia/minsal-casos-activos-a-nivel-nacional-de-covid-19-han-registrado-una-reduccion-de-un-40-en-tres-semanas/GQZRSOMEQVFBDFFNU3FXUJAXAU/
-	Titular: Minsal: Casos activos a nivel nacional de Covid-19 han registrado una reducción de un 40% en tres semanas
-	Medio: tercera
-into DB.
-2021-12-09 15:28:31 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/internacional/america-latina/2021/12/09/la-selva-amazonica-victima-insospechada-del-acuerdo-de-paz-en-colombia.shtml
-	Titular: La selva amazónica, víctima insospechada del acuerdo de paz en Colombia
-	Medio: biobio
-into DB.
-2021-12-09 15:28:31 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/nacional/noticia/vacunacion-contra-el-covid-ninos-ninas-y-adolescentes-no-inoculados-se-contagian-5-veces-mas-que-aquellos-que-si-lo-estan/4YNRVOW4R5BLNEWORGKJHQONKQ/
-	Titular: Vacunación contra el Covid: niños, niñas y adolescentes no inoculados se contagian 5 veces más que aquellos que sí lo están
-	Medio: tercera
-into DB.
-2021-12-09 15:28:32 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/internacional/america-latina/2021/12/09/acuerdo-permitira-que-militares-argentinos-tengan-instruccion-en-academias-de-rusia.shtml
-	Titular: Acuerdo permitirá que militares argentinos tengan instrucción en academias de Rusia
-	Medio: biobio
-into DB.
-2021-12-09 15:28:33 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/nacional/noticia/comienza-juicio-contra-excarabinero-por-femicidio-de-norma-vasquez-fiscalia-pide-presidio-perpetuo-calificado/PMSN3FMLYBHSNML5INJCKCIG5A/
-	Titular: Comienza juicio contra excarabinero por femicidio de Norma Vásquez: fiscalía pide presidio perpetuo calificado
-	Medio: tercera
-into DB.
-2021-12-09 15:28:33 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/internacional/mediooriente/2021/12/09/irak-anuncia-inicio-de-retirada-de-tropas-de-la-alianza-internacional-que-luchan-contra-el-isis.shtml
-	Titular: Irak anuncia inicio de retirada de tropas de la alianza internacional que luchan contra el ISIS
-	Medio: biobio
-into DB.
-2021-12-09 15:28:34 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/economia/actualidad-economica/2021/12/09/industria-metalurgica-proyecta-crecimiento-del-7-para-2021.shtml
-	Titular: Industria metalúrgica y metalmecánica proyecta crecimiento de 7% este año: en 2020 cayó 3,9%
-	Medio: biobio
-into DB.
-2021-12-09 15:28:35 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/economia/tu-bolsillo/2021/12/07/dirigente-ganadero-sostiene-que-precios-de-carne-en-chile-estan-entre-los-mas-caros-del-mundo.shtml
-	Titular: Dirigente ganadero sostiene que precios de carne en Chile están entre los más caros del mundo
-	Medio: biobio
-into DB.
-2021-12-09 15:28:35 [scrapy.core.scraper] ERROR: Error processing {'autor': 'Alberto Montt',
+2021-12-14 18:56:21 [scrapy.core.scraper] ERROR: Error processing {'autor': 'Alberto Montt',
  'bajada': None,
  'cuerpo': None,
  'fecha': datetime.datetime(2021, 3, 5, 22, 0, tzinfo=datetime.timezone(datetime.timedelta(0), 'GMT')),
@@ -577,189 +236,66 @@ Traceback (most recent call last):
     current.result = callback(  # type: ignore[misc]
   File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/utils/defer.py", line 150, in f
     return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
-  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/pipelines.py", line 16, in process_item
-    item['cuerpo'] = list(map(self.cleaner.clean_html, item['cuerpo']))
-TypeError: 'NoneType' object is not iterable
-2021-12-09 15:28:36 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/tendencias/noticia/el-diagnostico-que-desato-una-cadena-de-favores/7FTPK726TVESDP5GMUFZIXBVJM/
-	Titular: El diagnóstico que desató una cadena de favores
+  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/pipelines.py", line 70, in process_item
+    logging.warn('NULL BODY\narticle:\n\t{url}\nmedio:\n\t{spider.name}\nDropping.'.format(url=item['url']))
+KeyError: 'spider'
+2021-12-14 18:56:21 [root] INFO: INSERTED item with:
+	URL: https://www.elmostrador.cl/dia/2021/12/14/denuncian-herido-a-bala-en-temucuicui-tras-operativo-de-carabineros/
+	Titular: 
+
+                
+                
+                Denuncian que comunero de Temucuicui fue herido a bala tras operativo de Carabineros
+            
+	Medio: mostrador
+into DB.
+2021-12-14 18:56:22 [root] INFO: INSERTED item with:
+	URL: https://www.biobiochile.cl/biobiotv/programas/la-entrevista-de-tomas-mosciatti/2021/12/14/sergio-lehmann-economista-jefe-bci-es-muy-importante-reencauzar-el-gasto-publico.shtml
+	Titular: Sergio Lehmann, economista jefe BCI: "Es muy importante reencauzar el gasto público"
+	Medio: biobio
+into DB.
+2021-12-14 18:56:23 [root] INFO: INSERTED item with:
+	URL: https://www.elmostrador.cl/dia/2021/12/14/onu-acusa-a-talibanes-de-ejecuciones-extrajudiciales-en-afganistan/
+	Titular: 
+
+                
+                
+                ONU acusa a talibanes de ejecuciones extrajudiciales en Afganistán
+            
+	Medio: mostrador
+into DB.
+2021-12-14 18:56:24 [root] INFO: INSERTED item with:
+	URL: https://www.biobiochile.cl/noticias/espectaculos-y-tv/notas-espectaculos-tv/2021/12/14/ex-rostro-de-tv-es-acusado-de-estafa-prometio-viajes-a-china-que-nunca-se-realizaron.shtml
+	Titular: Ex rostro de TV es acusado de estafa: prometió viajes a China que nunca se realizaron
+	Medio: biobio
+into DB.
+2021-12-14 18:56:25 [root] INFO: INSERTED item with:
+	URL: https://www.latercera.com/mundo/noticia/eeuu-retoma-dialogos-con-funcionarios-palestinos-y-que-fueron-interrumpidos-en-el-gobierno-de-donald-trump/OF6NDAXATNH3ZLQY65YTEG4AYA/
+	Titular: EE.UU. retoma diálogos con funcionarios palestinos y que fueron interrumpidos en el gobierno de Donald Trump
 	Medio: tercera
 into DB.
-2021-12-09 15:28:36 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/economia/actualidad-economica/2021/12/08/bencinas-gasolina-de-97-sufre-caida-de-06-y-gas-licuado-sufre-primera-gran-diminucion-en-meses.shtml
-	Titular: Bencinas: gasolina de 97 tiene caída de $0,6 y gas licuado sufre primera gran diminución en meses
+2021-12-14 18:56:25 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-14 18:56:25 [root] INFO: []
+2021-12-14 18:56:25 [tercera] INFO: Final stats:
+{'log_count/INFO': 56, 'start_time': datetime.datetime(2021, 12, 15, 0, 56, 10, 267983), 'memusage/startup': 52289536, 'memusage/max': 52289536, 'time_start': datetime.datetime(2021, 12, 14, 18, 56, 10, 293441), 'spider_name': 'tercera', 'parse_limit': 1, 'scheduler/enqueued/memory': 11, 'scheduler/enqueued': 11, 'scheduler/dequeued/memory': 11, 'scheduler/dequeued': 11, 'downloader/request_count': 12, 'downloader/request_method_count/GET': 12, 'downloader/request_bytes': 4172, 'robotstxt/request_count': 1, 'downloader/response_count': 12, 'downloader/response_status_count/200': 10, 'downloader/response_bytes': 738835, 'httpcompression/response_bytes': 4025304, 'httpcompression/response_count': 10, 'response_received_count': 10, 'robotstxt/response_count': 1, 'robotstxt/response_status_count/200': 1, 'politica_links': 8, 'politica_articles_requested': 1, 'request_depth_max': 1, 'nacional_links': 8, 'nacional_articles_requested': 1, 'tendencias_links': 8, 'tendencias_articles_requested': 1, 'downloader/response_status_count/301': 2, 'politica_articles_started': 1, 'politica_parse_success': 1, 'politica_storage_success': 1, 'item_scraped_count': 3, 'nacional_articles_started': 1, 'nacional_parse_success': 1, 'nacional_storage_success': 1, 'tendencias_articles_started': 1, 'log_count/ERROR': 1, 'internacional_links': 8, 'internacional_articles_requested': 1, 'opinion_links': 0, 'internacional_articles_started': 1, 'internacional_parse_success': 1, 'internacional_storage_success': 1, 'elapsed_time_seconds': 15.1929, 'finish_time': datetime.datetime(2021, 12, 15, 0, 56, 25, 460883), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 18, 56, 25, 460978)}
+2021-12-14 18:56:25 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-14 18:56:25 [root] INFO: INSERTED item with:
+	URL: https://www.elmostrador.cl/noticias/opinion/columnas/2021/12/14/derechos-de-la-naturaleza/
+	Titular: Derechos de la naturaleza
+	Medio: mostrador
+into DB.
+2021-12-14 18:56:25 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-14 18:56:25 [root] INFO: []
+2021-12-14 18:56:25 [mostrador] INFO: Final stats:
+{'log_count/INFO': 51, 'start_time': datetime.datetime(2021, 12, 15, 0, 56, 10, 289851), 'memusage/startup': 52604928, 'memusage/max': 52604928, 'time_start': datetime.datetime(2021, 12, 14, 18, 56, 10, 293905), 'spider_name': 'mostrador', 'parse_limit': 1, 'scheduler/enqueued/memory': 6, 'scheduler/enqueued': 6, 'scheduler/dequeued/memory': 6, 'scheduler/dequeued': 6, 'downloader/request_count': 7, 'downloader/request_method_count/GET': 7, 'downloader/request_bytes': 2407, 'robotstxt/request_count': 1, 'downloader/response_count': 7, 'downloader/response_status_count/200': 7, 'downloader/response_bytes': 147960, 'response_received_count': 7, 'robotstxt/response_count': 1, 'robotstxt/response_status_count/200': 1, 'httpcompression/response_bytes': 919628, 'httpcompression/response_count': 6, 'nacional_links': 7, 'nacional_articles_requested': 1, 'request_depth_max': 1, 'internacional_links': 7, 'internacional_articles_requested': 1, 'opinion_links': 8, 'opinion_articles_requested': 1, 'log_count/ERROR': 1, 'nacional_articles_started': 1, 'nacional_parse_success': 1, 'nacional_storage_success': 1, 'item_scraped_count': 3, 'internacional_articles_started': 1, 'internacional_parse_success': 1, 'internacional_storage_success': 1, 'opinion_articles_started': 1, 'opinion_parse_success': 1, 'opinion_storage_success': 1, 'elapsed_time_seconds': 15.656776, 'finish_time': datetime.datetime(2021, 12, 15, 0, 56, 25, 946627), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 18, 56, 25, 946739)}
+2021-12-14 18:56:25 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-14 18:56:28 [root] INFO: INSERTED item with:
+	URL: https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2021/12/14/hasta-2022-y-2023-se-extiende-vigencia-de-cedulas-de-identidad-vencidas-para-personas-chilenas.shtml
+	Titular: Hasta 2022 y 2023: Se extiende vigencia de cédulas de identidad vencidas para personas chilenas
 	Medio: biobio
 into DB.
-2021-12-09 15:28:37 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/tendencias/noticia/la-reinvencion-de-los-restaurantes/OED3CUCQPNDXDDDYG6QUQZ3HHI/
-	Titular: La reinvención de los restaurantes
-	Medio: tercera
-into DB.
-2021-12-09 15:28:37 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/economia/actualidad-economica/2021/12/09/tasas-de-interes-podria-volver-a-subir-en-los-proximos-dias.shtml
-	Titular: Expertos prevén nueva alza de las tasas de interés del Banco Central cerrando el año en torno a 4%
-	Medio: biobio
-into DB.
-2021-12-09 15:28:38 [scrapy.core.scraper] ERROR: Error processing {'autor': 'La Tercera',
- 'bajada': None,
- 'cuerpo': None,
- 'fecha': datetime.datetime(2021, 2, 27, 0, 37, 53, tzinfo=datetime.timezone(datetime.timedelta(0), 'GMT')),
- 'imagen_url': 'https://www.latercera.com/resizer/Bz-TigrHHyu-S2nk_SlUQNJ18Lc=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/XAUVEC7XUNELJO7SSXLPLT523E.jpg',
- 'medio': 'tercera',
- 'seccion': 'tendencias',
- 'titular': 'En pauta, por Alberto Montt',
- 'url': 'https://www.latercera.com/tendencias/noticia/en-pauta-por-alberto-montt/IC7SQBGIOJF3LCS7PXVJ7TEA2U/'}
-Traceback (most recent call last):
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 858, in _runCallbacks
-    current.result = callback(  # type: ignore[misc]
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/utils/defer.py", line 150, in f
-    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
-  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/pipelines.py", line 16, in process_item
-    item['cuerpo'] = list(map(self.cleaner.clean_html, item['cuerpo']))
-TypeError: 'NoneType' object is not iterable
-2021-12-09 15:28:39 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2021/12/09/melt-pizzas-inaugura-primera-sucursal-en-concepcion-esperamos-llegar-a-las-principales-ciudades.shtml
-	Titular: Melt Pizzas inaugura primera sucursal en Concepción: "Esperamos llegar a las principales ciudades"
-	Medio: biobio
-into DB.
-2021-12-09 15:28:40 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/sociedad/historia/2021/12/09/revelan-evidencia-de-tsunami-en-chile-en-1737-que-no-esta-en-registros.shtml
-	Titular: Zona de Valdivia: revelan evidencia de un Tsunami en Chile en 1737 que no está en los registros
-	Medio: biobio
-into DB.
-2021-12-09 15:28:41 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2021/12/09/detalles-del-anuncio-sobre-pension-garantizada-solidaria.shtml
-	Titular: Detalles del anuncio sobre "Pensión Garantizada Solidaria"
-	Medio: biobio
-into DB.
-2021-12-09 15:28:42 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/tendencias/noticia/de-que-se-liberan-las-mujeres-cuando-se-liberan/VOSHHAUIBZA2FKE67EGLOSYON4/
-	Titular: ¿De qué se liberan las mujeres cuando se liberan?
-	Medio: tercera
-into DB.
-2021-12-09 15:28:43 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/opinion/tu-voz/2021/12/09/se-les-acabo-la-fiesta-a-las-organizaciones-funcionales-mal-utilizadas-en-ciertas-municipalidades.shtml
-	Titular: Se les acabó la fiesta a las "organizaciones funcionales" mal utilizadas en ciertas municipalidades
-	Medio: biobio
-into DB.
-2021-12-09 15:28:43 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/mundo/noticia/olaf-scholz-jura-como-nuevo-canciller-de-alemania-con-los-desafios-de-enfrentar-la-pandemia-la-crisis-economica-y-el-cambio-climatico/F6MRPDB2OJFZ3L5SXDSB32E45M/
-	Titular: Olaf Scholz jura como nuevo canciller de Alemania con los desafíos de enfrentar la pandemia, la crisis económica y el cambio climático
-	Medio: tercera
-into DB.
-2021-12-09 15:28:44 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/biobiotv/programas/podria-ser-peor/2021/12/09/conoce-blueremin-el-medicamento-que-promete-prevenir-y-eliminar-las-caries-en-etapa-inicial.shtml
-	Titular: Conoce Blueremin el medicamento que promete prevenir y eliminar las caries en etapa inicial
-	Medio: biobio
-into DB.
-2021-12-09 15:28:44 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/mundo/noticia/alemania-supera-los-63-millones-de-casos-de-coronavirus-tras-sumar-mas-de-70000-durante-el-ultimo-dia/OJUS2DR2LNA7RDW5PI7EFBQEME/
-	Titular: Alemania supera los 6,3 millones de casos de coronavirus tras sumar más de 70.000 durante el último día
-	Medio: tercera
-into DB.
-2021-12-09 15:28:45 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/blogs/blog-ubo/2021/12/09/ciberseguridad-estamos-preparados-frente-amenazas-ciberneticas.shtml
-	Titular: Ciberseguridad: ¿Estamos preparados frente amenazas cibernéticas?
-	Medio: biobio
-into DB.
-2021-12-09 15:28:46 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/mundo/noticia/nueva-zelanda-presenta-un-plan-para-prohibir-gradualmente-la-venta-de-tabaco/VA7W5ENM7RFEHFVAA3H446HSPQ/
-	Titular: Nueva Zelanda presenta un plan para prohibir gradualmente la venta de tabaco
-	Medio: tercera
-into DB.
-2021-12-09 15:28:46 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/artes-y-cultura/actualidad-cultural/2021/12/09/carta-abierta-a-sebastian-pinera-en-el-bicentenario-del-cementerio-general.shtml
-	Titular: Carta abierta a Sebastián Piñera en el Bicentenario del Cementerio General
-	Medio: biobio
-into DB.
-2021-12-09 15:28:47 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/espectaculos-y-tv/tv/2021/12/09/minuto-para-ganar-chilevision-alista-nuevo-espacio-de-concursos-animado-por-jean-phillipe-cretton.shtml
-	Titular: "Minuto para ganar": Chilevisión alista nuevo espacio de concursos animado por Jean Phillipe Cretton
-	Medio: biobio
-into DB.
-2021-12-09 15:28:47 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/mundo/noticia/irak-anuncia-el-fin-de-las-misiones-de-combate-y-el-inicio-de-la-retirada-de-la-coalicion-contra-el-estado-islamico/DHBWJBGOJVG5DOJVCOAHJCIUMQ/
-	Titular: Irak anuncia el fin de las “misiones de combate” y el inicio de la retirada de la coalición contra el Estado Islámico
-	Medio: tercera
-into DB.
-2021-12-09 15:28:48 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/mundo/noticia/dinamarca-impone-nuevas-limitaciones-para-disminuir-alza-de-casos-de-covid-19/YPGKPJETTZAXFOKN3ZTP4H246E/
-	Titular: Dinamarca impone nuevas limitaciones para disminuir alza de casos de Covid-19
-	Medio: tercera
-into DB.
-2021-12-09 15:28:48 [scrapy.core.engine] INFO: Closing spider (finished)
-2021-12-09 15:28:48 [root] INFO: []
-2021-12-09 15:28:48 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{'downloader/request_bytes': 11822,
- 'downloader/request_count': 28,
- 'downloader/request_method_count/GET': 28,
- 'downloader/response_bytes': 1904551,
- 'downloader/response_count': 28,
- 'downloader/response_status_count/200': 26,
- 'downloader/response_status_count/301': 2,
- 'elapsed_time_seconds': 33.8813,
- 'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2021, 12, 9, 21, 28, 48, 752177),
- 'httpcompression/response_bytes': 10166155,
- 'httpcompression/response_count': 26,
- 'item_scraped_count': 17,
- 'log_count/ERROR': 3,
- 'log_count/INFO': 94,
- 'memusage/max': 52125696,
- 'memusage/startup': 52125696,
- 'request_depth_max': 1,
- 'response_received_count': 26,
- 'robotstxt/request_count': 1,
- 'robotstxt/response_count': 1,
- 'robotstxt/response_status_count/200': 1,
- 'scheduler/dequeued': 27,
- 'scheduler/dequeued/memory': 27,
- 'scheduler/enqueued': 27,
- 'scheduler/enqueued/memory': 27,
- 'start_time': datetime.datetime(2021, 12, 9, 21, 28, 14, 870877)}
-2021-12-09 15:28:48 [scrapy.core.engine] INFO: Spider closed (finished)
-2021-12-09 15:28:49 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/ciencia-y-tecnologia/astronomia/2021/12/09/nasa-lanza-por-primera-vez-mision-para-medir-la-polarizacion-de-los-rayos-x-de-agujeros-negros.shtml
-	Titular: NASA lanza por primera vez misión para medir la polarización de los rayos X de agujeros negros
-	Medio: biobio
-into DB.
-2021-12-09 15:28:50 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/espectaculos-y-tv/cine-y-series/2021/12/09/spoiler-muerte-de-iconico-personaje-remece-en-secuela-de-sex-and-the-city-y-no-es-samantha.shtml
-	Titular: Spoiler: muerte de icónico personaje remece en secuela de Sex and the city (y no es Samantha)
-	Medio: biobio
-into DB.
-2021-12-09 15:28:51 [root] INFO: INSERTED item with:
-	URL: https://www.biobiochile.cl/noticias/espectaculos-y-tv/notas-espectaculos-tv/2021/12/09/cntv-abre-consulta-publica-por-nueva-normativa-de-concesiones-con-medios-de-terceros.shtml
-	Titular: CNTV abre consulta pública por nueva normativa de concesiones con medios de terceros
-	Medio: biobio
-into DB.
-2021-12-09 15:28:51 [scrapy.core.engine] INFO: Closing spider (finished)
-2021-12-09 15:28:51 [root] INFO: []
-2021-12-09 15:28:51 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{'downloader/request_bytes': 14183,
- 'downloader/request_count': 31,
- 'downloader/request_method_count/GET': 31,
- 'downloader/response_bytes': 1036838,
- 'downloader/response_count': 31,
- 'downloader/response_status_count/200': 31,
- 'elapsed_time_seconds': 36.674007,
- 'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2021, 12, 9, 21, 28, 51, 531834),
- 'httpcompression/response_bytes': 7074220,
- 'httpcompression/response_count': 30,
- 'item_scraped_count': 25,
- 'log_count/ERROR': 3,
- 'log_count/INFO': 111,
- 'memusage/max': 51949568,
- 'memusage/startup': 51949568,
- 'request_depth_max': 1,
- 'response_received_count': 31,
- 'robotstxt/request_count': 1,
- 'robotstxt/response_count': 1,
- 'robotstxt/response_status_count/200': 1,
- 'scheduler/dequeued': 30,
- 'scheduler/dequeued/memory': 30,
- 'scheduler/enqueued': 30,
- 'scheduler/enqueued/memory': 30,
- 'start_time': datetime.datetime(2021, 12, 9, 21, 28, 14, 857827)}
-2021-12-09 15:28:51 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-14 18:56:28 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-14 18:56:28 [root] INFO: []
+2021-12-14 18:56:28 [biobio] INFO: Final stats:
+{'log_count/INFO': 71, 'start_time': datetime.datetime(2021, 12, 15, 0, 56, 10, 253630), 'memusage/startup': 52051968, 'memusage/max': 52056064, 'time_start': datetime.datetime(2021, 12, 14, 18, 56, 10, 291390), 'spider_name': 'biobio', 'parse_limit': 1, 'scheduler/enqueued/memory': 10, 'scheduler/enqueued': 10, 'scheduler/dequeued/memory': 10, 'scheduler/dequeued': 10, 'downloader/request_count': 11, 'downloader/request_method_count/GET': 11, 'downloader/request_bytes': 4369, 'robotstxt/request_count': 1, 'downloader/response_count': 11, 'downloader/response_status_count/200': 11, 'downloader/response_bytes': 280056, 'response_received_count': 11, 'robotstxt/response_count': 1, 'robotstxt/response_status_count/200': 1, 'httpcompression/response_bytes': 2058209, 'httpcompression/response_count': 10, 'nacional_links': 19, 'nacional_articles_requested': 1, 'request_depth_max': 1, 'internacional_links': 19, 'internacional_articles_requested': 1, 'economia_links': 19, 'economia_articles_requested': 1, 'tendencias_links': 19, 'tendencias_articles_requested': 1, 'opinion_links': 19, 'opinion_articles_requested': 1, 'nacional_articles_started': 1, 'nacional_parse_success': 1, 'nacional_storage_success': 1, 'item_scraped_count': 5, 'internacional_articles_started': 1, 'internacional_parse_success': 1, 'internacional_storage_success': 1, 'log_count/ERROR': 1, 'economia_articles_started': 1, 'economia_parse_success': 1, 'economia_storage_success': 1, 'tendencias_articles_started': 1, 'tendencias_parse_success': 1, 'tendencias_storage_success': 1, 'opinion_articles_started': 1, 'opinion_parse_success': 1, 'opinion_storage_success': 1, 'elapsed_time_seconds': 18.674797, 'finish_time': datetime.datetime(2021, 12, 15, 0, 56, 28, 928427), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 18, 56, 28, 928523)}
+2021-12-14 18:56:28 [scrapy.core.engine] INFO: Spider closed (finished)
