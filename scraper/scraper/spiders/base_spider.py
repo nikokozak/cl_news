@@ -1,8 +1,8 @@
-import scrapy
+import scrapy, datetime
 from scraper.spiders.cache_manager import Cache
 
 class NoticiaSpider(scrapy.Spider):
-    @classmethod 
+    @classmethod
     def from_crawler(cls, crawler, *args, **kwargs):
         '''Override proxy to __init__ used by scrapy to create spiders
         so we can access scrapy's settings and assign the correct cache
@@ -19,6 +19,7 @@ class NoticiaSpider(scrapy.Spider):
         '''Override the __init__ function so that we might pass in keyword args
         and set defaults for our spider'''
         super(NoticiaSpider, self).__init__(*args, **kwargs)
+        self.stats = self.crawler.stats
 
         # Clears the cache of values before starting
         if not hasattr(self, 'clear_cache'): self.clear_cache = False
@@ -28,6 +29,7 @@ class NoticiaSpider(scrapy.Spider):
 
     def closed(self, reason):
         if reason == 'finished':
+            self.stats.set_value('time_end', datetime.datetime.now())
             self.cache.save()
             print('Successfully saved cache for ' + self.name)
 
