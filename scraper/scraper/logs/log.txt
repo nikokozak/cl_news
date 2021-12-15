@@ -1,228 +1,151 @@
-2021-12-14 18:55:15 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: scraper)
-2021-12-14 18:55:15 [scrapy.utils.log] INFO: Versions: lxml 4.6.4.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.9.9 (main, Nov 21 2021, 03:23:42) - [Clang 13.0.0 (clang-1300.0.29.3)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 36.0.0, Platform macOS-11.4-x86_64-i386-64bit
-2021-12-14 18:55:15 [scrapy.extensions.telnet] INFO: Telnet Password: 2ee2d19170f11230
-2021-12-14 18:55:15 [twisted] CRITICAL: Unhandled error in Deferred:
-2021-12-14 18:55:15 [twisted] CRITICAL: 
-Traceback (most recent call last):
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 1661, in _inlineCallbacks
-    result = current_context.run(gen.send, result)
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/crawler.py", line 86, in crawl
-    self.spider = self._create_spider(*args, **kwargs)
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/crawler.py", line 98, in _create_spider
-    return self.spidercls.from_crawler(self, *args, **kwargs)
-  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/base_spider.py", line 12, in from_crawler
-    spider = cls(*args, **kwargs)
-  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/base_spider.py", line 22, in __init__
-    self.stats = self.crawler.stats
-AttributeError: 'BioBioSpider' object has no attribute 'crawler'
-2021-12-14 18:55:15 [scrapy.extensions.telnet] INFO: Telnet Password: 349053caeb8b3535
-2021-12-14 18:55:15 [twisted] CRITICAL: Unhandled error in Deferred:
-2021-12-14 18:55:15 [twisted] CRITICAL: 
-Traceback (most recent call last):
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 1661, in _inlineCallbacks
-    result = current_context.run(gen.send, result)
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/crawler.py", line 86, in crawl
-    self.spider = self._create_spider(*args, **kwargs)
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/crawler.py", line 98, in _create_spider
-    return self.spidercls.from_crawler(self, *args, **kwargs)
-  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/base_spider.py", line 12, in from_crawler
-    spider = cls(*args, **kwargs)
-  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/base_spider.py", line 22, in __init__
-    self.stats = self.crawler.stats
-AttributeError: 'TerceraSpider' object has no attribute 'crawler'
-2021-12-14 18:55:15 [scrapy.extensions.telnet] INFO: Telnet Password: 83cd2540463c3a4c
-2021-12-14 18:55:15 [twisted] CRITICAL: Unhandled error in Deferred:
-2021-12-14 18:55:15 [twisted] CRITICAL: 
-Traceback (most recent call last):
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 1661, in _inlineCallbacks
-    result = current_context.run(gen.send, result)
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/crawler.py", line 86, in crawl
-    self.spider = self._create_spider(*args, **kwargs)
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/crawler.py", line 98, in _create_spider
-    return self.spidercls.from_crawler(self, *args, **kwargs)
-  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/base_spider.py", line 12, in from_crawler
-    spider = cls(*args, **kwargs)
-  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/base_spider.py", line 22, in __init__
-    self.stats = self.crawler.stats
-AttributeError: 'BioBioSpider' object has no attribute 'crawler'
-2021-12-14 18:55:15 [scrapy.extensions.telnet] INFO: Telnet Password: 284f246640f69f39
-2021-12-14 18:55:15 [twisted] CRITICAL: Unhandled error in Deferred:
-2021-12-14 18:55:15 [twisted] CRITICAL: 
-Traceback (most recent call last):
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 1661, in _inlineCallbacks
-    result = current_context.run(gen.send, result)
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/crawler.py", line 86, in crawl
-    self.spider = self._create_spider(*args, **kwargs)
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/crawler.py", line 98, in _create_spider
-    return self.spidercls.from_crawler(self, *args, **kwargs)
-  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/base_spider.py", line 12, in from_crawler
-    spider = cls(*args, **kwargs)
-  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/spiders/base_spider.py", line 22, in __init__
-    self.stats = self.crawler.stats
-AttributeError: 'MostradorSpider' object has no attribute 'crawler'
-2021-12-14 18:56:10 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: scraper)
-2021-12-14 18:56:10 [scrapy.utils.log] INFO: Versions: lxml 4.6.4.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.9.9 (main, Nov 21 2021, 03:23:42) - [Clang 13.0.0 (clang-1300.0.29.3)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 36.0.0, Platform macOS-11.4-x86_64-i386-64bit
-2021-12-14 18:56:10 [scrapy.extensions.telnet] INFO: Telnet Password: 4485b2efcf84ad5f
-2021-12-14 18:56:10 [scrapy.core.engine] INFO: Spider opened
-2021-12-14 18:56:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2021-12-14 18:56:10 [biobio] INFO: Spider opened: biobio
-2021-12-14 18:56:10 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
-2021-12-14 18:56:10 [scrapy.extensions.telnet] INFO: Telnet Password: 08577578db658f7c
-2021-12-14 18:56:10 [scrapy.core.engine] INFO: Spider opened
-2021-12-14 18:56:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2021-12-14 18:56:10 [tercera] INFO: Spider opened: tercera
-2021-12-14 18:56:10 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6024
-2021-12-14 18:56:10 [scrapy.extensions.telnet] INFO: Telnet Password: b5963045ff7d271f
-2021-12-14 18:56:10 [scrapy.core.engine] INFO: Spider opened
-2021-12-14 18:56:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2021-12-14 18:56:10 [emol] INFO: Spider opened: emol
-2021-12-14 18:56:10 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6025
-2021-12-14 18:56:10 [scrapy.extensions.telnet] INFO: Telnet Password: 72b0c6a675c352fc
-2021-12-14 18:56:10 [scrapy.core.engine] INFO: Spider opened
-2021-12-14 18:56:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2021-12-14 18:56:10 [mostrador] INFO: Spider opened: mostrador
-2021-12-14 18:56:10 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6026
-2021-12-14 18:56:12 [root] INFO: INSERTED item with:
+2021-12-14 19:10:31 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: scraper)
+2021-12-14 19:10:31 [scrapy.utils.log] INFO: Versions: lxml 4.6.4.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.9.9 (main, Nov 21 2021, 03:23:42) - [Clang 13.0.0 (clang-1300.0.29.3)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 36.0.0, Platform macOS-11.4-x86_64-i386-64bit
+2021-12-14 19:10:31 [scrapy.core.engine] INFO: Spider opened
+2021-12-14 19:10:31 [biobio] INFO: Spider opened: biobio
+2021-12-14 19:10:31 [scrapy.core.engine] INFO: Spider opened
+2021-12-14 19:10:31 [tercera] INFO: Spider opened: tercera
+2021-12-14 19:10:31 [scrapy.core.engine] INFO: Spider opened
+2021-12-14 19:10:31 [emol] INFO: Spider opened: emol
+2021-12-14 19:10:31 [scrapy.core.engine] INFO: Spider opened
+2021-12-14 19:10:31 [mostrador] INFO: Spider opened: mostrador
+2021-12-14 19:10:33 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/13/1041008/programacion-emoltv-semana-13-diciembre.html
+	Titular: Streaming y entrevistas: La programación de este miércoles 15 de diciembre en EmolTV
+	Medio: emol
+
+2021-12-14 19:10:33 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041201/balance-estado-emergencia-macrozona.html
+	Titular: Estado de emergencia en la Macrozona Sur: Hechos violentos bajaron en un 43% y se han concretado 96 detenciones
+	Medio: emol
+
+2021-12-14 19:10:33 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041206/carabineros-ercilla-ataque-la-araucania.html
+	Titular: Efectivos policiales y militares fueron atacados en una zona boscosa de Ercilla y hay un civil lesionado
+	Medio: emol
+
+2021-12-14 19:10:33 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041130/estrategia-comunicacional-boric-kast-twitter.html
+	Titular: Más interpelaciones y foco en seguridad: los cambios en la estrategia en Twitter de las campañas de Kast y Boric
+	Medio: emol
+
+2021-12-14 19:10:33 [root] INFO: EXISTS already in DB: 
 	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041177/cndc-violencia-macrozona-sur-estado.html
-	Titular: Dueños de camiones llaman a candidatos a frenar violencia en la Macrozona Sur tras nuevo ataque
 	Medio: emol
-into DB.
-2021-12-14 18:56:12 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:33 [root] INFO: EXISTS already in DB: 
 	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041197/corte-declarainadimisble-recursocontrakast.html
-	Titular: Corte declara inadmisible recurso de protección contra Kast tras emplazar a Boric por acusación de &quot;abuso&quot;
 	Medio: emol
-into DB.
-2021-12-14 18:56:12 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041157/recomendaciones-plan-verano-seguro-covid19.html
-	Titular: Acelerar dosis de refuerzo, testeo aleatorio y foco en Ómicron: Las propuestas de expertos para el &quot;plan verano seguro&quot;
-	Medio: emol
-into DB.
-2021-12-14 18:56:12 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041195/boric-agradece-apoyo-bachelet.html
-	Titular: Boric agradece respaldo de Bachelet a su candidatura: &quot;Es un gran honor en momentos clave de nuestra historia&quot;
-	Medio: emol
-into DB.
-2021-12-14 18:56:12 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041173/examenes-drogas-pelo-orina-debate.html
-	Titular: Mito y realidad: Expertos explican las diferencias entre el test de orina y de pelo para detectar drogas
-	Medio: emol
-into DB.
-2021-12-14 18:56:12 [root] INFO: INSERTED item with:
-	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041054/operativo-apoderados-de-mesa-balotaje.html
-	Titular: El reclutamiento de apoderados de mesa en los comandos de Kast  y Boric para &quot;defender&quot; los sufragios del balotaje
-	Medio: emol
-into DB.
-2021-12-14 18:56:13 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:33 [root] INFO: EXISTS already in DB: 
 	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041203/bielorrusia-condena-carcel-opositora.html
-	Titular: Condenan a 18 años de cárcel al marido de la principal líder opositora en Bielorrusia
 	Medio: emol
-into DB.
-2021-12-14 18:56:13 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:33 [root] INFO: EXISTS already in DB: 
 	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041199/italia-estado-emergencia-coronavirus.html
-	Titular: Italia prorroga hasta marzo el estado de emergencia por covid-19: Superará los dos años con este régimen
 	Medio: emol
-into DB.
-2021-12-14 18:56:13 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:33 [root] INFO: EXISTS already in DB: 
 	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041188/haiti-balance-2021.html
-	Titular: Entre un magnicidio, un terremoto y una ola de violencia: El duro 2021 que azotó a Haití
 	Medio: emol
-into DB.
-2021-12-14 18:56:13 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:33 [root] INFO: EXISTS already in DB: 
 	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041179/cumbre-alba-cuba.html
-	Titular: Cumbre del ALBA comienza en Cuba con críticas a EE.UU. por su &quot;egoísmo&quot; en la pandemia
 	Medio: emol
-into DB.
-2021-12-14 18:56:13 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:33 [root] INFO: EXISTS already in DB: 
 	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041174/reino-unido-prohibicion-viaje-omicron.html
-	Titular: Reino Unido levanta la prohibición de viajar desde países de África por variante Ómicron
 	Medio: emol
-into DB.
-2021-12-14 18:56:13 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:33 [root] INFO: EXISTS already in DB: 
 	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041158/colombia-ataque-explosivo.html
-	Titular: Ataque explosivo en aeropuerto colombiano causa la muerte de dos policías y un civil
 	Medio: emol
-into DB.
-2021-12-14 18:56:14 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:35 [root] INFO: EXISTS already in DB: 
 	URL: http://www.emol.com/noticias/Tecnologia/2021/12/14/1041128/onu-record-temperatura-siberia-2020.html
-	Titular: Agencia de la ONU validó los 38°C registrados en Siberia en 2020: &quot;Enciende las alarmas sobre el cambio climático&quot;
 	Medio: emol
-into DB.
-2021-12-14 18:56:14 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:35 [root] INFO: EXISTS already in DB: 
 	URL: http://www.emol.com/noticias/Tecnologia/2021/12/14/1041121/oms-tsunami-infecciones-delta-omicron.html
-	Titular: OMS advierte que el mundo enfrenta un &quot;tsunami de infecciones&quot; por variantes Delta y Ómicron
 	Medio: emol
-into DB.
-2021-12-14 18:56:14 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:35 [root] INFO: EXISTS already in DB: 
 	URL: http://www.emol.com/noticias/Tecnologia/2021/12/13/1041050/detectan-41-sitios-web-suplantados.html
-	Titular: Detectan 41 suplantaciones de sitios web con supuestos descuentos navideños
 	Medio: emol
-into DB.
-2021-12-14 18:56:14 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:35 [root] INFO: EXISTS already in DB: 
 	URL: http://www.emol.com/noticias/Tecnologia/2021/12/10/1040842/lluvia-estrellas-geminidas-2021.html
-	Titular: Vuelven las Gemínidas: Lluvia de estrellas tendrá su mayor actividad las noches del domingo y lunes
 	Medio: emol
-into DB.
-2021-12-14 18:56:14 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:35 [root] INFO: EXISTS already in DB: 
 	URL: http://www.emol.com/noticias/Tecnologia/2021/12/10/1040826/momia-cajamarquilla-desvela-rostro.html
-	Titular: Momia de hace mil años descubierta recientemente en Perú recuerda al cuadro &quot;El Grito&quot; de Edvard Munch
 	Medio: emol
-into DB.
-2021-12-14 18:56:14 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:35 [root] INFO: EXISTS already in DB: 
 	URL: http://www.emol.com/noticias/Tecnologia/2021/12/09/1040703/oms-efectividad-6meses-segunda-dosis.html
-	Titular: OMS estima que efectividad de vacunas contra el covid-19 se extendería seis meses tras segunda dosis
 	Medio: emol
-into DB.
-2021-12-14 18:56:15 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:36 [root] INFO: EXISTS already in DB: 
 	URL: https://www.emol.com/noticias/Economia/2021/12/14/1041205/banco-central-tasa-interes-diciembre.html
-	Titular: Analistas reaccionan a la agresiva nueva alza de tasa de interés del Banco Central: "Es un golpe fuerte a la mesa"
 	Medio: emol
-into DB.
-2021-12-14 18:56:15 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:36 [root] INFO: EXISTS already in DB: 
 	URL: http://www.emol.com/noticias/Nacional/2021/12/10/1040903/mineduc.html
-	Titular: Mineduc destaca que PDT se realizó &quot;con total normalidad&quot;: Participaron 275 mil postulantes
 	Medio: emol
-into DB.
-2021-12-14 18:56:15 [root] INFO: EXISTS already: 
-	http://www.emol.com/noticias/Tendencias/2021/12/09/1040718/radio-apoya-mujeres-silenciadas-afganistan.html
-Skipping.
-2021-12-14 18:56:15 [root] INFO: EXISTS already: 
-	http://www.emol.com/noticias/Nacional/2021/12/06/1040463/cna-recomienda-postular-instituciones-acreditadas.html
-Skipping.
-2021-12-14 18:56:15 [root] INFO: EXISTS already: 
-	http://www.emol.com/noticias/Nacional/2021/12/06/1040308/rendicion-ptu-claves-admision-2022.html
-Skipping.
-2021-12-14 18:56:15 [root] INFO: EXISTS already: 
-	http://www.emol.com/noticias/Tendencias/2021/12/03/1040313/usach-pdt.html
-Skipping.
-2021-12-14 18:56:15 [root] INFO: EXISTS already: 
-	http://www.emol.com/noticias/Nacional/2021/12/03/1040271/preparativos-ptu-2021-protocolos-covid.html
-Skipping.
-2021-12-14 18:56:15 [scrapy.core.engine] INFO: Closing spider (finished)
-2021-12-14 18:56:15 [root] INFO: []
-2021-12-14 18:56:15 [emol] INFO: Final stats:
-{'log_count/INFO': 38, 'start_time': datetime.datetime(2021, 12, 15, 0, 56, 10, 279722), 'memusage/startup': 52473856, 'memusage/max': 52473856, 'time_start': datetime.datetime(2021, 12, 14, 18, 56, 10, 293630), 'spider_name': 'emol', 'parse_limit': 1, 'scheduler/enqueued/memory': 7, 'scheduler/enqueued': 7, 'scheduler/dequeued/memory': 7, 'scheduler/dequeued': 7, 'downloader/request_count': 9, 'downloader/request_method_count/GET': 9, 'downloader/request_bytes': 3392, 'robotstxt/request_count': 2, 'downloader/response_count': 9, 'downloader/response_status_count/404': 1, 'downloader/response_bytes': 238105, 'response_received_count': 9, 'robotstxt/response_count': 2, 'robotstxt/response_status_count/404': 1, 'downloader/response_status_count/200': 8, 'nacional_json_dump_started': 1, 'nacional_parse_success': 6, 'nacional_storage_success': 6, 'item_scraped_count': 25, 'httpcompression/response_bytes': 356944, 'httpcompression/response_count': 4, 'robotstxt/response_status_count/200': 1, 'economia_links': 6, 'economia_articles_requested': 1, 'request_depth_max': 1, 'internacional_json_dump_started': 1, 'internacional_parse_success': 6, 'internacional_storage_success': 6, 'tendencias_links': 0, 'tecnologia_json_dump_started': 1, 'tecnologia_parse_success': 6, 'tecnologia_storage_success': 6, 'economia_articles_started': 1, 'economia_parse_success': 1, 'economia_storage_success': 1, 'educacion_json_dump_started': 1, 'educacion_parse_success': 6, 'educacion_storage_success': 1, 'educacion_storage_skipped': 5, 'elapsed_time_seconds': 5.497546, 'finish_time': datetime.datetime(2021, 12, 15, 0, 56, 15, 777268), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 18, 56, 15, 777362)}
-2021-12-14 18:56:15 [scrapy.core.engine] INFO: Spider closed (finished)
-2021-12-14 18:56:18 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/politica/noticia/congreso-despacha-proyecto-de-ley-juan-barrios-penas-partiran-desde-los-10-anos-para-quienes-incendien-lugares-habitados-sin-resultado-de-muerte/66BIRIFA7FDJBPIPW3NY7Z4VBE/
-	Titular: Congreso despacha proyecto de ley Juan Barrios: penas partirán desde los 10 años para quienes incendien lugares habitados sin resultado de muerte
+
+2021-12-14 19:10:36 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Tendencias/2021/12/09/1040718/radio-apoya-mujeres-silenciadas-afganistan.html
+	Medio: emol
+
+2021-12-14 19:10:36 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Nacional/2021/12/06/1040463/cna-recomienda-postular-instituciones-acreditadas.html
+	Medio: emol
+
+2021-12-14 19:10:36 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Nacional/2021/12/06/1040308/rendicion-ptu-claves-admision-2022.html
+	Medio: emol
+
+2021-12-14 19:10:36 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Tendencias/2021/12/03/1040313/usach-pdt.html
+	Medio: emol
+
+2021-12-14 19:10:36 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Nacional/2021/12/03/1040271/preparativos-ptu-2021-protocolos-covid.html
+	Medio: emol
+
+2021-12-14 19:10:36 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-14 19:10:36 [root] INFO: []
+2021-12-14 19:10:36 [emol] INFO: EMOL stats:
+{'log_count/INFO': 32, 'start_time': datetime.datetime(2021, 12, 15, 1, 10, 31, 728900), 'memusage/startup': 52346880, 'memusage/max': 52346880, 'time_start': datetime.datetime(2021, 12, 14, 19, 10, 31, 743259), 'spider_name': 'emol', 'parse_limit': 1, 'scheduler/enqueued/memory': 7, 'scheduler/enqueued': 7, 'scheduler/dequeued/memory': 7, 'scheduler/dequeued': 7, 'downloader/request_count': 9, 'downloader/request_method_count/GET': 9, 'downloader/request_bytes': 3392, 'robotstxt/request_count': 2, 'downloader/response_count': 9, 'downloader/response_status_count/404': 1, 'downloader/response_bytes': 268651, 'response_received_count': 9, 'robotstxt/response_count': 2, 'robotstxt/response_status_count/404': 1, 'downloader/response_status_count/200': 8, 'httpcompression/response_bytes': 356945, 'httpcompression/response_count': 4, 'robotstxt/response_status_count/200': 1, 'nacional_json_dump_started': 1, 'nacional_parse_success': 6, 'nacional_storage_success': 4, 'item_scraped_count': 25, 'nacional_storage_skipped': 2, 'economia_links': 6, 'economia_articles_requested': 1, 'request_depth_max': 1, 'internacional_json_dump_started': 1, 'internacional_parse_success': 6, 'internacional_storage_skipped': 6, 'tendencias_links': 0, 'tecnologia_json_dump_started': 1, 'tecnologia_parse_success': 6, 'tecnologia_storage_skipped': 6, 'economia_articles_started': 1, 'economia_parse_success': 1, 'economia_storage_skipped': 1, 'educacion_json_dump_started': 1, 'educacion_parse_success': 6, 'educacion_storage_skipped': 6, 'elapsed_time_seconds': 5.088342, 'finish_time': datetime.datetime(2021, 12, 15, 1, 10, 36, 817242), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 19, 10, 36, 817336)}
+2021-12-14 19:10:36 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-14 19:10:38 [root] INFO: EXISTS already in DB: 
+	URL: https://www.elmostrador.cl/dia/2021/12/14/denuncian-herido-a-bala-en-temucuicui-tras-operativo-de-carabineros/
+	Medio: mostrador
+
+2021-12-14 19:10:39 [root] INFO: INSERTED item into DB:
+	URL: https://www.latercera.com/politica/noticia/diputados-rn-ofician-a-cancilleria-para-que-se-pronuncie-por-apoyo-de-bachelet-a-boric-hay-un-llamado-explicito-a-la-ciudadania-a-inclinarse-por-una-de-las-preferencias-presidenciales/DJ35CFIFJZDSPMJNJLNSKPCZCU/
+	Titular: Diputados RN ofician a Cancillería para que se pronuncie por apoyo de Bachelet a Boric: “Hay un llamado explícito a la ciudadanía a inclinarse por una de las preferencias presidenciales”
 	Medio: tercera
-into DB.
-2021-12-14 18:56:19 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:40 [root] INFO: EXISTS already in DB: 
 	URL: https://www.biobiochile.cl/noticias/nacional/chile/2021/12/14/como-jefe-de-campana-pido-disculpas-al-periodista-siches-pide-perdon-por-reaccion-de-boric.shtml
-	Titular: "Como jefa de campaña pido disculpas al periodista": Siches pide perdón por reacción de Boric
 	Medio: biobio
-into DB.
-2021-12-14 18:56:20 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/nacional/noticia/procedimiento-policial-en-temucuicui-termina-con-un-comunero-herido/YIHCYCD3DRCMJHQQKVR3BJQLQ4/
-	Titular: Procedimiento de Carabineros en Temucuicui termina con enfrentamiento armado
-	Medio: tercera
-into DB.
-2021-12-14 18:56:21 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:40 [root] INFO: EXISTS already in DB: 
 	URL: https://www.biobiochile.cl/noticias/internacional/eeuu/2021/12/14/washington-dc-demando-a-dos-grupos-de-extremas-derecha-por-su-rol-en-asalto-al-capitolio.shtml
-	Titular: Washington DC demandó a dos grupos de extremas derecha por su rol en asalto al Capitolio
 	Medio: biobio
-into DB.
-2021-12-14 18:56:21 [scrapy.core.scraper] ERROR: Error processing {'autor': 'Alberto Montt',
+
+2021-12-14 19:10:40 [root] INFO: EXISTS already in DB: 
+	URL: https://www.latercera.com/nacional/noticia/procedimiento-policial-en-temucuicui-termina-con-un-comunero-herido/YIHCYCD3DRCMJHQQKVR3BJQLQ4/
+	Medio: tercera
+
+2021-12-14 19:10:41 [root] WARNING: NULL BODY
+article:
+	https://www.latercera.com/tendencias/noticia/en-pauta-por-alberto-montt/VOIKMFT32JDP5HOVPUBGSKEURU/
+medio:
+	tercera
+Dropping.
+2021-12-14 19:10:41 [scrapy.core.scraper] WARNING: Dropped: 
+{'autor': 'Alberto Montt',
  'bajada': None,
  'cuerpo': None,
  'fecha': datetime.datetime(2021, 3, 5, 22, 0, tzinfo=datetime.timezone(datetime.timedelta(0), 'GMT')),
@@ -231,71 +154,234 @@ into DB.
  'seccion': 'tendencias',
  'titular': 'En Pauta, por Alberto Montt',
  'url': 'https://www.latercera.com/tendencias/noticia/en-pauta-por-alberto-montt/VOIKMFT32JDP5HOVPUBGSKEURU/'}
-Traceback (most recent call last):
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/twisted/internet/defer.py", line 858, in _runCallbacks
-    current.result = callback(  # type: ignore[misc]
-  File "/Users/niko/Library/Caches/pypoetry/virtualenvs/scraper-0TfSL6Ry-py3.9/lib/python3.9/site-packages/scrapy/utils/defer.py", line 150, in f
-    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
-  File "/Users/niko/Documents/Code/LectorChile/scraper/scraper/pipelines.py", line 70, in process_item
-    logging.warn('NULL BODY\narticle:\n\t{url}\nmedio:\n\t{spider.name}\nDropping.'.format(url=item['url']))
-KeyError: 'spider'
-2021-12-14 18:56:21 [root] INFO: INSERTED item with:
-	URL: https://www.elmostrador.cl/dia/2021/12/14/denuncian-herido-a-bala-en-temucuicui-tras-operativo-de-carabineros/
-	Titular: 
-
-                
-                
-                Denuncian que comunero de Temucuicui fue herido a bala tras operativo de Carabineros
-            
-	Medio: mostrador
-into DB.
-2021-12-14 18:56:22 [root] INFO: INSERTED item with:
+2021-12-14 19:10:41 [root] INFO: EXISTS already in DB: 
 	URL: https://www.biobiochile.cl/biobiotv/programas/la-entrevista-de-tomas-mosciatti/2021/12/14/sergio-lehmann-economista-jefe-bci-es-muy-importante-reencauzar-el-gasto-publico.shtml
-	Titular: Sergio Lehmann, economista jefe BCI: "Es muy importante reencauzar el gasto público"
 	Medio: biobio
-into DB.
-2021-12-14 18:56:23 [root] INFO: INSERTED item with:
-	URL: https://www.elmostrador.cl/dia/2021/12/14/onu-acusa-a-talibanes-de-ejecuciones-extrajudiciales-en-afganistan/
-	Titular: 
 
-                
-                
-                ONU acusa a talibanes de ejecuciones extrajudiciales en Afganistán
-            
+2021-12-14 19:10:43 [root] INFO: EXISTS already in DB: 
+	URL: https://www.elmostrador.cl/dia/2021/12/14/onu-acusa-a-talibanes-de-ejecuciones-extrajudiciales-en-afganistan/
 	Medio: mostrador
-into DB.
-2021-12-14 18:56:24 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:43 [root] INFO: EXISTS already in DB: 
 	URL: https://www.biobiochile.cl/noticias/espectaculos-y-tv/notas-espectaculos-tv/2021/12/14/ex-rostro-de-tv-es-acusado-de-estafa-prometio-viajes-a-china-que-nunca-se-realizaron.shtml
-	Titular: Ex rostro de TV es acusado de estafa: prometió viajes a China que nunca se realizaron
 	Medio: biobio
-into DB.
-2021-12-14 18:56:25 [root] INFO: INSERTED item with:
-	URL: https://www.latercera.com/mundo/noticia/eeuu-retoma-dialogos-con-funcionarios-palestinos-y-que-fueron-interrumpidos-en-el-gobierno-de-donald-trump/OF6NDAXATNH3ZLQY65YTEG4AYA/
-	Titular: EE.UU. retoma diálogos con funcionarios palestinos y que fueron interrumpidos en el gobierno de Donald Trump
-	Medio: tercera
-into DB.
-2021-12-14 18:56:25 [scrapy.core.engine] INFO: Closing spider (finished)
-2021-12-14 18:56:25 [root] INFO: []
-2021-12-14 18:56:25 [tercera] INFO: Final stats:
-{'log_count/INFO': 56, 'start_time': datetime.datetime(2021, 12, 15, 0, 56, 10, 267983), 'memusage/startup': 52289536, 'memusage/max': 52289536, 'time_start': datetime.datetime(2021, 12, 14, 18, 56, 10, 293441), 'spider_name': 'tercera', 'parse_limit': 1, 'scheduler/enqueued/memory': 11, 'scheduler/enqueued': 11, 'scheduler/dequeued/memory': 11, 'scheduler/dequeued': 11, 'downloader/request_count': 12, 'downloader/request_method_count/GET': 12, 'downloader/request_bytes': 4172, 'robotstxt/request_count': 1, 'downloader/response_count': 12, 'downloader/response_status_count/200': 10, 'downloader/response_bytes': 738835, 'httpcompression/response_bytes': 4025304, 'httpcompression/response_count': 10, 'response_received_count': 10, 'robotstxt/response_count': 1, 'robotstxt/response_status_count/200': 1, 'politica_links': 8, 'politica_articles_requested': 1, 'request_depth_max': 1, 'nacional_links': 8, 'nacional_articles_requested': 1, 'tendencias_links': 8, 'tendencias_articles_requested': 1, 'downloader/response_status_count/301': 2, 'politica_articles_started': 1, 'politica_parse_success': 1, 'politica_storage_success': 1, 'item_scraped_count': 3, 'nacional_articles_started': 1, 'nacional_parse_success': 1, 'nacional_storage_success': 1, 'tendencias_articles_started': 1, 'log_count/ERROR': 1, 'internacional_links': 8, 'internacional_articles_requested': 1, 'opinion_links': 0, 'internacional_articles_started': 1, 'internacional_parse_success': 1, 'internacional_storage_success': 1, 'elapsed_time_seconds': 15.1929, 'finish_time': datetime.datetime(2021, 12, 15, 0, 56, 25, 460883), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 18, 56, 25, 460978)}
-2021-12-14 18:56:25 [scrapy.core.engine] INFO: Spider closed (finished)
-2021-12-14 18:56:25 [root] INFO: INSERTED item with:
-	URL: https://www.elmostrador.cl/noticias/opinion/columnas/2021/12/14/derechos-de-la-naturaleza/
-	Titular: Derechos de la naturaleza
-	Medio: mostrador
-into DB.
-2021-12-14 18:56:25 [scrapy.core.engine] INFO: Closing spider (finished)
-2021-12-14 18:56:25 [root] INFO: []
-2021-12-14 18:56:25 [mostrador] INFO: Final stats:
-{'log_count/INFO': 51, 'start_time': datetime.datetime(2021, 12, 15, 0, 56, 10, 289851), 'memusage/startup': 52604928, 'memusage/max': 52604928, 'time_start': datetime.datetime(2021, 12, 14, 18, 56, 10, 293905), 'spider_name': 'mostrador', 'parse_limit': 1, 'scheduler/enqueued/memory': 6, 'scheduler/enqueued': 6, 'scheduler/dequeued/memory': 6, 'scheduler/dequeued': 6, 'downloader/request_count': 7, 'downloader/request_method_count/GET': 7, 'downloader/request_bytes': 2407, 'robotstxt/request_count': 1, 'downloader/response_count': 7, 'downloader/response_status_count/200': 7, 'downloader/response_bytes': 147960, 'response_received_count': 7, 'robotstxt/response_count': 1, 'robotstxt/response_status_count/200': 1, 'httpcompression/response_bytes': 919628, 'httpcompression/response_count': 6, 'nacional_links': 7, 'nacional_articles_requested': 1, 'request_depth_max': 1, 'internacional_links': 7, 'internacional_articles_requested': 1, 'opinion_links': 8, 'opinion_articles_requested': 1, 'log_count/ERROR': 1, 'nacional_articles_started': 1, 'nacional_parse_success': 1, 'nacional_storage_success': 1, 'item_scraped_count': 3, 'internacional_articles_started': 1, 'internacional_parse_success': 1, 'internacional_storage_success': 1, 'opinion_articles_started': 1, 'opinion_parse_success': 1, 'opinion_storage_success': 1, 'elapsed_time_seconds': 15.656776, 'finish_time': datetime.datetime(2021, 12, 15, 0, 56, 25, 946627), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 18, 56, 25, 946739)}
-2021-12-14 18:56:25 [scrapy.core.engine] INFO: Spider closed (finished)
-2021-12-14 18:56:28 [root] INFO: INSERTED item with:
+
+2021-12-14 19:10:44 [root] INFO: EXISTS already in DB: 
 	URL: https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2021/12/14/hasta-2022-y-2023-se-extiende-vigencia-de-cedulas-de-identidad-vencidas-para-personas-chilenas.shtml
-	Titular: Hasta 2022 y 2023: Se extiende vigencia de cédulas de identidad vencidas para personas chilenas
 	Medio: biobio
-into DB.
-2021-12-14 18:56:28 [scrapy.core.engine] INFO: Closing spider (finished)
-2021-12-14 18:56:28 [root] INFO: []
-2021-12-14 18:56:28 [biobio] INFO: Final stats:
-{'log_count/INFO': 71, 'start_time': datetime.datetime(2021, 12, 15, 0, 56, 10, 253630), 'memusage/startup': 52051968, 'memusage/max': 52056064, 'time_start': datetime.datetime(2021, 12, 14, 18, 56, 10, 291390), 'spider_name': 'biobio', 'parse_limit': 1, 'scheduler/enqueued/memory': 10, 'scheduler/enqueued': 10, 'scheduler/dequeued/memory': 10, 'scheduler/dequeued': 10, 'downloader/request_count': 11, 'downloader/request_method_count/GET': 11, 'downloader/request_bytes': 4369, 'robotstxt/request_count': 1, 'downloader/response_count': 11, 'downloader/response_status_count/200': 11, 'downloader/response_bytes': 280056, 'response_received_count': 11, 'robotstxt/response_count': 1, 'robotstxt/response_status_count/200': 1, 'httpcompression/response_bytes': 2058209, 'httpcompression/response_count': 10, 'nacional_links': 19, 'nacional_articles_requested': 1, 'request_depth_max': 1, 'internacional_links': 19, 'internacional_articles_requested': 1, 'economia_links': 19, 'economia_articles_requested': 1, 'tendencias_links': 19, 'tendencias_articles_requested': 1, 'opinion_links': 19, 'opinion_articles_requested': 1, 'nacional_articles_started': 1, 'nacional_parse_success': 1, 'nacional_storage_success': 1, 'item_scraped_count': 5, 'internacional_articles_started': 1, 'internacional_parse_success': 1, 'internacional_storage_success': 1, 'log_count/ERROR': 1, 'economia_articles_started': 1, 'economia_parse_success': 1, 'economia_storage_success': 1, 'tendencias_articles_started': 1, 'tendencias_parse_success': 1, 'tendencias_storage_success': 1, 'opinion_articles_started': 1, 'opinion_parse_success': 1, 'opinion_storage_success': 1, 'elapsed_time_seconds': 18.674797, 'finish_time': datetime.datetime(2021, 12, 15, 0, 56, 28, 928427), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 18, 56, 28, 928523)}
-2021-12-14 18:56:28 [scrapy.core.engine] INFO: Spider closed (finished)
+
+2021-12-14 19:10:44 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-14 19:10:44 [root] INFO: []
+2021-12-14 19:10:44 [biobio] INFO: BIOBIO stats:
+{'log_count/INFO': 49, 'start_time': datetime.datetime(2021, 12, 15, 1, 10, 31, 708180), 'memusage/startup': 51990528, 'memusage/max': 51994624, 'time_start': datetime.datetime(2021, 12, 14, 19, 10, 31, 740985), 'spider_name': 'biobio', 'parse_limit': 1, 'scheduler/enqueued/memory': 10, 'scheduler/enqueued': 10, 'scheduler/dequeued/memory': 10, 'scheduler/dequeued': 10, 'downloader/request_count': 11, 'downloader/request_method_count/GET': 11, 'downloader/request_bytes': 4369, 'robotstxt/request_count': 1, 'downloader/response_count': 11, 'downloader/response_status_count/200': 11, 'downloader/response_bytes': 280050, 'response_received_count': 11, 'robotstxt/response_count': 1, 'robotstxt/response_status_count/200': 1, 'httpcompression/response_bytes': 2058209, 'httpcompression/response_count': 10, 'nacional_links': 19, 'nacional_articles_requested': 1, 'request_depth_max': 1, 'internacional_links': 19, 'internacional_articles_requested': 1, 'economia_links': 19, 'economia_articles_requested': 1, 'tendencias_links': 19, 'tendencias_articles_requested': 1, 'opinion_links': 19, 'opinion_articles_requested': 1, 'nacional_articles_started': 1, 'nacional_parse_success': 1, 'nacional_storage_skipped': 1, 'item_scraped_count': 5, 'internacional_articles_started': 1, 'internacional_parse_success': 1, 'internacional_storage_skipped': 1, 'log_count/WARNING': 2, 'economia_articles_started': 1, 'economia_parse_success': 1, 'economia_storage_skipped': 1, 'tendencias_articles_started': 1, 'tendencias_parse_success': 1, 'tendencias_storage_skipped': 1, 'opinion_articles_started': 1, 'opinion_parse_success': 1, 'opinion_storage_skipped': 1, 'elapsed_time_seconds': 13.173639, 'finish_time': datetime.datetime(2021, 12, 15, 1, 10, 44, 881819), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 19, 10, 44, 881908)}
+2021-12-14 19:10:44 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-14 19:10:45 [root] INFO: EXISTS already in DB: 
+	URL: https://www.latercera.com/mundo/noticia/eeuu-retoma-dialogos-con-funcionarios-palestinos-y-que-fueron-interrumpidos-en-el-gobierno-de-donald-trump/OF6NDAXATNH3ZLQY65YTEG4AYA/
+	Medio: tercera
+
+2021-12-14 19:10:45 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-14 19:10:45 [root] INFO: []
+2021-12-14 19:10:45 [tercera] INFO: TERCERA stats:
+{'log_count/INFO': 52, 'start_time': datetime.datetime(2021, 12, 15, 1, 10, 31, 719129), 'memusage/startup': 52191232, 'memusage/max': 52191232, 'time_start': datetime.datetime(2021, 12, 14, 19, 10, 31, 743061), 'spider_name': 'tercera', 'parse_limit': 1, 'scheduler/enqueued/memory': 11, 'scheduler/enqueued': 11, 'scheduler/dequeued/memory': 11, 'scheduler/dequeued': 11, 'downloader/request_count': 12, 'downloader/request_method_count/GET': 12, 'downloader/request_bytes': 4211, 'robotstxt/request_count': 1, 'downloader/response_count': 12, 'downloader/response_status_count/200': 10, 'downloader/response_bytes': 744486, 'httpcompression/response_bytes': 4048197, 'httpcompression/response_count': 10, 'response_received_count': 10, 'robotstxt/response_count': 1, 'robotstxt/response_status_count/200': 1, 'politica_links': 8, 'politica_articles_requested': 1, 'request_depth_max': 1, 'nacional_links': 8, 'nacional_articles_requested': 1, 'tendencias_links': 8, 'tendencias_articles_requested': 1, 'downloader/response_status_count/301': 2, 'politica_articles_started': 1, 'politica_parse_success': 1, 'politica_storage_success': 1, 'item_scraped_count': 3, 'nacional_articles_started': 1, 'nacional_parse_success': 1, 'nacional_storage_skipped': 1, 'tendencias_articles_started': 1, 'log_count/WARNING': 2, 'tendencias_errors': 1, 'item_dropped_count': 1, 'item_dropped_reasons_count/DropItem': 1, 'internacional_links': 8, 'internacional_articles_requested': 1, 'opinion_links': 0, 'internacional_articles_started': 1, 'internacional_parse_success': 1, 'internacional_storage_skipped': 1, 'elapsed_time_seconds': 13.663263, 'finish_time': datetime.datetime(2021, 12, 15, 1, 10, 45, 382392), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 19, 10, 45, 382478)}
+2021-12-14 19:10:45 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-14 19:10:47 [root] INFO: EXISTS already in DB: 
+	URL: https://www.elmostrador.cl/noticias/opinion/columnas/2021/12/14/derechos-de-la-naturaleza/
+	Medio: mostrador
+
+2021-12-14 19:10:47 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-14 19:10:47 [root] INFO: []
+2021-12-14 19:10:47 [mostrador] INFO: MOSTRADOR stats:
+{'log_count/INFO': 53, 'start_time': datetime.datetime(2021, 12, 15, 1, 10, 31, 739649), 'memusage/startup': 52506624, 'memusage/max': 52506624, 'time_start': datetime.datetime(2021, 12, 14, 19, 10, 31, 743544), 'spider_name': 'mostrador', 'parse_limit': 1, 'scheduler/enqueued/memory': 6, 'scheduler/enqueued': 6, 'scheduler/dequeued/memory': 6, 'scheduler/dequeued': 6, 'downloader/request_count': 7, 'downloader/request_method_count/GET': 7, 'downloader/request_bytes': 2407, 'robotstxt/request_count': 1, 'downloader/response_count': 7, 'downloader/response_status_count/200': 7, 'downloader/response_bytes': 147936, 'response_received_count': 7, 'robotstxt/response_count': 1, 'robotstxt/response_status_count/200': 1, 'httpcompression/response_bytes': 919623, 'httpcompression/response_count': 6, 'nacional_links': 7, 'nacional_articles_requested': 1, 'request_depth_max': 1, 'internacional_links': 7, 'internacional_articles_requested': 1, 'nacional_articles_started': 1, 'nacional_parse_success': 1, 'nacional_storage_skipped': 1, 'item_scraped_count': 3, 'opinion_links': 8, 'opinion_articles_requested': 1, 'log_count/WARNING': 2, 'internacional_articles_started': 1, 'internacional_parse_success': 1, 'internacional_storage_skipped': 1, 'opinion_articles_started': 1, 'opinion_parse_success': 1, 'opinion_storage_skipped': 1, 'elapsed_time_seconds': 15.313136, 'finish_time': datetime.datetime(2021, 12, 15, 1, 10, 47, 52785), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 19, 10, 47, 52872)}
+2021-12-14 19:10:47 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-14 19:15:27 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: scraper)
+2021-12-14 19:15:27 [scrapy.utils.log] INFO: Versions: lxml 4.6.4.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.9.9 (main, Nov 21 2021, 03:23:42) - [Clang 13.0.0 (clang-1300.0.29.3)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 36.0.0, Platform macOS-11.4-x86_64-i386-64bit
+2021-12-14 19:15:27 [scrapy.core.engine] INFO: Spider opened
+2021-12-14 19:15:27 [biobio] INFO: Spider opened: biobio
+2021-12-14 19:15:27 [scrapy.core.engine] INFO: Spider opened
+2021-12-14 19:15:27 [tercera] INFO: Spider opened: tercera
+2021-12-14 19:15:27 [scrapy.core.engine] INFO: Spider opened
+2021-12-14 19:15:27 [emol] INFO: Spider opened: emol
+2021-12-14 19:15:27 [scrapy.core.engine] INFO: Spider opened
+2021-12-14 19:15:27 [mostrador] INFO: Spider opened: mostrador
+2021-12-14 19:15:29 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041208/tito-fernandez-arresto-domiciliario-nocturno.html
+	Titular: Tito Fernández se entregó a la Justicia tras orden de detención en su contra: Quedó con arresto domiciliario nocturno
+	Medio: emol
+
+2021-12-14 19:15:29 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Nacional/2021/12/13/1041008/programacion-emoltv-semana-13-diciembre.html
+	Medio: emol
+
+2021-12-14 19:15:29 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041201/balance-estado-emergencia-macrozona.html
+	Medio: emol
+
+2021-12-14 19:15:29 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041206/carabineros-ercilla-ataque-la-araucania.html
+	Medio: emol
+
+2021-12-14 19:15:29 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041130/estrategia-comunicacional-boric-kast-twitter.html
+	Medio: emol
+
+2021-12-14 19:15:29 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Nacional/2021/12/14/1041177/cndc-violencia-macrozona-sur-estado.html
+	Medio: emol
+
+2021-12-14 19:15:30 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041203/bielorrusia-condena-carcel-opositora.html
+	Medio: emol
+
+2021-12-14 19:15:30 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041199/italia-estado-emergencia-coronavirus.html
+	Medio: emol
+
+2021-12-14 19:15:30 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041188/haiti-balance-2021.html
+	Medio: emol
+
+2021-12-14 19:15:30 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041179/cumbre-alba-cuba.html
+	Medio: emol
+
+2021-12-14 19:15:30 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041174/reino-unido-prohibicion-viaje-omicron.html
+	Medio: emol
+
+2021-12-14 19:15:30 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Internacional/2021/12/14/1041158/colombia-ataque-explosivo.html
+	Medio: emol
+
+2021-12-14 19:15:32 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Tecnologia/2021/12/14/1041128/onu-record-temperatura-siberia-2020.html
+	Medio: emol
+
+2021-12-14 19:15:32 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Tecnologia/2021/12/14/1041121/oms-tsunami-infecciones-delta-omicron.html
+	Medio: emol
+
+2021-12-14 19:15:32 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Tecnologia/2021/12/13/1041050/detectan-41-sitios-web-suplantados.html
+	Medio: emol
+
+2021-12-14 19:15:32 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Tecnologia/2021/12/10/1040842/lluvia-estrellas-geminidas-2021.html
+	Medio: emol
+
+2021-12-14 19:15:32 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Tecnologia/2021/12/10/1040826/momia-cajamarquilla-desvela-rostro.html
+	Medio: emol
+
+2021-12-14 19:15:32 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Tecnologia/2021/12/09/1040703/oms-efectividad-6meses-segunda-dosis.html
+	Medio: emol
+
+2021-12-14 19:15:32 [root] INFO: EXISTS already in DB: 
+	URL: https://www.emol.com/noticias/Economia/2021/12/14/1041205/banco-central-tasa-interes-diciembre.html
+	Medio: emol
+
+2021-12-14 19:15:33 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Nacional/2021/12/10/1040903/mineduc.html
+	Medio: emol
+
+2021-12-14 19:15:33 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Tendencias/2021/12/09/1040718/radio-apoya-mujeres-silenciadas-afganistan.html
+	Medio: emol
+
+2021-12-14 19:15:33 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Nacional/2021/12/06/1040463/cna-recomienda-postular-instituciones-acreditadas.html
+	Medio: emol
+
+2021-12-14 19:15:33 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Nacional/2021/12/06/1040308/rendicion-ptu-claves-admision-2022.html
+	Medio: emol
+
+2021-12-14 19:15:33 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Tendencias/2021/12/03/1040313/usach-pdt.html
+	Medio: emol
+
+2021-12-14 19:15:33 [root] INFO: EXISTS already in DB: 
+	URL: http://www.emol.com/noticias/Nacional/2021/12/03/1040271/preparativos-ptu-2021-protocolos-covid.html
+	Medio: emol
+
+2021-12-14 19:15:33 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-14 19:15:33 [root] INFO: []
+2021-12-14 19:15:33 [emol] INFO: EMOL stats:
+{'log_count/INFO': 32, 'start_time': datetime.datetime(2021, 12, 15, 1, 15, 27, 645740), 'memusage/startup': 52244480, 'memusage/max': 52244480, 'time_start': datetime.datetime(2021, 12, 14, 19, 15, 27, 660620), 'spider_name': 'emol', 'parse_limit': 1, 'scheduler/enqueued/memory': 7, 'scheduler/enqueued': 7, 'scheduler/dequeued/memory': 7, 'scheduler/dequeued': 7, 'downloader/request_count': 9, 'downloader/request_method_count/GET': 9, 'downloader/request_bytes': 3392, 'robotstxt/request_count': 2, 'downloader/response_count': 9, 'downloader/response_status_count/404': 1, 'downloader/response_bytes': 266985, 'response_received_count': 9, 'robotstxt/response_count': 2, 'robotstxt/response_status_count/404': 1, 'downloader/response_status_count/200': 8, 'httpcompression/response_bytes': 356945, 'httpcompression/response_count': 4, 'robotstxt/response_status_count/200': 1, 'nacional_json_dump_started': 1, 'nacional_parse_success': 6, 'nacional_storage_success': 1, 'item_scraped_count': 25, 'nacional_storage_skipped': 5, 'economia_links': 6, 'economia_articles_requested': 1, 'request_depth_max': 1, 'internacional_json_dump_started': 1, 'internacional_parse_success': 6, 'internacional_storage_skipped': 6, 'tendencias_links': 0, 'tecnologia_json_dump_started': 1, 'tecnologia_parse_success': 6, 'tecnologia_storage_skipped': 6, 'economia_articles_started': 1, 'economia_parse_success': 1, 'economia_storage_skipped': 1, 'educacion_json_dump_started': 1, 'educacion_parse_success': 6, 'educacion_storage_skipped': 6, 'elapsed_time_seconds': 5.524969, 'finish_time': datetime.datetime(2021, 12, 15, 1, 15, 33, 170709), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 19, 15, 33, 170805)}
+2021-12-14 19:15:33 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-14 19:15:34 [root] INFO: EXISTS already in DB: 
+	URL: https://www.latercera.com/politica/noticia/diputados-rn-ofician-a-cancilleria-para-que-se-pronuncie-por-apoyo-de-bachelet-a-boric-hay-un-llamado-explicito-a-la-ciudadania-a-inclinarse-por-una-de-las-preferencias-presidenciales/DJ35CFIFJZDSPMJNJLNSKPCZCU/
+	Medio: tercera
+
+2021-12-14 19:15:35 [root] INFO: EXISTS already in DB: 
+	URL: https://www.biobiochile.cl/noticias/nacional/chile/2021/12/14/como-jefe-de-campana-pido-disculpas-al-periodista-siches-pide-perdon-por-reaccion-de-boric.shtml
+	Medio: biobio
+
+2021-12-14 19:15:35 [root] INFO: EXISTS already in DB: 
+	URL: https://www.latercera.com/nacional/noticia/procedimiento-policial-en-temucuicui-termina-con-un-comunero-herido/YIHCYCD3DRCMJHQQKVR3BJQLQ4/
+	Medio: tercera
+
+2021-12-14 19:15:36 [root] INFO: EXISTS already in DB: 
+	URL: https://www.biobiochile.cl/noticias/internacional/eeuu/2021/12/14/washington-dc-demando-a-dos-grupos-de-extremas-derecha-por-su-rol-en-asalto-al-capitolio.shtml
+	Medio: biobio
+
+2021-12-14 19:15:37 [root] WARNING: NULL BODY
+article:
+	https://www.latercera.com/tendencias/noticia/en-pauta-por-alberto-montt/VOIKMFT32JDP5HOVPUBGSKEURU/
+medio:
+	tercera
+Dropping.
+2021-12-14 19:15:37 [scrapy.core.scraper] WARNING: Dropped: 
+{'autor': 'Alberto Montt',
+ 'bajada': None,
+ 'cuerpo': None,
+ 'fecha': datetime.datetime(2021, 3, 5, 22, 0, tzinfo=datetime.timezone(datetime.timedelta(0), 'GMT')),
+ 'imagen_url': 'https://www.latercera.com/resizer/LF0piZ23kaCwJquadSl6DHdZUbg=/900x600/filters:focal(1501.6666666666667x681.6666666666667:1511.6666666666667x671.6666666666667)/cloudfront-us-east-1.images.arcpublishing.com/copesa/B3SVLGKHEBFRDNZJMK4GHC76SU.jpg',
+ 'medio': 'tercera',
+ 'seccion': 'tendencias',
+ 'titular': 'En Pauta, por Alberto Montt',
+ 'url': 'https://www.latercera.com/tendencias/noticia/en-pauta-por-alberto-montt/VOIKMFT32JDP5HOVPUBGSKEURU/'}
+2021-12-14 19:15:37 [root] INFO: EXISTS already in DB: 
+	URL: https://www.biobiochile.cl/biobiotv/programas/la-entrevista-de-tomas-mosciatti/2021/12/14/sergio-lehmann-economista-jefe-bci-es-muy-importante-reencauzar-el-gasto-publico.shtml
+	Medio: biobio
+
+2021-12-14 19:15:38 [root] INFO: EXISTS already in DB: 
+	URL: https://www.elmostrador.cl/dia/2021/12/14/denuncian-herido-a-bala-en-temucuicui-tras-operativo-de-carabineros/
+	Medio: mostrador
+
+2021-12-14 19:15:39 [root] INFO: EXISTS already in DB: 
+	URL: https://www.elmostrador.cl/dia/2021/12/14/onu-acusa-a-talibanes-de-ejecuciones-extrajudiciales-en-afganistan/
+	Medio: mostrador
+
+2021-12-14 19:15:39 [root] INFO: INSERTED item into DB:
+	URL: https://www.biobiochile.cl/noticias/espectaculos-y-tv/notas-espectaculos-tv/2021/12/14/behona-basauri-vive-momento-critica-al-socorrer-a-mujer-en-plena-calle-creimos-que-habia-muerto.shtml
+	Titular: Behoña Basauri vive momento crítica al socorrer a mujer en plena calle: "Creímos que había muerto"
+	Medio: biobio
+
+2021-12-14 19:15:40 [root] INFO: EXISTS already in DB: 
+	URL: https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2021/12/14/hasta-2022-y-2023-se-extiende-vigencia-de-cedulas-de-identidad-vencidas-para-personas-chilenas.shtml
+	Medio: biobio
+
+2021-12-14 19:15:40 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-14 19:15:40 [root] INFO: []
+2021-12-14 19:15:40 [biobio] INFO: BIOBIO stats:
+{'log_count/INFO': 49, 'start_time': datetime.datetime(2021, 12, 15, 1, 15, 27, 618364), 'memusage/startup': 51871744, 'memusage/max': 51875840, 'time_start': datetime.datetime(2021, 12, 14, 19, 15, 27, 658206), 'spider_name': 'biobio', 'parse_limit': 1, 'scheduler/enqueued/memory': 10, 'scheduler/enqueued': 10, 'scheduler/dequeued/memory': 10, 'scheduler/dequeued': 10, 'downloader/request_count': 11, 'downloader/request_method_count/GET': 11, 'downloader/request_bytes': 4380, 'robotstxt/request_count': 1, 'downloader/response_count': 11, 'downloader/response_status_count/200': 11, 'downloader/response_bytes': 284070, 'response_received_count': 11, 'robotstxt/response_count': 1, 'robotstxt/response_status_count/200': 1, 'httpcompression/response_bytes': 2071776, 'httpcompression/response_count': 10, 'nacional_links': 19, 'nacional_articles_requested': 1, 'request_depth_max': 1, 'internacional_links': 19, 'internacional_articles_requested': 1, 'economia_links': 19, 'economia_articles_requested': 1, 'tendencias_links': 19, 'tendencias_articles_requested': 1, 'opinion_links': 19, 'opinion_articles_requested': 1, 'nacional_articles_started': 1, 'nacional_parse_success': 1, 'nacional_storage_skipped': 1, 'item_scraped_count': 5, 'internacional_articles_started': 1, 'internacional_parse_success': 1, 'internacional_storage_skipped': 1, 'log_count/WARNING': 2, 'economia_articles_started': 1, 'economia_parse_success': 1, 'economia_storage_skipped': 1, 'tendencias_articles_started': 1, 'tendencias_parse_success': 1, 'tendencias_storage_success': 1, 'opinion_articles_started': 1, 'opinion_parse_success': 1, 'opinion_storage_skipped': 1, 'elapsed_time_seconds': 12.881788, 'finish_time': datetime.datetime(2021, 12, 15, 1, 15, 40, 500152), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 19, 15, 40, 500248)}
+2021-12-14 19:15:40 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-14 19:15:40 [root] INFO: EXISTS already in DB: 
+	URL: https://www.latercera.com/mundo/noticia/eeuu-retoma-dialogos-con-funcionarios-palestinos-y-que-fueron-interrumpidos-en-el-gobierno-de-donald-trump/OF6NDAXATNH3ZLQY65YTEG4AYA/
+	Medio: tercera
+
+2021-12-14 19:15:40 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-14 19:15:40 [root] INFO: []
+2021-12-14 19:15:40 [tercera] INFO: TERCERA stats:
+{'log_count/INFO': 52, 'start_time': datetime.datetime(2021, 12, 15, 1, 15, 27, 634278), 'memusage/startup': 52072448, 'memusage/max': 52072448, 'time_start': datetime.datetime(2021, 12, 14, 19, 15, 27, 660410), 'spider_name': 'tercera', 'parse_limit': 1, 'scheduler/enqueued/memory': 11, 'scheduler/enqueued': 11, 'scheduler/dequeued/memory': 11, 'scheduler/dequeued': 11, 'downloader/request_count': 12, 'downloader/request_method_count/GET': 12, 'downloader/request_bytes': 4211, 'robotstxt/request_count': 1, 'downloader/response_count': 12, 'downloader/response_status_count/200': 10, 'downloader/response_bytes': 742201, 'httpcompression/response_bytes': 4040488, 'httpcompression/response_count': 10, 'response_received_count': 10, 'robotstxt/response_count': 1, 'robotstxt/response_status_count/200': 1, 'politica_links': 8, 'politica_articles_requested': 1, 'request_depth_max': 1, 'nacional_links': 8, 'nacional_articles_requested': 1, 'tendencias_links': 8, 'tendencias_articles_requested': 1, 'downloader/response_status_count/301': 2, 'politica_articles_started': 1, 'politica_parse_success': 1, 'politica_storage_skipped': 1, 'item_scraped_count': 3, 'nacional_articles_started': 1, 'nacional_parse_success': 1, 'nacional_storage_skipped': 1, 'tendencias_articles_started': 1, 'log_count/WARNING': 2, 'tendencias_errors': 1, 'item_dropped_count': 1, 'item_dropped_reasons_count/DropItem': 1, 'internacional_links': 8, 'internacional_articles_requested': 1, 'opinion_links': 0, 'internacional_articles_started': 1, 'internacional_parse_success': 1, 'internacional_storage_skipped': 1, 'elapsed_time_seconds': 13.259251, 'finish_time': datetime.datetime(2021, 12, 15, 1, 15, 40, 893529), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 19, 15, 40, 893616)}
+2021-12-14 19:15:40 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-14 19:15:41 [root] INFO: EXISTS already in DB: 
+	URL: https://www.elmostrador.cl/noticias/opinion/columnas/2021/12/14/derechos-de-la-naturaleza/
+	Medio: mostrador
+
+2021-12-14 19:15:41 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-14 19:15:41 [root] INFO: []
+2021-12-14 19:15:41 [mostrador] INFO: MOSTRADOR stats:
+{'log_count/INFO': 53, 'start_time': datetime.datetime(2021, 12, 15, 1, 15, 27, 656681), 'memusage/startup': 52404224, 'memusage/max': 52404224, 'time_start': datetime.datetime(2021, 12, 14, 19, 15, 27, 660943), 'spider_name': 'mostrador', 'parse_limit': 1, 'scheduler/enqueued/memory': 6, 'scheduler/enqueued': 6, 'scheduler/dequeued/memory': 6, 'scheduler/dequeued': 6, 'downloader/request_count': 7, 'downloader/request_method_count/GET': 7, 'downloader/request_bytes': 2407, 'robotstxt/request_count': 1, 'downloader/response_count': 7, 'downloader/response_status_count/200': 7, 'downloader/response_bytes': 148023, 'response_received_count': 7, 'robotstxt/response_count': 1, 'robotstxt/response_status_count/200': 1, 'httpcompression/response_bytes': 919629, 'httpcompression/response_count': 6, 'nacional_links': 7, 'nacional_articles_requested': 1, 'request_depth_max': 1, 'internacional_links': 7, 'internacional_articles_requested': 1, 'opinion_links': 8, 'opinion_articles_requested': 1, 'log_count/WARNING': 2, 'nacional_articles_started': 1, 'nacional_parse_success': 1, 'nacional_storage_skipped': 1, 'item_scraped_count': 3, 'internacional_articles_started': 1, 'internacional_parse_success': 1, 'internacional_storage_skipped': 1, 'opinion_articles_started': 1, 'opinion_parse_success': 1, 'opinion_storage_skipped': 1, 'elapsed_time_seconds': 13.951826, 'finish_time': datetime.datetime(2021, 12, 15, 1, 15, 41, 608507), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 19, 15, 41, 608595)}
+2021-12-14 19:15:41 [scrapy.core.engine] INFO: Spider closed (finished)
