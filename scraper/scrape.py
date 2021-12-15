@@ -2,6 +2,8 @@ import scrapy, logging, argparse
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 
+logging.info("\n\n\n{}\nSTARTING PARSE\n{}\n\n\n".format("*" * 50, "*" * 50))
+
 sites = ['biobio', 'tercera', 'emol', 'mostrador']
 process = CrawlerProcess(get_project_settings())
 
