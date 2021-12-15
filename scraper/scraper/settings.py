@@ -90,6 +90,7 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'scraper.pipelines.DefaultsPipeline': 300,
+    'scraper.pipelines.ScreenerPipeline': 350,
     'scraper.pipelines.SanitizePipeline': 400,
     'scraper.pipelines.DBPipeline': 500,
 }

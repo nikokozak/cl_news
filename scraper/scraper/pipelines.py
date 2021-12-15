@@ -44,9 +44,11 @@ class DBPipeline:
         try:
             self.cur.execute(insert_sql, insert_data)
             logging.info('INSERTED item with:\n\tURL: {url}\n\tTitular: {titular}\n\tMedio: {medio}\ninto DB.'.format(url=item['url'], titular=item['titular'], medio=item['medio']))
+            spider.stats.inc_value(item['seccion'] + '_storage_success')
             return item
         except psycopg2.errors.UniqueViolation:
             logging.info('EXISTS already: \n\t{url}\nSkipping.'.format(medio=item['medio'], url=item['url']))
+            spider.stats.inc_value(item['seccion'] + '_storage_skipped')
             return None #In this case we can do this, given it's the last pipeline
 
     def close_spider(self, spider):
@@ -61,14 +63,21 @@ class ScreenerPipeline:
     '''
     def process_item(self, item, spider):
         if item['titular'] == None:
-            logging.warn('NULL TITULAR for article: \n\t{url}\nDropping.'.format(url=item['url']))
+            logging.warn('NULL TITULAR\narticle:\n\t{url}\nmedio:\n\t{spider.name}\nDropping.'.format(url=item['url']))
+            spider.stats.inc_value(item['seccion'] + '_errors')
             raise DropItem
         if item['cuerpo'] == None or item['cuerpo'] == []:
-            logging.warn('NULL BODY for article: \n\t{url}\nDropping.'.format(url=item['url']))
+            logging.warn('NULL BODY\narticle:\n\t{url}\nmedio:\n\t{spider.name}\nDropping.'.format(url=item['url']))
+            spider.stats.inc_value(item['seccion'] + '_errors')
             raise DropItem
         if item['url'] == None:
-            logging.warn('NULL URL in spider {spider_name}\nDropping.'.format(url=spider.name))
+            logging.warn('NULL URL in spider {spider.name}\nDropping.'.format(url=spider.name))
+            spider.stats.inc_value(item['seccion'] + '_errors')
             raise DropItem
+
+
+        spider.stats.inc_value(item['seccion'] + '_parse_success')
+        return item
 
 
 class DefaultsPipeline:
