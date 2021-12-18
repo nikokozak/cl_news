@@ -6,7 +6,7 @@
 <div id="articulo-details">
   <% autor = Map.get(@noticia, "autor", false) %>
   <% medio = Map.get(@noticia, "medio_std") %>
-  <p id="articulo-autor"><%= if autor do %><%= if String.equivalent?(medio, "emol") do%><% else %>Por<% end %><strong><%= Map.get(@noticia, "autor") %></strong><% end %></p>
+  <p id="articulo-autor"><%= if autor do %><%= if String.equivalent?(medio, "emol") do%><% else %>Por <% end %><strong><%= Map.get(@noticia, "autor") %></strong><% end %></p>
   <p id="articulo-fecha"><%= Map.get(@noticia, "fecha") %></p>
 </div>
 <%= if Map.get(@noticia, "imagen_url", false) do %>

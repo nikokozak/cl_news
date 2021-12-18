@@ -1,6 +1,7 @@
-Add detailed (timestamped, conn times, etc.) to server.
-Integrate Grafana
 Set up crontab config in repo
+Integrate Grafana
+
+Metrics module
 Continuous deployment with port reassignment
 
 Test application errors with intentional kills.
