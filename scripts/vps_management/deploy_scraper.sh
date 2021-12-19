@@ -9,7 +9,9 @@ ssh_and_run <<-STDIN
     cd srv/scraper
     rm scraper/logs/log.txt
     ~/.poetry/bin/poetry install
-    sudo echo "*/15 * * * * ${SSH_USER} bash /home/${SSH_USER}/srv/scraper/run_scraper.sh" > /etc/cron.d/scraper
+    echo "*/15 * * * * ${SSH_USER} bash /home/${SSH_USER}/srv/scraper/run_scraper.sh" > scraper_cron
+    sudo cp scraper_cron /etc/cron.d/
+    rm scraper_cron
 STDIN
 
 if [ "$?" -eq "0" ]; then
