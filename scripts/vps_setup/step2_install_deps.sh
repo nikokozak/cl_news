@@ -31,4 +31,7 @@ ssh_and_run <<-STDIN
     sudo dnf copr enable @caddy/caddy -y
     sudo dnf install caddy -y
 
+    sudo systemctl enable crond.service
+    sudo systemctl start crond.service
+
 STDIN
