@@ -20,7 +20,7 @@ RELEASE_FILENAME=$(basename "$RELEASE_FILE")
 
 scp -i "$SSH_KEY" release/release.tar.gz ${SSH_USER}@${SSH_SERVER}:/home/${SSH_USER}/
 
-cat <<-EOF > ../caddy.conf/Caddyfile
+cat <<-EOF > scripts/caddy.conf/Caddyfile
     lectorchile.com
 
     reverse_proxy 127.0.0.1:${LECTOR_PORT}
@@ -44,6 +44,8 @@ ssh_and_run <<-STDIN
     systemctl stop lector
     systemctl start lector
 STDIN
+
+# TODO why does sytemctl stop lector and start lector fail?
 
 # The last command above changes the SELinux policy, allowing us to run lector as a service
 
