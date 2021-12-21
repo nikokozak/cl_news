@@ -385,3 +385,195 @@ Dropping.
 2021-12-14 19:15:41 [mostrador] INFO: MOSTRADOR stats:
 {'log_count/INFO': 53, 'start_time': datetime.datetime(2021, 12, 15, 1, 15, 27, 656681), 'memusage/startup': 52404224, 'memusage/max': 52404224, 'time_start': datetime.datetime(2021, 12, 14, 19, 15, 27, 660943), 'spider_name': 'mostrador', 'parse_limit': 1, 'scheduler/enqueued/memory': 6, 'scheduler/enqueued': 6, 'scheduler/dequeued/memory': 6, 'scheduler/dequeued': 6, 'downloader/request_count': 7, 'downloader/request_method_count/GET': 7, 'downloader/request_bytes': 2407, 'robotstxt/request_count': 1, 'downloader/response_count': 7, 'downloader/response_status_count/200': 7, 'downloader/response_bytes': 148023, 'response_received_count': 7, 'robotstxt/response_count': 1, 'robotstxt/response_status_count/200': 1, 'httpcompression/response_bytes': 919629, 'httpcompression/response_count': 6, 'nacional_links': 7, 'nacional_articles_requested': 1, 'request_depth_max': 1, 'internacional_links': 7, 'internacional_articles_requested': 1, 'opinion_links': 8, 'opinion_articles_requested': 1, 'log_count/WARNING': 2, 'nacional_articles_started': 1, 'nacional_parse_success': 1, 'nacional_storage_skipped': 1, 'item_scraped_count': 3, 'internacional_articles_started': 1, 'internacional_parse_success': 1, 'internacional_storage_skipped': 1, 'opinion_articles_started': 1, 'opinion_parse_success': 1, 'opinion_storage_skipped': 1, 'elapsed_time_seconds': 13.951826, 'finish_time': datetime.datetime(2021, 12, 15, 1, 15, 41, 608507), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 14, 19, 15, 41, 608595)}
 2021-12-14 19:15:41 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-21 11:59:17 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: scraper)
+2021-12-21 11:59:17 [scrapy.utils.log] INFO: Versions: lxml 4.6.4.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.9.9 (main, Nov 21 2021, 03:23:42) - [Clang 13.0.0 (clang-1300.0.29.3)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 36.0.0, Platform macOS-11.4-x86_64-i386-64bit
+2021-12-21 11:59:17 [scrapy.core.engine] INFO: Spider opened
+2021-12-21 11:59:17 [biobio] INFO: Spider opened: biobio
+2021-12-21 11:59:17 [scrapy.core.engine] INFO: Spider opened
+2021-12-21 11:59:17 [tercera] INFO: Spider opened: tercera
+2021-12-21 11:59:17 [scrapy.core.engine] INFO: Spider opened
+2021-12-21 11:59:17 [emol] INFO: Spider opened: emol
+2021-12-21 11:59:17 [scrapy.core.engine] INFO: Spider opened
+2021-12-21 11:59:17 [mostrador] INFO: Spider opened: mostrador
+2021-12-21 11:59:25 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/19/1041494/programacion-emoltv-semana-20-diciembre.html
+	Titular: Streaming y entrevistas: La programación de este martes 21 de diciembre en EmolTV
+	Medio: emol
+
+2021-12-21 11:59:25 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/21/1041769/balance-hidrico-deficit-preciitaciones.html
+	Titular: El 2021 es el cuarto año más seco: MOP alerta que es &quot;la peor situación hídrica que hemos experimentado en nuestra historia&quot;
+	Medio: emol
+
+2021-12-21 11:59:25 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/21/1041797/compromiso-vivienda-programa-gobierno-pinera.html
+	Titular: Gobierno lanza &quot;Compromiso Vivienda&quot;: Programa beneficiará a 100 mil familias con la entrega de terrenos fiscales
+	Medio: emol
+
+2021-12-21 11:59:25 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/21/1041773/orrego-solicita-boric-competencias-transporte.html
+	Titular: Orrego pide a Boric el traspaso del transporte público a la gobernación: &quot;El gobierno central no tiene las capacidades&quot;
+	Medio: emol
+
+2021-12-21 11:59:25 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/21/1041785/gobierno-y-traspasomandodigital.html
+	Titular: Gobierno instruye a ministerios y pone en marcha &quot;traspaso de mando digital&quot; de cara al cambio de administración en 2022
+	Medio: emol
+
+2021-12-21 11:59:25 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Nacional/2021/12/21/1041788/boric-loncon-bassa-convencion-reunion.html
+	Titular: Gabriel Boric en visita a Loncon y Bassa: &quot;No voy a tratar de pautear a la Convención con lo que tienen que hacer&quot;
+	Medio: emol
+
+2021-12-21 11:59:30 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Internacional/2021/12/21/1041796/japon-restricciones-control-fronterizo-coronavirus.html
+	Titular: Japón decide mantener las duras medidas de control fronterizo para frenar el covid-19
+	Medio: emol
+
+2021-12-21 11:59:30 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Internacional/2021/12/21/1041790/ataque-incendiario-diario-patagonia-argentina.html
+	Titular: Incendian sede de diario en la Patagonia argentina tras protesta contra ley de minería
+	Medio: emol
+
+2021-12-21 11:59:30 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Internacional/2021/12/21/1041779/analisis-triunfo-boric-argentina-kirchnerismo.html
+	Titular: Análisis en Argentina al triunfo de Boric: &quot;La chilenización no llega al kirchnerismo&quot;
+	Medio: emol
+
+2021-12-21 11:59:30 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Internacional/2021/12/21/1041772/biden-medidas-omicron-eeuu.html
+	Titular: Biden descarta restricciones en EE.UU. por avance de Ómicron: Impulsará los tests y movilizará al personal médico militar
+	Medio: emol
+
+2021-12-21 11:59:30 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Internacional/2021/12/21/1041736/situacion-politica-sudamerica-gabriel-boric.html
+	Titular: Una región fragmentada: El escenario sudamericano que enfrentará Gabriel Boric como presidente
+	Medio: emol
+
+2021-12-21 11:59:30 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Internacional/2021/12/21/1041747/francia-pide-reducir-contactos-covid19.html
+	Titular: Francia descarta por ahora nuevas restricciones y pide a ciudadanos reducir &quot;al máximo&quot; sus contactos
+	Medio: emol
+
+2021-12-21 11:59:34 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Tecnologia/2021/12/17/1041529/pfizer-efectividad-vacuna-ninos.html
+	Titular: Pfizer reporta menor efectividad de su vacuna en niños de entre 2 y 5 años y probará añadir dosis de refuerzo
+	Medio: emol
+
+2021-12-21 11:59:34 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Tecnologia/2021/12/17/1041443/enfermos-covid19-problemas-oculares.html
+	Titular: Enfermos de covid-19 presentan problemas oculares incluso 10 meses después de padecerlo
+	Medio: emol
+
+2021-12-21 11:59:34 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Tecnologia/2021/12/16/1041353/pez-tropical-detectado-aguas-artico.html
+	Titular: Detectada en el Ártico la presencia de un pez tropical cuyo hábitat natural son las aguas cálidas
+	Medio: emol
+
+2021-12-21 11:59:34 [root] INFO: INSERTED item into DB:
+	URL: http://www.emol.com/noticias/Tecnologia/2021/12/15/1041214/estudio-pfizer-omicron.html
+	Titular: Estudio señala que la segunda dosis de Pfizer protege al 70% de los casos graves de Ómicron
+	Medio: emol
+
+2021-12-21 11:59:37 [root] INFO: INSERTED item into DB:
+	URL: https://www.emol.com/noticias/Economia/2021/12/21/1041793/gobierno-estrategia-discusion-pgu.html
+	Titular: Aprobarla "lo antes posible": Gobierno explica estrategia para acelerar tramitación de Pensión Garantizada Universal
+	Medio: emol
+
+2021-12-21 11:59:41 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-21 11:59:41 [emol] INFO: EMOL stats:
+{'log_count/INFO': 23, 'start_time': datetime.datetime(2021, 12, 21, 17, 59, 17, 564486), 'memusage/startup': 52744192, 'memusage/max': 52752384, 'time_start': datetime.datetime(2021, 12, 21, 11, 59, 17, 604004), 'spider_name': 'emol', 'parse_limit': 1, 'scheduler/enqueued/memory': 7, 'scheduler/enqueued': 7, 'scheduler/dequeued/memory': 7, 'scheduler/dequeued': 7, 'downloader/request_count': 9, 'downloader/request_method_count/GET': 9, 'downloader/request_bytes': 3389, 'robotstxt/request_count': 2, 'downloader/response_count': 9, 'downloader/response_status_count/404': 1, 'downloader/response_bytes': 273011, 'response_received_count': 9, 'robotstxt/response_count': 2, 'robotstxt/response_status_count/404': 1, 'downloader/response_status_count/200': 8, 'httpcompression/response_bytes': 364425, 'httpcompression/response_count': 4, 'robotstxt/response_status_count/200': 1, 'economia_links': 5, 'economia_articles_requested': 1, 'request_depth_max': 1, 'nacional_json_dump_started': 1, 'nacional_parse_success': 6, 'nacional_storage_success': 6, 'item_scraped_count': 25, 'internacional_json_dump_started': 1, 'internacional_parse_success': 6, 'internacional_storage_success': 6, 'tendencias_links': 0, 'tecnologia_json_dump_started': 1, 'tecnologia_parse_success': 6, 'tecnologia_storage_success': 4, 'tecnologia_storage_skipped': 2, 'economia_articles_started': 1, 'economia_parse_success': 1, 'economia_storage_success': 1, 'educacion_json_dump_started': 1, 'educacion_parse_success': 6, 'educacion_storage_skipped': 6, 'elapsed_time_seconds': 23.539302, 'finish_time': datetime.datetime(2021, 12, 21, 17, 59, 41, 103788), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 21, 11, 59, 41, 103916)}
+2021-12-21 11:59:41 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-21 11:59:47 [root] INFO: INSERTED item into DB:
+	URL: https://www.elmostrador.cl/noticias/multimedia/2021/12/21/guatemala-impone-estado-de-sitio-en-comunidades-tras-masacre/
+	Titular: 
+
+                
+                
+                Guatemala impone estado de sitio en comunidades tras masacre
+            
+	Medio: mostrador
+
+2021-12-21 11:59:49 [root] INFO: INSERTED item into DB:
+	URL: https://www.elmostrador.cl/dia/2021/12/21/boric-y-las-expectativas-sobre-el-gabinete-no-nos-anticipemos-estoy-escuchando-las-senales-economicas-y-la-voz-de-los-chilenos/
+	Titular: 
+
+                
+                
+                Boric y las expectativas sobre el gabinete: “No nos anticipemos, estoy escuchando las señales económicas y la voz de los chilenos”
+            
+	Medio: mostrador
+
+2021-12-21 11:59:54 [root] INFO: INSERTED item into DB:
+	URL: https://www.elmostrador.cl/noticias/opinion/columnas/2021/12/21/el-ejercito-de-reserva-y-el-millon-de-nuevos-electores/
+	Titular: El ejército de reserva y el millón de nuevos electores
+	Medio: mostrador
+
+2021-12-21 11:59:54 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-21 11:59:54 [mostrador] INFO: MOSTRADOR stats:
+{'log_count/INFO': 27, 'start_time': datetime.datetime(2021, 12, 21, 17, 59, 17, 599538), 'memusage/startup': 52887552, 'memusage/max': 52887552, 'time_start': datetime.datetime(2021, 12, 21, 11, 59, 17, 604630), 'spider_name': 'mostrador', 'parse_limit': 1, 'scheduler/enqueued/memory': 6, 'scheduler/enqueued': 6, 'scheduler/dequeued/memory': 6, 'scheduler/dequeued': 6, 'downloader/request_count': 7, 'downloader/request_method_count/GET': 7, 'downloader/request_bytes': 2505, 'robotstxt/request_count': 1, 'downloader/response_count': 7, 'downloader/response_status_count/200': 7, 'downloader/response_bytes': 148813, 'response_received_count': 7, 'robotstxt/response_count': 1, 'robotstxt/response_status_count/200': 1, 'httpcompression/response_bytes': 925045, 'httpcompression/response_count': 6, 'nacional_links': 7, 'nacional_articles_requested': 1, 'request_depth_max': 1, 'internacional_links': 7, 'internacional_articles_requested': 1, 'opinion_links': 8, 'opinion_articles_requested': 1, 'internacional_articles_started': 1, 'internacional_parse_success': 1, 'internacional_storage_success': 1, 'item_scraped_count': 3, 'nacional_articles_started': 1, 'nacional_parse_success': 1, 'nacional_storage_success': 1, 'opinion_articles_started': 1, 'opinion_parse_success': 1, 'opinion_storage_success': 1, 'elapsed_time_seconds': 36.50496, 'finish_time': datetime.datetime(2021, 12, 21, 17, 59, 54, 104498), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 21, 11, 59, 54, 104603)}
+2021-12-21 11:59:54 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-21 11:59:57 [root] INFO: INSERTED item into DB:
+	URL: https://www.biobiochile.cl/noticias/nacional/region-del-maule/2021/12/21/confirman-primer-caso-de-variante-omicron-en-la-region-del-maule.shtml
+	Titular: Confirman primer caso de variante Ómicron en la región del Maule
+	Medio: biobio
+
+2021-12-21 11:59:59 [root] INFO: INSERTED item into DB:
+	URL: https://www.latercera.com/politica/noticia/gabriel-boric-tras-reunion-con-loncon-dice-que-no-espera-una-convencion-partisana-al-servicio-de-nuestro-gobierno-y-que-respetara-lo-que-el-organo-decida/DXHUI3S23NCZJMHB6NJ3HACP5U/
+	Titular: Gabriel Boric tras reunión con Loncon: dice que no espera una “Convención partisana al servicio de nuestro gobierno” y que respetará lo que el órgano decida
+	Medio: tercera
+
+2021-12-21 11:59:59 [root] INFO: INSERTED item into DB:
+	URL: https://www.latercera.com/nacional/noticia/confirman-primer-caso-de-variante-omicron-en-la-region-del-maule/4QHJ6ZWUBBBO7AP74GBOETKGFA/
+	Titular: Confirman primer caso de variante Ómicron en la Región del Maule
+	Medio: tercera
+
+2021-12-21 12:00:03 [root] WARNING: NULL BODY
+article:
+	https://www.latercera.com/tendencias/noticia/en-pauta-por-alberto-montt/VOIKMFT32JDP5HOVPUBGSKEURU/
+medio:
+	tercera
+Dropping.
+2021-12-21 12:00:03 [scrapy.core.scraper] WARNING: Dropped: 
+{'autor': 'Alberto Montt',
+ 'bajada': None,
+ 'cuerpo': None,
+ 'fecha': datetime.datetime(2021, 3, 5, 22, 0, tzinfo=datetime.timezone(datetime.timedelta(0), 'GMT')),
+ 'imagen_url': 'https://www.latercera.com/resizer/LF0piZ23kaCwJquadSl6DHdZUbg=/900x600/filters:focal(1501.6666666666667x681.6666666666667:1511.6666666666667x671.6666666666667)/cloudfront-us-east-1.images.arcpublishing.com/copesa/B3SVLGKHEBFRDNZJMK4GHC76SU.jpg',
+ 'medio': 'tercera',
+ 'seccion': 'tendencias',
+ 'titular': 'En Pauta, por Alberto Montt',
+ 'url': 'https://www.latercera.com/tendencias/noticia/en-pauta-por-alberto-montt/VOIKMFT32JDP5HOVPUBGSKEURU/'}
+2021-12-21 12:00:03 [root] INFO: INSERTED item into DB:
+	URL: https://www.biobiochile.cl/noticias/internacional/europa/2021/12/21/reino-unido-acusado-de-asesinar-a-diputado-david-amess-se-declara-no-culpable-ante-la-justicia.shtml
+	Titular: Reino Unido: acusado de asesinar a diputado David Amess se declara no culpable ante la justicia
+	Medio: biobio
+
+2021-12-21 12:00:10 [root] INFO: INSERTED item into DB:
+	URL: https://www.biobiochile.cl/noticias/economia/tu-bolsillo/2021/12/21/se-acaba-el-plazo-revisa-si-te-corresponde-una-devolucion-de-pagos-en-exceso-de-fonasa.shtml
+	Titular: Se acaba el plazo: Revisa si te corresponde una devolución de pagos en exceso de Fonasa
+	Medio: biobio
+
+2021-12-21 12:00:16 [root] INFO: INSERTED item into DB:
+	URL: https://www.biobiochile.cl/noticias/espectaculos-y-tv/notas-espectaculos-tv/2021/12/21/te-confundo-con-giorgio-boric-lanza-broma-a-periodista-de-mega-en-plena-conferencia-de-prensa.shtml
+	Titular: "Te confundo con Giorgio": Boric lanza broma a periodista de Mega en plena conferencia de prensa
+	Medio: biobio
+
+2021-12-21 12:00:21 [root] INFO: INSERTED item into DB:
+	URL: https://www.latercera.com/mundo/noticia/estados-unidos-recomienda-a-sus-ciudadanos-no-viajar-a-espana-por-la-situacion-de-la-pandemia/3VZLBAAJUJEBLBUQXDR6PVBEKA/
+	Titular: Estados Unidos recomienda a sus ciudadanos no viajar a España por la situación de la pandemia
+	Medio: tercera
+
+2021-12-21 12:00:21 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-21 12:00:21 [tercera] INFO: TERCERA stats:
+{'log_count/INFO': 41, 'start_time': datetime.datetime(2021, 12, 21, 17, 59, 17, 553381), 'memusage/startup': 52584448, 'memusage/max': 84307968, 'time_start': datetime.datetime(2021, 12, 21, 11, 59, 17, 603700), 'spider_name': 'tercera', 'parse_limit': 1, 'scheduler/enqueued/memory': 11, 'scheduler/enqueued': 11, 'scheduler/dequeued/memory': 11, 'scheduler/dequeued': 11, 'downloader/request_count': 12, 'downloader/request_method_count/GET': 12, 'downloader/request_bytes': 4165, 'robotstxt/request_count': 1, 'downloader/response_count': 12, 'downloader/response_status_count/200': 10, 'downloader/response_bytes': 727878, 'httpcompression/response_bytes': 3998081, 'httpcompression/response_count': 10, 'response_received_count': 10, 'robotstxt/response_count': 1, 'robotstxt/response_status_count/200': 1, 'politica_links': 8, 'politica_articles_requested': 1, 'request_depth_max': 1, 'nacional_links': 8, 'nacional_articles_requested': 1, 'tendencias_links': 8, 'tendencias_articles_requested': 1, 'downloader/response_status_count/301': 2, 'politica_articles_started': 1, 'politica_parse_success': 1, 'politica_storage_success': 1, 'item_scraped_count': 3, 'nacional_articles_started': 1, 'nacional_parse_success': 1, 'nacional_storage_success': 1, 'tendencias_articles_started': 1, 'log_count/WARNING': 2, 'tendencias_errors': 1, 'item_dropped_count': 1, 'item_dropped_reasons_count/DropItem': 1, 'internacional_links': 8, 'internacional_articles_requested': 1, 'opinion_links': 0, 'internacional_articles_started': 1, 'internacional_parse_success': 1, 'internacional_storage_success': 1, 'elapsed_time_seconds': 64.141946, 'finish_time': datetime.datetime(2021, 12, 21, 18, 0, 21, 695327), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 21, 12, 0, 21, 695420)}
+2021-12-21 12:00:21 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-12-21 12:00:23 [root] INFO: INSERTED item into DB:
+	URL: https://www.biobiochile.cl/biobiotv/programas/podria-ser-peor/2021/12/20/apertura-de-pasos-fronterizos-terrestres-conoce-cuales-son-las-etapas-y-requisitos.shtml
+	Titular: Apertura de pasos fronterizos terrestres: conoce cuáles son las etapas y requisitos
+	Medio: biobio
+
+2021-12-21 12:00:23 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-12-21 12:00:23 [biobio] INFO: BIOBIO stats:
+{'log_count/INFO': 47, 'start_time': datetime.datetime(2021, 12, 21, 17, 59, 17, 540528), 'memusage/startup': 52408320, 'memusage/max': 84307968, 'time_start': datetime.datetime(2021, 12, 21, 11, 59, 17, 601591), 'spider_name': 'biobio', 'parse_limit': 1, 'scheduler/enqueued/memory': 10, 'scheduler/enqueued': 10, 'scheduler/dequeued/memory': 10, 'scheduler/dequeued': 10, 'downloader/request_count': 11, 'downloader/request_method_count/GET': 11, 'downloader/request_bytes': 4343, 'robotstxt/request_count': 1, 'downloader/response_count': 11, 'downloader/response_status_count/200': 11, 'downloader/response_bytes': 303406, 'response_received_count': 11, 'robotstxt/response_count': 1, 'robotstxt/response_status_count/200': 1, 'httpcompression/response_bytes': 2243068, 'httpcompression/response_count': 10, 'nacional_links': 19, 'nacional_articles_requested': 1, 'request_depth_max': 1, 'internacional_links': 19, 'internacional_articles_requested': 1, 'economia_links': 19, 'economia_articles_requested': 1, 'tendencias_links': 19, 'tendencias_articles_requested': 1, 'opinion_links': 19, 'opinion_articles_requested': 1, 'nacional_articles_started': 1, 'nacional_parse_success': 1, 'nacional_storage_success': 1, 'item_scraped_count': 5, 'log_count/WARNING': 2, 'internacional_articles_started': 1, 'internacional_parse_success': 1, 'internacional_storage_success': 1, 'economia_articles_started': 1, 'economia_parse_success': 1, 'economia_storage_success': 1, 'tendencias_articles_started': 1, 'tendencias_parse_success': 1, 'tendencias_storage_success': 1, 'opinion_articles_started': 1, 'opinion_parse_success': 1, 'opinion_storage_success': 1, 'elapsed_time_seconds': 66.115848, 'finish_time': datetime.datetime(2021, 12, 21, 18, 0, 23, 656376), 'finish_reason': 'finished', 'time_end': datetime.datetime(2021, 12, 21, 12, 0, 23, 656481)}
+2021-12-21 12:00:23 [scrapy.core.engine] INFO: Spider closed (finished)

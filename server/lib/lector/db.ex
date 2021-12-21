@@ -39,6 +39,10 @@ defmodule Lector.DB do
     GenServer.call(:db, :get_secciones)
   end
 
+  def get_updated_at do
+    GenServer.call(:db, :get_updated_at)
+  end
+
   #############################################################
   ###################### CALLBACKS ############################
   #############################################################
@@ -131,6 +135,17 @@ defmodule Lector.DB do
     %{columns: columns, rows: rows} = Postgrex.query!(db_conn, query, [])
 
     {:reply, format_rows(rows, columns), state}
+  end
+
+  def handle_call(:get_updated_at, _from, [conn: db_conn] = state) do
+    query = "SELECT MAX(dt) as dt 
+    FROM updated_at"
+
+    %{columns: columns, rows: rows} = Postgrex.query!(db_conn, query, [])
+
+    result = format_rows(rows, columns) |> List.first
+
+    {:reply, result, state}
   end
 
   defp format_rows(rows, columns, inspect \\ false) do
