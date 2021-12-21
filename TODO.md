@@ -1,11 +1,15 @@
-Set up crontab config in repo
-Integrate Grafana
+TERM=vt100 on sshd to digitalocean
+Fix value too long for type character (200) in bajada/title
+Mostrador not processing other sections
+Why so many "exists in DB?" -> emol json dumps. How do we handle these skips?
 
-Metrics module
+Fix the "por ...." spacing
+Add a timestamp to articles
+Add an "updated at" value in frontpage (use PSQL table for this)
+Check to see if default timestamp is missing timezone info
+Check to see if timezones are accurate for Mercurio, etc. if not, make them
+Daily log rotation with backup (make script)
+ 
 Continuous deployment with port reassignment
 
-Test application errors with intentional kills.
-
 Add inegration tests (check `rel/env.sh.eex` as a way of maybe running checks on startup)
-Finalize deploy pipeline
-
