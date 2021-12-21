@@ -1,5 +1,8 @@
 import Config
 
+config :elixir,
+  time_zone_database: Tzdata.TimeZoneDatabase
+
 config :lector,
   template_dir: "lib/templates",
   layout_dir: "lib/templates/layouts",

@@ -901,3 +901,5 @@ Request: GET /
 20:10:55.057 [info] GET /noticia/zEqqtl1BEey_OXtmjHGNNQ== 127.0.0.1 :: sent - 200 - 8
 20:10:58.925 [info] GET / 127.0.0.1 :: sent - 200 - 13
 20:11:06.829 [info] GET / 127.0.0.1 :: sent - 200 - 3
+13:35:22.151 [info] Starting server at port 8080
+13:43:44.513 [info] Starting server at port 8080

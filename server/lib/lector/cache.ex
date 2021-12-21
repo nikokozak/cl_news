@@ -4,7 +4,7 @@ defmodule Lector.Cache do
   An in-memory reflection of our database.
   Uses ETS as an in-memory db.
 
-  Keeps the latest 200 stories in the :noticias ETS table.
+  Keeps the latest 200 stories in the :noticias ETS table. <- TODO
   Keeps a representation of the :secciones table in ETS.
   Keeps a representation of the :medios table in ETS.
 
@@ -64,6 +64,10 @@ defmodule Lector.Cache do
     end)
 
     :ok
+  end
+
+  defp store_updated_at do
+    Lector.DB.get_updated_at
   end
 
   defp get_fullname(table, std_name) do
