@@ -54,6 +54,14 @@ class DBPipeline:
     def close_spider(self, spider):
         # self.conn.commit() -- Use if no autocommit
         # logging.info(self.conn.notices)
+        updated_at_sql = ("INSERT INTO updated_at"
+                          "(dt)"
+                          "VALUES"
+                          "(%s)")
+
+        updated_at_data = [datetime.datetime.now(ZoneInfo('America/Santiago'))]
+
+        self.cur.execute(updated_at_sql, updated_at_data)
         self.conn.close()
 
 class ScreenerPipeline:
