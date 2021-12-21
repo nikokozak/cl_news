@@ -7,7 +7,8 @@
   <% autor = Map.get(@noticia, "autor", false) %>
   <% medio = Map.get(@noticia, "medio_std") %>
   <p id="articulo-autor"><%= if autor do %><%= if String.equivalent?(medio, "emol") do%><% else %>Por <% end %><strong><%= Map.get(@noticia, "autor") %></strong><% end %></p>
-  <p id="articulo-fecha"><%= Map.get(@noticia, "fecha") %></p>
+  <% {:ok, fecha} = Map.get(@noticia, "fecha") |> DateTime.shift_zone("America/Santiago") %>
+  <p id="articulo-fecha"><%= Calendar.strftime(fecha, "%d-%m-%Y | %H:%M") %></p>
 </div>
 <%= if Map.get(@noticia, "imagen_url", false) do %>
   <img id="noticia-imagen" src="<%= Map.get(@noticia, "imagen_url") %>" />

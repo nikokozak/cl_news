@@ -52,7 +52,10 @@ class BioBioSpider(NoticiaSpider):
         l.add_xpath('autor', rules['autor'])
         l.add_xpath('imagen_url', rules['imagen_url'])
         l.add_value('cuerpo', self.sanitize_body(response, rules['cuerpo']))
-        l.add_xpath('fecha', rules['fecha'])
+        # add timezone info to EMOL scrape-derived date
+        datetime = self.add_tz(response.xpath(rules['fecha']).get())
+        #l.add_xpath('fecha', rules['fecha'])
+        l.add_value('fecha', datetime)
         l.add_value('url', response.url)
 
         yield l.load_item()
@@ -74,7 +77,7 @@ class BioBioSpider(NoticiaSpider):
             else:
                 l.add_value('imagen_url', None)
             l.add_value('cuerpo', self.sanitize_body_text(article["texto"]))
-            l.add_value('fecha', self.parse_date(article["fechaPublicacion"]))
+            l.add_value('fecha', self.add_tz(article["fechaPublicacion"]))
             l.add_value('url', article["permalink"])
 
             # Skip this item if it's a multimedia item
@@ -90,6 +93,5 @@ class BioBioSpider(NoticiaSpider):
     def sanitize_body_text(self, text):
         return re.sub(r'{.*}', "", text)
 
-    def parse_date(self, strdate):
-        strdate = strdate + "UTC-0400"
-        return datetime.datetime.strptime(strdate, '%Y-%m-%dT%H:%M:%S%Z%z')
+    def add_tz(self, strdate):
+        return strdate + ' America/Santiago'

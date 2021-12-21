@@ -955,3 +955,88 @@ Last message (from #PID<0.500.0>): :refresh
     (stdlib 3.16.1) gen_server.erl:771: :gen_server.handle_msg/6
     (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
 Last message: {:"$gen_cast", :refresh}
+14:23:37.748 [info] Starting server at port 8080
+14:23:50.231 [info] GET / 127.0.0.1 :: sent - 200 - 97ms
+14:23:55.200 [info] GET /noticia/vvyucmKHEeyFlr8B0m5pqA== 127.0.0.1 :: sent - 200 - 14ms
+14:23:58.017 [info] GET / 127.0.0.1 :: sent - 200 - 4ms
+14:23:59.904 [info] GET /noticia/vvyucmKHEeyFlr8B0m5pqA== 127.0.0.1 :: sent - 200 - 10ms
+14:26:01.276 [info] GET /noticia/wvhdqmKHEeyFlodgtQ1FLw== 127.0.0.1 :: sent - 200 - 11ms
+14:26:07.050 [info] GET /noticia/3psIKGKHEey6AfMwnwiCWg== 127.0.0.1 :: sent - 200 - 11ms
+14:26:14.992 [info] GET /noticia/zsbzYmKHEey6Acf8X7orXA== 127.0.0.1 :: sent - 200 - 10ms
+14:26:19.528 [info] GET /noticia/u8eRrmKHEeyFlqcQkSwnsw== 127.0.0.1 :: sent - 200 - 9ms
+14:30:49.479 [info] Starting server at port 8080
+14:30:55.625 [info] GET /noticia/u8eRrmKHEeyFlqcQkSwnsw== 127.0.0.1 :: sent - 200 - 55ms
+14:31:25.562 [info] Starting server at port 8080
+14:31:27.589 [info] GET /noticia/u8eRrmKHEeyFlqcQkSwnsw== 127.0.0.1 :: sent - 200 - 74ms
+14:31:28.931 [info] GET / 127.0.0.1 :: sent - 200 - 13ms
+14:31:30.873 [info] GET /noticia/zsbzYmKHEey6Acf8X7orXA== 127.0.0.1 :: sent - 200 - 5ms
+14:31:37.880 [info] GET /noticia/vvEEqmKHEeyFlvuuz6Jo-A== 127.0.0.1 :: sent - 200 - 1ms
+14:31:41.193 [info] GET /noticia/3psIKGKHEey6AfMwnwiCWg== 127.0.0.1 :: sent - 200 - 6ms
+14:32:27.657 [info] Starting server at port 8080
+14:32:30.134 [info] GET /noticia/3psIKGKHEey6AfMwnwiCWg== 127.0.0.1 :: sent - 200 - 60ms
+14:32:30.934 [info] GET /noticia/3psIKGKHEey6AfMwnwiCWg== 127.0.0.1 :: sent - 200 - 6ms
+14:32:32.127 [info] GET / 127.0.0.1 :: sent - 200 - 10ms
+14:32:34.267 [info] GET /noticia/u8eRrmKHEeyFlqcQkSwnsw== 127.0.0.1 :: sent - 200 - 5ms
+14:32:36.301 [info] GET / 127.0.0.1 :: sent - 200 - 14ms
+14:32:37.993 [info] GET /noticia/0spDGmKHEey6AZNsXnXxyg== 127.0.0.1 :: sent - 200 - 6ms
+14:33:28.893 [info] Starting server at port 8080
+14:33:31.817 [info] GET /noticia/0spDGmKHEey6AZNsXnXxyg== 127.0.0.1 :: sent - 200 - 68ms
+14:34:02.744 [info] Starting server at port 8080
+14:34:05.542 [info] GET /noticia/0spDGmKHEey6AZNsXnXxyg== 127.0.0.1 :: sent - 200 - 61ms
+14:34:06.208 [info] GET /noticia/0spDGmKHEey6AZNsXnXxyg== 127.0.0.1 :: sent - 200 - 5ms
+14:34:19.123 [info] Starting server at port 8080
+14:35:11.763 [info] Starting server at port 8080
+14:36:24.111 [info] GET /noticia/0spDGmKHEey6AZNsXnXxyg== 127.0.0.1 :: sent - 200 - 56ms
+14:36:25.301 [info] GET /noticia/0spDGmKHEey6AZNsXnXxyg== 127.0.0.1 :: sent - 200 - 6ms
+14:37:03.483 [info] GET /noticia/0spDGmKHEey6AZNsXnXxyg== 127.0.0.1 :: sent - 200 - 4ms
+14:37:22.593 [info] GET /noticia/0spDGmKHEey6AZNsXnXxyg== 127.0.0.1 :: sent - 200 - 11ms
+14:37:27.232 [info] GET /noticia/0spDGmKHEey6AZNsXnXxyg== 127.0.0.1 :: sent - 200 - 6ms
+14:37:43.308 [info] GET /noticia/0spDGmKHEey6AZNsXnXxyg== 127.0.0.1 :: sent - 200 - 7ms
+14:37:48.363 [info] GET / 127.0.0.1 :: sent - 200 - 11ms
+14:37:50.204 [info] GET /noticia/vvyucmKHEeyFlr8B0m5pqA== 127.0.0.1 :: sent - 200 - 1ms
+14:37:59.913 [info] GET /noticia/wvhdqmKHEeyFlodgtQ1FLw== 127.0.0.1 :: sent - 200 - 2ms
+14:38:09.347 [info] GET /noticia/zsbzYmKHEey6Acf8X7orXA== 127.0.0.1 :: sent - 200 - 6ms
+14:38:12.700 [info] GET /noticia/u8eRrmKHEeyFlqcQkSwnsw== 127.0.0.1 :: sent - 200 - 5ms
+14:38:19.232 [info] GET /noticia/0DvmsmKHEeyYP2PHh3MxWA== 127.0.0.1 :: sent - 200 - 6ms
+14:44:50.883 [info] GET /noticia/0DvmsmKHEeyYP2PHh3MxWA== 127.0.0.1 :: sent - 200 - 6ms
+14:44:51.919 [info] GET /noticia/0DvmsmKHEeyYP2PHh3MxWA== 127.0.0.1 :: sent - 200 - 5ms
+14:45:04.085 [info] Starting server at port 8080
+14:45:16.181 [info] GET /noticia/0DvmsmKHEeyYP2PHh3MxWA== 127.0.0.1 :: sent - 200 - 58ms
+14:45:20.532 [info] GET / 127.0.0.1 :: sent - 200 - 13ms
+14:45:21.409 [info] GET /noticia/vvyucmKHEeyFlr8B0m5pqA== 127.0.0.1 :: sent - 200 - 1ms
+14:47:04.924 [error] #PID<0.506.0> running Lector.Endpoint (connection #PID<0.504.0>, stream id 1) terminated
+Server: localhost:8080 (http)
+Request: GET /noticia/vvyucmKHEeyFlr8B0m5pqA==
+** (exit) an exception was raised:
+    ** (FunctionClauseError) no function clause matching in Calendar.strftime/3
+        (elixir 1.12.3) lib/calendar.ex:523: Calendar.strftime({:ok, #DateTime<2021-12-21 20:00:00.000000-03:00 -03 America/Santiago>}, "%d-%m-%Y | %H:%M", [])
+        (lector 0.5.0) lib/templates/noticia.ex:11: Lector.Templates.Noticia.noticia/1
+        (lector 0.5.0) lib/template.ex:73: Lector.Template.render/4
+        (lector 0.5.0) lib/plug/router.ex:280: anonymous fn/4 in Lector.Router.dispatch/2
+        (telemetry 1.0.0) /Users/niko/Documents/Code/LectorChile/server/deps/telemetry/src/telemetry.erl:293: :telemetry.span/3
+        (lector 0.5.0) lib/plug/router.ex:276: Lector.Router.dispatch/2
+        (lector 0.5.0) lib/lector/router.ex:1: Lector.Router.plug_builder_call/2
+        (lector 0.5.0) lib/lector/endpoint.ex:1: Lector.Endpoint.plug_builder_call/2
+14:47:06.133 [error] #PID<0.507.0> running Lector.Endpoint (connection #PID<0.504.0>, stream id 2) terminated
+Server: localhost:8080 (http)
+Request: GET /noticia/vvyucmKHEeyFlr8B0m5pqA==
+** (exit) an exception was raised:
+    ** (FunctionClauseError) no function clause matching in Calendar.strftime/3
+        (elixir 1.12.3) lib/calendar.ex:523: Calendar.strftime({:ok, #DateTime<2021-12-21 20:00:00.000000-03:00 -03 America/Santiago>}, "%d-%m-%Y | %H:%M", [])
+        (lector 0.5.0) lib/templates/noticia.ex:11: Lector.Templates.Noticia.noticia/1
+        (lector 0.5.0) lib/template.ex:73: Lector.Template.render/4
+        (lector 0.5.0) lib/plug/router.ex:280: anonymous fn/4 in Lector.Router.dispatch/2
+        (telemetry 1.0.0) /Users/niko/Documents/Code/LectorChile/server/deps/telemetry/src/telemetry.erl:293: :telemetry.span/3
+        (lector 0.5.0) lib/plug/router.ex:276: Lector.Router.dispatch/2
+        (lector 0.5.0) lib/lector/router.ex:1: Lector.Router.plug_builder_call/2
+        (lector 0.5.0) lib/lector/endpoint.ex:1: Lector.Endpoint.plug_builder_call/2
+14:48:04.543 [info] GET /noticia/vvyucmKHEeyFlr8B0m5pqA== 127.0.0.1 :: sent - 200 - 2ms
+14:48:07.288 [info] GET /noticia/vvyucmKHEeyFlr8B0m5pqA== 127.0.0.1 :: sent - 200 - 5ms
+14:48:45.484 [info] GET / 127.0.0.1 :: sent - 200 - 13ms
+14:48:47.457 [info] GET /noticia/wvhdqmKHEeyFlodgtQ1FLw== 127.0.0.1 :: sent - 200 - 5ms
+16:02:03.033 [info] GET / 127.0.0.1 :: sent - 200 - 56ms
+16:02:04.955 [info] GET /noticia/uDqNHmKiEeyrsQt-ky0t4w== 127.0.0.1 :: sent - 200 - 6ms
+16:02:10.926 [info] GET / 127.0.0.1 :: sent - 200 - 10ms
+16:02:14.460 [info] GET /noticia/vvyucmKHEeyFlr8B0m5pqA== 127.0.0.1 :: sent - 200 - 7ms
+16:02:34.082 [info] GET / 127.0.0.1 :: sent - 200 - 4ms
+16:02:36.208 [info] GET /noticia/tyeJhmKiEeyxgfPmxo2fbg== 127.0.0.1 :: sent - 200 - 2ms
