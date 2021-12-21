@@ -4,8 +4,10 @@ defmodule Lector.Cache do
   @doc """
   An in-memory reflection of our database.
   Uses ETS as an in-memory db.
+  Is refreshed every 5 minutes.
 
   Keeps the latest 200 stories in the :noticias ETS table. <- TODO
+  Keeps the latest :updated_at value in genserver state.
   Keeps a representation of the :secciones table in ETS.
   Keeps a representation of the :medios table in ETS.
 

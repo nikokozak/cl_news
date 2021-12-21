@@ -100,7 +100,7 @@ defmodule Lector.DB do
   end
 
   def handle_call({:get_noticia, id}, _from, [conn: db_conn] = state) do
-    query = "SELECT m.nombre as medio, m.std as medio_std, s.nombre as seccion, s.std as seccion_std, noticia_id, titular, bajada, autor, imagen_url, cuerpo, to_char(fecha, 'DD-MM-YYYY') as \"fecha\"
+    query = "SELECT m.nombre as medio, m.std as medio_std, s.nombre as seccion, s.std as seccion_std, noticia_id, titular, bajada, autor, imagen_url, cuerpo, to_char(fecha, 'DD-MM-YYYY HH24:MI:SS') as \"fecha\"
     FROM noticias
     JOIN medios as m USING (medio_id)
     JOIN secciones as s USING (seccion_id)
