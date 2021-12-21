@@ -3,6 +3,9 @@
 
 CREATE DATABASE :lectordatabase;
 CREATE USER :lectoruser;
+-- TODO: See if we can get rid of the grants for each table like this.
+-- Either way I need ownership so I can perform ident-authed migrations.
+ALTER DATABASE :lectordatabase OWNER TO :lectoruser;
 GRANT CONNECT ON DATABASE :lectordatabase TO :lectoruser;
 
 \c :lectordatabase
@@ -16,6 +19,7 @@ create table medios (
     nombre varchar(50) NOT NULL,
     std varchar(50) NOT NULL
 );
+alter table medios OWNER TO :lectoruser;
 grant insert, update, delete, select on table medios to :lectoruser;
 
 create table secciones (
@@ -23,6 +27,7 @@ create table secciones (
     nombre varchar(50) NOT NULL,
     std varchar(50) NOT NULL
 );
+alter table medios OWNER TO :lectoruser;
 grant insert, update, delete, select on table secciones to :lectoruser;
 
 create table noticias (
@@ -41,6 +46,7 @@ create table noticias (
     UNIQUE (url),
     UNIQUE (titular, medio_id)
 );
+alter table medios OWNER TO :lectoruser;
 grant insert, update, delete, select on table noticias to :lectoruser;
 
 grant usage, select on all sequences in schema public to :lectoruser;

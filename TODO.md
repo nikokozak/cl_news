@@ -1,4 +1,3 @@
-TERM=vt100 on sshd to digitalocean
 Fix value too long for type character (200) in bajada/title
 Mostrador not processing other sections
 Why so many "exists in DB?" -> emol json dumps. How do we handle these skips?
