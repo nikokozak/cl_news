@@ -1,4 +1,3 @@
-Null titulares in BioBio
 Articles en Tercera cutting out people
 
 Add a timestamp to articles

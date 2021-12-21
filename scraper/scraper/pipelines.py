@@ -1,4 +1,5 @@
 import psycopg2, logging, datetime, os
+from zoneinfo import ZoneInfo
 import lxml.html.clean as clean
 from scrapy.exceptions import DropItem
 
@@ -91,7 +92,7 @@ class DefaultsPipeline:
         item.setdefault('imagen_url', None)
         item.setdefault('bajada', None)
         item.setdefault('cuerpo', None)
-        item.setdefault('fecha', datetime.datetime.now())
+        item.setdefault('fecha', datetime.datetime.now(ZoneInfo('America/Santiago')))
         item.setdefault('url', None)
 
         return item
