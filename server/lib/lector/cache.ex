@@ -1,5 +1,6 @@
 defmodule Lector.Cache do
   use GenServer
+  require Logger
   @doc """
   An in-memory reflection of our database.
   Uses ETS as an in-memory db.
@@ -34,8 +35,10 @@ defmodule Lector.Cache do
 
     store_medios()
     store_secciones()
+    %{"dt" => updated_at} = Lector.DB.get_updated_at
 
-    {:ok, nil}
+    schedule_refresh()
+    {:ok, %{ updated_at: updated_at }}
   end
 
   # These can access the tables seeing as the tables are public-read by default
@@ -43,6 +46,22 @@ defmodule Lector.Cache do
   def get_seccion_fullname(std_name), do: get_fullname(:secciones, std_name)
   def get_medios, do: :ets.tab2list(:medios)
   def get_secciones, do: :ets.tab2list(:secciones)
+  def get_updated_at, do: GenServer.call(:lector_cache, :get_updated_at)
+
+  def handle_info(:refresh, state) do
+    store_medios()
+    store_secciones()
+    %{ "dt" => updated_at } = Lector.DB.get_updated_at
+
+    Logger.debug("Cache updated")
+
+    schedule_refresh()
+    {:noreply, %{ state | updated_at: updated_at }}
+  end
+
+  def handle_call(:get_updated_at, _from, state) do
+    {:reply, Map.get(state, :updated_at), state}
+  end
 
   #############################################################
   ###################### PRIVATE ##############################
@@ -66,10 +85,6 @@ defmodule Lector.Cache do
     :ok
   end
 
-  defp store_updated_at do
-    Lector.DB.get_updated_at
-  end
-
   defp get_fullname(table, std_name) do
     try do
       [{_, _, full_name}] = :ets.match_object(table, {:_, std_name, :_})
@@ -78,5 +93,7 @@ defmodule Lector.Cache do
       MatchError -> nil
     end
   end
+
+  defp schedule_refresh, do: Process.send_after(self(), :refresh, 5 * 60 * 1000)
 
 end

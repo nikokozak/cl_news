@@ -903,3 +903,55 @@ Request: GET /
 20:11:06.829 [info] GET / 127.0.0.1 :: sent - 200 - 3
 13:35:22.151 [info] Starting server at port 8080
 13:43:44.513 [info] Starting server at port 8080
+14:06:23.995 [info] Starting server at port 8080
+14:08:49.538 [info] Starting server at port 8080
+14:10:04.927 [info] Starting server at port 8080
+14:10:05.102 [info] Application lector exited: Lector.start(:normal, []) returned an error: shutdown: failed to start child: Lector.Cache
+    ** (EXIT) an exception was raised:
+        ** (MatchError) no match of right hand side value: %{"dt" => ~U[2021-12-21 18:00:23.655195Z]}
+            (lector 0.5.0) lib/lector/cache.ex:37: Lector.Cache.init/1
+            (stdlib 3.16.1) gen_server.erl:423: :gen_server.init_it/2
+            (stdlib 3.16.1) gen_server.erl:390: :gen_server.init_it/6
+            (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+14:10:05.124 [info] Application tzdata exited: :stopped
+14:10:05.125 [info] Application hackney exited: :stopped
+14:10:05.125 [info] Application metrics exited: :stopped
+14:10:05.125 [info] Application ssl_verify_fun exited: :stopped
+14:10:05.125 [info] Application parse_trans exited: :stopped
+14:10:05.125 [info] Application syntax_tools exited: :stopped
+14:10:05.125 [info] Application certifi exited: :stopped
+14:10:05.125 [info] Application mimerl exited: :stopped
+14:10:05.125 [info] Application idna exited: :stopped
+14:10:05.125 [info] Application unicode_util_compat exited: :stopped
+14:10:05.125 [info] Application logger_file_backend exited: :stopped
+14:10:05.125 [info] Application poolboy exited: :stopped
+14:10:05.126 [info] Application postgrex exited: :stopped
+14:10:05.127 [info] Application db_connection exited: :stopped
+14:10:05.127 [info] Application connection exited: :stopped
+14:10:05.127 [info] Application decimal exited: :stopped
+14:10:05.128 [info] Application plug_cowboy exited: :stopped
+14:10:05.128 [info] Application cowboy_telemetry exited: :stopped
+14:10:05.128 [info] Application cowboy exited: :stopped
+14:10:05.129 [info] Application ranch exited: :stopped
+14:10:05.129 [info] Application cowlib exited: :stopped
+14:10:05.129 [info] Application plug exited: :stopped
+14:10:05.130 [info] Application telemetry exited: :stopped
+14:10:05.130 [info] Application plug_crypto exited: :stopped
+14:10:05.130 [info] Application mime exited: :stopped
+14:10:05.130 [info] Application eex exited: :stopped
+14:10:42.889 [info] Starting server at port 8080
+14:14:03.584 [error] GenServer :lector_cache terminating
+** (FunctionClauseError) no function clause matching in Lector.Cache.handle_call/3
+    (lector 0.5.0) lib/lector/cache.ex:59: Lector.Cache.handle_call(:refresh, {#PID<0.500.0>, [:alias | #Reference<0.3997153838.1854734337.43752>]}, %{updated_at: ~U[2021-12-21 18:00:23.655195Z]})
+    (stdlib 3.16.1) gen_server.erl:721: :gen_server.try_handle_call/4
+    (stdlib 3.16.1) gen_server.erl:750: :gen_server.handle_msg/6
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message (from #PID<0.500.0>): :refresh
+14:14:29.526 [info] Starting server at port 8080
+14:14:58.517 [error] GenServer :lector_cache terminating
+** (RuntimeError) attempted to cast GenServer :lector_cache but no handle_cast/2 clause was provided
+    (lector 0.5.0) lib/gen_server.ex:819: Lector.Cache.handle_cast/2
+    (stdlib 3.16.1) gen_server.erl:695: :gen_server.try_dispatch/4
+    (stdlib 3.16.1) gen_server.erl:771: :gen_server.handle_msg/6
+    (stdlib 3.16.1) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: {:"$gen_cast", :refresh}
