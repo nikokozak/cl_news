@@ -37,7 +37,7 @@ biobio = {
     'article_links': '//section[contains(@class, "section-busca")]//div[@class="results"]/article/a/@href',
 
     'article': {
-        'titular': 'normalize-space(//h1[@class="post-title" or @class="nota-title"]/text())',
+        'titular': 'normalize-space(//*[self::h1[@class="post-title" or @class="nota-title"] or self::h2[@class="titulo"]]/text())',
         'bajada': '//div[@class="post-excerpt" or @class="extracto-nota"]/p//text()',
         'autor': '//a[@class="autor-link"]/text()',
         'image_url': '//meta[@property="og:image"]/@content',
