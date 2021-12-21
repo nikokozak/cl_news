@@ -47,7 +47,7 @@ class DBPipeline:
             spider.stats.inc_value(item['seccion'] + '_storage_success')
             return item
         except psycopg2.errors.UniqueViolation:
-            logging.info('EXISTS already in DB: \n\tURL: {url}\n\tMedio: {medio}\n'.format(medio=item['medio'], url=item['url']))
+            logging.debug('EXISTS already in DB: \n\tURL: {url}\n\tMedio: {medio}\n'.format(medio=item['medio'], url=item['url']))
             spider.stats.inc_value(item['seccion'] + '_storage_skipped')
             return None #In this case we can do this, given it's the last pipeline
 
