@@ -31,17 +31,21 @@ cat <<-EOF > scripts/caddy.conf/Caddyfile
 
     reverse_proxy 127.0.0.1:${LECTOR_PORT}
 EOF
+scp -i "$SSH_KEY" scripts/caddy.conf/Caddyfile ${SSH_USER}@${SSH_SERVER}:/home/${SSH_USER}
 
 ssh_and_run <<-STDIN
 
+    # Caddyfile refresh
+    sudo cp Caddyfile /etc/caddy/
+
     # Make the required folders for --user space systemd service
     mkdir -p /home/${SSH_USER}/.config/systemd/user/
-    cp lector.service /home/${SSH_USER}/.config/systemd/user/
+    sudo cp lector.service /home/${SSH_USER}/.config/systemd/user/
     rm lector.service
 
     # Untar our release, replace previous files with new ones
     mkdir -p srv/server/ 
-    rm -rf srv/server/*
+    sudo rm -rf srv/server/*
     cp release.tar.gz srv/server/
     rm release.tar.gz
     cd srv/server/
