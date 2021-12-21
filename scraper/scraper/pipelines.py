@@ -18,7 +18,6 @@ class SanitizePipeline:
 
         return item
 
-
 class DBPipeline:
     '''
     Handles storing items in our database.
@@ -57,7 +56,6 @@ class DBPipeline:
         # logging.info(self.conn.notices)
         self.conn.close()
 
-
 class ScreenerPipeline:
     '''
     Screen items for unacceptable values.
@@ -79,7 +77,6 @@ class ScreenerPipeline:
 
         spider.stats.inc_value(item['seccion'] + '_parse_success')
         return item
-
 
 class DefaultsPipeline:
     '''
