@@ -53,7 +53,7 @@ class DBPipeline:
 
     def close_spider(self, spider):
         # self.conn.commit() -- Use if no autocommit
-        logging.info(self.conn.notices)
+        # logging.info(self.conn.notices)
         self.conn.close()
 
 
