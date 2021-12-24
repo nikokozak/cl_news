@@ -53,9 +53,7 @@ class BioBioSpider(NoticiaSpider):
         l.add_xpath('imagen_url', rules['imagen_url'])
         l.add_value('cuerpo', self.sanitize_body(response, rules['cuerpo']))
         # add timezone info to EMOL scrape-derived date
-        datetime = self.add_tz(response.xpath(rules['fecha']).get())
-        #l.add_xpath('fecha', rules['fecha'])
-        l.add_value('fecha', datetime)
+        l.add_value('fecha', self.add_tz(response.xpath(rules['fecha']).get()))
         l.add_value('url', response.url)
 
         yield l.load_item()
@@ -77,6 +75,7 @@ class BioBioSpider(NoticiaSpider):
             else:
                 l.add_value('imagen_url', None)
             l.add_value('cuerpo', self.sanitize_body_text(article["texto"]))
+            # add timezone info to EMOL scrape-derived date
             l.add_value('fecha', self.add_tz(article["fechaPublicacion"]))
             l.add_value('url', article["permalink"])
 
