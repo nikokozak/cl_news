@@ -10,6 +10,7 @@
   <body>
     <header>
       <a id="header-title" href="/">Lector Chile</a>
+      <p id="header-updated-at">Actualizado a las <%=  Calendar.strftime(Lector.Cache.get_updated_at(), "%H:%M, %d/%m/%Y") %></p>
       <%= Component.navigation() %>
     </header>
     <%= @inner_content %>

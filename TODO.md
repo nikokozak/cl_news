@@ -9,6 +9,8 @@ EMOL - TEST
 MOSTRADOR - CHECK
 BIOBIO - CHECK
 
+Refactor rules / spiders (too much duplication)
+
 Daily log rotation with backup (make script)
 DB backups
  

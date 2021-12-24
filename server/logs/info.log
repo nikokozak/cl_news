@@ -1040,3 +1040,61 @@ Request: GET /noticia/vvyucmKHEeyFlr8B0m5pqA==
 16:02:14.460 [info] GET /noticia/vvyucmKHEeyFlr8B0m5pqA== 127.0.0.1 :: sent - 200 - 7ms
 16:02:34.082 [info] GET / 127.0.0.1 :: sent - 200 - 4ms
 16:02:36.208 [info] GET /noticia/tyeJhmKiEeyxgfPmxo2fbg== 127.0.0.1 :: sent - 200 - 2ms
+18:29:02.588 [info] Starting server at port 8080
+18:29:02.636 [error] Failed to start Ranch listener Lector.Endpoint.HTTP in :ranch_tcp:listen([cacerts: :..., key: :..., cert: :..., port: 8080]) for reason :eaddrinuse (address already in use)
+
+18:29:02.654 [info] Application lector exited: Lector.start(:normal, []) returned an error: shutdown: failed to start child: {:ranch_listener_sup, Lector.Endpoint.HTTP}
+    ** (EXIT) shutdown: failed to start child: :ranch_acceptors_sup
+        ** (EXIT) {:listen_error, Lector.Endpoint.HTTP, :eaddrinuse}
+18:29:02.664 [info] Application tzdata exited: :stopped
+18:29:02.665 [info] Application hackney exited: :stopped
+18:29:02.665 [info] Application metrics exited: :stopped
+18:29:02.665 [info] Application ssl_verify_fun exited: :stopped
+18:29:02.665 [info] Application parse_trans exited: :stopped
+18:29:02.665 [info] Application syntax_tools exited: :stopped
+18:29:02.665 [info] Application certifi exited: :stopped
+18:29:02.665 [info] Application mimerl exited: :stopped
+18:29:02.665 [info] Application idna exited: :stopped
+18:29:02.665 [info] Application unicode_util_compat exited: :stopped
+18:29:02.665 [info] Application logger_file_backend exited: :stopped
+18:29:02.665 [info] Application poolboy exited: :stopped
+18:29:02.666 [info] Application postgrex exited: :stopped
+18:29:02.666 [info] Application db_connection exited: :stopped
+18:29:02.666 [info] Application connection exited: :stopped
+18:29:02.666 [info] Application decimal exited: :stopped
+18:29:02.667 [info] Application plug_cowboy exited: :stopped
+18:29:02.667 [info] Application cowboy_telemetry exited: :stopped
+18:29:02.668 [info] Application cowboy exited: :stopped
+18:29:02.668 [info] Application ranch exited: :stopped
+18:29:02.668 [info] Application cowlib exited: :stopped
+18:29:02.668 [info] Application plug exited: :stopped
+18:29:02.669 [info] Application telemetry exited: :stopped
+18:29:02.670 [info] Application plug_crypto exited: :stopped
+18:29:02.670 [info] Application mime exited: :stopped
+18:29:02.670 [info] Application eex exited: :stopped
+18:29:47.398 [info] Starting server at port 8080
+18:29:58.183 [info] GET / 127.0.0.1 :: sent - 200 - 193ms
+18:31:47.999 [info] GET / 127.0.0.1 :: sent - 200 - 14ms
+18:32:36.588 [info] GET / 127.0.0.1 :: sent - 200 - 20ms
+18:33:27.337 [info] GET / 127.0.0.1 :: sent - 200 - 22ms
+18:33:48.038 [info] GET / 127.0.0.1 :: sent - 200 - 13ms
+18:35:53.425 [info] GET / 127.0.0.1 :: sent - 200 - 14ms
+19:01:10.648 [info] GET / 127.0.0.1 :: sent - 200 - 13ms
+19:01:22.154 [info] GET / 127.0.0.1 :: sent - 200 - 3ms
+19:02:08.133 [info] GET /internacional 127.0.0.1 :: sent - 200 - 4ms
+19:02:10.336 [info] GET / 127.0.0.1 :: sent - 200 - 17ms
+19:05:54.801 [info] GET / 127.0.0.1 :: sent - 200 - 13ms
+19:06:16.573 [info] GET / 127.0.0.1 :: sent - 200 - 11ms
+19:06:17.603 [info] GET / 127.0.0.1 :: sent - 200 - 12ms
+19:06:27.893 [info] GET / 127.0.0.1 :: sent - 200 - 5ms
+19:06:56.176 [info] GET / 127.0.0.1 :: sent - 200 - 3ms
+19:07:24.785 [info] GET / 127.0.0.1 :: sent - 200 - 4ms
+19:07:33.086 [info] GET / 127.0.0.1 :: sent - 200 - 4ms
+19:07:44.219 [info] GET / 127.0.0.1 :: sent - 200 - 3ms
+19:07:50.779 [info] GET / 127.0.0.1 :: sent - 200 - 11ms
+19:08:48.333 [info] GET / 127.0.0.1 :: sent - 200 - 5ms
+19:08:52.733 [info] GET / 127.0.0.1 :: sent - 200 - 15ms
+19:09:20.124 [info] GET / 127.0.0.1 :: sent - 200 - 3ms
+19:09:22.504 [info] GET / 127.0.0.1 :: sent - 200 - 12ms
+19:09:46.059 [info] GET / 127.0.0.1 :: sent - 200 - 3ms
+19:09:54.679 [info] GET / 127.0.0.1 :: sent - 200 - 4ms

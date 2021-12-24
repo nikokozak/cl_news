@@ -63,6 +63,13 @@ header {
     text-decoration: none;
 }
 
+#header-updated-at {
+    font-size: 0.6rem;
+    margin: 0 auto 0 auto;
+    width: 12rem;
+    display: none;
+}
+
 /** ---------------------------------- **/
 /** ------- MAJOR BREAKPOINTS -------- **/
 /** ---------------------------------- **/
@@ -71,6 +78,10 @@ header {
     body {
         width: 700px;
         margin: 0 auto 0 auto;
+    }
+
+    #header-updated-at {
+        display: block;
     }
 }
 
