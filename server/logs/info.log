@@ -1098,3 +1098,19 @@ Request: GET /noticia/vvyucmKHEeyFlr8B0m5pqA==
 19:09:22.504 [info] GET / 127.0.0.1 :: sent - 200 - 12ms
 19:09:46.059 [info] GET / 127.0.0.1 :: sent - 200 - 3ms
 19:09:54.679 [info] GET / 127.0.0.1 :: sent - 200 - 4ms
+19:20:28.449 [info] GET / 127.0.0.1 :: sent - 200 - 7ms
+19:20:57.756 [info] GET /noticia/wr2rLGKiEeyrsRdGoBoxRQ== 127.0.0.1 :: sent - 200 - 8ms
+19:21:04.427 [info] GET /noticia/gI_egmKsEeyNIXOE7aT2wA== 127.0.0.1 :: sent - 200 - 2ms
+19:21:46.571 [info] GET /noticia/gI_egmKsEeyNIXOE7aT2wA== 127.0.0.1 :: sent - 200 - 15ms
+19:21:50.801 [info] GET / 127.0.0.1 :: sent - 200 - 13ms
+19:21:55.352 [info] GET /noticia/uDqNHmKiEeyrsQt-ky0t4w== 127.0.0.1 :: sent - 200 - 5ms
+19:23:52.069 [info] GET /noticia/sjz3qGKiEeyYNg8kawNKrg== 127.0.0.1 :: sent - 200 - 5ms
+19:27:28.551 [info] GET /noticia/vvyucmKHEeyFlr8B0m5pqA== 127.0.0.1 :: sent - 200 - 7ms
+19:29:14.233 [info] Starting server at port 8080
+19:29:19.212 [info] GET / 127.0.0.1 :: sent - 200 - 61ms
+19:29:20.659 [info] GET / 127.0.0.1 :: sent - 200 - 14ms
+19:29:33.594 [info] GET /noticia/xMDR7mRYEeydkTOxjkb75A== 127.0.0.1 :: sent - 200 - 8ms
+19:30:10.936 [info] GET /noticia/xMDR7mRYEeydkTOxjkb75A== 127.0.0.1 :: sent - 200 - 15ms
+19:30:12.795 [info] GET /noticia/xMDR7mRYEeydkTOxjkb75A== 127.0.0.1 :: sent - 200 - 6ms
+19:30:17.167 [info] GET /noticia/xMDR7mRYEeydkTOxjkb75A== 127.0.0.1 :: sent - 200 - 6ms
+19:32:34.147 [info] GET / 127.0.0.1 :: sent - 200 - 18ms
