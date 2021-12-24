@@ -1114,3 +1114,35 @@ Request: GET /noticia/vvyucmKHEeyFlr8B0m5pqA==
 19:30:12.795 [info] GET /noticia/xMDR7mRYEeydkTOxjkb75A== 127.0.0.1 :: sent - 200 - 6ms
 19:30:17.167 [info] GET /noticia/xMDR7mRYEeydkTOxjkb75A== 127.0.0.1 :: sent - 200 - 6ms
 19:32:34.147 [info] GET / 127.0.0.1 :: sent - 200 - 18ms
+19:33:11.764 [info] GET /noticia/4h1N-GRYEeyN7K_Iwnh-UQ== 127.0.0.1 :: sent - 200 - 6ms
+19:33:19.944 [info] GET / 127.0.0.1 :: sent - 200 - 39ms
+20:34:57.671 [info] Starting server at port 8080
+20:34:59.818 [error] #PID<0.2137.0> running Lector.Endpoint (connection #PID<0.2135.0>, stream id 1) terminated
+Server: localhost:8080 (http)
+Request: GET /
+** (exit) an exception was raised:
+    ** (FunctionClauseError) no function clause matching in Calendar.strftime/3
+        (elixir 1.12.3) lib/calendar.ex:523: Calendar.strftime({:ok, #DateTime<2021-12-23 22:29:05.672307-03:00 -03 America/Santiago>}, "%H:%M, %d/%m/%Y", [])
+        (lector 0.5.0) lib/templates/home.ex:13: Lector.Templates.Home.layout/1
+        (lector 0.5.0) lib/template.ex:76: Lector.Template.render/4
+        (lector 0.5.0) lib/plug/router.ex:280: anonymous fn/4 in Lector.Router.dispatch/2
+        (telemetry 1.0.0) /Users/niko/Documents/Code/LectorChile/server/deps/telemetry/src/telemetry.erl:293: :telemetry.span/3
+        (lector 0.5.0) lib/plug/router.ex:276: Lector.Router.dispatch/2
+        (lector 0.5.0) lib/lector/router.ex:1: Lector.Router.plug_builder_call/2
+        (lector 0.5.0) lib/lector/endpoint.ex:1: Lector.Endpoint.plug_builder_call/2
+20:35:01.418 [error] #PID<0.2138.0> running Lector.Endpoint (connection #PID<0.2135.0>, stream id 2) terminated
+Server: localhost:8080 (http)
+Request: GET /
+** (exit) an exception was raised:
+    ** (FunctionClauseError) no function clause matching in Calendar.strftime/3
+        (elixir 1.12.3) lib/calendar.ex:523: Calendar.strftime({:ok, #DateTime<2021-12-23 22:29:05.672307-03:00 -03 America/Santiago>}, "%H:%M, %d/%m/%Y", [])
+        (lector 0.5.0) lib/templates/home.ex:13: Lector.Templates.Home.layout/1
+        (lector 0.5.0) lib/template.ex:76: Lector.Template.render/4
+        (lector 0.5.0) lib/plug/router.ex:280: anonymous fn/4 in Lector.Router.dispatch/2
+        (telemetry 1.0.0) /Users/niko/Documents/Code/LectorChile/server/deps/telemetry/src/telemetry.erl:293: :telemetry.span/3
+        (lector 0.5.0) lib/plug/router.ex:276: Lector.Router.dispatch/2
+        (lector 0.5.0) lib/lector/router.ex:1: Lector.Router.plug_builder_call/2
+        (lector 0.5.0) lib/lector/endpoint.ex:1: Lector.Endpoint.plug_builder_call/2
+20:36:18.311 [info] Starting server at port 8080
+20:36:31.108 [info] GET / 127.0.0.1 :: sent - 200 - 82ms
+20:36:37.498 [info] GET / 127.0.0.1 :: sent - 200 - 13ms
