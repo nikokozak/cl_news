@@ -6,7 +6,7 @@
   <div id="pagination">
     <%= if page != 1 do %>
       <div class="pagination-previous">
-        <a href="<%= if page == 1, do: "/", else: "/ultimo/#{page - 1}" %>"><<</a>
+        <a href="<%= if page == 1, do: "/", else: "/ultimo/#{page - 1}" %>"></a>
       </div>
     <% end %>
     <%= for n <- (page - 1)..(page + 1), n > 0 && n <= step do %>

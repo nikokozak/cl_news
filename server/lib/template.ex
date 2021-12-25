@@ -70,9 +70,13 @@ defmodule Lector.Template do
   """
   def render(module, %{ status: status } = conn, file, assigns) do
     template_render_fn_name = get_fn_name_from_filename(file)
-    rendered_template = apply(module, template_render_fn_name, [assigns])
-    assigns = [assigns | [inner_content: rendered_template]]
 
+    # Render the "template" - i.e. "home.html.eex"
+    assigns = Keyword.put(assigns, :conn, conn)
+    rendered_template = apply(module, template_render_fn_name, [assigns])
+
+    # Render the layout with template as inner_content
+    assigns = Keyword.put(assigns, :inner_content, rendered_template)
     rendered_layout = apply(module, :layout, [assigns])
 
     conn = Plug.Conn.assign(conn, :timing_end, System.monotonic_time(:millisecond))
