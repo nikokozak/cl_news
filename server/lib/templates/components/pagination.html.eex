@@ -1,4 +1,7 @@
 <% # This template requires a list of *items* (maps), each with a *count_key* containing the total count of items, as well as a *page* signifying the current page num %>
+<% section_path = Path.split(conn.request_path) %>
+<% curr_section = Enum.at(section_path, 0) <> Enum.at(section_path, 1, "") %>
+<% curr_section = if (curr_section == "/"), do: "/ultimo", else: curr_section %>
 <%= if length(items) > 0 do %>
   <% full_count = Map.get(Enum.at(items, 0), count_key, 0) %>
   <% step = round(full_count / 5) %>
@@ -6,21 +9,21 @@
   <div id="pagination">
     <%= if page != 1 do %>
       <div class="pagination-previous">
-        <a href="<%= if page == 1, do: "/", else: "/ultimo/#{page - 1}" %>"></a>
+        <a href="<%= "#{curr_section}/#{page - 1}" %>"><<</a>
       </div>
     <% end %>
     <%= for n <- (page - 1)..(page + 1), n > 0 && n <= step do %>
       <div class="pagination-number">
         <%= if n == 1 do %>
-          <a href="/" class="<%= if page == 1, do: "active", else: "inactive" %>"><%= n %></a>
+          <a href="<%= "#{curr_section}/1" %>" class="<%= if page == 1, do: "active", else: "inactive" %>"><%= n %></a>
         <% else %>
-          <a href="/ultimo/<%= n %>" class="<%= if page == n, do: "active", else: "inactive" %>"><%= n %></a>
+          <a href="<%= "#{curr_section}/#{n}" %>" class="<%= if page == n, do: "active", else: "inactive" %>"><%= n %></a>
         <% end %>
       </div>
     <% end %>
     <%= if page != step do %>
       <div class="pagination-next">
-        <a href="<%= "/ultimo/#{page + 1}" %>">>></a>
+        <a href="<%= "#{curr_section}/#{page + 1}" %>">>></a>
       </div>
     <% end %>
   </div>

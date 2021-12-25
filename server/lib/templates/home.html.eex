@@ -16,4 +16,4 @@
 <% end %>
 </div>
 
-<%= Component.pagination(@noticias, "full_count", @page) %>
+<%= Component.pagination(@conn, @noticias, "full_count", @page) %>

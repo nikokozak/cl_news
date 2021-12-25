@@ -1231,3 +1231,101 @@ Request: GET /
 12:13:13.633 [info] GET / 127.0.0.1 :: sent - 200 - 3ms
 12:14:31.439 [info] Starting server at port 8080
 12:14:35.908 [info] GET / 127.0.0.1 :: sent - 200 - 65ms
+12:16:22.402 [info] Starting server at port 8080
+12:16:37.589 [info] GET / 127.0.0.1 :: sent - 200 - 52ms
+12:16:42.507 [info] GET /ultimo/2 127.0.0.1 :: sent - 200 - 15ms
+12:17:24.002 [info] Starting server at port 8080
+12:17:31.024 [error] #PID<0.502.0> running Lector.Endpoint (connection #PID<0.501.0>, stream id 1) terminated
+Server: localhost:8080 (http)
+Request: GET /ultimo/2
+** (exit) an exception was raised:
+    ** (UndefinedFunctionError) function Lector.Templates.Component.pagination/3 is undefined or private
+        (lector 0.5.0) Lector.Templates.Component.pagination([%{"autor" => "EFE/Editado por Ramón Jara A., Emol", "bajada" => "La preocupación de las autoridades se centra en el avance de la variante Ómicron, donde el número de casos confirmados asciende a  90.906, tras la detección de 16.817 casos hoy.", "cuerpo" => ["<div><div>El <b>Reino Unido</b> comunicó este jueves <b>119.789 contagios de coronavirus en 24 horas</b>, un récord desde el inicio de la pandemia por segundo día consecutivo y casi 14.000 más que ayer.</div><div><br></div><div>En el conjunto del Reino Unido hay<b> 8.216 personas internadas por coronavirus</b>, un 7,81% más que siete días atrás, mientras que en Londres, donde más rápido se expandido la variante Ómicron, hay 2.036 ingresados, un 48,4% más, según los últimos datos oficiales, que corresponden al miércoles.</div><div><br></div><div><b>Hasta ahora se han inyectado más de 31 millones de dosis de refuerzo de una vacuna contra el coronavirus</b>, que cubren al 55,1% de la población mayor de 12 años.</div><div><br></div><div>Desde hace más de una semana, el número de test PCR procesados en el país ha superado el medio millón diario, con el mayor peak el pasado viernes, cuando se registró el resultado de 620.291 pruebas.</div><div><br></div><div>El número de casos de Ómicron confirmados por secuenciación genética asciende a <b>90.906</b>, tras la detección de <b>16.817 casos hoy</b>, según los datos de la Agencia de Seguridad Sanitaria británica (UKHSA, en inglés).</div><div><br></div><div>El primer ministro, <b>Boris Johnson</b>, ha confirmado esta semana que <b>no planea imponer restricciones adicionales antes del día de Navidad</b>, aunque ha advertido de que está sobre la mesa la posibilidad de nuevas limitaciones la próxima semana.</div><div><br></div><div>Los gobiernos autónomos de<b> Escocia, Gales e Irlanda del Norte </b>ya han adelantado por su parte medidas para tratar de frenar los contagios que entrarán en vigor el lunes.</div><div><br></div><div>Dos estudios publicados en Reino Unido sugieren que los enfermos con la variante Ómicron del coronavirus sufren menos riesgo de hospitalización respecto a la variante Delta.</div><div><br></div><div>Diversos expertos han alertado, sin embargo, que la mayor transmisibilidad podría contrarrestar ese efecto, por lo que han alertado del riesgo de saturación del sistema sanitario. </div></div>"], "fecha" => ~U[2021-12-23 16:44:00.000000Z], "fecha_short" => "23-12-2021", "full_count" => 186, "imagen_url" => "https://static.emol.cl/emol50/Fotos/2021/12/23/file_20211223140333.jpg", "medio" => "El Mercurio Online", "medio_std" => "emol", "noticia_id" => <<196, 205, 44, 20, 100, 88, 17, 236, 157, 145, 235, 103, 131, 88, 6, 40>>, "seccion" => "Internacional", "seccion_std" => "internacional", "titular" => "Reino Unido anota nuevo récord con casi 120.000 mil contagios en un día: 14.000 más que ayer"}, %{"autor" => "Redactado por Ramón Jara A., Emol", "bajada" => "En plena sesión del Congreso, la también ministra del Trabajo, Yolanda Díaz, respondió a la vocera del partido de extrema derecha, Macarena Olona, quien minutos antes la había tratado de \"fea\".", "cuerpo" => ["<div><p>La vicepresidenta segunda y ministra del Trabajo de España, <b>Yolanda Díaz</b>, puso de ejemplo a Chile y el proceso electoral recién pasado para responder al partido de extrema derecha <b>Vox</b>, cuya vocera,<b> Macarena Olona</b>, la insultó en plena sesión del Congreso y la acusó de \"traicionar a la clase obrera\".</p><div><br></div><div><div>\"Para Yoli, que aspiró a ser lideresa mundial y no pasó de fashionaria. Que la Agenda España, el programa de Vox sea su recuerdo permanente a su traición a la clase obrera española. Con todo el cariño, Maca, que cada miércoles disfruta despojándola del falso hábito que muestra y <b>enseñando la fealdad </b>que esconde\", aseguró Olona, y agregó: <b>\"Porque hay que ser muy fea para atreverse a amenazar a millones de españoles en el templo de la palabra\"</b>.</div></div><div><br></div><div>En esa línea, afirmó que \"ustedes proponen ante lo que está viviendo España, por ejemplo, levantar un muro en Ceuta y en Melilla; proponen (...) salir del Espacio Schengen, que es como salir de la Unión Europea; y proponen derogar la ley de igualdad de género entre hombres y mujeres. No solo eso, sino que además<b> quieren que en plena pandemia salgamos de la Organización Mundial de la Salud (OMS)</b>\".</div><div><br></div><div>\"Señoría, yo creo que los españoles tienen derecho a saber lo que ustedes defienden. <b>Su intervención ha sido muy clara y desde luego España es mucho mejor de lo que ustedes proponen</b>\", cerró.</div></div>"], "fecha" => ~U[2021-12-23 15:33:00.000000Z], "fecha_short" => "23-12-2021", "full_count" => 186, "imagen_url" => "https://static.emol.cl/emol50/Fotos/2021/12/23/file_20211223134150.jpg", "medio" => "El Mercurio Online", "medio_std" => "emol", "noticia_id" => <<196, 212, 127, 0, 100, 88, 17, 236, 157, 145, 71, 141, 180, 57, 99, 231>>, "seccion" => "Internacional", "seccion_std" => "internacional", "titular" => "Vicepresidenta española envía mensaje a Vox: &quot;Deberían aprender de la lección de Chile&quot;"}, %{"autor" => "Redactado por Javiera Riquelme, Emol.", "bajada" => "De acuerdo con la entidad, el mayor flujo se espera para hoy y mañana (viernes 24).", "cuerpo" => ["<div><div>A pesar de que este fin de semana no será largo, ya que Navidad se celebrará un día sábado, se proyecta un importante incremento en el flujo vehicular. Por ello, desde el Ministerio de Obras Públicas (MOP) <b>anunciaron medidas como el \"peaje a luca\" o 3x1 en la Ruta 68</b>.</div><div><br></div><div>\"Entre el jueves 23 y el domingo 26 esperamos que<b> 379.698 vehículos salgan de la Región Metropolitana</b>. Si bien la cifra es inferior al último fin de semana largo de este año (31 de octubre y 1 de noviembre) en donde salieron más de 419 mil vehículos, se anticipa un aumento importante en las carreteras por la Navidad y porque estas fechas marcan para muchas personas el inicio de las vacaciones\", aseguró el ministro,<b> Alfredo Moreno</b>.</div><div><b><br></b></div><div></div><div>De acuerdo con lo que indicaron, el mayor flujo<b> se proyecta para los días jueves y viernes con más de 100 mil vehículos por jornada</b>. El sábado 25, en tanto, se espera la salida de alrededor de 90 mil vehículos. </div><div><br></div><div>\"Para facilitar el desplazamiento habrá peaje a luca en la Ruta 68 el viernes 24 entre las 07:00 y 12:00 horas para vehículos livianos en la plaza de Lo Prado y Zapata sólo en dirección a la costa. La medida se replicará el sábado 25 entre las 07:00 y 10:00 horas. <b>En la misma línea habrá peaje rebajado en un 50% </b>para vehículos pesados de dos o más ejes sólo en dirección a la costa el viernes y sábado entre las 00:00 y 07:00 horas\", agregó el titular del MOP.</div><div><br></div><div>En cuanto al retorno, para el domingo<b> 26 se proyecta el regreso</b> de más de 111 mil vehículos a la RM.  Ese día también estará vigente el \"peaje a luca\" para vehículos livianos sólo en dirección a Santiago en la Ruta 68 sólo entre las 8:00 y 12:00 horas. </div><div><br></div><div>Además, desde el ministerio señalaron que se dispondrá del sistema 3x1 hacia la capital entre las 17:00 y 23:00 horas entre el Enlace Pudahuel (km 11,6) y el Enlace Costanera (km 9,5) <b>de acuerdo a las condiciones del flujo</b>.</div><div><br></div><div>Finalmente, Moreno destacó que \"<b>es importante que la gente pueda en lo posible planificar su viaje </b>y si es factible evitar los días y horas de mayor congestión, ya que así tendrá un viaje más (truncated)
+12:18:08.800 [info] Starting server at port 8080
+12:18:46.617 [info] GET /ultimo/2 127.0.0.1 :: sent - 200 - 13ms
+12:18:55.211 [info] GET /nacional 127.0.0.1 :: sent - 200 - 8ms
+12:19:28.136 [info] Starting server at port 8080
+12:19:32.030 [error] #PID<0.502.0> running Lector.Endpoint (connection #PID<0.501.0>, stream id 1) terminated
+Server: localhost:8080 (http)
+Request: GET /nacional
+** (exit) an exception was raised:
+    ** (UndefinedFunctionError) function Plug.Conn.fetch/2 is undefined (Plug.Conn does not implement the Access behaviour)
+        (plug 1.12.1) Plug.Conn.fetch(%Plug.Conn{adapter: {Plug.Cowboy.Conn, :...}, assigns: %{timing_init: -576460746912}, body_params: %{}, cookies: %Plug.Conn.Unfetched{aspect: :cookies}, halted: false, host: "localhost", method: "GET", owner: #PID<0.502.0>, params: %{"seccion" => "nacional"}, path_info: ["nacional"], path_params: %{"seccion" => "nacional"}, port: 8080, private: %{plug_route: {"/:seccion", #Function<9.113182292/2 in Lector.Router.do_match/4>}}, query_params: %{}, query_string: "", remote_ip: {127, 0, 0, 1}, req_cookies: %Plug.Conn.Unfetched{aspect: :cookies}, req_headers: [{"accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"}, {"accept-encoding", "gzip, deflate"}, {"accept-language", "en-us"}, {"connection", "keep-alive"}, {"host", "localhost:8080"}, {"referer", "http://localhost:8080/ultimo/2"}, {"upgrade-insecure-requests", "1"}, {"user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Safari/605.1.15"}], request_path: "/nacional", resp_body: nil, resp_cookies: %{}, resp_headers: [{"cache-control", "max-age=0, private, must-revalidate"}], scheme: :http, script_name: [], secret_key_base: nil, state: :unset, status: nil}, :request_path)
+        (elixir 1.12.3) lib/access.ex:285: Access.get/3
+        (lector 0.5.0) lib/templates/components/pagination.html.eex:2: Lector.Templates.Component.pagination/4
+        (lector 0.5.0) lib/templates/home.ex:19: Lector.Templates.Home.home/1
+        (lector 0.5.0) lib/template.ex:76: Lector.Template.render/4
+        (lector 0.5.0) lib/plug/router.ex:280: anonymous fn/4 in Lector.Router.dispatch/2
+        (telemetry 1.0.0) /Users/niko/Documents/Code/LectorChile/server/deps/telemetry/src/telemetry.erl:293: :telemetry.span/3
+        (lector 0.5.0) lib/plug/router.ex:276: Lector.Router.dispatch/2
+12:20:16.082 [info] Starting server at port 8080
+12:20:17.772 [error] #PID<0.502.0> running Lector.Endpoint (connection #PID<0.501.0>, stream id 1) terminated
+Server: localhost:8080 (http)
+Request: GET /nacional
+** (exit) an exception was raised:
+    ** (FunctionClauseError) no function clause matching in Keyword.get/3
+        (elixir 1.12.3) lib/keyword.ex:218: Keyword.get(%Plug.Conn{adapter: {Plug.Cowboy.Conn, :...}, assigns: %{timing_init: -576460749193}, body_params: %{}, cookies: %Plug.Conn.Unfetched{aspect: :cookies}, halted: false, host: "localhost", method: "GET", owner: #PID<0.502.0>, params: %{"seccion" => "nacional"}, path_info: ["nacional"], path_params: %{"seccion" => "nacional"}, port: 8080, private: %{plug_route: {"/:seccion", #Function<9.113182292/2 in Lector.Router.do_match/4>}}, query_params: %{}, query_string: "", remote_ip: {127, 0, 0, 1}, req_cookies: %Plug.Conn.Unfetched{aspect: :cookies}, req_headers: [{"accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"}, {"accept-encoding", "gzip, deflate"}, {"accept-language", "en-us"}, {"connection", "keep-alive"}, {"host", "localhost:8080"}, {"referer", "http://localhost:8080/ultimo/2"}, {"upgrade-insecure-requests", "1"}, {"user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Safari/605.1.15"}], request_path: "/nacional", resp_body: nil, resp_cookies: %{}, resp_headers: [{"cache-control", "max-age=0, private, must-revalidate"}], scheme: :http, script_name: [], secret_key_base: nil, state: :unset, status: nil}, :request_path, nil)
+        (lector 0.5.0) lib/templates/components/pagination.html.eex:2: Lector.Templates.Component.pagination/4
+        (lector 0.5.0) lib/templates/home.ex:19: Lector.Templates.Home.home/1
+        (lector 0.5.0) lib/template.ex:76: Lector.Template.render/4
+        (lector 0.5.0) lib/plug/router.ex:280: anonymous fn/4 in Lector.Router.dispatch/2
+        (telemetry 1.0.0) /Users/niko/Documents/Code/LectorChile/server/deps/telemetry/src/telemetry.erl:293: :telemetry.span/3
+        (lector 0.5.0) lib/plug/router.ex:276: Lector.Router.dispatch/2
+        (lector 0.5.0) lib/lector/router.ex:1: Lector.Router.plug_builder_call/2
+12:20:58.993 [info] Starting server at port 8080
+12:21:00.832 [info] GET /nacional 127.0.0.1 :: sent - 200 - 60ms
+12:21:06.038 [info] GET /economia 127.0.0.1 :: sent - 200 - 47ms
+12:21:08.632 [info] GET / 127.0.0.1 :: sent - 200 - 10ms
+12:21:14.156 [info] GET /ultimo/2 127.0.0.1 :: sent - 200 - 10ms
+12:24:48.027 [info] Starting server at port 8080
+12:24:50.900 [info] GET / 127.0.0.1 :: sent - 200 - 55ms
+12:24:53.677 [info] GET /ultimo/2 127.0.0.1 :: sent - 200 - 10ms
+12:24:56.038 [info] GET /ultimo/3 127.0.0.1 :: sent - 200 - 17ms
+12:24:57.893 [info] GET /ultimo/2 127.0.0.1 :: sent - 200 - 11ms
+12:25:00.987 [info] GET / 127.0.0.1 :: sent - 200 - 4ms
+12:25:07.926 [info] GET /ultimo/2 127.0.0.1 :: sent - 200 - 11ms
+12:25:13.749 [info] GET /internacional 127.0.0.1 :: sent - 200 - 3ms
+12:25:16.950 [info] GET /ultimo/2 127.0.0.1 :: sent - 200 - 3ms
+12:25:18.897 [info] GET / 127.0.0.1 :: sent - 200 - 3ms
+12:25:21.322 [info] GET /internacional 127.0.0.1 :: sent - 200 - 10ms
+12:25:26.467 [info] GET /internacional/2 127.0.0.1 :: sent - 200 - 7ms
+12:25:29.330 [info] GET / 127.0.0.1 :: sent - 200 - 11ms
+12:25:41.972 [info] GET /internacional 127.0.0.1 :: sent - 200 - 10ms
+12:25:47.021 [info] GET /internacional/2 127.0.0.1 :: sent - 200 - 3ms
+12:26:05.039 [info] Starting server at port 8080
+12:26:18.929 [info] GET /internacional/2 127.0.0.1 :: sent - 200 - 64ms
+12:26:45.122 [info] GET / 127.0.0.1 :: sent - 200 - 3ms
+12:26:48.871 [info] GET /ultimo/2 127.0.0.1 :: sent - 200 - 10ms
+12:26:51.875 [info] GET /internacional 127.0.0.1 :: sent - 200 - 4ms
+12:35:30.639 [info] GET /ultimo/2 127.0.0.1 :: sent - 200 - 9ms
+12:35:41.201 [info] Starting server at port 8080
+12:35:43.184 [info] GET /ultimo/2 127.0.0.1 :: sent - 200 - 56ms
+12:35:45.918 [info] GET /ultimo/1 127.0.0.1 :: sent - 200 - 3ms
+12:35:50.921 [info] GET / 127.0.0.1 :: sent - 200 - 11ms
+12:35:52.966 [info] GET /ultimo/2 127.0.0.1 :: sent - 200 - 11ms
+12:35:57.869 [info] GET /nacional 127.0.0.1 :: sent - 200 - 3ms
+12:36:02.265 [info] GET /nacional/3 127.0.0.1 :: sent - 200 - 18ms
+12:36:05.871 [info] GET /nacional/2 127.0.0.1 :: sent - 200 - 5ms
+12:36:07.677 [info] GET /nacional/1 127.0.0.1 :: sent - 200 - 3ms
+12:38:30.973 [info] Starting server at port 8080
+12:38:33.824 [info] GET / 127.0.0.1 :: sent - 200 - 56ms
+12:39:25.252 [info] Starting server at port 8080
+12:39:27.802 [info] GET / 127.0.0.1 :: sent - 200 - 64ms
+12:39:32.997 [info] GET / 127.0.0.1 :: sent - 200 - 10ms
+12:40:36.375 [info] GET / 127.0.0.1 :: sent - 200 - 14ms
+12:40:37.152 [info] GET / 127.0.0.1 :: sent - 200 - 9ms
+12:40:37.432 [info] GET /ultimo/2 127.0.0.1 :: sent - 200 - 3ms
+12:41:11.940 [info] Starting server at port 8080
+12:41:14.987 [info] GET / 127.0.0.1 :: sent - 200 - 60ms
+12:41:24.717 [info] GET /internacional 127.0.0.1 :: sent - 200 - 10ms
+12:41:27.993 [info] GET /internacional/2 127.0.0.1 :: sent - 200 - 9ms
+12:41:34.612 [info] GET /internacional/1 127.0.0.1 :: sent - 200 - 9ms
+12:41:36.285 [info] GET /internacional/2 127.0.0.1 :: sent - 200 - 10ms
+12:41:37.998 [info] GET /internacional/3 127.0.0.1 :: sent - 200 - 17ms
+12:41:40.240 [info] GET /internacional/4 127.0.0.1 :: sent - 200 - 9ms
+12:41:44.185 [info] GET / 127.0.0.1 :: sent - 200 - 4ms
+12:41:47.000 [info] GET /noticia/4h1N-GRYEeyN7K_Iwnh-UQ== 127.0.0.1 :: sent - 200 - 10ms
+12:41:49.672 [info] GET / 127.0.0.1 :: sent - 200 - 9ms
+12:41:52.020 [info] GET /economia 127.0.0.1 :: sent - 200 - 4ms
+12:41:54.224 [info] GET /economia/2 127.0.0.1 :: sent - 200 - 1ms
+12:41:55.934 [info] GET / 127.0.0.1 :: sent - 200 - 4ms
