@@ -4,7 +4,7 @@
 <% curr_section = if (curr_section == "/"), do: "/ultimo", else: curr_section %>
 <%= if length(items) > 0 do %>
   <% full_count = Map.get(Enum.at(items, 0), count_key, 0) %>
-  <% step = round(full_count / 5) %>
+  <% step = round(full_count / 20) %>
   <%= if step > 0 do%>
   <div id="pagination">
     <%= if page != 1 do %>

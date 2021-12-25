@@ -1,4 +1,5 @@
-Pagination for section pages
+Centralize results_per_page setting
+Refac pagination
 Articles en Tercera cutting out people
 
 Refactor rules / spiders (too much duplication)

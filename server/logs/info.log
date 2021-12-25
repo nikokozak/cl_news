@@ -1329,3 +1329,42 @@ Request: GET /nacional
 12:41:52.020 [info] GET /economia 127.0.0.1 :: sent - 200 - 4ms
 12:41:54.224 [info] GET /economia/2 127.0.0.1 :: sent - 200 - 1ms
 12:41:55.934 [info] GET / 127.0.0.1 :: sent - 200 - 4ms
+12:44:34.747 [info] Starting server at port 8080
+12:44:34.771 [error] Failed to start Ranch listener Lector.Endpoint.HTTP in :ranch_tcp:listen([cacerts: :..., key: :..., cert: :..., port: 8080]) for reason :eaddrinuse (address already in use)
+
+12:44:34.779 [info] Application lector exited: Lector.start(:normal, []) returned an error: shutdown: failed to start child: {:ranch_listener_sup, Lector.Endpoint.HTTP}
+    ** (EXIT) shutdown: failed to start child: :ranch_acceptors_sup
+        ** (EXIT) {:listen_error, Lector.Endpoint.HTTP, :eaddrinuse}
+12:44:34.790 [info] Application tzdata exited: :stopped
+12:44:34.791 [info] Application hackney exited: :stopped
+12:44:34.791 [info] Application metrics exited: :stopped
+12:44:34.791 [info] Application ssl_verify_fun exited: :stopped
+12:44:34.791 [info] Application parse_trans exited: :stopped
+12:44:34.791 [info] Application syntax_tools exited: :stopped
+12:44:34.791 [info] Application certifi exited: :stopped
+12:44:34.791 [info] Application mimerl exited: :stopped
+12:44:34.791 [info] Application idna exited: :stopped
+12:44:34.791 [info] Application unicode_util_compat exited: :stopped
+12:44:34.791 [info] Application logger_file_backend exited: :stopped
+12:44:34.791 [info] Application poolboy exited: :stopped
+12:44:34.792 [info] Application postgrex exited: :stopped
+12:44:34.793 [info] Application db_connection exited: :stopped
+12:44:34.793 [info] Application connection exited: :stopped
+12:44:34.793 [info] Application decimal exited: :stopped
+12:44:34.793 [info] Application plug_cowboy exited: :stopped
+12:44:34.793 [info] Application cowboy_telemetry exited: :stopped
+12:44:34.794 [info] Application cowboy exited: :stopped
+12:44:34.794 [info] Application ranch exited: :stopped
+12:44:34.794 [info] Application cowlib exited: :stopped
+12:44:34.796 [info] Application plug exited: :stopped
+12:44:34.796 [info] Application telemetry exited: :stopped
+12:44:34.797 [info] Application plug_crypto exited: :stopped
+12:44:34.797 [info] Application mime exited: :stopped
+12:44:34.797 [info] Application eex exited: :stopped
+12:45:04.598 [info] Starting server at port 8080
+12:45:08.866 [info] GET / 127.0.0.1 :: sent - 200 - 64ms
+12:45:13.467 [info] GET /internacional 127.0.0.1 :: sent - 200 - 10ms
+12:45:15.168 [info] GET /internacional/2 127.0.0.1 :: sent - 200 - 10ms
+12:45:18.131 [info] GET /internacional/1 127.0.0.1 :: sent - 200 - 9ms
+12:45:21.866 [info] GET /economia 127.0.0.1 :: sent - 200 - 11ms
+12:45:25.421 [info] GET /educacion 127.0.0.1 :: sent - 200 - 2ms
