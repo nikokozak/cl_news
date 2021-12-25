@@ -52,7 +52,7 @@ ssh_and_run <<-STDIN
     sudo tar -zxvf release.tar.gz
 
     # Change ownership of new files, SELinux perms for server systemd execution
-    sudo chown $SSH_USER /home/${SSH_USER}/srv/server
+    sudo chown -R $SSH_USER /home/${SSH_USER}/srv/server
     sudo chcon -R -t bin_t /home/${SSH_USER}/srv/server/bin/
 
     sudo systemctl reload caddy

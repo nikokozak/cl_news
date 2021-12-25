@@ -1,3 +1,5 @@
+Pagination for section pages
+Fix permissions for server files
 Articles en Tercera cutting out people
 
 Refactor rules / spiders (too much duplication)
